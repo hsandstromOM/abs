@@ -1,0 +1,70 @@
+{
+  "name": "abs",
+  "version": "1.0.0",
+  "description": "abs rebuild",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "watchify browser.js -o www/browser.js & node server.js",
+    "build": "watchify browser.js -o www/browser.js & node server.js & npm run watch-css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/main.scss www/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hsandstromOM/abs.git"
+  },
+  "keywords": [
+    "bacon"
+  ],
+  "author": "OM",
+  "license": "ISC",
+  "dependencies": {
+    "angucomplete-alt": "^2.0.0",
+    "angular": "^1.4.7",
+    "angular-contentful": "^2.0.0",
+    "angular-cookies": "^1.4.7",
+    "angular-jwt": "0.0.9",
+    "angular-marked": "^1.2.0",
+    "angular-resource": "^1.5.6",
+    "angular-sanitize": "^1.5.6",
+    "angular-storage": "0.0.13",
+    "angular-stripe-checkout": "^4.0.1",
+    "angular-ui-bootstrap": "^1.3.2",
+    "angular-ui-router": "^0.2.15",
+    "angular-utils-pagination": "^0.11.1",
+    "auth0-angular": "^4.0.4",
+    "body": "^5.1.0",
+    "body-parser": "^1.15.1",
+    "ecstatic": "^1.1.3",
+    "ejs": "^2.3.4",
+    "express": "~4.5.1",
+    "http-cors": "^1.0.1",
+    "http-hash-router": "^1.1.0",
+    "hyperscript": "^1.4.7",
+    "jquery": "^2.2.3",
+    "mandrill-api": "^1.0.45",
+    "moment": "^2.10.6",
+    "ngmap": "^1.17.1",
+    "nodemailer": "^2.4.2",
+    "nodemailer-mandrill-transport": "^1.1.0",
+    "palmettoflow-event": "^1.1.2",
+    "palmettoflow-nodejs": "^1.0.1",
+    "pouchdb": "^5.0.0",
+    "send-data": "^7.0.0",
+    "underscore": "^1.8.3",
+    "xhr": "^2.1.0",
+    "zero-config": "^7.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^11.2.0",
+    "node-sass": "^3.5.3",
+    "nodemon": "^1.9.1",
+    "watchify": "^3.4.0"
+  },
+  "homepage": "https://github.com/hsandstromOM/abs#readme",
+  "bugs": {
+    "url": "https://github.com/hsandstromOM/abs/issues"
+  }
+}

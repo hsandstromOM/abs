@@ -1,0 +1,95 @@
+.honeyCombRowOfFour {
+ width:100%;
+ margin-top:-70px;
+ display:block;
+ float:left
+}
+.honeyCombRowOfThree {
+ width:100%;
+ margin-top:-70px;
+ display:block;
+ float:left;
+ margin-left: 122px;
+}
+.honeyComb {
+  display: inline-block;
+  position: relative;
+  width: 241px !important;
+  height: 279px !important;
+}
+.honeyComb:hover {
+  .overlayer {
+    opacity: 0;
+  }
+}
+.overlayer {
+  opacity: .7;
+  position: absolute;
+}
+.fourRow {
+  margin-top: -70px !important;
+}
+.threeRow {
+  margin-left: 0px !important;
+  margin-top: -70px !important;
+}
+.threeRowStart {
+  margin-left: 120px !important;
+  margin-top: -70px !important;
+}
+@media (max-width: 992px){
+  .honeyCombContainer{
+    width:100% !important;
+  }
+  .threeRowStart{
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+  .threeRow {
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+  .fourRow {
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+  .hexText{
+    height: auto !important;
+    padding-top: 0 !important;
+    width: 100% !important;
+    position: absolute;
+    text-align: center;
+    top: 44% !important;
+  }
+}
+@media (max-width:895px){
+  .gallery-text{
+    margin-top:-35px !important;
+  }
+}
+@media (max-width: 776px){
+  .honeycombContainer{
+    width:100%;
+  }
+  .gallery-text{
+    margin-top:-25px !important;
+  }
+  .threeRowStart{
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+  .threeRow {
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+  .fourRow {
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+}
