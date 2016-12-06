@@ -309,9 +309,9 @@ function render () {
                   }, "x")
                 ]),
                 h("div.col-sm-4", {
-                  "style":"padding:0"
+                  "style":"padding:20; padding-top:100px"
                 }, [
-                  h("img", {
+                  h("img.img-responsive.center-block", {
                     "data-ng-src":"{{currentTeamMember.fields.fullImage.fields.file.url}}",
                     "alt":""
                   })
@@ -320,7 +320,7 @@ function render () {
                   "style":"padding-left:40px"
                 }, [
                   h("h4", {
-                    "style":"padding-top:50px"
+                    "style":"padding-top:40px"
                   }, [
                     h("strong", "{{currentTeamMember.fields.name}}")
                   ]),
