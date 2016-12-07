@@ -48,6 +48,7 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
   })
 }
 
+
 function render () {
   return h('div#homePage', [
     h("div.page-container", [

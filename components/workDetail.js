@@ -6,7 +6,8 @@ module.exports = {
   template: render().outerHTML,
   controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window', component],
   params: {
-    obj: null
+    obj: null,
+    service: null
   }
 }
 
@@ -39,7 +40,44 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
   //     controller: 'ModalInstanceCtrl'
   //   });
   // }
+
+  if($state.params.service) {
+    $scope.page = $state.params.service
+    $scope.currentServiceProvided = $state.params.service
+    $scope.selectedService = $state.params.service.fields.pageTitle
+    store.set('workService', $scope.selectedService)
+  } else if(store.get('selectedWorkService')){
+    $scope.currentServiceProvided = store.get('selectedWorkService')
+    $scope.selectedService = $scope.currentServiceProvided.fields.pageTitle
+  }
+
+  $scope.mainPage = 'work'
+  $scope.slide = {
+    'workNav' : true
+  }
+  $scope.selectServiceProvided = function (serviceProvided) {
+    $scope.currentServiceProvided = serviceProvided
+    $scope.page = $scope.currentServiceProvided
+  }
+
+//// below needed for service subnav to display///////
+  $scope.allServices = []
+  contentful.entries('content_type=serviceTypes&include=3').then(function(res) {
+    var items = res.data.items
+    angular.forEach(items, function(item){
+      $scope.allServices.push(item)
+    })
+   })
+  $scope.selectService = function (service) {
+    $scope.currentService = service
+    $scope.page = $scope.currentService.fields.pageTitle
+  }
+  $scope.allWorkProjects = []
+  contentful.entries('content_type=workProjects&include=3').then(function(res) {
+    $scope.allWorkProjects = res.data.items
+  })
 }
+
 angular.module('app').controller('ModalInstanceCtrl', function( $scope, $uibModalInstance) {
   $scope.cancel = function (){
     $uibModalInstance.dismiss('cancel')
