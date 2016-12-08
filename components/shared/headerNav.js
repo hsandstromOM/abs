@@ -326,7 +326,7 @@ function template () {
     }, [
       h("div.subnavitem.col-xs-3.col-md-3",
       {
-        "style":"border-left:none;border-right:1px solid white;display:inline-block !important;",
+        "style":"border-left:none;border-right:1px solid white;display:inline-block !important; width:20%",
         'data-ng-repeat': 'service in allServices',
         'data-ng-click': 'setSelectedService(service)'
       }, [
