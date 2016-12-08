@@ -11,6 +11,15 @@ module.exports = {
 }
 
 function component ($scope, $state, store, contentful,  $uibModal, $window) {
+  if($state.params.service) {
+    $scope.page = $state.params.service
+    $scope.currentServiceProvided = $state.params.service
+    $scope.selectedService = $state.params.service.fields.pageTitle
+    store.set('services', $scope.selectedService)
+  } else if(store.get('selectedServices')){
+    $scope.currentServiceProvided = store.get('selectedServices')
+    $scope.selectedService = $scope.currentServiceProvided.fields.pageTitle
+  }
    $scope.allServicesProvided = []
    $scope.slide = {
      'serviceNav': true

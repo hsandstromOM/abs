@@ -106,7 +106,6 @@ function template () {
                 ]),
                 h("div.col-sm-3", [
                   h("h6.mg-md", {'data-ui-sref':'services', 'style':'cursor:pointer'},"SERVICES"),
-
                    h("h5.mg-md", {
                      'data-ui-sref':'services({service: service})',
                      'data-ng-repeat': 'service in allServices',

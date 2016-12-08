@@ -757,6 +757,15 @@ module.exports = {
 }
 
 function component ($scope, $state, store, contentful,  $uibModal, $window) {
+  if($state.params.service) {
+    $scope.page = $state.params.service
+    $scope.currentServiceProvided = $state.params.service
+    $scope.selectedService = $state.params.service.fields.pageTitle
+    store.set('services', $scope.selectedService)
+  } else if(store.get('selectedServices')){
+    $scope.currentServiceProvided = store.get('selectedServices')
+    $scope.selectedService = $scope.currentServiceProvided.fields.pageTitle
+  }
    $scope.allServicesProvided = []
    $scope.slide = {
      'serviceNav': true
@@ -951,7 +960,6 @@ function template () {
                 ]),
                 h("div.col-sm-3", [
                   h("h6.mg-md", {'data-ui-sref':'services', 'style':'cursor:pointer'},"SERVICES"),
-
                    h("h5.mg-md", {
                      'data-ui-sref':'services({service: service})',
                      'data-ng-repeat': 'service in allServices',
@@ -1531,7 +1539,7 @@ function render () {
                     "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
                   }, [
                     h("span", {
-                      "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle"
+                      "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right:10px"
                     }, '{{member.fields.name}}')
                   ])
                 ]),
@@ -1556,7 +1564,7 @@ function render () {
                     "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
                   }, [
                     h("span", {
-                      "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle"
+                      "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
                     }, '{{member.fields.name}}')
                   ])
                 ])
@@ -1581,7 +1589,7 @@ function render () {
                     "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
                   }, [
                     h("span", {
-                      "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle"
+                      "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
                     }, '{{member.fields.name}}')
                   ])
                 ]),
@@ -1606,7 +1614,7 @@ function render () {
                     "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
                   }, [
                     h("span", {
-                      "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle"
+                      "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
                     }, '{{member.fields.name}}')
                   ])
                 ])
@@ -1631,7 +1639,7 @@ function render () {
                     "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
                   }, [
                     h("span", {
-                      "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle"
+                      "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
                     }, '{{member.fields.name}}')
                   ])
                 ])
@@ -1656,7 +1664,7 @@ function render () {
                     "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
                   }, [
                     h("span", {
-                      "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle"
+                      "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
                     }, '{{member.fields.name}}')
                   ])
                 ])
