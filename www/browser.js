@@ -386,9 +386,11 @@ function render () {
                 h("select#subject.form-control", {
                   'data-ng-model': "contact.subject",
                 },[
-                  h("option", [ "architecture" ]),
-                  h("option", [ "engineering" ]),
-                  h("option", [ "human factors" ])
+                  h("option", "Architecture"),
+                  h("option", "Forensic Consulting"),
+                  h("option", "Building Enclosure"),
+                  h("option", ["Life Safety and Human Factors" ]),
+                  h("option",  "Engineering Services")
                 ])
               ])
             ]),
@@ -1540,7 +1542,7 @@ function render () {
                   }, [
                     h("span", {
                       "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right:10px"
-                    }, '{{member.fields.name}}')
+                    }, '{{member.fields.name}}'," ", '{{member.fields.lastName}}')
                   ])
                 ]),
               ]),
@@ -1565,7 +1567,7 @@ function render () {
                   }, [
                     h("span", {
                       "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
-                    }, '{{member.fields.name}}')
+                    }, '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
                   ])
                 ])
               ]),
@@ -1590,7 +1592,7 @@ function render () {
                   }, [
                     h("span", {
                       "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
-                    }, '{{member.fields.name}}')
+                    }, '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
                   ])
                 ]),
               ]),
@@ -1615,7 +1617,7 @@ function render () {
                   }, [
                     h("span", {
                       "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
-                    }, '{{member.fields.name}}')
+                    }, '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
                   ])
                 ])
               ]),
@@ -1640,7 +1642,7 @@ function render () {
                   }, [
                     h("span", {
                       "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
-                    }, '{{member.fields.name}}')
+                    }, '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
                   ])
                 ])
               ]),
@@ -1665,7 +1667,7 @@ function render () {
                   }, [
                     h("span", {
                       "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
-                    }, '{{member.fields.name}}')
+                    }, '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
                   ])
                 ])
               ]),
@@ -1711,7 +1713,7 @@ function render () {
                   h("h4", {
                     "style":"padding-top:40px"
                   }, [
-                    h("strong", "{{currentTeamMember.fields.name}}")
+                    h("strong", "{{currentTeamMember.fields.name}}"," ", '{{currentTeamMember.fields.lastName}}')
                   ]),
                   h("h4", "{{currentTeamMember.fields.certificationsAndLicenses}}"),
                   h("p", "{{currentTeamMember.fields.bio}}" ),

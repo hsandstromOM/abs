@@ -301,9 +301,11 @@ function render () {
                 h("select#subject.form-control", {
                   'data-ng-model': "contact.subject",
                 },[
-                  h("option", [ "architecture" ]),
-                  h("option", [ "engineering" ]),
-                  h("option", [ "human factors" ])
+                  h("option", "Architecture"),
+                  h("option", "Forensic Consulting"),
+                  h("option", "Building Enclosure"),
+                  h("option", ["Life Safety and Human Factors" ]),
+                  h("option",  "Engineering Services")
                 ])
               ])
             ]),
