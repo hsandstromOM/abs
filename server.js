@@ -100,7 +100,7 @@ function renderApp (req, res, template) {
   sendHtml(req, res, ejs.render(layout, {
     nav: '',
     body: template,
-    footer: footer
+    footer: '',
   }))
 }
 

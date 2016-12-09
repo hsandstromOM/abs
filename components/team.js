@@ -1,6 +1,6 @@
 var h = require('hyperscript')
-var headerNav = require('./shared/headerNav')
-var footer = require('./shared/footer')
+//var headerNav = require('./shared/headerNav')
+//var footer = require('./shared/footer')
 module.exports = {
   url: '/team',
   template: render().outerHTML,
@@ -10,11 +10,15 @@ module.exports = {
   }
 }
 
-function component ($scope, $state, store, contentful, $uibModal, $window, $q) {
+function component($scope, $state, store, contentful, $uibModal, $window, $q) {
   $scope.slide = {
     'teamNav': true
   }
-  $scope.filteredMembers = [
+
+  $scope.sortType = 'lastName'
+  $scope.sortReverse = false
+
+  $scope.filteredMembers= [
     [],[],[],[],[],[],[],[],[]
   ]
   $scope.setCurrentTeamMember = function (member) {
@@ -151,7 +155,7 @@ function render () {
                   }, [
                     h("span", {
                       "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right:10px"
-                    }, '{{member.fields.name}}'," ", '{{member.fields.lastName}}')
+                    }, '{{member.fields.name}}', '{{member.fields.lastName}}')
                   ])
                 ]),
               ]),

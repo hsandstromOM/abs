@@ -73,7 +73,8 @@ ng.module('app', [
    .filter('serviceProvided', require('./filters/serviceProvided.js'))
    .filter('service', require('./filters/serviceProvided.js'))
    .filter('telephone', require('./filters/telephone.js'))
-   .directive('navheader', require('./components/shared/headerNav.js'))   .directive('homehex', require('./components/homeHex.js'))
+   .directive('navheader', require('./components/shared/headerNav.js'))
+   .directive('homehex', require('./components/homeHex.js'))
    .directive('footermenu', require('./components/shared/footer.js'))
 
 // manually bootstrap angular
