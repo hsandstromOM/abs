@@ -85,8 +85,8 @@ ng.element(document).ready(function() {
 
 },{"./components/contact":2,"./components/contentfulWrapper":4,"./components/home":5,"./components/homeHex.js":6,"./components/services":7,"./components/shared/footer.js":8,"./components/shared/headerNav.js":9,"./components/team":10,"./components/work":11,"./components/workDetail":12,"./filters/serviceProvided.js":13,"./filters/telephone.js":14,"./services":101,"angucomplete-alt":15,"angular":32,"angular-cookies":17,"angular-jwt":19,"angular-marked":20,"angular-resource":23,"angular-sanitize":25,"angular-storage":27,"angular-ui-bootstrap":29,"angular-ui-router":30,"auth0-angular":35,"hyperscript":45,"jquery":52,"moment":57,"ngMap":59,"pouchdb":65,"underscore":76}],2:[function(require,module,exports){
 var h = require('hyperscript')
-//var headerNav = require('./shared/headerNav')
-//var footer = require('./shared/footer')
+var headerNav = require('./shared/headerNav')
+var footer = require('./shared/footer')
 module.exports = {
   url: '/contact',
   template: render().outerHTML,
@@ -440,7 +440,7 @@ function render () {
   ])
 }
 
-},{"hyperscript":45}],3:[function(require,module,exports){
+},{"./shared/footer":8,"./shared/headerNav":9,"hyperscript":45}],3:[function(require,module,exports){
 !function(){angular.module("contentful",[])}(),function(){function t(t,n,e,r){var i;n.contentfulEntry&&(i=t.$eval(n.contentfulEntry),r.isQueryString(i)?e.entries(i).then(function(n){var e={};n.data&&n.data.items&&n.data.items.length&&(e=n.data.items[0]),t.$contentfulEntry=e},function(){t.$contentfulEntry={}}):e.entry(i).then(function(n){t.$contentfulEntry=n.data},function(){t.$contentfulEntry={}})),n.hasOwnProperty("contentfulEntries")&&(i=t.$eval(n.contentfulEntries),e.entries(i).then(function(n){t.$contentfulEntries=n.data},function(){t.$contentfulEntries={limit:0,skip:0,total:0,items:[]}}))}t.$inject=["$scope","$attrs","contentful","contentfulHelpers"],angular.module("contentful").controller("ContentfulDirectiveCtrl",t)}(),function(){function t(){return{restrict:"EA",scope:!0,controller:"ContentfulDirectiveCtrl"}}t.$inject=[],angular.module("contentful").directive("contentfulEntries",t)}(),function(){function t(){return{restrict:"EA",scope:!0,controller:"ContentfulDirectiveCtrl"}}t.$inject=[],angular.module("contentful").directive("contentfulEntry",t)}(),function(){function t(){function t(){}return t.prototype.resolveResponse=function(t){var n=this;return n.walkMutate(t,n.isLink,function(e){return n.getLink(t,e)||e}),t.items||[]},t.prototype.isLink=function(t){return t&&t.sys&&t.sys.type&&"Link"===t.sys.type?!0:!1},t.prototype.getLink=function(t,n){var e=this,r=n.sys.linkType,i=n.sys.id,o=function(t){return t&&t.sys&&t.sys.type===r&&t.sys.id===i};return e.findLink(t.items,o)||t.includes&&e.findLink(t.includes[r],o)},t.prototype.findLink=function(t,n){var e,r=null;if(!angular.isArray(t))return r;for(e=0;e<t.length;e++)if(n(t[e])){r=t[e];break}return r},t.prototype.walkMutate=function(t,n,e){var r=this;return n(t)?e(t):angular.isArray(t)||angular.isObject(t)?(angular.forEach(t,function(i,o){t[o]=r.walkMutate(i,n,e)}),t):t},t.prototype.isQueryString=function(t){return t.toString().indexOf("=")>-1?!0:t.toString().indexOf("&")>-1?!0:t.toString().indexOf("?")>-1?!0:!1},new t}angular.module("contentful").factory("contentfulHelpers",t)}(),function(){function t(){function t(t,n,e){return new r(t,n,e,i)}function r(t,n,e,r){if(this._$http=t,this._$q=n,this._contentfulHelpers=e,this.options=r,"function"!=typeof t.get)throw new Error("The contentful service needs a valid http service to work with");if("function"!=typeof n.when)throw new Error("The contentful service needs a valid promise service to work with")}var i={host:"cdn.contentful.com",space:null,accessToken:null,secure:!0};this.setOptions=function(t){return angular.extend(i,t),this},this.$get=t,t.$inject=["$http","$q","contentfulHelpers"],r.prototype.request=function(t,n){var e;return n=n||{},n.headers=n.headers||{},n.params=n.params||{},n.headers["Content-Type"]="application/vnd.contentful.delivery.v1+json",n.params.access_token=this.options.accessToken,e=[this.options.secure?"https":"http","://",this.options.host,":",this.options.secure?"443":"80","/spaces/",this.options.space,t].join(""),this._$http.get(e,n)},r.prototype.asset=function(t){return this.request("/assets/"+t)},r.prototype.assets=function(t){return this.processResponseWithMultipleEntries(this.request("/assets",e(n(t))))},r.prototype.contentType=function(t){return this.request("/content_types/"+t)},r.prototype.contentTypes=function(t){return this.processResponseWithMultipleEntries(this.request("/content_types",e(n(t))))},r.prototype.entry=function(t){return this.request("/entries/"+t)},r.prototype.entries=function(t){return this.processResponseWithMultipleEntries(this.request("/entries",e(n(t))))},r.prototype.space=function(){return this.request("")},r.prototype.processResponseWithMultipleEntries=function(t){var n=this;return t&&t.then&&t.then(function(t){var e={limit:t.data.limit,skip:t.data.skip,total:t.data.total};return e.items=n._contentfulHelpers.resolveResponse(t.data),t.data=e,t},function(t){return t}),t},r.prototype.processResponseWithSingleEntry=function(t){return t&&t.then&&t.then(function(t){return t},function(t){return t}),t}}function n(t){var n={};if(!t)return n;var e=t.toString().split("&");return angular.forEach(e,function(t){var e=t.split("=");e.length>1&&(n[e[0]]=e[1])}),n}function e(t){return angular.isObject(t)||(t={}),{params:t}}angular.module("contentful").provider("contentful",t)}();
 },{}],4:[function(require,module,exports){
 var contentful = require('./contentful')
@@ -450,8 +450,8 @@ module.exports = function () {
 
 },{"./contentful":3}],5:[function(require,module,exports){
 var h = require('hyperscript')
-//var headerNav = require('./shared/headerNav')
-//var footer = require('./shared/footer')
+var headerNav = require('./shared/headerNav')
+var footer = require('./shared/footer')
 
 module.exports = {
   url: '/',
@@ -603,7 +603,7 @@ function render () {
   ])
 }
 
-},{"hyperscript":45}],6:[function(require,module,exports){
+},{"./shared/footer":8,"./shared/headerNav":9,"hyperscript":45}],6:[function(require,module,exports){
 var h = require('hyperscript')
 
 module.exports = function () {
@@ -748,8 +748,8 @@ function render () {
 
 },{"hyperscript":45}],7:[function(require,module,exports){
 var h = require('hyperscript')
-//var headerNav = require('./shared/headerNav')
-//var footer = require('./shared/footer')
+var headerNav = require('./shared/headerNav')
+var footer = require('./shared/footer')
 module.exports = {
  url: '/services',
  template: render().outerHTML,
@@ -854,7 +854,7 @@ function render () {
   ])
 }
 
-},{"hyperscript":45}],8:[function(require,module,exports){
+},{"./shared/footer":8,"./shared/headerNav":9,"hyperscript":45}],8:[function(require,module,exports){
 var h = require('hyperscript')
 
 module.exports = function () {
@@ -925,6 +925,82 @@ function controller ($scope, $state, $stateParams, contentful, store) {
     $scope.defaultService = $scope.allServices[0]
   })
 }
+
+function template () {
+   return h('div', [
+    h("a.bloc-button.btn.btn-d.scrollToTop", {
+       "onclick":"scrollToTarget('1')"
+     }, [
+       h("span.fa.fa-chevron-up")
+    ]),
+   /* ScrollToTop Button END*/
+   /* Bloc Group */
+    h("div.bloc-group", [
+     /* Footer - bloc-16 */
+       h("div#bloc-16.bloc.bloc-tile-3.bgc-white.l-bloc", [
+         h("div.container.bloc-lg", [
+           h("div.row", [
+             h("div.col-sm-12", [
+               h("h6.mg-md", {
+               'data-ui-sref': 'contact',
+               'style':'cursor:pointer'
+              },
+                 "APPLIED BUILDING SCIENCES, INC. | CONTACT US"),
+               h("div.row", [
+                 h("div.col-sm-3", [
+                   h("h6.mg-md", {'data-ui-sref':'home', 'style':'cursor:pointer'},"HOME")
+                 ]),
+                 h("div.col-sm-3", [
+                   h("h6.mg-md", {'data-ui-sref':'team', 'style':'cursor:pointer'},"TEAM")
+                ]),
+                h("div.col-sm-3", [
+                   h("h6.mg-md", {'data-ui-sref':'work', 'style':'cursor:pointer'},"WORK"),
+                   h("h5.mg-md", {
+                     'data-ui-sref':'work({service: serviceProvided})',
+                     'data-ng-repeat': 'serviceProvided in allWorkServicesProvided',
+                     'style':'cursor:pointer'},
+                     '{{serviceProvided.fields.pageTitle}}')
+                 ]),
+                 h("div.col-sm-3", [
+                   h("h6.mg-md", {'data-ui-sref':'services', 'style':'cursor:pointer'},"SERVICES"),
+                    h("h5.mg-md", {
+                      'data-ui-sref':'services({service: service})',
+                      'data-ng-repeat': 'service in allServices',
+                      'style':'cursor:pointer'},
+                      "{{service.fields.pageTitle}}"),
+                 ])
+               ])
+             ])
+           ])
+         ])
+       ]),
+     /* Footer - bloc-16 END */
+     /* Footer - bloc-17 */
+       h("div#bloc-17.bloc.l-bloc.bgc-white.bloc-tile-3", [
+         h("div.container.bloc-lg", [
+           h("div.row", [
+             h("div.col-sm-12")
+           ])
+         ])
+       ]),
+     /* Footer - bloc-17 END */
+     /* Footer - bloc-18 */
+       h("div#bloc-18.bloc.bloc-tile-3.bgc-white.l-bloc", [
+         h("div.container.bloc-lg", [
+           h("div.row", [
+            h("div.col-sm-12", [
+              h("img.img-responsive", {
+                 "src":"img/ABS_footer_logo.png"
+               })
+             ])
+           ])
+         ])
+       ])
+     /* Footer - bloc-18 END */
+     ])
+   ])
+ }
+ //}
 
 },{"hyperscript":45}],9:[function(require,module,exports){
 var h = require('hyperscript')
@@ -1315,8 +1391,8 @@ function template () {
 
 },{"hyperscript":45}],10:[function(require,module,exports){
 var h = require('hyperscript')
-//var headerNav = require('./shared/headerNav')
-//var footer = require('./shared/footer')
+var headerNav = require('./shared/headerNav')
+var footer = require('./shared/footer')
 module.exports = {
   url: '/team',
   template: render().outerHTML,
@@ -1673,10 +1749,10 @@ function render () {
     ])
 }
 
-},{"hyperscript":45}],11:[function(require,module,exports){
+},{"./shared/footer":8,"./shared/headerNav":9,"hyperscript":45}],11:[function(require,module,exports){
 var h = require('hyperscript')
-//var headerNav = require('./shared/headerNav')
-//var footer = require('./shared/footer')
+var headerNav = require('./shared/headerNav')
+var footer = require('./shared/footer')
 module.exports = {
   url: '/work',
   template: render().outerHTML,
@@ -1786,10 +1862,10 @@ function render () {
   ])
 }
 
-},{"hyperscript":45}],12:[function(require,module,exports){
+},{"./shared/footer":8,"./shared/headerNav":9,"hyperscript":45}],12:[function(require,module,exports){
 var h = require('hyperscript')
-//var headerNav = require('./shared/headerNav')
-//var footer = require('./shared/footer')
+var headerNav = require('./shared/headerNav')
+var footer = require('./shared/footer')
 module.exports = {
   url: '/workDetail',
   template: render().outerHTML,
@@ -2103,7 +2179,7 @@ function render () {
   ])
 }
 
-},{"hyperscript":45}],13:[function(require,module,exports){
+},{"./shared/footer":8,"./shared/headerNav":9,"hyperscript":45}],13:[function(require,module,exports){
 module.exports = function () {
   return function(items, currentServiceProvided) {
     var workProjectsFiltered = [];
