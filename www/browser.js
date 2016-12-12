@@ -1622,20 +1622,21 @@ function render () {
                   "style":"padding:10px",
                   "type": 'button',
                   'aria-label': 'close',
-                  'data-dismmiss': 'modal'
+                  'data-dismiss': 'modal'
                 }, [
                   h("span", {
                     "aria-hidden":"true"
                   }, "x")
                 ]),
                 h("div.col-sm-4", {
-                  "style":"padding:20; padding-top:100px"
-                }, [
-                  h("img.img-responsive.center-block", {
-                    "data-ng-src":"{{currentTeamMember.fields.fullImage.fields.file.url}}",
-                    "alt":""
-                  })
-                ]),
+                 "style":"padding:20; padding-top:60px; padding-left:20"
+               }, [
+                 h("img.img-responsive.center-block", {
+                   "data-ng-src":"{{currentTeamMember.fields.fullImage.fields.file.url}}",
+                   "alt":""
+                 })
+               ]),
+
                 h("div.col-sm-7", {
                   "style":"padding-left:40px"
                 }, [
