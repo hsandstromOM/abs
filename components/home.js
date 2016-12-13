@@ -63,7 +63,7 @@ function render () {
                 h('br'),
                 h('br'),
                 h('div.text-center', [
-                  h("i.fa.fa-2x.fa-angle-down.icon-green-ryb")
+                  h("i.fa.fa-3x.fa-angle-down.icon-green-ryb")
                 ]),
                 h("h3.mg-md.text-center.tc-green-ryb", "WHO WE ARE.")
               ])
@@ -85,7 +85,7 @@ function render () {
             h('div.col-sm-12', {'style':'margin-left:0px! important;'}, [
               h("br"),
               h('div.text-center', [
-                h("i.fa.fa-2x.fa-angle-down.icon-green-ryb")
+                h("i.fa.fa-3x.fa-angle-down.icon-green-ryb")
               ]),
               h("h3.mg-md.text-center.tc-green-ryb", ["WHAT WE DO."])
             ])

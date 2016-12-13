@@ -514,7 +514,7 @@ function render () {
                 h('br'),
                 h('br'),
                 h('div.text-center', [
-                  h("i.fa.fa-2x.fa-angle-down.icon-green-ryb")
+                  h("i.fa.fa-3x.fa-angle-down.icon-green-ryb")
                 ]),
                 h("h3.mg-md.text-center.tc-green-ryb", "WHO WE ARE.")
               ])
@@ -536,7 +536,7 @@ function render () {
             h('div.col-sm-12', {'style':'margin-left:0px! important;'}, [
               h("br"),
               h('div.text-center', [
-                h("i.fa.fa-2x.fa-angle-down.icon-green-ryb")
+                h("i.fa.fa-3x.fa-angle-down.icon-green-ryb")
               ]),
               h("h3.mg-md.text-center.tc-green-ryb", ["WHAT WE DO."])
             ])
@@ -949,7 +949,9 @@ function template () {
                'style':'cursor:pointer'
               },
                  "APPLIED BUILDING SCIENCES, INC. | CONTACT US"),
-               h("div.row", [
+               h("div.row", {
+                 "style":"padding-top:20px"
+               },[
                  h("div.col-sm-3", [
                    h("h6.mg-md", {'data-ui-sref':'home', 'style':'cursor:pointer'},"HOME")
                  ]),
@@ -1120,7 +1122,7 @@ function template () {
             ])
           ]),
           h("div.navbar-collapse.navbar-1.collapse.hidden-md", {
-          'style':'box-shadow: rgba(0, 0, 0, 0.0470588) 0px 3px 8px 4px inset;background-color: rgb(246, 246, 246);'
+          'style':' box-shadow: 0px 3px 27px 0px rgba(0, 0, 0, 0.35);'
         }, [
             h("ul.site-navigation.nav.navbar-nav", {
               "style":"border-top:none; backround-color:none;"
@@ -1169,7 +1171,7 @@ function template () {
       ])
     ]),
     h('nav.navbar.navbar-default.navSmall', {
-      'style':'z-index:20;display:none;padding-top: 10px;box-shadow: rgba(0, 0, 0, 0.0470588) 0px 3px 8px 4px inset;background-color: rgb(246, 246, 246);'
+      'style':'z-index:20;display:none;padding-top: 10px; box-shadow: 0px 3px 27px 0px rgba(0, 0, 0, 0.35);'
     },[
       h('div.container-fluid', [
         h('div.navbar-header', [
@@ -1195,7 +1197,7 @@ function template () {
           'style':'height:100% !important'
         },[
 
-          h('ul.nav.navbar-nav', {'style':'box-shadow: rgba(0, 0, 0, 0.0470588) 0px 3px 8px 4px inset;margin-top: -4px;height: 100vh;border-top-style: none;'},[
+          h('ul.nav.navbar-nav', {'style':'box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 27px 0px inset;margin-top: -4px;height: 100vh;border-top-style: none;'},[
             h('li.dropdown', {
               'style':'text-align: center;'
             },[

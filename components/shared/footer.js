@@ -89,7 +89,9 @@ function template () {
                'style':'cursor:pointer'
               },
                  "APPLIED BUILDING SCIENCES, INC. | CONTACT US"),
-               h("div.row", [
+               h("div.row", {
+                 "style":"padding-top:20px"
+               },[
                  h("div.col-sm-3", [
                    h("h6.mg-md", {'data-ui-sref':'home', 'style':'cursor:pointer'},"HOME")
                  ]),
