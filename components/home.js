@@ -43,7 +43,7 @@ function render () {
       /* bloc-0 END */
       h("div.closeNav", [
         /* bloc-1 */
-        h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:100vh;'},[
+        h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:50vh;'},[
           h('img.honeycomb-left',{
             'src':'img/honeycomb_pattern.png',
             'style':"max-height:400px;z-index:1;margin-left:-50px !important;"
@@ -111,6 +111,7 @@ function render () {
               h("div.col-sm-12", [
                 h("h2.mg-md.text-center.tc-prussian-blue", "TEAM MEMBER SPOTLIGHT"),
                 h("p.text-center", {
+                  'style': "margin-left:120px; margin-right:120px; margin-bottom:65px;",
                   'data-marked': 'contentfulData.fields.teamMemberSpotlightContent'
                 }),
                 h("div.text-center", [
@@ -125,10 +126,12 @@ function render () {
         /* bloc-5 END */
         /* bloc-6 */
         h("div#bloc-6.bloc.tc-white.bgc-royal-blue-traditional", [
-          h("div.container.bloc-lg", [
+          h("div.container.bloc-md", [
             h("div.row", [
               h("div.col-sm-4", [
-                h("h2.mg-md.tc-white", "CERTIFICATIONS AND LICENSES")
+                h("h2.tc-white", {
+                  "style":"margin-top:0"
+                }, "CERTIFICATIONS AND LICENSES")
               ]),
               h("div.col-sm-4", [
                 h("p", {

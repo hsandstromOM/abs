@@ -81,7 +81,7 @@ function template () {
     h("div.bloc-group", [
      /* Footer - bloc-16 */
        h("div#bloc-16.bloc.bloc-tile-3.bgc-white.l-bloc", [
-         h("div.container.bloc-lg", [
+         h("div.container.bloc-md", [
            h("div.row", [
              h("div.col-sm-12", [
                h("h6.mg-md", {
@@ -120,7 +120,7 @@ function template () {
      /* Footer - bloc-16 END */
      /* Footer - bloc-17 */
        h("div#bloc-17.bloc.l-bloc.bgc-white.bloc-tile-3", [
-         h("div.container.bloc-lg", [
+         h("div.container.bloc-md", [
            h("div.row", [
              h("div.col-sm-12")
            ])
@@ -129,7 +129,7 @@ function template () {
      /* Footer - bloc-17 END */
      /* Footer - bloc-18 */
        h("div#bloc-18.bloc.bloc-tile-3.bgc-white.l-bloc", [
-         h("div.container.bloc-lg", [
+         h("div.container.bloc-md", [
            h("div.row", [
             h("div.col-sm-12", [
               h("img.img-responsive", {

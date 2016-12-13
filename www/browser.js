@@ -494,7 +494,7 @@ function render () {
       /* bloc-0 END */
       h("div.closeNav", [
         /* bloc-1 */
-        h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:100vh;'},[
+        h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:50vh;'},[
           h('img.honeycomb-left',{
             'src':'img/honeycomb_pattern.png',
             'style':"max-height:400px;z-index:1;margin-left:-50px !important;"
@@ -562,6 +562,7 @@ function render () {
               h("div.col-sm-12", [
                 h("h2.mg-md.text-center.tc-prussian-blue", "TEAM MEMBER SPOTLIGHT"),
                 h("p.text-center", {
+                  'style': "margin-left:120px; margin-right:120px; margin-bottom:65px;",
                   'data-marked': 'contentfulData.fields.teamMemberSpotlightContent'
                 }),
                 h("div.text-center", [
@@ -576,10 +577,12 @@ function render () {
         /* bloc-5 END */
         /* bloc-6 */
         h("div#bloc-6.bloc.tc-white.bgc-royal-blue-traditional", [
-          h("div.container.bloc-lg", [
+          h("div.container.bloc-md", [
             h("div.row", [
               h("div.col-sm-4", [
-                h("h2.mg-md.tc-white", "CERTIFICATIONS AND LICENSES")
+                h("h2.tc-white", {
+                  "style":"margin-top:0"
+                }, "CERTIFICATIONS AND LICENSES")
               ]),
               h("div.col-sm-4", [
                 h("p", {
@@ -938,7 +941,7 @@ function template () {
     h("div.bloc-group", [
      /* Footer - bloc-16 */
        h("div#bloc-16.bloc.bloc-tile-3.bgc-white.l-bloc", [
-         h("div.container.bloc-lg", [
+         h("div.container.bloc-md", [
            h("div.row", [
              h("div.col-sm-12", [
                h("h6.mg-md", {
@@ -977,7 +980,7 @@ function template () {
      /* Footer - bloc-16 END */
      /* Footer - bloc-17 */
        h("div#bloc-17.bloc.l-bloc.bgc-white.bloc-tile-3", [
-         h("div.container.bloc-lg", [
+         h("div.container.bloc-md", [
            h("div.row", [
              h("div.col-sm-12")
            ])
@@ -986,7 +989,7 @@ function template () {
      /* Footer - bloc-17 END */
      /* Footer - bloc-18 */
        h("div#bloc-18.bloc.bloc-tile-3.bgc-white.l-bloc", [
-         h("div.container.bloc-lg", [
+         h("div.container.bloc-md", [
            h("div.row", [
             h("div.col-sm-12", [
               h("img.img-responsive", {
@@ -1098,14 +1101,16 @@ function controller ($scope, $state, $stateParams, contentful, store) {
 
 function template () {
   return h('div', [
-    h("div#bloc-0.bloc.bgc-white.l-bloc.navBig", [
-      h("div.container.bloc-sm", [
+    h("div#bloc-0.bloc.bgc-white.l-bloc.navBig",{
+    }, [
+      h("div.container.bloc-sm",  [
         h("nav.navbar.navbar-default.navbar-fixed-top", {
           'data-ng-class': "slide.workNav ? 'navShadow' : 'noShadow' || slide.serviceNav ? 'navShadow' : 'noShadow' || slide.teamNav ? 'navShadow' : 'noShadow'",
-          "style":"background-color:white",
+          "style":"background-color:white;",
         }, [
           h("div.navbar-header", [
             h(".navbar-brand", {
+              "style": "padding-left: 5vh;",
               'data-ui-sref': 'home'
             }, [
               h("img",{
@@ -1121,39 +1126,39 @@ function template () {
               "style":"border-top:none; backround-color:none;"
             }, [
               h("li", {
-                "style":"padding-right:20px; text-align:center;"
+                "style":"padding-right:10vh; text-align:center;"
               }, [
                 h("#team.tk-aaux-next", {
-                  "style":"cursor:pointer;font-size: 16px;font-weight:bold;line-height:5px;padding-top: 15px;padding-bottom: 15px;font-weight:600 !important;",
+                  "style":"cursor:pointer;font-size: 18px;font-weight:bold;line-height:21px;padding-top: 15px;padding-bottom: 15px;font-weight:600 !important;",
                   "data-ui-sref":'team',
                   'data-ng-class': "mainPage === 'team' ? 'active' : 'ltc-royal-blue-traditional'"
                 }, "TEAM")
               ]),
               h("li", {
-                "style":"padding-right:20px; text-align:center;"
+                "style":"padding-right:10vh; text-align:center;"
               }, [
                 h("#work.tk-aaux-next", {
-                  "style": "cursor:pointer;font-size: 16px;font-weight:bold;line-height:5px;padding-top: 15px;padding-bottom: 15px;font-weight:600 !important;",
+                  "style": "cursor:pointer;font-size: 18px;font-weight:bold;line-height:21px;padding-top: 15px;padding-bottom: 15px;font-weight:600 !important;",
                   'data-ui-sref': 'work({service: defaultWorkService})',
                   'data-ng-click': 'setWorkService()',
                   'data-ng-class': "mainPage === 'work' ? 'active' : 'ltc-royal-blue-traditional'"
                 }, "WORK")
               ]),
               h("li", {
-                "style":"padding-right:20px; text-align:center;"
+                "style":"padding-right:10vh; text-align:center;"
               }, [
                 h("div#services.tk-aaux-next", {
-                  "style": "cursor: pointer; font-size: 16px; line-height: 5px; padding-top: 15px; padding-bottom: 15px; font-weight: 600 !important;",
+                  "style": "cursor: pointer; font-size: 18px; line-height: 21px; padding-top: 15px; padding-bottom: 15px; font-weight: 600 !important;",
                   'data-ng-click': 'setSelectedService()',
                   'data-ui-sref': 'services()',
                   'data-ng-class': "mainPage === 'services' ? 'active' : 'ltc-royal-blue-traditional'"
                 }, "SERVICES"),
               ]),
               h("li", {
-                'style':'margin-right: 10px;'
+                'style':'padding-right: 10vh;text-align:center;padding-top: 10px; padding-bottom: 10px;'
               }, [
                 h("a", {
-                  "style":"color:white;line-height:5px;font-weight:bold; margin: auto;width:140px;text-align:center;padding-top:15px;padding-bottom:15px;",
+                  "style":"color:white;line-height:21px;font-weight:bold; margin: auto;width:180px;text-align:center;padding-top:5px;padding-bottom:5px;",
                   "data-ui-sref":"contact",
                   'data-ng-class': "page === 'contact' ? 'greenContact' : 'blueContact'"
                 }, "CONTACT"),
