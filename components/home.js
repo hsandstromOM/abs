@@ -111,7 +111,7 @@ function render () {
               h("div.col-sm-12", [
                 h("h2.mg-md.text-center.tc-prussian-blue", "TEAM MEMBER SPOTLIGHT"),
                 h("p.text-center", {
-                  'style': "margin-left:120px; margin-right:120px; margin-bottom:65px;",
+                  'style': "margin-left:200px; margin-right:200px; margin-bottom:65px;",
                   'data-marked': 'contentfulData.fields.teamMemberSpotlightContent'
                 }),
                 h("div.text-center", [
