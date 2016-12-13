@@ -1128,36 +1128,36 @@ function template () {
               "style":"border-top:none; backround-color:none;"
             }, [
               h("li", {
-                "style":"padding-right:10vh; text-align:center;"
+                "style":"padding-right:2vh; text-align:center;"
               }, [
                 h("#team.tk-aaux-next", {
-                  "style":"cursor:pointer;font-size: 18px;font-weight:bold;line-height:21px;padding-top: 15px;padding-bottom: 15px;font-weight:600 !important;",
+                  "style":"cursor:pointer;font-size: 18px;font-weight:normal;line-height:21px;padding-top: 15px;padding-bottom: 15px;font-weight:600 !important;",
                   "data-ui-sref":'team',
                   'data-ng-class': "mainPage === 'team' ? 'active' : 'ltc-royal-blue-traditional'"
                 }, "TEAM")
               ]),
               h("li", {
-                "style":"padding-right:10vh; text-align:center;"
+                "style":"padding-right:2vh; text-align:center;"
               }, [
                 h("#work.tk-aaux-next", {
-                  "style": "cursor:pointer;font-size: 18px;font-weight:bold;line-height:21px;padding-top: 15px;padding-bottom: 15px;font-weight:600 !important;",
+                  "style": "cursor:pointer;font-size: 18px;font-weight:normal;line-height:21px;padding-top: 15px;padding-bottom: 15px;font-weight:600 !important;",
                   'data-ui-sref': 'work({service: defaultWorkService})',
                   'data-ng-click': 'setWorkService()',
                   'data-ng-class': "mainPage === 'work' ? 'active' : 'ltc-royal-blue-traditional'"
                 }, "WORK")
               ]),
               h("li", {
-                "style":"padding-right:10vh; text-align:center;"
+                "style":"padding-right:2vh; text-align:center;"
               }, [
                 h("div#services.tk-aaux-next", {
-                  "style": "cursor: pointer; font-size: 18px; line-height: 21px; padding-top: 15px; padding-bottom: 15px; font-weight: 600 !important;",
+                  "style": "cursor: pointer; font-size: 18px;font-weight:normal;line-height: 21px; padding-top: 15px; padding-bottom: 15px; font-weight: 600 !important;",
                   'data-ng-click': 'setSelectedService()',
                   'data-ui-sref': 'services()',
                   'data-ng-class': "mainPage === 'services' ? 'active' : 'ltc-royal-blue-traditional'"
                 }, "SERVICES"),
               ]),
               h("li", {
-                'style':'padding-right: 10vh;text-align:center;padding-top: 10px; padding-bottom: 10px;'
+                'style':'padding-right: 2vh;text-align:center;padding-top: 10px; padding-bottom: 10px;'
               }, [
                 h("a", {
                   "style":"color:white;line-height:21px;font-weight:bold; margin: auto;width:180px;text-align:center;padding-top:5px;padding-bottom:5px;",
@@ -1696,7 +1696,7 @@ function render () {
             "role": 'document'
           }, [
             h("div.modal-content", {
-              "style":"border-radius:0;height:402px;width:130%"
+              "style":"border-radius:0;height:500px;width:130%"
             }, [
               h("div.modal-body", {
                 "style":"padding:0"
@@ -1711,16 +1711,16 @@ function render () {
                     "aria-hidden":"true"
                   }, "x")
                 ]),
-                h("div.col-sm-4", {
-                 "style":"padding:20; padding-top:60px; padding-left:20"
+                h("div.col-sm-6", {
+                 "style":"padding-left: 0px;  padding-right: 0px;"
                }, [
-                 h("img.img-responsive.center-block", {
+                 h("img.img-responsive", {
                    "data-ng-src":"{{currentTeamMember.fields.fullImage.fields.file.url}}",
                    "alt":""
                  })
                ]),
 
-                h("div.col-sm-7", {
+                h("div.col-sm-6", {
                   "style":"padding-left:40px"
                 }, [
                   h("h4", {

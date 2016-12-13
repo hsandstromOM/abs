@@ -297,7 +297,7 @@ function render () {
             "role": 'document'
           }, [
             h("div.modal-content", {
-              "style":"border-radius:0;height:402px;width:130%"
+              "style":"border-radius:0;height:500px;width:130%"
             }, [
               h("div.modal-body", {
                 "style":"padding:0"
@@ -312,16 +312,16 @@ function render () {
                     "aria-hidden":"true"
                   }, "x")
                 ]),
-                h("div.col-sm-4", {
-                 "style":"padding:20; padding-top:60px; padding-left:20"
+                h("div.col-sm-6", {
+                 "style":"padding-left: 0px;  padding-right: 0px;"
                }, [
-                 h("img.img-responsive.center-block", {
+                 h("img.img-responsive", {
                    "data-ng-src":"{{currentTeamMember.fields.fullImage.fields.file.url}}",
                    "alt":""
                  })
                ]),
 
-                h("div.col-sm-7", {
+                h("div.col-sm-6", {
                   "style":"padding-left:40px"
                 }, [
                   h("h4", {

@@ -118,36 +118,36 @@ function template () {
               "style":"border-top:none; backround-color:none;"
             }, [
               h("li", {
-                "style":"padding-right:10vh; text-align:center;"
+                "style":"padding-right:2vh; text-align:center;"
               }, [
                 h("#team.tk-aaux-next", {
-                  "style":"cursor:pointer;font-size: 18px;font-weight:bold;line-height:21px;padding-top: 15px;padding-bottom: 15px;font-weight:600 !important;",
+                  "style":"cursor:pointer;font-size: 18px;font-weight:normal;line-height:21px;padding-top: 15px;padding-bottom: 15px;font-weight:600 !important;",
                   "data-ui-sref":'team',
                   'data-ng-class': "mainPage === 'team' ? 'active' : 'ltc-royal-blue-traditional'"
                 }, "TEAM")
               ]),
               h("li", {
-                "style":"padding-right:10vh; text-align:center;"
+                "style":"padding-right:2vh; text-align:center;"
               }, [
                 h("#work.tk-aaux-next", {
-                  "style": "cursor:pointer;font-size: 18px;font-weight:bold;line-height:21px;padding-top: 15px;padding-bottom: 15px;font-weight:600 !important;",
+                  "style": "cursor:pointer;font-size: 18px;font-weight:normal;line-height:21px;padding-top: 15px;padding-bottom: 15px;font-weight:600 !important;",
                   'data-ui-sref': 'work({service: defaultWorkService})',
                   'data-ng-click': 'setWorkService()',
                   'data-ng-class': "mainPage === 'work' ? 'active' : 'ltc-royal-blue-traditional'"
                 }, "WORK")
               ]),
               h("li", {
-                "style":"padding-right:10vh; text-align:center;"
+                "style":"padding-right:2vh; text-align:center;"
               }, [
                 h("div#services.tk-aaux-next", {
-                  "style": "cursor: pointer; font-size: 18px; line-height: 21px; padding-top: 15px; padding-bottom: 15px; font-weight: 600 !important;",
+                  "style": "cursor: pointer; font-size: 18px;font-weight:normal;line-height: 21px; padding-top: 15px; padding-bottom: 15px; font-weight: 600 !important;",
                   'data-ng-click': 'setSelectedService()',
                   'data-ui-sref': 'services()',
                   'data-ng-class': "mainPage === 'services' ? 'active' : 'ltc-royal-blue-traditional'"
                 }, "SERVICES"),
               ]),
               h("li", {
-                'style':'padding-right: 10vh;text-align:center;padding-top: 10px; padding-bottom: 10px;'
+                'style':'padding-right: 2vh;text-align:center;padding-top: 10px; padding-bottom: 10px;'
               }, [
                 h("a", {
                   "style":"color:white;line-height:21px;font-weight:bold; margin: auto;width:180px;text-align:center;padding-top:5px;padding-bottom:5px;",
