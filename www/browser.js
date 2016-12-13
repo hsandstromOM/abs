@@ -1131,7 +1131,7 @@ function template () {
                 "style":"padding-right:2vh; text-align:center;"
               }, [
                 h("#team.tk-aaux-next", {
-                  "style":"cursor:pointer;font-size: 18px;font-weight:normal;line-height:21px;padding-top: 15px;padding-bottom: 15px;font-weight:600 !important;",
+                  "style":"cursor:pointer;font-size: 18px;font-weight:normal;line-height:21px;padding-top: 15px;padding-bottom: 15px;",
                   "data-ui-sref":'team',
                   'data-ng-class': "mainPage === 'team' ? 'active' : 'ltc-royal-blue-traditional'"
                 }, "TEAM")
@@ -1140,7 +1140,7 @@ function template () {
                 "style":"padding-right:2vh; text-align:center;"
               }, [
                 h("#work.tk-aaux-next", {
-                  "style": "cursor:pointer;font-size: 18px;font-weight:normal;line-height:21px;padding-top: 15px;padding-bottom: 15px;font-weight:600 !important;",
+                  "style": "cursor:pointer;font-size: 18px;font-weight:normal;line-height:21px;padding-top: 15px;padding-bottom: 15px;",
                   'data-ui-sref': 'work({service: defaultWorkService})',
                   'data-ng-click': 'setWorkService()',
                   'data-ng-class': "mainPage === 'work' ? 'active' : 'ltc-royal-blue-traditional'"
@@ -1150,7 +1150,7 @@ function template () {
                 "style":"padding-right:2vh; text-align:center;"
               }, [
                 h("div#services.tk-aaux-next", {
-                  "style": "cursor: pointer; font-size: 18px;font-weight:normal;line-height: 21px; padding-top: 15px; padding-bottom: 15px; font-weight: 600 !important;",
+                  "style": "cursor: pointer; font-size: 18px;font-weight:normal;line-height: 21px; padding-top: 15px; padding-bottom: 15px;",
                   'data-ng-click': 'setSelectedService()',
                   'data-ui-sref': 'services()',
                   'data-ng-class': "mainPage === 'services' ? 'active' : 'ltc-royal-blue-traditional'"
