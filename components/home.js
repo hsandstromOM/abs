@@ -80,6 +80,10 @@ function render () {
             h("div.col-sm-8.col-sm-offset-2", [
               h("p.text-left", {
                 'data-marked': 'contentfulData.fields.whoWeAreContent'
+              }),
+              h("p.text-left", {
+                'style': "font-weight: 600 !important",
+                'data-marked': 'contentfulData.fields.whoWeAreContentCloser'
               })
             ]),
             h('div.col-sm-12', {'style':'margin-left:0px! important;'}, [
