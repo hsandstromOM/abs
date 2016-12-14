@@ -92,7 +92,10 @@ function render () {
           ])
         ])
       ]),
-      h('.container', [
+      h('.container', {
+        'style': "background-color:#ffffff;min-width:100% !important"
+      },
+      [
 
 
       h('div.col-md-12', {

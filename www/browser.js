@@ -543,7 +543,10 @@ function render () {
           ])
         ])
       ]),
-      h('.container', [
+      h('.container', {
+        'style': "background-color:#ffffff;min-width:100% !important"
+      },
+      [
 
 
       h('div.col-md-12', {
@@ -675,7 +678,7 @@ function render () {
           "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
         }, [
           h("span", {
-            "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle",
+            "style":"letter-spacing:1.5px;font-weight:bold;color:white;display:inline-block;vertical-align:middle",
           }, "{{service.fields.pageTitle}}")
         ])
       ])
@@ -697,7 +700,7 @@ function render () {
           "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
         }, [
           h("span", {
-            "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle",
+            "style":"letter-spacing:1.5px;font-weight:bold;color:white;display:inline-block;vertical-align:middle",
           }, "{{service.fields.pageTitle}}")
         ])
       ])
