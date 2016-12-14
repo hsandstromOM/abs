@@ -1323,9 +1323,9 @@ function template () {
       'style': 'background-color:#c5ceca;overflow-x:scroll;overflow-y:hidden;white-space:nowrap;',
       'data-ng-class': "slide.workNav ? 'slideNavDown' : 'slideNavUp'"
     }, [
-      h("div.subnavitem.col-xs-6.col-md-6",
+      h("div.subnavitem.col-xs-3.col-md-3",
       {
-        "style":"border-left:none;",
+        "style":"border-left:none;border-right:1px solid white;display:inline-block !important; width:20%",
         'data-ng-repeat': 'serviceProvided in allWorkServicesProvided',
         'data-ng-click': 'setWorkService(serviceProvided)'
       }, [
