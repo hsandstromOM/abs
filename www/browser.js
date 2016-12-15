@@ -535,7 +535,7 @@ function render () {
               h("p.text-left", {
                 'style': "font-weight: 600 !important",
                 'data-marked': 'contentfulData.fields.whoWeAreContentCloser'
-              })
+              }),
             ]),
             h('div.col-sm-12', {'style':'margin-left:0px! important;'}, [
               h("br"),
