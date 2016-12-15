@@ -1858,7 +1858,7 @@ function render () {
                 h("strong", '{{workProject.fields.title}}')
               ]),
               h("p", {
-                'data-marked': 'workProject.fields.description | limitTo: 200'
+                'data-marked': 'workProject.fields.workProjectSummary'
               }),
               h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
                 "data-ui-sref":"workDetail({obj: workProject})"
