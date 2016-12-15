@@ -149,8 +149,8 @@ function template () {
               h("li", {
                 'style':'padding-right: 2vh;text-align:center;padding-top: 10px; padding-bottom: 10px;'
               }, [
-                h("a", {
-                  "style":"font-style: tk-industry;color:white;line-height:21px;font-weight: bold; margin: auto;width:180px;text-align:center;padding-top:5px;padding-bottom:5px;",
+                h("a.tk-industry", {
+                  "style":"color:white;line-height:21px;font-weight: bold; margin: auto;width:180px;text-align:center;padding-top:5px;padding-bottom:5px;",
                   "data-ui-sref":"contact",
                   'data-ng-class': "page === 'contact' ? 'greenContact' : 'blueContact'"
                 }, "CONTACT"),
