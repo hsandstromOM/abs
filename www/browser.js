@@ -1703,21 +1703,19 @@ function render () {
             "role": 'document'
           }, [
             h("div.modal-content", {
-              "style":"border-radius:0;height:500px;width:130%"
+              "style":"border-radius:0;height:442px;width:130%"
             }, [
               h("div.modal-body", {
                 "style":"padding:0"
               }, [
-                h("button.close", {
-                  "style":"padding:10px",
+                h("i.fa.fa-times-circle", {
+                  "style":"padding:10px; margin-left: 350px",
                   "type": 'button',
                   'aria-label': 'close',
+                  "aria-hidden":"true",
                   'data-dismiss': 'modal'
-                }, [
-                  h("span", {
-                    "aria-hidden":"true"
-                  }, "x")
-                ]),
+                }
+              ),
                 h("div.col-sm-6", {
                  "style":"padding-left: 0px;  padding-right: 0px;"
                }, [
@@ -1731,7 +1729,7 @@ function render () {
                   "style":"padding-left:40px"
                 }, [
                   h("h4", {
-                    "style":"padding-top:40px"
+                    "style":"padding-top:5px"
                   }, [
                     h("strong", "{{currentTeamMember.fields.name}}"," ", '{{currentTeamMember.fields.lastName}}')
                   ]),
