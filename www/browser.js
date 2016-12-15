@@ -1137,7 +1137,7 @@ function template () {
               h("li", {
                 "style":"padding-right:2vh; text-align:center;"
               }, [
-                h("#team.tk-aaux-next", {
+                h("#team.tk-industry", {
                   "style":"cursor:pointer;font-size: 18px;font-weight:normal;line-height:21px;padding-top: 15px;padding-bottom: 15px;",
                   "data-ui-sref":'team',
                   'data-ng-class': "mainPage === 'team' ? 'active' : 'ltc-royal-blue-traditional'"
@@ -1146,7 +1146,7 @@ function template () {
               h("li", {
                 "style":"padding-right:2vh; text-align:center;"
               }, [
-                h("#work.tk-aaux-next", {
+                h("#work.tk-industry", {
                   "style": "cursor:pointer;font-size: 18px;font-weight:normal;line-height:21px;padding-top: 15px;padding-bottom: 15px;",
                   'data-ui-sref': 'work({service: defaultWorkService})',
                   'data-ng-click': 'setWorkService()',
@@ -1156,7 +1156,7 @@ function template () {
               h("li", {
                 "style":"padding-right:2vh; text-align:center;"
               }, [
-                h("div#services.tk-aaux-next", {
+                h("div#services.tk-industry", {
                   "style": "cursor: pointer; font-size: 18px;font-weight:normal;line-height: 21px; padding-top: 15px; padding-bottom: 15px;",
                   'data-ng-click': 'setSelectedService()',
                   'data-ui-sref': 'services()',
@@ -1167,7 +1167,7 @@ function template () {
                 'style':'padding-right: 2vh;text-align:center;padding-top: 10px; padding-bottom: 10px;'
               }, [
                 h("a", {
-                  "style":"color:white;line-height:21px;font-weight:bold; margin: auto;width:180px;text-align:center;padding-top:5px;padding-bottom:5px;",
+                  "style":"font-style: tk-industry;color:white;line-height:21px;font-weight: bold; margin: auto;width:180px;text-align:center;padding-top:5px;padding-bottom:5px;",
                   "data-ui-sref":"contact",
                   'data-ng-class': "page === 'contact' ? 'greenContact' : 'blueContact'"
                 }, "CONTACT"),
