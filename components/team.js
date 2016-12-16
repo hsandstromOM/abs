@@ -153,7 +153,7 @@ function render () {
                   h("div.hexText", {
                     "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
                   }, [
-                    h("span", {
+                    h("p", {
                       "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right:10px"
                     }, '{{member.fields.name}}', '{{member.fields.lastName}}')
                   ])
@@ -178,7 +178,7 @@ function render () {
                   h("div.hexText", {
                     "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
                   }, [
-                    h("span", {
+                    h("p", {
                       "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
                     }, '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
                   ])
@@ -203,7 +203,7 @@ function render () {
                   h("div.hexText", {
                     "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
                   }, [
-                    h("span", {
+                    h("p", {
                       "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
                     }, '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
                   ])
@@ -228,7 +228,7 @@ function render () {
                   h("div.hexText", {
                     "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
                   }, [
-                    h("span", {
+                    h("p", {
                       "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
                     }, '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
                   ])
@@ -253,7 +253,7 @@ function render () {
                   h("div.hexText", {
                     "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
                   }, [
-                    h("span", {
+                    h("p", {
                       "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
                     }, '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
                   ])
@@ -278,7 +278,7 @@ function render () {
                   h("div.hexText", {
                     "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
                   }, [
-                    h("span", {
+                    h("p", {
                       "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
                     }, '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
                   ])

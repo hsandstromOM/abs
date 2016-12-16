@@ -183,9 +183,9 @@
   margin-top: -65px; }
 
 .navShadow {
-  -webkit-box-shadow: 0px 10px 85px -8px rgba(0, 0, 0, 0.44);
-  -moz-box-shadow: 0px 10px 85px -8px rgba(0, 0, 0, 0.44);
-  box-shadow: 0px 10px 85px -8px rgba(0, 0, 0, 0.44); }
+  -webkit-box-shadow: 1.5px 2.598px 27px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 1.5px 2.598px 27px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 1.5px 2.598px 27px 0px rgba(0, 0, 0, 0.35); }
 
 .navbar-fixed-top .navbar-collapse {
   height: 100vh; }
@@ -426,6 +426,7 @@ a, button {
   font-size: 38px; }
 
 #bloc-6 p {
+  font-family: "industry",sans-serif;
   font-size: 18px; }
 
 #bloc-7 h1 {
