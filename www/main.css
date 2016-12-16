@@ -451,10 +451,12 @@ a, button {
   font-size: 50px; }
 
 #bloc-16 h6 {
-  font-size: 13px; }
+  font-size: 13px;
+  font-weight: bolder;}
 
 #bloc-16 h5 {
-  font-size: 10px; }
+  font-size: 10px;
+  font-weight: bolder; }
 
 /* = NavBar
 -------------------------------------------------------------- */
