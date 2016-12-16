@@ -703,7 +703,7 @@ function render () {
         h("div.hexText", {
           "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
         }, [
-          h("span", {
+          h("p", {
             "style":"letter-spacing:1.5px;font-weight:bold;color:white;display:inline-block;vertical-align:middle",
           }, "{{service.fields.pageTitle}}")
         ])
@@ -725,7 +725,7 @@ function render () {
         h("div.hexText", {
           "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
         }, [
-          h("span", {
+          h("p", {
             "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle",
           }, "{{service.fields.pageTitle}}")
         ])
@@ -747,7 +747,7 @@ function render () {
         h("div.hexText", {
           "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
         }, [
-          h("span", {
+          h("p", {
             "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle",
           }, "{{service.fields.pageTitle}}")
         ])
