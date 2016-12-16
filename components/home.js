@@ -43,7 +43,7 @@ function render () {
       /* bloc-0 END */
       h("div.closeNav", [
         /* bloc-1 */
-        h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:50vh;'},[
+        h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:75vh;'},[
           h('img.honeycomb-left',{
             'src':'img/honeycomb_pattern.png',
             'style':"max-height:400px;z-index:1;margin-left:-50px !important;"
@@ -52,7 +52,7 @@ function render () {
             'src':'img/honeycomb.png',
             'style':"max-height:600px;z-index:1;margin-right:-50px !important;"
           }),
-          h("div.container.bloc-xxl", {'style':'z-index:2; '},[
+          //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
             h("div.row", [
               h("div.col-sm-12", {'style':'margin-top:-400px;'},[
                 h("h1.text-center.hero-bloc-text.tc-white", [
@@ -61,14 +61,14 @@ function render () {
                   "FROM THE GROUND UP"
                 ]),
                 h('br'),
-                h('br'),
+                //h('br'),
                 h('div.text-center', [
                   h("i.fa.fa-3x.fa-angle-down.icon-green-ryb")
                 ]),
                 h("h3.mg-md.text-center.tc-green-ryb", "WHO WE ARE.")
               ])
             ])
-          ])
+          //])
         ]),
       /* bloc-1 END */
       /* bloc-2 */
