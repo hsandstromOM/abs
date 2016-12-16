@@ -1739,12 +1739,12 @@ function render () {
                     "style":"display:block"
                   }, [
                     h("a.tk-industry", {
-                      "style":"display:inline;text-decoration:underline",
+                      "style":"color:#73B53d;display:inline;text-decoration:underline",
                       'data-ng-href': 'mailto:{{currentTeamMember.fields.emailAddress}}'
                     }, "EMAIL {{currentTeamMember.fields.name}}"),
                     h('br'),
                     h("a.tk-industry", {
-                      "style":"display:inline;text-decoration:underline"
+                      "style":"color:#73B53d;display:inline;text-decoration:underline"
                     }, "DOWNLOAD C.V.")
                   ])
                 ])
