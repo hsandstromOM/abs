@@ -60,12 +60,14 @@ function render () {
                   h("br"),
                   "FROM THE GROUND UP"
                 ]),
-                h('br'),
+                //h('br'),
                 //h('br'),
                 h('div.text-center', [
-                  h("i.fa.fa-3x.fa-angle-down.icon-green-ryb")
+                  h("i.fa.fa-2x.fa-angle-down.icon-green-ryb")
                 ]),
-                h("h3.mg-md.text-center.tc-green-ryb", "WHO WE ARE.")
+                h("h3.mg-md.text-center.tc-green-ryb",{
+                  "style": "margin-top:0px"
+                }, ["WHO WE ARE."])
               ])
             ])
           //])
@@ -89,9 +91,13 @@ function render () {
             h('div.col-sm-12', {'style':'margin-left:0px! important;'}, [
               h("br"),
               h('div.text-center', [
-                h("i.fa.fa-3x.fa-angle-down.icon-green-ryb")
+                h("i.fa.fa-2x.fa-angle-down.icon-green-ryb")
               ]),
-              h("h3.mg-md.text-center.tc-green-ryb", ["WHAT WE DO."])
+              h("h3.mg-md.text-center.tc-green-ryb",{
+                "style": "margin-top:0px; margin-bottom 100px"
+              }, ["WHAT WE DO."]),
+              h("br"),
+              h("br"),
             ])
           ])
         ])
@@ -107,7 +113,8 @@ function render () {
       },[
         h('div',{
           'style':'display:block; margin:auto; text-align:center;',
-        'data-homehex': ''})
+        'data-homehex': ''}),
+        h("br"),
       ]),
     ]),
         h("div#bloc-5.bloc.bg-Halftone-Pattern.tc-prussian-blue.bgc-white", {
@@ -116,6 +123,8 @@ function render () {
           h("div.container.bloc-lg", [
             h("div.row", [
               h("div.col-sm-12", [
+                h("br"),
+                h("br"),
                 h("h2.mg-md.text-center.tk-industry.tc-prussian-blue", "TEAM MEMBER SPOTLIGHT"),
                 h("p.text-center", {
                   'style': "margin-left:200px; margin-right:200px; margin-bottom:65px;",

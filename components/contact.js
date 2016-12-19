@@ -98,18 +98,24 @@ function render () {
         'data-mainPage': 'mainPage',
         'data-slide': 'slide',
       }),
-      h("div.closeNav", [
-      h('.bloc.bgc-white.bg-Team-Placeholder-Header.d-bloc#bloc-7', {
-        'style': 'display:block;margin-top:95px;'
-      }, [
-        h('.container.bloc-lg', [
-          h('.row', [
-            h('.col-sm-12', [
+      h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:75vh;'},[
+        h('img.honeycomb-left',{
+          'src':'img/honeycomb_pattern.png',
+          'style':"max-height:400px;z-index:1;margin-left:-50px !important;"
+        }),
+        h('img.honeycomb-right',{
+          'src':'img/honeycomb.png',
+          'style':"max-height:600px;z-index:1;margin-right:-50px !important;"
+        }),
+        //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
+          h("div.row", [
+            h("div.col-sm-12", {'style':'margin-top:-300px;text-transform: uppercase;'},[
               h('h1.mg-md.text-center.tc-white', '{{contentfulData.fields.bannerText}}')
             ])
           ])
-        ])
+        //])
       ]),
+      h("div.closeNav", [
       h('ng-map.breakMargin', {
         'style': 'display:block;width:100%;height:600px;',
         'data-zoom-to-include-markers': 'true'

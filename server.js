@@ -79,7 +79,7 @@ var server = http.createServer(function (req, res) {
   }
 })
 
-server.listen(process.env.PORT || 3000);
+server.listen(process.env.PORT || 3001);
 
 // support methods
 function handleAppTemplate (req, res) {

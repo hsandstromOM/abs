@@ -100,19 +100,22 @@ function render () {
         'data-mainPage': 'mainPage',
         'data-slide': 'slide',
       }),
-      h("div.closeNav", {
-        'style':'margin-top:95px;'
-      }, [
-        h("div#bloc-7.bloc.bgc-white.bg-Team-Placeholder-Header.d-bloc",
-        [
-          h("div.container.bloc-lg", [
-            h("div.row", [
-              h("div.col-sm-12", [
-                h("h1.mg-md.text-center.tc-white", '{{teamPage.fields.bannerHeadline}}')
-              ])
+      h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:75vh;'},[
+        h('img.honeycomb-left',{
+          'src':'img/honeycomb_pattern.png',
+          'style':"max-height:400px;z-index:1;margin-left:-50px !important;"
+        }),
+        h('img.honeycomb-right',{
+          'src':'img/honeycomb.png',
+          'style':"max-height:600px;z-index:1;margin-right:-50px !important;"
+        }),
+        //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
+          h("div.row", [
+            h("div.col-sm-12", {'style':'margin-top:-300px;text-transform: uppercase;'},[
+              h("h1.mg-md.text-center.tc-white", '{{teamPage.fields.bannerHeadline}}')
             ])
           ])
-        ])
+        //])
       ]),
       h("div#bloc-12.bloc.bg-Halftone-Pattern.tc-prussian-blue", {
         "style":"background-color:#F6F6F6;-webkit-box-shadow:inset 0 10px 5px 2px rgba(0,0,0,.05);box-shadow:inset 0 -3px 8px 4px rgba(0,0,0,.05);height:80%"
@@ -132,7 +135,7 @@ function render () {
           ]),
           h("div.row.voffset", [
             h("div.honeyCombContainer#honeyCombContainer", {
-              "style":"position:relative;width:965px;display:block;margin:0 auto"
+              "style":"position:relative;width:1200px;display:block;margin:0 auto"
             }, [
               h('.honeyCombRowOfFour', {
                 'data-ng-if': 'filteredMembers.length'
@@ -143,21 +146,17 @@ function render () {
                   'data-ng-click': 'setCurrentTeamMember(member)',
                   'data-ng-repeat': 'member in filteredMembers[0]'
                 }, [
-                  h("img.overlayer", {
-                    "src":'img/greenOverlay.png',
-                    'style': 'position:absolute;'
-                  }),
-                  h("img", {
-                    "data-ng-src": "{{member.fields.thumbnail.fields.file.url}}"
-                  }),
-                  h("div.hexText", {
-                    "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
-                  }, [
-                    h("p.uppercase", {
-                      "style":"text-transform:uppercase;font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right:10px"
-                    }, '{{member.fields.name}}', '{{member.fields.lastName}}')
-                  ])
-                ]),
+                  h("div.shadow", [
+                    h("div.hexContainer", [
+                      h(".hexThumb",[
+                        h("img", {
+                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
+                        }),
+                        h("p", '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
+                      ])
+                    ]),
+                  ]),
+                ])
               ]),
               h('.honeyCombRowOfThree', {
                 'data-ng-if': 'filteredMembers.length > 4'
@@ -168,20 +167,16 @@ function render () {
                  'data-ng-click': 'setCurrentTeamMember(member)',
                  'data-ng-repeat': 'member in filteredMembers[1]'
                 }, [
-                  h("img.overlayer", {
-                    "src":'img/greenOverlay.png',
-                    'style': 'position:absolute;'
-                  }),
-                  h("img", {
-                    "data-ng-src": "{{member.fields.thumbnail.fields.file.url}}"
-                  }),
-                  h("div.hexText", {
-                    "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
-                  }, [
-                    h("p.uppercase", {
-                      "style":"text-transform:uppercase;font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
-                    }, '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
-                  ])
+                  h("div.shadow", [
+                    h("div.hexContainer", [
+                      h(".hexThumb",[
+                        h("img", {
+                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
+                        }),
+                        h("p", '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
+                      ])
+                    ]),
+                  ]),
                 ])
               ]),
               h('.honeyCombRowOfFour', {
@@ -193,21 +188,17 @@ function render () {
                   'data-ng-click': 'setCurrentTeamMember(member)',
                   'data-ng-repeat': 'member in filteredMembers[2]'
                 }, [
-                  h("img.overlayer", {
-                    "src":'img/greenOverlay.png',
-                    'style': 'position:absolute;'
-                  }),
-                  h("img", {
-                    "data-ng-src": "{{member.fields.thumbnail.fields.file.url}}"
-                  }),
-                  h("div.hexText", {
-                    "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
-                  }, [
-                    h("p.uppercase", {
-                      "style":"text-transform:uppercase;font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
-                    }, '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
-                  ])
-                ]),
+                  h("div.shadow", [
+                    h("div.hexContainer", [
+                      h(".hexThumb",[
+                        h("img", {
+                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
+                        }),
+                        h("p", '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
+                      ])
+                    ]),
+                  ]),
+                ])
               ]),
               h('.honeyCombRowOfThree', {
                 'data-ng-if': 'filteredMembers.length > 11'
@@ -218,20 +209,16 @@ function render () {
                   'data-ng-click': 'setCurrentTeamMember(member)',
                  'data-ng-repeat': 'member in filteredMembers[3]'
                 }, [
-                  h("img.overlayer", {
-                    "src":'img/greenOverlay.png',
-                    'style': 'position:absolute;'
-                  }),
-                  h("img", {
-                    "data-ng-src": "{{member.fields.thumbnail.fields.file.url}}"
-                  }),
-                  h("div.hexText", {
-                    "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
-                  }, [
-                    h("p.uppercase", {
-                      "style":"text-transform:uppercase;font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
-                    }, '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
-                  ])
+                  h("div.shadow", [
+                    h("div.hexContainer", [
+                      h(".hexThumb",[
+                        h("img", {
+                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
+                        }),
+                        h("p", '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
+                      ])
+                    ]),
+                  ]),
                 ])
               ]),
               h('.honeyCombRowOfFour', {
@@ -243,20 +230,16 @@ function render () {
                   'data-ng-click': 'setCurrentTeamMember(member)',
                   'data-ng-repeat': 'member in filteredMembers[4]'
                 }, [
-                  h("img.overlayer", {
-                    "src":'img/greenOverlay.png',
-                    'style': 'position:absolute;'
-                  }),
-                  h("img", {
-                    "data-ng-src": "{{member.fields.thumbnail.fields.file.url}}"
-                  }),
-                  h("div.hexText", {
-                    "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
-                  }, [
-                    h("p.uppercase", {
-                      "style":"text-transform:uppercase;font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
-                    }, '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
-                  ])
+                  h("div.shadow", [
+                    h("div.hexContainer", [
+                      h(".hexThumb",[
+                        h("img", {
+                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
+                        }),
+                        h("p", '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
+                      ])
+                    ]),
+                  ]),
                 ])
               ]),
               h('.honeyCombRowOfThree', {
@@ -268,20 +251,16 @@ function render () {
                   'data-ng-click': 'setCurrentTeamMember(member)',
                  'data-ng-repeat': 'member in filteredMembers[5]'
                 }, [
-                  h("img.overlayer", {
-                    "src":'img/greenOverlay.png',
-                    'style': 'position:absolute;'
-                  }),
-                  h("img", {
-                    "data-ng-src": "{{member.fields.thumbnail.fields.file.url}}"
-                  }),
-                  h("div.hexText", {
-                    "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
-                  }, [
-                    h("p.uppercase", {
-                      "style":"text-transform:uppercase;font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
-                    }, '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
-                  ])
+                  h("div.shadow", [
+                    h("div.hexContainer", [
+                      h(".hexThumb",[
+                        h("img", {
+                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
+                        }),
+                        h("p", '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
+                      ])
+                    ]),
+                  ]),
                 ])
               ]),
             ])
@@ -323,7 +302,7 @@ function render () {
                   "style":"padding-left:40px"
                 }, [
                   h("h4", {
-                    "style":"padding-top:5px"
+                    "style":"padding-top:5px;text-transform: uppercase;"
                   }, [
                     h("strong", "{{currentTeamMember.fields.name}}"," ", '{{currentTeamMember.fields.lastName}}')
                   ]),
@@ -333,7 +312,7 @@ function render () {
                     "style":"display:block"
                   }, [
                     h("a.tk-industry", {
-                      "style":"color:#73B53d;display:inline;text-decoration:underline",
+                      "style":"color:#73B53d;display:inline;text-decoration:underline;text-transform: uppercase;",
                       'data-ng-href': 'mailto:{{currentTeamMember.fields.emailAddress}}'
                     }, "EMAIL {{currentTeamMember.fields.name}}"),
                     h('br'),

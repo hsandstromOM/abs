@@ -184,18 +184,24 @@ function render () {
         'data-mainPage': 'mainPage',
         'data-slide': 'slide',
       }),
-      h("div.closeNav", [
-      h('.bloc.bgc-white.bg-Team-Placeholder-Header.d-bloc#bloc-7', {
-        'style': 'display:block;margin-top:95px;'
-      }, [
-        h('.container.bloc-lg', [
-          h('.row', [
-            h('.col-sm-12', [
+      h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:75vh;'},[
+        h('img.honeycomb-left',{
+          'src':'img/honeycomb_pattern.png',
+          'style':"max-height:400px;z-index:1;margin-left:-50px !important;"
+        }),
+        h('img.honeycomb-right',{
+          'src':'img/honeycomb.png',
+          'style':"max-height:600px;z-index:1;margin-right:-50px !important;"
+        }),
+        //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
+          h("div.row", [
+            h("div.col-sm-12", {'style':'margin-top:-300px;text-transform: uppercase;'},[
               h('h1.mg-md.text-center.tc-white', '{{contentfulData.fields.bannerText}}')
             ])
           ])
-        ])
+        //])
       ]),
+      h("div.closeNav", [
       h('ng-map.breakMargin', {
         'style': 'display:block;width:100%;height:600px;',
         'data-zoom-to-include-markers': 'true'
@@ -511,12 +517,14 @@ function render () {
                   h("br"),
                   "FROM THE GROUND UP"
                 ]),
-                h('br'),
+                //h('br'),
                 //h('br'),
                 h('div.text-center', [
-                  h("i.fa.fa-3x.fa-angle-down.icon-green-ryb")
+                  h("i.fa.fa-2x.fa-angle-down.icon-green-ryb")
                 ]),
-                h("h3.mg-md.text-center.tc-green-ryb", "WHO WE ARE.")
+                h("h3.mg-md.text-center.tc-green-ryb",{
+                  "style": "margin-top:0px"
+                }, ["WHO WE ARE."])
               ])
             ])
           //])
@@ -540,9 +548,13 @@ function render () {
             h('div.col-sm-12', {'style':'margin-left:0px! important;'}, [
               h("br"),
               h('div.text-center', [
-                h("i.fa.fa-3x.fa-angle-down.icon-green-ryb")
+                h("i.fa.fa-2x.fa-angle-down.icon-green-ryb")
               ]),
-              h("h3.mg-md.text-center.tc-green-ryb", ["WHAT WE DO."])
+              h("h3.mg-md.text-center.tc-green-ryb",{
+                "style": "margin-top:0px; margin-bottom 100px"
+              }, ["WHAT WE DO."]),
+              h("br"),
+              h("br"),
             ])
           ])
         ])
@@ -558,7 +570,8 @@ function render () {
       },[
         h('div',{
           'style':'display:block; margin:auto; text-align:center;',
-        'data-homehex': ''})
+        'data-homehex': ''}),
+        h("br"),
       ]),
     ]),
         h("div#bloc-5.bloc.bg-Halftone-Pattern.tc-prussian-blue.bgc-white", {
@@ -567,6 +580,8 @@ function render () {
           h("div.container.bloc-lg", [
             h("div.row", [
               h("div.col-sm-12", [
+                h("br"),
+                h("br"),
                 h("h2.mg-md.text-center.tk-industry.tc-prussian-blue", "TEAM MEMBER SPOTLIGHT"),
                 h("p.text-center", {
                   'style': "margin-left:200px; margin-right:200px; margin-bottom:65px;",
@@ -666,7 +681,7 @@ function controller ($scope, contentful, store) {
 function render () {
   return h('#honeyHex', [
     h('.homeHoneyThree', [
-      h("a.honeyComb", {
+      h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
        'data-ng-repeat': 'service in allServices[0]'
@@ -678,17 +693,15 @@ function render () {
         h("img", {
           "src":"img/homeHoney.png"
         }),
-        h("div.hexText", {
-          "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
-        }, [
-          h("p.uppercase", {
-            "style":"letter-spacing:1.5px;font-weight:bold;color:white;display:inline-block;vertical-align:middle",
+        h("div.hexText", [
+          h("p", {
+            "style":"font-weight:bold;color:white",
           }, "{{service.fields.pageTitle}}")
         ])
       ])
     ]),
     h('.homeHoneyTwo', [
-      h("a.honeyComb", {
+      h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
        'data-ng-repeat': 'service in allServices[1]'
@@ -700,11 +713,9 @@ function render () {
         h("img", {
           "src":"img/homeHoney.png"
         }),
-        h("div.hexText", {
-          "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
-        }, [
+        h("div.hexText", [
           h("p", {
-            "style":"letter-spacing:1.5px;font-weight:bold;color:white;display:inline-block;vertical-align:middle",
+            "style":"font-weight:bold;color:white",
           }, "{{service.fields.pageTitle}}")
         ])
       ])
@@ -801,19 +812,25 @@ function render () {
         'data-mainPage': 'mainPage',
         'data-slide': 'slide'
       }),
-      h("div.closeNav", {
-        'style': 'margin-top:95px;'
-      }, [
-        h("div#bloc-15.bloc.bg-Architecture-Header2.bgc-white.l-bloc", [
-          h("div.container.bloc-lg", [
-            h("div.row", [
-              h("div.col-sm-12", [
-                h("h4.mg-md.text-center.tc-white", "SERVICES:"),
-                h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}")
-              ])
+      h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:75vh;'},[
+        h('img.honeycomb-left',{
+          'src':'img/honeycomb_pattern.png',
+          'style':"max-height:400px;z-index:1;margin-left:-50px !important;"
+        }),
+        h('img.honeycomb-right',{
+          'src':'img/honeycomb.png',
+          'style':"max-height:600px;z-index:1;margin-right:-50px !important;"
+        }),
+        //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
+          h("div.row", [
+            h("div.col-sm-12", {'style':'margin-top:-300px;'},[
+              h("h4.mg-md.text-center.tc-white", "SERVICES:"),
+              h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}")
             ])
           ])
-        ]),
+        //])
+      ]),
+      h("div.closeNav", [
         h("div#bloc-2.bloc.bg-Halftone-Pattern.tc-prussian-blue.bgc-white", {
           "style": "background-color:#F6F6F6;-webkit-box-shadow:inset 0 10px 5px 2px rgba(0,0,0,.05);box-shadow:inset 0 -3px 8px 4px rgba(0,0,0,.05)"
         }, [
@@ -823,11 +840,11 @@ function render () {
                 h("div#over", [
                   h("span.Centerer"),
                   h("img.hexImg.Centered", {
-                    "style":"margin-top:-155px !important;",
+                    "style":"margin-top:-129px !important;",
                     "src":"img/honeycomb_shape.png"
                   }),
                   h("div.gallery-text", {
-                    'style':'margin-top:-5px;'
+                    'style':'margin-top:7px;'
 
                   },[
                     h('img.cIcon',{'src':'img/contact_icon.png'}),
@@ -1109,7 +1126,8 @@ function controller ($scope, $state, $stateParams, contentful, store) {
 }
 
 function template () {
-  return h('div', [
+  return h('div',{
+  }, [
     h("div#bloc-0.bloc.bgc-white.l-bloc.navBig",{
     }, [
       h("div.container.bloc-sm",  [
@@ -1129,7 +1147,7 @@ function template () {
             ])
           ]),
           h("div.navbar-collapse.navbar-1.collapse.hidden-md", {
-          'style':' box-shadow: 0px 3px 27px 0px rgba(0, 0, 0, 0.35);'
+          'style':' box-shadow: 1.5px 2.598px 27px 0px rgba(0, 0, 0, 0.35)'
         }, [
             h("ul.site-navigation.nav.navbar-nav", {
               "style":"border-top:none; backround-color:none;"
@@ -1178,7 +1196,7 @@ function template () {
       ])
     ]),
     h('nav.navbar.navbar-default.navSmall', {
-      'style':'z-index:20;display:none;padding-top: 10px; box-shadow: 0px 3px 27px 0px rgba(0, 0, 0, 0.35);'
+      'style':'z-index:20;display:none;padding-top: 10px;   box-shadow: 0px 3px 27px 0px rgba(0, 0, 0, 0.35);'
     },[
       h('div.container-fluid', [
         h('div.navbar-header', [
@@ -1204,7 +1222,7 @@ function template () {
           'style':'height:100% !important'
         },[
 
-          h('ul.nav.navbar-nav', {'style':'box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 27px 0px inset;margin-top: -4px;height: 100vh;border-top-style: none;'},[
+          h('ul.nav.navbar-nav', {'style':'box-shadow: 1.5px 2.598px 27px 0px rgba(0, 0, 0, 0.35) inset;margin-top: -4px;height: 100vh;border-top-style: none;'},[
             h('li.dropdown', {
               'style':'text-align: center;'
             },[
@@ -1359,7 +1377,7 @@ function template () {
 
     //////// team subnav full view////////////
     h("div.row.subnav-navigation.subnavbar.slideNav#teamNav", {
-      'style':'background-color:#c5ceca;',
+      'style':'background-color:#c5ceca;box-shadow: 1.5px 2.598px 27px 0px rgba(0, 0, 0, 0.35);',
       'data-ng-class': "slide.teamNav ? 'slideNavDown' : 'slideNavUp'"
     }, [
       h("div.subnavitem.col-xs-3.col-md-3",
@@ -1506,19 +1524,22 @@ function render () {
         'data-mainPage': 'mainPage',
         'data-slide': 'slide',
       }),
-      h("div.closeNav", {
-        'style':'margin-top:95px;'
-      }, [
-        h("div#bloc-7.bloc.bgc-white.bg-Team-Placeholder-Header.d-bloc",
-        [
-          h("div.container.bloc-lg", [
-            h("div.row", [
-              h("div.col-sm-12", [
-                h("h1.mg-md.text-center.tc-white", '{{teamPage.fields.bannerHeadline}}')
-              ])
+      h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:75vh;'},[
+        h('img.honeycomb-left',{
+          'src':'img/honeycomb_pattern.png',
+          'style':"max-height:400px;z-index:1;margin-left:-50px !important;"
+        }),
+        h('img.honeycomb-right',{
+          'src':'img/honeycomb.png',
+          'style':"max-height:600px;z-index:1;margin-right:-50px !important;"
+        }),
+        //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
+          h("div.row", [
+            h("div.col-sm-12", {'style':'margin-top:-300px;text-transform: uppercase;'},[
+              h("h1.mg-md.text-center.tc-white", '{{teamPage.fields.bannerHeadline}}')
             ])
           ])
-        ])
+        //])
       ]),
       h("div#bloc-12.bloc.bg-Halftone-Pattern.tc-prussian-blue", {
         "style":"background-color:#F6F6F6;-webkit-box-shadow:inset 0 10px 5px 2px rgba(0,0,0,.05);box-shadow:inset 0 -3px 8px 4px rgba(0,0,0,.05);height:80%"
@@ -1538,7 +1559,7 @@ function render () {
           ]),
           h("div.row.voffset", [
             h("div.honeyCombContainer#honeyCombContainer", {
-              "style":"position:relative;width:965px;display:block;margin:0 auto"
+              "style":"position:relative;width:1200px;display:block;margin:0 auto"
             }, [
               h('.honeyCombRowOfFour', {
                 'data-ng-if': 'filteredMembers.length'
@@ -1549,21 +1570,17 @@ function render () {
                   'data-ng-click': 'setCurrentTeamMember(member)',
                   'data-ng-repeat': 'member in filteredMembers[0]'
                 }, [
-                  h("img.overlayer", {
-                    "src":'img/greenOverlay.png',
-                    'style': 'position:absolute;'
-                  }),
-                  h("img", {
-                    "data-ng-src": "{{member.fields.thumbnail.fields.file.url}}"
-                  }),
-                  h("div.hexText", {
-                    "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
-                  }, [
-                    h("p.uppercase", {
-                      "style":"text-transform:uppercase;font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right:10px"
-                    }, '{{member.fields.name}}', '{{member.fields.lastName}}')
-                  ])
-                ]),
+                  h("div.shadow", [
+                    h("div.hexContainer", [
+                      h(".hexThumb",[
+                        h("img", {
+                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
+                        }),
+                        h("p", '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
+                      ])
+                    ]),
+                  ]),
+                ])
               ]),
               h('.honeyCombRowOfThree', {
                 'data-ng-if': 'filteredMembers.length > 4'
@@ -1574,20 +1591,16 @@ function render () {
                  'data-ng-click': 'setCurrentTeamMember(member)',
                  'data-ng-repeat': 'member in filteredMembers[1]'
                 }, [
-                  h("img.overlayer", {
-                    "src":'img/greenOverlay.png',
-                    'style': 'position:absolute;'
-                  }),
-                  h("img", {
-                    "data-ng-src": "{{member.fields.thumbnail.fields.file.url}}"
-                  }),
-                  h("div.hexText", {
-                    "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
-                  }, [
-                    h("p.uppercase", {
-                      "style":"text-transform:uppercase;font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
-                    }, '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
-                  ])
+                  h("div.shadow", [
+                    h("div.hexContainer", [
+                      h(".hexThumb",[
+                        h("img", {
+                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
+                        }),
+                        h("p", '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
+                      ])
+                    ]),
+                  ]),
                 ])
               ]),
               h('.honeyCombRowOfFour', {
@@ -1599,21 +1612,17 @@ function render () {
                   'data-ng-click': 'setCurrentTeamMember(member)',
                   'data-ng-repeat': 'member in filteredMembers[2]'
                 }, [
-                  h("img.overlayer", {
-                    "src":'img/greenOverlay.png',
-                    'style': 'position:absolute;'
-                  }),
-                  h("img", {
-                    "data-ng-src": "{{member.fields.thumbnail.fields.file.url}}"
-                  }),
-                  h("div.hexText", {
-                    "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
-                  }, [
-                    h("p.uppercase", {
-                      "style":"text-transform:uppercase;font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
-                    }, '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
-                  ])
-                ]),
+                  h("div.shadow", [
+                    h("div.hexContainer", [
+                      h(".hexThumb",[
+                        h("img", {
+                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
+                        }),
+                        h("p", '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
+                      ])
+                    ]),
+                  ]),
+                ])
               ]),
               h('.honeyCombRowOfThree', {
                 'data-ng-if': 'filteredMembers.length > 11'
@@ -1624,20 +1633,16 @@ function render () {
                   'data-ng-click': 'setCurrentTeamMember(member)',
                  'data-ng-repeat': 'member in filteredMembers[3]'
                 }, [
-                  h("img.overlayer", {
-                    "src":'img/greenOverlay.png',
-                    'style': 'position:absolute;'
-                  }),
-                  h("img", {
-                    "data-ng-src": "{{member.fields.thumbnail.fields.file.url}}"
-                  }),
-                  h("div.hexText", {
-                    "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
-                  }, [
-                    h("p.uppercase", {
-                      "style":"text-transform:uppercase;font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
-                    }, '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
-                  ])
+                  h("div.shadow", [
+                    h("div.hexContainer", [
+                      h(".hexThumb",[
+                        h("img", {
+                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
+                        }),
+                        h("p", '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
+                      ])
+                    ]),
+                  ]),
                 ])
               ]),
               h('.honeyCombRowOfFour', {
@@ -1649,20 +1654,16 @@ function render () {
                   'data-ng-click': 'setCurrentTeamMember(member)',
                   'data-ng-repeat': 'member in filteredMembers[4]'
                 }, [
-                  h("img.overlayer", {
-                    "src":'img/greenOverlay.png',
-                    'style': 'position:absolute;'
-                  }),
-                  h("img", {
-                    "data-ng-src": "{{member.fields.thumbnail.fields.file.url}}"
-                  }),
-                  h("div.hexText", {
-                    "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
-                  }, [
-                    h("p.uppercase", {
-                      "style":"text-transform:uppercase;font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
-                    }, '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
-                  ])
+                  h("div.shadow", [
+                    h("div.hexContainer", [
+                      h(".hexThumb",[
+                        h("img", {
+                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
+                        }),
+                        h("p", '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
+                      ])
+                    ]),
+                  ]),
                 ])
               ]),
               h('.honeyCombRowOfThree', {
@@ -1674,20 +1675,16 @@ function render () {
                   'data-ng-click': 'setCurrentTeamMember(member)',
                  'data-ng-repeat': 'member in filteredMembers[5]'
                 }, [
-                  h("img.overlayer", {
-                    "src":'img/greenOverlay.png',
-                    'style': 'position:absolute;'
-                  }),
-                  h("img", {
-                    "data-ng-src": "{{member.fields.thumbnail.fields.file.url}}"
-                  }),
-                  h("div.hexText", {
-                    "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px"
-                  }, [
-                    h("p.uppercase", {
-                      "style":"text-transform:uppercase;font-weight:bold;color:white;display:inline-block;vertical-align:middle;padding-right: 10px"
-                    }, '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
-                  ])
+                  h("div.shadow", [
+                    h("div.hexContainer", [
+                      h(".hexThumb",[
+                        h("img", {
+                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
+                        }),
+                        h("p", '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
+                      ])
+                    ]),
+                  ]),
                 ])
               ]),
             ])
@@ -1729,7 +1726,7 @@ function render () {
                   "style":"padding-left:40px"
                 }, [
                   h("h4", {
-                    "style":"padding-top:5px"
+                    "style":"padding-top:5px;text-transform: uppercase;"
                   }, [
                     h("strong", "{{currentTeamMember.fields.name}}"," ", '{{currentTeamMember.fields.lastName}}')
                   ]),
@@ -1739,7 +1736,7 @@ function render () {
                     "style":"display:block"
                   }, [
                     h("a.tk-industry", {
-                      "style":"color:#73B53d;display:inline;text-decoration:underline",
+                      "style":"color:#73B53d;display:inline;text-decoration:underline;text-transform: uppercase;",
                       'data-ng-href': 'mailto:{{currentTeamMember.fields.emailAddress}}'
                     }, "EMAIL {{currentTeamMember.fields.name}}"),
                     h('br'),
@@ -1821,19 +1818,25 @@ function render () {
         'data-mainPage': 'mainPage',
         'data-slide': 'slide'
       }),
-      h("div.closeNav", [
-        h("div#bloc-11.bloc.bgc-white.bg-team-header.d-bloc", {
-          'style':'margin-top:95px;'
-        }, [
-          h("div.container.bloc-lg", [
-            h("div.row", [
-            h("div.col-sm-12", [
+      h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:75vh;'},[
+        h('img.honeycomb-left',{
+          'src':'img/honeycomb_pattern.png',
+          'style':"max-height:400px;z-index:1;margin-left:-50px !important;"
+        }),
+        h('img.honeycomb-right',{
+          'src':'img/honeycomb.png',
+          'style':"max-height:600px;z-index:1;margin-right:-50px !important;"
+        }),
+        //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
+          h("div.row", [
+            h("div.col-sm-12", {'style':'margin-top:-300px;'},[
               h("h4.mg-md.text-center.tc-white", "WORK:"),
               h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}")
             ])
           ])
-        ])
+        //])
       ]),
+      h("div.closeNav", [
       h("div#bloc-12.bloc.bg-Halftone-Pattern.tc-prussian-blue.bgc-white", {
         'style':'background-color:#F6F6F6;'
       }, [
@@ -1968,19 +1971,27 @@ function render () {
         'data-mainPage': 'mainPage',
         'data-slide': 'slide'
       }),
+      h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:75vh;'},[
+        h('img.honeycomb-left',{
+          'src':'img/honeycomb_pattern.png',
+          'style':"max-height:400px;z-index:1;margin-left:-50px !important;"
+        }),
+        h('img.honeycomb-right',{
+          'src':'img/honeycomb.png',
+          'style':"max-height:600px;z-index:1;margin-right:-50px !important;"
+        }),
+        //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
+          h("div.row", [
+            h("div.col-sm-12", {'style':'margin-top:-300px;text-transform: uppercase;'},[
+              h("h4.mg-md.tc-white.text-center", "WORK / BUILDING ENCLOSURE:"),
+              h("h1.mg-md.tc-white.text-center", "{{workProject.fields.title}}")
+            ])
+          ])
+        //])
+      ]),
       h("div.closeNav", {
         'style': 'margin-top:95px;'
       }, [
-        h("div#bloc-15.bloc.bg-Architecture-Header2.bgc-white.l-bloc", [
-          h("div.container.bloc-lg", [
-            h("div.row", [
-              h("div.col-sm-12", [
-                h("h4.mg-md.tc-white.text-center", "WORK / BUILDING ENCLOSURE:"),
-                h("h1.mg-md.tc-white.text-center", "{{workProject.fields.title}}")
-              ])
-            ])
-          ])
-        ]),
         h("div#bloc-2.bloc.bg-Halftone-Pattern.tc-prussian-blue.bgc-white", {
           "style": "background-color:#F6F6F6;-webkit-box-shadow:inset 0 10px 5px 2px rgba(0,0,0,.05);box-shadow:inset 0 -3px 8px 4px rgba(0,0,0,.05)"
         }, [
@@ -2026,7 +2037,17 @@ function render () {
                       h("div.carousel-inner", [
                         h("div.item.active", [
                           h("div.row", [
-                            h("div.col-sm-3", [
+                            h("div.col-sm-2",[
+                              h("a", {
+                                "href":"#x",
+                              }, [
+                                h("img.img-responsive", {
+                                  "src":"http://placehold.it/500x500",
+                                  "alt":"Image"
+                                })
+                              ])
+                            ]),
+                            h("div.col-sm-2", [
                               h("a", {
                                 "href":"#x"
                               }, [
@@ -2036,7 +2057,7 @@ function render () {
                                 })
                               ])
                             ]),
-                            h("div.col-sm-3", [
+                            h("div.col-sm-2", [
                               h("a", {
                                 "href":"#x"
                               }, [
@@ -2046,7 +2067,7 @@ function render () {
                                 })
                               ])
                             ]),
-                            h("div.col-sm-3", [
+                            h("div.col-sm-2", [
                               h("a", {
                                 "href":"#x"
                               }, [
@@ -2056,7 +2077,17 @@ function render () {
                                 })
                               ])
                             ]),
-                            h("div.col-sm-3", [
+                            h("div.col-sm-2", [
+                              h("a", {
+                                "href":"#x"
+                              }, [
+                                h("img.img-responsive", {
+                                  "src":"http://placehold.it/500x500",
+                                  "alt":"Image"
+                                })
+                              ])
+                            ]),
+                            h("div.col-sm-2", [
                               h("a", {
                                 "href":"#x"
                               }, [
@@ -2070,7 +2101,7 @@ function render () {
                         ]),
                         h("div.item", [
                           h("div.row", [
-                            h("div.col-sm-3", [
+                            h("div.col-sm-2", [
                               h("a", {
                                 "href":"#x"
                               }, [
@@ -2079,7 +2110,7 @@ function render () {
                                   "alt":"Image"})
                                 ])
                               ]),
-                              h("div.col-sm-3", [
+                              h("div.col-sm-2", [
                                 h("a", {
                                   "href":"#x"
                                 }, [
@@ -2088,7 +2119,7 @@ function render () {
                                     "alt":"Image"})
                                   ])
                                 ]),
-                                h("div.col-sm-3", [
+                                h("div.col-sm-2", [
                                   h("a", {
                                     "href":"#x"
                                   }, [
@@ -2098,7 +2129,27 @@ function render () {
                                     })
                                   ])
                                 ]),
-                                h("div.col-sm-3", [
+                                h("div.col-sm-2", [
+                                  h("a", {
+                                    "href":"#x"
+                                  }, [
+                                    h("img.img-responsive", {
+                                      "src":"http://placehold.it/500x500",
+                                      "alt":"Image"
+                                    })
+                                  ])
+                                ]),
+                                h("div.col-sm-2", [
+                                  h("a", {
+                                    "href":"#x"
+                                  }, [
+                                    h("img.img-responsive", {
+                                      "src":"http://placehold.it/500x500",
+                                      "alt":"Image"
+                                    })
+                                  ])
+                                ]),
+                                h("div.col-sm-2", [
                                   h("a", {
                                     "href":"#x"
                                   }, [
@@ -2112,7 +2163,7 @@ function render () {
                             ]),
                             h("div.item", [
                               h("div.row", [
-                                h("div.col-sm-3", [
+                                h("div.col-sm-2", [
                                   h("a", {
                                     "href":"#x"
                                   }, [
@@ -2122,7 +2173,7 @@ function render () {
                                     })
                                   ])
                                 ]),
-                                h("div.col-sm-3", [
+                                h("div.col-sm-2", [
                                   h("a", {
                                     "href":"#x"
                                   }, [
@@ -2132,7 +2183,7 @@ function render () {
                                     })
                                   ])
                                 ]),
-                                h("div.col-sm-3", [
+                                h("div.col-sm-2", [
                                   h("a", {
                                     "href":"#x"
                                   }, [
@@ -2142,7 +2193,27 @@ function render () {
                                     })
                                   ])
                                 ]),
-                                h("div.col-sm-3", [
+                                h("div.col-sm-2", [
+                                  h("a", {
+                                    "href":"#x"
+                                  }, [
+                                    h("img.img-responsive", {
+                                      "src":"http://placehold.it/500x500",
+                                      "alt":"Image"
+                                    })
+                                  ])
+                                ]),
+                                h("div.col-sm-2", [
+                                  h("a", {
+                                    "href":"#x"
+                                  }, [
+                                    h("img.img-responsive", {
+                                      "src":"http://placehold.it/500x500",
+                                      "alt":"Image"
+                                    })
+                                  ])
+                                ]),
+                                h("div.col-sm-2", [
                                   h("a", {
                                     "href":"#x"
                                   }, [
@@ -2160,18 +2231,18 @@ function render () {
                             "href":"#myCarousel",
                             "data-slide":"prev"
                           }, [
-                            h("h3", {
-                              "style":"color:white;padding-top:70px"
-                            }, "‹")
+                            h("i.fa.fa-2x.fa-angle-left", {
+                              "style":"color:white;padding-top:60px"
+                            })
                           ]),
                           h("a.right.carousel-control", {
                             "style":"margin-right:-50px;background-color:grey;width:40px;background-image:none",
                             "href":"#myCarousel",
                             "data-slide":"next"
                           }, [
-                            h("h3", {
-                              "style":"color:white;padding-top:70px"
-                            }, "›")
+                            h("i.fa.fa-2x.fa-angle-right", {
+                              "style":"color:white;padding-top:60px"
+                            })
                           ])
                         ])
                       ])

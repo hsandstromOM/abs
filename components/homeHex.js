@@ -50,7 +50,7 @@ function controller ($scope, contentful, store) {
 function render () {
   return h('#honeyHex', [
     h('.homeHoneyThree', [
-      h("a.honeyComb", {
+      h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
        'data-ng-repeat': 'service in allServices[0]'
@@ -62,17 +62,15 @@ function render () {
         h("img", {
           "src":"img/homeHoney.png"
         }),
-        h("div.hexText", {
-          "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
-        }, [
-          h("p.uppercase", {
-            "style":"letter-spacing:1.5px;font-weight:bold;color:white;display:inline-block;vertical-align:middle",
+        h("div.hexText", [
+          h("p", {
+            "style":"font-weight:bold;color:white",
           }, "{{service.fields.pageTitle}}")
         ])
       ])
     ]),
     h('.homeHoneyTwo', [
-      h("a.honeyComb", {
+      h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
        'data-ng-repeat': 'service in allServices[1]'
@@ -84,11 +82,9 @@ function render () {
         h("img", {
           "src":"img/homeHoney.png"
         }),
-        h("div.hexText", {
-          "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
-        }, [
+        h("div.hexText", [
           h("p", {
-            "style":"letter-spacing:1.5px;font-weight:bold;color:white;display:inline-block;vertical-align:middle",
+            "style":"font-weight:bold;color:white",
           }, "{{service.fields.pageTitle}}")
         ])
       ])

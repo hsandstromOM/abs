@@ -91,19 +91,27 @@ function render () {
         'data-mainPage': 'mainPage',
         'data-slide': 'slide'
       }),
+      h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:75vh;'},[
+        h('img.honeycomb-left',{
+          'src':'img/honeycomb_pattern.png',
+          'style':"max-height:400px;z-index:1;margin-left:-50px !important;"
+        }),
+        h('img.honeycomb-right',{
+          'src':'img/honeycomb.png',
+          'style':"max-height:600px;z-index:1;margin-right:-50px !important;"
+        }),
+        //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
+          h("div.row", [
+            h("div.col-sm-12", {'style':'margin-top:-300px;text-transform: uppercase;'},[
+              h("h4.mg-md.tc-white.text-center", "WORK / BUILDING ENCLOSURE:"),
+              h("h1.mg-md.tc-white.text-center", "{{workProject.fields.title}}")
+            ])
+          ])
+        //])
+      ]),
       h("div.closeNav", {
         'style': 'margin-top:95px;'
       }, [
-        h("div#bloc-15.bloc.bg-Architecture-Header2.bgc-white.l-bloc", [
-          h("div.container.bloc-lg", [
-            h("div.row", [
-              h("div.col-sm-12", [
-                h("h4.mg-md.tc-white.text-center", "WORK / BUILDING ENCLOSURE:"),
-                h("h1.mg-md.tc-white.text-center", "{{workProject.fields.title}}")
-              ])
-            ])
-          ])
-        ]),
         h("div#bloc-2.bloc.bg-Halftone-Pattern.tc-prussian-blue.bgc-white", {
           "style": "background-color:#F6F6F6;-webkit-box-shadow:inset 0 10px 5px 2px rgba(0,0,0,.05);box-shadow:inset 0 -3px 8px 4px rgba(0,0,0,.05)"
         }, [
@@ -149,7 +157,17 @@ function render () {
                       h("div.carousel-inner", [
                         h("div.item.active", [
                           h("div.row", [
-                            h("div.col-sm-3", [
+                            h("div.col-sm-2",[
+                              h("a", {
+                                "href":"#x",
+                              }, [
+                                h("img.img-responsive", {
+                                  "src":"http://placehold.it/500x500",
+                                  "alt":"Image"
+                                })
+                              ])
+                            ]),
+                            h("div.col-sm-2", [
                               h("a", {
                                 "href":"#x"
                               }, [
@@ -159,7 +177,7 @@ function render () {
                                 })
                               ])
                             ]),
-                            h("div.col-sm-3", [
+                            h("div.col-sm-2", [
                               h("a", {
                                 "href":"#x"
                               }, [
@@ -169,7 +187,7 @@ function render () {
                                 })
                               ])
                             ]),
-                            h("div.col-sm-3", [
+                            h("div.col-sm-2", [
                               h("a", {
                                 "href":"#x"
                               }, [
@@ -179,7 +197,17 @@ function render () {
                                 })
                               ])
                             ]),
-                            h("div.col-sm-3", [
+                            h("div.col-sm-2", [
+                              h("a", {
+                                "href":"#x"
+                              }, [
+                                h("img.img-responsive", {
+                                  "src":"http://placehold.it/500x500",
+                                  "alt":"Image"
+                                })
+                              ])
+                            ]),
+                            h("div.col-sm-2", [
                               h("a", {
                                 "href":"#x"
                               }, [
@@ -193,7 +221,7 @@ function render () {
                         ]),
                         h("div.item", [
                           h("div.row", [
-                            h("div.col-sm-3", [
+                            h("div.col-sm-2", [
                               h("a", {
                                 "href":"#x"
                               }, [
@@ -202,7 +230,7 @@ function render () {
                                   "alt":"Image"})
                                 ])
                               ]),
-                              h("div.col-sm-3", [
+                              h("div.col-sm-2", [
                                 h("a", {
                                   "href":"#x"
                                 }, [
@@ -211,7 +239,7 @@ function render () {
                                     "alt":"Image"})
                                   ])
                                 ]),
-                                h("div.col-sm-3", [
+                                h("div.col-sm-2", [
                                   h("a", {
                                     "href":"#x"
                                   }, [
@@ -221,7 +249,27 @@ function render () {
                                     })
                                   ])
                                 ]),
-                                h("div.col-sm-3", [
+                                h("div.col-sm-2", [
+                                  h("a", {
+                                    "href":"#x"
+                                  }, [
+                                    h("img.img-responsive", {
+                                      "src":"http://placehold.it/500x500",
+                                      "alt":"Image"
+                                    })
+                                  ])
+                                ]),
+                                h("div.col-sm-2", [
+                                  h("a", {
+                                    "href":"#x"
+                                  }, [
+                                    h("img.img-responsive", {
+                                      "src":"http://placehold.it/500x500",
+                                      "alt":"Image"
+                                    })
+                                  ])
+                                ]),
+                                h("div.col-sm-2", [
                                   h("a", {
                                     "href":"#x"
                                   }, [
@@ -235,7 +283,7 @@ function render () {
                             ]),
                             h("div.item", [
                               h("div.row", [
-                                h("div.col-sm-3", [
+                                h("div.col-sm-2", [
                                   h("a", {
                                     "href":"#x"
                                   }, [
@@ -245,7 +293,7 @@ function render () {
                                     })
                                   ])
                                 ]),
-                                h("div.col-sm-3", [
+                                h("div.col-sm-2", [
                                   h("a", {
                                     "href":"#x"
                                   }, [
@@ -255,7 +303,7 @@ function render () {
                                     })
                                   ])
                                 ]),
-                                h("div.col-sm-3", [
+                                h("div.col-sm-2", [
                                   h("a", {
                                     "href":"#x"
                                   }, [
@@ -265,7 +313,27 @@ function render () {
                                     })
                                   ])
                                 ]),
-                                h("div.col-sm-3", [
+                                h("div.col-sm-2", [
+                                  h("a", {
+                                    "href":"#x"
+                                  }, [
+                                    h("img.img-responsive", {
+                                      "src":"http://placehold.it/500x500",
+                                      "alt":"Image"
+                                    })
+                                  ])
+                                ]),
+                                h("div.col-sm-2", [
+                                  h("a", {
+                                    "href":"#x"
+                                  }, [
+                                    h("img.img-responsive", {
+                                      "src":"http://placehold.it/500x500",
+                                      "alt":"Image"
+                                    })
+                                  ])
+                                ]),
+                                h("div.col-sm-2", [
                                   h("a", {
                                     "href":"#x"
                                   }, [
@@ -283,18 +351,18 @@ function render () {
                             "href":"#myCarousel",
                             "data-slide":"prev"
                           }, [
-                            h("h3", {
-                              "style":"color:white;padding-top:70px"
-                            }, "‹")
+                            h("i.fa.fa-2x.fa-angle-left", {
+                              "style":"color:white;padding-top:60px"
+                            })
                           ]),
                           h("a.right.carousel-control", {
                             "style":"margin-right:-50px;background-color:grey;width:40px;background-image:none",
                             "href":"#myCarousel",
                             "data-slide":"next"
                           }, [
-                            h("h3", {
-                              "style":"color:white;padding-top:70px"
-                            }, "›")
+                            h("i.fa.fa-2x.fa-angle-right", {
+                              "style":"color:white;padding-top:60px"
+                            })
                           ])
                         ])
                       ])

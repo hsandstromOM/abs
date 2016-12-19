@@ -6,21 +6,47 @@
 }
 .honeyCombRowOfThree {
  width:100%;
- margin-top:-70px;
+ margin-top:-65px;
  display:block;
  float:left;
- margin-left: 122px;
+ margin-left: 150px;
 }
 .honeyComb {
   display: inline-block;
   position: relative;
-  width: 241px !important;
-  height: 279px !important;
+  width: 280px !important;
+  height: 316px !important;
+  margin-right: 20px;
 }
 .honeyComb:hover {
   .overlayer {
     opacity: 0;
+
   }
+}
+.honeyCombHome {
+  display: inline-block;
+  position: relative;
+  width: 241px !important;
+  height: 279px !important;
+  //margin-right: 5px;
+}
+.honeyCombHome:hover {
+  .overlayer {
+    opacity: 0;
+
+  }
+}
+.honeyCombHome p {
+  font-family: "aaux-next", sans-serif;
+  font-size: 18px;
+  position: absolute;
+  top: 42%;
+  left:15%;
+  right:15%;
+  letter-spacing: 1px;
+  z-index: 1000;
+  transition: all 300ms ease-in-out .2s;
 }
 .overlayer {
   opacity: .7;
