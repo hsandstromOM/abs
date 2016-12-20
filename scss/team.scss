@@ -67,6 +67,18 @@
   .honeyCombContainer{
     width:100% !important;
   }
+
+  .honeyCombRowOfFour{
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+
+  .honeyCombRowOfThree{
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
   .threeRowStart{
     margin:auto !important;
     text-align:center;
@@ -97,6 +109,17 @@
   }
 }
 @media (max-width: 776px){
+  .honeyCombRowOfFour{
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+
+  .honeyCombRowOfThree{
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
   .honeycombContainer{
     width:100%;
   }

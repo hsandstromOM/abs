@@ -855,6 +855,14 @@ li {
   .wire-btn-green-ryb {
     display: block;
     margin: auto; }
+  .homeHoneyThree {
+    margin: auto !important;
+    text-align: center;
+    width: 100%; }
+  .homeHoneyTwo {
+    margin: auto !important;
+    text-align: center;
+    width: 100%; }
   .honeyComb:hover .overlayer {
     opacity: 0; }
   .overlayer {
@@ -1050,6 +1058,14 @@ li {
 @media (max-width: 992px) {
   .honeyCombContainer {
     width: 100% !important; }
+  .honeyCombRowOfFour {
+    margin: auto !important;
+    text-align: center;
+    width: 100%; }
+  .honeyCombRowOfThree {
+    margin: auto !important;
+    text-align: center;
+    width: 100%; }
   .threeRowStart {
     margin: auto !important;
     text-align: center;
@@ -1075,6 +1091,14 @@ li {
     margin-top: -35px !important; } }
 
 @media (max-width: 776px) {
+  .honeyCombRowOfFour {
+    margin: auto !important;
+    text-align: center;
+    width: 100%; }
+  .honeyCombRowOfThree {
+    margin: auto !important;
+    text-align: center;
+    width: 100%; }
   .honeycombContainer {
     width: 100%; }
   .gallery-text {
