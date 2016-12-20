@@ -32,8 +32,10 @@ body {
   left: 10px;
   background-color: #fff;
   text-align: center;
-  -webkit-clip-path: url("#hexContainer");
-  clip-path: url("#hexContainer");
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  //-webkit-clip-path: url("#hexContainer");
+  //clip-path: url("#hexContainer");
 }
 .hexThumb {
   display: block;
@@ -51,8 +53,10 @@ body {
   letter-spacing: .05em;
   text-transform: uppercase;
   text-align: center;
-  -webkit-clip-path: url("#hexThumb");
-  clip-path: url("#hexThumb");
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  //-webkit-clip-path: url("#hexThumb");
+  //clip-path: url("#hexThumb");
 }
 
 .old {
