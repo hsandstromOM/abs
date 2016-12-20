@@ -511,7 +511,7 @@ function render () {
           }),
           //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
             h("div.row", [
-              h("div.col-sm-12", {'style':'margin-top:-400px;'},[
+              h("div.col-sm-12", {'style':'margin-top:-325px;'},[
                 h("h1.text-center.hero-bloc-text.tc-white", [
                   "STRUCTURAL INTEGRITY,",
                   h("br"),
@@ -587,10 +587,10 @@ function render () {
                   'style': "margin-left:200px; margin-right:200px; margin-bottom:65px;",
                   'data-marked': 'contentfulData.fields.teamMemberSpotlightContent'
                 }),
-                h("div.text-center.tk-aaux-next", [
-                  h("a.btn.wire-btn-green-ryb.btn-sq.btn-lg", {
+                h("div.text-center.tk-industry", [
+                  h("a.btn.wire-btn-green-ryb.btn-sq.btn-lg.tk-industry", {
                     // "href":"index.html"
-                      "style":"letter-spacing: 1px"
+                      "style":"font-weight:strong;letter-spacing: 1px"
                   }, "{{contentfulData.fields.buttonText}}")
                 ])
               ])
@@ -985,7 +985,7 @@ function template () {
                 ]),
                 h("div.col-sm-3", [
                    h("h6.mg-md", {'data-ui-sref':'work', 'style':'cursor:pointer'},"WORK"),
-                   h("h5.mg-md", {
+                   h("h5.mg-md.tk-aaux-next", {
                      'data-ui-sref':'work({service: serviceProvided})',
                      'data-ng-repeat': 'serviceProvided in allWorkServicesProvided',
                      'style':'cursor:pointer'},
@@ -993,7 +993,7 @@ function template () {
                  ]),
                  h("div.col-sm-3", [
                    h("h6.mg-md", {'data-ui-sref':'services', 'style':'cursor:pointer'},"SERVICES"),
-                    h("h5.mg-md", {
+                    h("h5.mg-md.tk-aaux-next", {
                       'data-ui-sref':'services({service: service})',
                       'data-ng-repeat': 'service in allServices',
                       'style':'cursor:pointer'},
