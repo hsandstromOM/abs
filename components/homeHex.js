@@ -55,6 +55,9 @@ function render () {
         'data-ui-sref': 'services({service: service})',
        'data-ng-repeat': 'service in allServices[0]'
       }, [
+        h("p", {
+          "style":"font-weight:bold;color:white",
+        }, "{{service.fields.pageTitle}}"),
         h("img.overlayer", {
           "src":'img/homeGreen.png',
           'style': 'position:absolute;'
@@ -62,11 +65,11 @@ function render () {
         h("img", {
           "src":"img/homeHoney.png"
         }),
-        h("div.hexText", [
+        //h("div.hexText", [
           h("p", {
             "style":"font-weight:bold;color:white",
           }, "{{service.fields.pageTitle}}")
-        ])
+        //])
       ])
     ]),
     h('.homeHoneyTwo', [

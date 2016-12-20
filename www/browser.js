@@ -687,6 +687,9 @@ function render () {
         'data-ui-sref': 'services({service: service})',
        'data-ng-repeat': 'service in allServices[0]'
       }, [
+        h("p", {
+          "style":"font-weight:bold;color:white",
+        }, "{{service.fields.pageTitle}}"),
         h("img.overlayer", {
           "src":'img/homeGreen.png',
           'style': 'position:absolute;'
@@ -694,11 +697,11 @@ function render () {
         h("img", {
           "src":"img/homeHoney.png"
         }),
-        h("div.hexText", [
+        //h("div.hexText", [
           h("p", {
             "style":"font-weight:bold;color:white",
           }, "{{service.fields.pageTitle}}")
-        ])
+        //])
       ])
     ]),
     h('.homeHoneyTwo', [
@@ -1197,7 +1200,7 @@ function template () {
       ])
     ]),
     h('nav.navbar.navbar-default.navSmall', {
-      'style':'z-index:20;display:none;padding-top: 10px;   box-shadow: 0px 3px 27px 0px rgba(0, 0, 0, 0.35);'
+      'style':'z-index:20;display:none;padding-top: 10px;'
     },[
       h('div.container-fluid', [
         h('div.navbar-header', [
@@ -1853,13 +1856,14 @@ function render () {
               })
             ]),
             h("div.col-sm-8", {
-              'style': 'border-bottom:1px solid #d9dedc;padding-bottom:20px;'
+              'style': 'border-bottom:1px solid #d9dedc;padding-bottom:60px;'
             }, [
               h('br'),
-              h("h2.mg-md.tc-prussian-blue", [
+              h("h2.tc-prussian-blue", [
                 h("strong", '{{workProject.fields.title}}')
               ]),
               h("p", {
+                "style": "padding-bottom:10px;",
                 'data-marked': 'workProject.fields.workProjectSummary'
               }),
               h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {

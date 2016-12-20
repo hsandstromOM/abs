@@ -91,13 +91,14 @@ function render () {
               })
             ]),
             h("div.col-sm-8", {
-              'style': 'border-bottom:1px solid #d9dedc;padding-bottom:20px;'
+              'style': 'border-bottom:1px solid #d9dedc;padding-bottom:60px;'
             }, [
               h('br'),
-              h("h2.mg-md.tc-prussian-blue", [
+              h("h2.tc-prussian-blue", [
                 h("strong", '{{workProject.fields.title}}')
               ]),
               h("p", {
+                "style": "padding-bottom:10px;",
                 'data-marked': 'workProject.fields.workProjectSummary'
               }),
               h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
