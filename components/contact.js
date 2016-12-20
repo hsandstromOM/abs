@@ -109,7 +109,7 @@ function render () {
         }),
         //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
           h("div.row", [
-            h("div.col-sm-12", {'style':'margin-top:-300px;text-transform: uppercase;'},[
+            h("div.col-sm-12", {'style':'margin-top:-250px;text-transform: uppercase;'},[
               h('h1.mg-md.text-center.tc-white', '{{contentfulData.fields.bannerText}}')
             ])
           ])

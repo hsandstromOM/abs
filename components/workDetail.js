@@ -102,7 +102,7 @@ function render () {
         }),
         //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
           h("div.row", [
-            h("div.col-sm-12", {'style':'margin-top:-300px;text-transform: uppercase;'},[
+            h("div.col-sm-12", {'style':'margin-top:-250px;text-transform: uppercase;'},[
               h("h4.mg-md.tc-white.text-center", "WORK / BUILDING ENCLOSURE:"),
               h("h1.mg-md.tc-white.text-center", "{{workProject.fields.title}}")
             ])

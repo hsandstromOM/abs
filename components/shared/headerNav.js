@@ -103,7 +103,7 @@ function template () {
         }, [
           h("div.navbar-header", [
             h(".navbar-brand", {
-              "style": "padding-left: 5vh;",
+              "style": "padding-left: 5vh;padding-top:4vh; padding-bottom:4vh",
               'data-ui-sref': 'home'
             }, [
               h("img",{

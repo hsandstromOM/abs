@@ -53,7 +53,7 @@ function render () {
         }),
         //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
           h("div.row", [
-            h("div.col-sm-12", {'style':'margin-top:-300px;'},[
+            h("div.col-sm-12", {'style':'margin-top:-250px;'},[
               h("h4.mg-md.text-center.tc-white", "SERVICES:"),
               h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}")
             ])

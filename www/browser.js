@@ -195,7 +195,7 @@ function render () {
         }),
         //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
           h("div.row", [
-            h("div.col-sm-12", {'style':'margin-top:-300px;text-transform: uppercase;'},[
+            h("div.col-sm-12", {'style':'margin-top:-250px;text-transform: uppercase;'},[
               h('h1.mg-md.text-center.tc-white', '{{contentfulData.fields.bannerText}}')
             ])
           ])
@@ -824,7 +824,7 @@ function render () {
         }),
         //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
           h("div.row", [
-            h("div.col-sm-12", {'style':'margin-top:-300px;'},[
+            h("div.col-sm-12", {'style':'margin-top:-250px;'},[
               h("h4.mg-md.text-center.tc-white", "SERVICES:"),
               h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}")
             ])
@@ -1138,7 +1138,7 @@ function template () {
         }, [
           h("div.navbar-header", [
             h(".navbar-brand", {
-              "style": "padding-left: 5vh;",
+              "style": "padding-left: 5vh;padding-top:4vh; padding-bottom:4vh",
               'data-ui-sref': 'home'
             }, [
               h("img",{
@@ -1536,7 +1536,7 @@ function render () {
         }),
         //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
           h("div.row", [
-            h("div.col-sm-12", {'style':'margin-top:-300px;text-transform: uppercase;'},[
+            h("div.col-sm-12", {'style':'margin-top:-250px;text-transform: uppercase;'},[
               h("h1.mg-md.text-center.tc-white", '{{teamPage.fields.bannerHeadline}}')
             ])
           ])
@@ -1830,7 +1830,7 @@ function render () {
         }),
         //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
           h("div.row", [
-            h("div.col-sm-12", {'style':'margin-top:-300px;'},[
+            h("div.col-sm-12", {'style':'margin-top:-250px;'},[
               h("h4.mg-md.text-center.tc-white", "WORK:"),
               h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}")
             ])
@@ -1983,7 +1983,7 @@ function render () {
         }),
         //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
           h("div.row", [
-            h("div.col-sm-12", {'style':'margin-top:-300px;text-transform: uppercase;'},[
+            h("div.col-sm-12", {'style':'margin-top:-250px;text-transform: uppercase;'},[
               h("h4.mg-md.tc-white.text-center", "WORK / BUILDING ENCLOSURE:"),
               h("h1.mg-md.tc-white.text-center", "{{workProject.fields.title}}")
             ])
