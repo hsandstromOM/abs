@@ -1026,8 +1026,8 @@ li {
   font-size: 18px;
   position: absolute;
   top: 42%;
-  left: 15%;
-  right: 15%;
+  left: 17%;
+  right: 13%;
   letter-spacing: 1px;
   z-index: 1000;
   transition: all 300ms ease-in-out .2s; }
@@ -1288,8 +1288,7 @@ body {
   top: 44%;
   width: 100%;
   text-align: center;
-  z-index: 1000;
-  transition: all 300ms ease-in-out .2s; }
+  z-index: 1000; }
 
 .hexThumb img {
   max-width: 250px;
