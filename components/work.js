@@ -57,25 +57,25 @@ function render () {
         'data-mainPage': 'mainPage',
         'data-slide': 'slide'
       }),
-      h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:75vh;'},[
+      h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:50vh;'},[
         h('img.honeycomb-left',{
           'src':'img/honeycomb_pattern.png',
-          'style':"max-height:400px;z-index:1;margin-left:-50px !important;"
+          'style':"max-height:300px;z-index:1;margin-left:-50px !important;"
         }),
         h('img.honeycomb-right',{
           'src':'img/honeycomb.png',
-          'style':"max-height:600px;z-index:1;margin-right:-50px !important;"
+          'style':"max-height:500px;z-index:1;margin-right:-50px !important;"
         }),
         //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
           h("div.row", [
-            h("div.col-sm-12", {'style':'margin-top:-250px;'},[
+            h("div.col-sm-12", {'style':'margin-top:-215px;'},[
               h("h4.mg-md.text-center.tc-white", "WORK:"),
               h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}")
             ])
           ])
         //])
       ]),
-      h("div.closeNav", [
+      //h("div.closeNav", [
       h("div#bloc-12.bloc.bg-Halftone-Pattern.tc-prussian-blue.bgc-white", {
         'style':'background-color:#F6F6F6;'
       }, [
@@ -112,7 +112,7 @@ function render () {
     h('div', {
       'data-footermenu': ''
     }),
-      ])
+    //  ])
     ])
   ])
 }
