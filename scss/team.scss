@@ -27,8 +27,8 @@
 .honeyCombHome {
   display: inline-block;
   position: relative;
-  width: 241px !important;
-  height: 279px !important;
+  width: 253px !important;
+  height: 284px !important;
   //margin-right: 5px;
 }
 .honeyCombHome:hover {
@@ -41,12 +41,12 @@
   font-family: "aaux-next", sans-serif;
   font-size: 18px;
   position: absolute;
-  top: 42%;
+  top: 41%;
   left:17%;
-  right:13%;
+  right:15%;
   letter-spacing: 1px;
   z-index: 1000;
-  transition: all 300ms ease-in-out .2s;
+  transition: none;
 }
 .overlayer {
   opacity: .7;
@@ -94,13 +94,14 @@
     text-align:center;
     width:100%;
   }
+
   .hexText{
     height: auto !important;
     padding-top: 0 !important;
     width: 100% !important;
     position: absolute;
     text-align: center;
-    top: 44% !important;
+    top: 41% !important;
   }
 }
 @media (max-width:895px){

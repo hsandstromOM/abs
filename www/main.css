@@ -82,7 +82,7 @@
     width: 100% !important;
     position: absolute;
     text-align: center;
-    top: 44% !important; }
+    top: 42% !important; }
   .hexResponsive {
     width: 100% !important; }
     .hexResponsive a {
@@ -1023,8 +1023,8 @@ li {
 .honeyCombHome {
   display: inline-block;
   position: relative;
-  width: 241px !important;
-  height: 279px !important; }
+  width: 253px !important;
+  height: 284px !important; }
 
 .honeyCombHome:hover .overlayer {
   opacity: 0; }
@@ -1033,12 +1033,12 @@ li {
   font-family: "aaux-next", sans-serif;
   font-size: 18px;
   position: absolute;
-  top: 42%;
+  top: 41%;
   left: 17%;
-  right: 13%;
+  right: 15%;
   letter-spacing: 1px;
   z-index: 1000;
-  transition: all 300ms ease-in-out .2s; }
+  transition: none; }
 
 .overlayer {
   opacity: .7;
@@ -1084,7 +1084,7 @@ li {
     width: 100% !important;
     position: absolute;
     text-align: center;
-    top: 44% !important; } }
+    top: 41% !important; } }
 
 @media (max-width: 895px) {
   .gallery-text {
