@@ -109,11 +109,11 @@ function render () {
           ])
         //])
       ]),
-      h("div.closeNav", {
-        'style': 'margin-top:95px;'
-      }, [
+      //h("div.closeNav", {
+      //  'style': 'margin-top:95px;'
+      //}, [
         h("div#bloc-2.bloc.bg-Halftone-Pattern.tc-prussian-blue.bgc-white", {
-          "style": "background-color:#F6F6F6;-webkit-box-shadow:inset 0 10px 5px 2px rgba(0,0,0,.05);box-shadow:inset 0 -3px 8px 4px rgba(0,0,0,.05)"
+          "style": "padding-top:95px;background-color:#F6F6F6;-webkit-box-shadow:inset 0 10px 5px 2px rgba(0,0,0,.05);box-shadow:inset 0 -3px 8px 4px rgba(0,0,0,.05)"
         }, [
           h("div.container.bloc-lg", [
             h("div.hexagon.row", [
@@ -377,7 +377,7 @@ function render () {
     h('div', {
       'data-footermenu': ''
     }),
-      ])
+      //])
     ])
   ])
 }
