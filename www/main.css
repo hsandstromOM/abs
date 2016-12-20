@@ -431,7 +431,7 @@ a, button {
   font-size: 38px; }
 
 #bloc-6 p {
-  font-family: "industry",sans-serif;
+  font-family: "aaux-next",sans-serif;
   font-size: 18px; }
 
 #bloc-7 h1 {
@@ -461,6 +461,7 @@ a, button {
   font-size: 50px; }
 
 #bloc-16 h6 {
+  font-family: "aaux-next",sans-serif;
   font-size: 13px; }
 
 #bloc-16 h5 {
@@ -1037,8 +1038,7 @@ li {
   left: 17%;
   right: 15%;
   letter-spacing: 1px;
-  z-index: 1000;
-  transition: none; }
+  z-index: 1000; }
 
 .overlayer {
   opacity: .7;
