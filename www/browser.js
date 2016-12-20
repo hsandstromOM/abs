@@ -522,7 +522,7 @@ function render () {
                 h('div.text-center', [
                   h("i.fa.fa-2x.fa-angle-down.icon-green-ryb")
                 ]),
-                h("h3.mg-md.text-center.tc-green-ryb",{
+                h("h3.mg-md.text-center.tc-green-ryb.tk-industry",{
                   "style": "margin-top:0px"
                 }, ["WHO WE ARE."])
               ])
@@ -550,7 +550,7 @@ function render () {
               h('div.text-center', [
                 h("i.fa.fa-2x.fa-angle-down.icon-green-ryb")
               ]),
-              h("h3.mg-md.text-center.tc-green-ryb",{
+              h("h3.mg-md.text-center.tc-green-ryb.tk-industry",{
                 "style": "margin-top:0px; margin-bottom 100px"
               }, ["WHAT WE DO."]),
               h("br"),
