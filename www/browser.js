@@ -587,9 +587,10 @@ function render () {
                   'style': "margin-left:200px; margin-right:200px; margin-bottom:65px;",
                   'data-marked': 'contentfulData.fields.teamMemberSpotlightContent'
                 }),
-                h("div.text-center.tk-industry", [
+                h("div.text-center.tk-aaux-next", [
                   h("a.btn.wire-btn-green-ryb.btn-sq.btn-lg", {
                     // "href":"index.html"
+                      "style":"letter-spacing: 1px"
                   }, "{{contentfulData.fields.buttonText}}")
                 ])
               ])

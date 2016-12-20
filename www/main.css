@@ -45,7 +45,7 @@
   .subnav-navigation div a {
     color: #1a2c68;
     font-weight: 400;
-    font-family: "Industry", Helvetica, Arial, sans-serif;
+    font-family: "Industry", sans-serif;
     text-transform: uppercase;
     font-weight: normal;
     letter-spacing: .1em;
@@ -213,7 +213,7 @@ a.ltc-royal-blue-traditional:hover {
 
 .subnav-navigation div {
   display: inline-block;
-  font-family: "aaux-next",sans-serif;
+  font-family: "industry",sans-serif;
   text-align: center;
   height: 100%;
   list-style: none;
