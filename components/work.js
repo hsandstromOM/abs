@@ -60,11 +60,11 @@ function render () {
       h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:50vh;'},[
         h('img.honeycomb-left',{
           'src':'img/honeycomb_pattern.png',
-          'style':"max-height:300px;z-index:1;margin-left:-50px !important;"
+          'style':"height:300px;z-index:1;margin-left:-50px !important;"
         }),
         h('img.honeycomb-right',{
           'src':'img/honeycomb.png',
-          'style':"max-height:500px;z-index:1;margin-right:-50px !important;"
+          'style':"height:500px;z-index:1;margin-right:-50px !important;"
         }),
         //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
           h("div.row", [
