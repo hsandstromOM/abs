@@ -123,8 +123,8 @@ function template () {
               }, [
                 h("#team.tk-industry", {
                   "style":"cursor:pointer;font-size: 18px;font-weight:normal;line-height:21px;padding-top: 15px;padding-bottom: 15px;",
-                  "data-ui-sref":'team',
-                  'data-ng-class': "mainPage === 'team' ? 'active' : 'ltc-royal-blue-traditional'"
+                  "data-ui-sref":"team",
+                  'data-ng-class': "page === 'team' ? 'selectedGreen' : 'nonSelectedBlue'"
                 }, "TEAM")
               ]),
               h("li", {
@@ -134,7 +134,7 @@ function template () {
                   "style": "cursor:pointer;font-size: 18px;font-weight:normal;line-height:21px;padding-top: 15px;padding-bottom: 15px;",
                   'data-ui-sref': 'work({service: defaultWorkService})',
                   'data-ng-click': 'setWorkService()',
-                  'data-ng-class': "mainPage === 'work' ? 'active' : 'ltc-royal-blue-traditional'"
+                  'data-ng-class': "page === 'work' ? 'selectedGreen' : 'nonSelectedBlue'"
                 }, "WORK")
               ]),
               h("li", {
@@ -144,7 +144,7 @@ function template () {
                   "style": "cursor: pointer; font-size: 18px;font-weight:normal;line-height: 21px; padding-top: 15px; padding-bottom: 15px;",
                   'data-ng-click': 'setSelectedService()',
                   'data-ui-sref': 'services()',
-                  'data-ng-class': "mainPage === 'services' ? 'active' : 'ltc-royal-blue-traditional'"
+                  'data-ng-class': "page === 'services' ? 'selectedGreen' : 'nonSelectedBlue'"
                 }, "SERVICES"),
               ]),
               h("li", {

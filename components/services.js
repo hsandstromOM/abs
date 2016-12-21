@@ -71,10 +71,10 @@ function render () {
                   h("span.Centerer"),
                   h("img.hexImg.Centered", {
                     "style":"margin-top:-129px !important;",
-                    "src":"img/honeycomb_shape.png"
+                    "src":"img/doubleHoney.png"
                   }),
                   h("div.gallery-text", {
-                    'style':'margin-top:7px;'
+                    'style':'margin-top:20px;'
 
                   },[
                     h('img.cIcon',{'src':'img/contact_icon.png'}),
