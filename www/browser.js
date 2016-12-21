@@ -1141,12 +1141,12 @@ function template () {
         }, [
           h("div.navbar-header", [
             h(".navbar-brand", {
-              "style": "padding-left: 5vh; height: 180px",
+              "style": "padding-left: 5vh;height: 180px",
               'data-ui-sref': 'home'
             }, [
               h("img",{
                 "src":"img/ABS_logo.png","alt":"logo","width":"247",
-                'style':'cursor:pointer; text-align: center',
+                'style':'cursor:pointer; text-align: center;padding-top:20px; padding-bottom:20px; ',
               })
             ])
           ]),
