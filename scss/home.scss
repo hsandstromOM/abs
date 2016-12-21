@@ -35,11 +35,12 @@
   box-shadow: 1.5px 2.598px 27px 0px rgba(0, 0, 0, 0.35);
 }
 .navbar-fixed-top .navbar-collapse{
-  height: 100vh;
+  height: 190vh;
 }
-.navbar-fixed-top .navbar-collapse {
-    max-height: none;
+.navbar-fixed-top .navbar-collapse{
+  max-height:none;
 }
+
 a.ltc-royal-blue-traditional:hover{
   color:  rgba(115, 181, 61, 1);
 }
@@ -56,7 +57,7 @@ a.ltc-royal-blue-traditional:hover{
   right: 0;
 }
 .slideNavDown {
-  margin-top: 185px;
+  margin-top: 180px;
   //top: 160px;
 }
 .subnav-navigation div {

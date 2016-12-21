@@ -1,6 +1,7 @@
 var h = require('hyperscript')
 var headerNav = require('./shared/headerNav')
 var footer = require('./shared/footer')
+
 module.exports = {
   url: '/team',
   template: render().outerHTML,

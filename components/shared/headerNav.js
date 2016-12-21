@@ -103,12 +103,12 @@ function template () {
         }, [
           h("div.navbar-header", [
             h(".navbar-brand", {
-              "style": "padding-left: 5vh;padding-top:4vh; padding-bottom:4vh",
+              "style": "padding-left: 5vh; height: 180px",
               'data-ui-sref': 'home'
             }, [
               h("img",{
                 "src":"img/ABS_logo.png","alt":"logo","width":"247",
-                'style':'cursor:pointer',
+                'style':'cursor:pointer; text-align: center',
               })
             ])
           ]),
@@ -303,7 +303,7 @@ function template () {
 
 
 ///// work full nav
-    h("div.row.subnav-navigation.subnavbar.slideNav", {
+    h("div.row.subnav-navigation.subnavbar.slideNav#workNav", {
       'style': 'background-color:#c5ceca;overflow-x:scroll;overflow-y:hidden;white-space:nowrap;',
       'data-ng-class': "slide.workNav ? 'slideNavDown' : 'slideNavUp'"
     }, [

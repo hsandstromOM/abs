@@ -57,26 +57,25 @@ function render () {
         'data-mainPage': 'mainPage',
         'data-slide': 'slide'
       }),
-
-      //  h('img.img-responsive.honeycomb-left',{
-      //    'src':'img/honeycomb_pattern.png',
-      //    'style':"max-height:200px;z-index:1;margin-left:-50px !important;"
-      //  }),
-        //h('img.img-responsive.honeycomb-right',{
-        //  'src':'img/honeycomb.png',
-        //  'style':"max-height:300px;z-index:1;margin-right:-50px !important;"
-      //  }),
+      h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:75vh;'},[
+        h('img.honeycomb-left',{
+          'src':'img/honeycomb_pattern.png',
+          'style':"max-height:400px;z-index:1;margin-left:-50px !important;"
+        }),
+        h('img.honeycomb-right',{
+          'src':'img/honeycomb.png',
+          'style':"max-height:600px;z-index:1;margin-right:-50px !important;"
+        }),
         //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
-          h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:900px;'},[
           h("div.row", [
-            h("div.col-sm-12", {'style':'margin-top:215px;'},[
+            h("div.col-sm-12", {'style':'margin-top:-250px;'},[
               h("h4.mg-md.text-center.tc-white", "WORK:"),
               h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}")
             ])
           ])
         //])
       ]),
-      //h("div.closeNav", [
+      h("div.closeNav", [
       h("div#bloc-12.bloc.bg-Halftone-Pattern.tc-prussian-blue.bgc-white", {
         'style':'background-color:#F6F6F6;'
       }, [
@@ -92,14 +91,13 @@ function render () {
               })
             ]),
             h("div.col-sm-8", {
-              'style': 'border-bottom:1px solid #d9dedc;padding-bottom:60px;'
+              'style': 'border-bottom:1px solid #d9dedc;padding-bottom:20px;'
             }, [
               h('br'),
-              h("h2.tc-prussian-blue", [
+              h("h2.mg-md.tc-prussian-blue", [
                 h("strong", '{{workProject.fields.title}}')
               ]),
               h("p", {
-                "style": "padding-bottom:10px;",
                 'data-marked': 'workProject.fields.workProjectSummary'
               }),
               h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
@@ -113,7 +111,7 @@ function render () {
     h('div', {
       'data-footermenu': ''
     }),
-    //  ])
+      ])
     ])
   ])
 }

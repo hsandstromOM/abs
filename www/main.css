@@ -188,7 +188,7 @@
   box-shadow: 1.5px 2.598px 27px 0px rgba(0, 0, 0, 0.35); }
 
 .navbar-fixed-top .navbar-collapse {
-  height: 100vh; }
+  height: 190vh; }
 
 .navbar-fixed-top .navbar-collapse {
   max-height: none; }
@@ -209,7 +209,7 @@ a.ltc-royal-blue-traditional:hover {
   right: 0; }
 
 .slideNavDown {
-  margin-top: 185px; }
+  margin-top: 180px; }
 
 .subnav-navigation div {
   display: inline-block;
@@ -1280,8 +1280,9 @@ body {
   left: 10px;
   background-color: #fff;
   text-align: center;
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
+  backface-visibility: hidden;
+  -webkit-clip-path: url("#hexContainer");
+  clip-path: url("#hexContainer"); }
 
 .hexThumb {
   display: block;
@@ -1299,8 +1300,9 @@ body {
   letter-spacing: .05em;
   text-transform: uppercase;
   text-align: center;
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
+  backface-visibility: hidden;
+  -webkit-clip-path: url("#hexThumb");
+  clip-path: url("#hexThumb"); }
 
 .old {
   /*-webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 80% 100%);
