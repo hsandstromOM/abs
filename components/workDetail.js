@@ -94,15 +94,15 @@ function render () {
       h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:75vh;'},[
         h('img.honeycomb-left',{
           'src':'img/honeycomb_pattern.png',
-          'style':"max-height:400px;z-index:1;margin-left:-50px !important;"
+          'style':"max-height:275px;z-index:1;margin-left:-50px !important;"
         }),
         h('img.honeycomb-right',{
           'src':'img/honeycomb.png',
-          'style':"max-height:600px;z-index:1;margin-right:-50px !important;"
+          'style':"max-height:450px;z-index:1;margin-right:-50px !important;"
         }),
         //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
           h("div.row", [
-            h("div.col-sm-12", {'style':'margin-top:-250px;text-transform: uppercase;'},[
+            h("div.col-sm-12", {'style':'margin-top:-180px;text-transform: uppercase;'},[
               h("h4.mg-md.tc-white.text-center", "WORK / BUILDING ENCLOSURE:"),
               h("h1.mg-md.tc-white.text-center", "{{workProject.fields.title}}")
             ])

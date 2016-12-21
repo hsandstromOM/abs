@@ -43,7 +43,7 @@ function render () {
       /* bloc-0 END */
       h("div.closeNav", [
         /* bloc-1 */
-        h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:75vh;'},[
+        h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:175vh;'},[
           h('img.honeycomb-left',{
             'src':'img/honeycomb_pattern.png',
             'style':"max-height:400px;z-index:1;margin-left:-50px !important;"
