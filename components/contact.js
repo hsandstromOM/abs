@@ -10,6 +10,7 @@ module.exports = {
 function component ($scope, $state, store, contentful,  $uibModal, $window, NgMap, $http) {
   NgMap.getMap().then(function(map) {
   $scope.map = map;
+  $scope.map.setOptions({draggable: false, zoomControl: false, scrollwheel: false, disableDoubleClickZoom: true});
   });
   $scope.custom = true
   $scope.custom1 = true
@@ -120,7 +121,7 @@ function render () {
         'style': 'pointer-events: none'
       }),
       h('ng-map.breakMargin', {
-        'style': 'display:block;width:100%;height:600px; pointer-events: none ',
+        'style': 'display:block;width:100%;height:600px;',
         'data-zoom-to-include-markers': 'true'
       }, [
           h('marker', {
