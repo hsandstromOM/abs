@@ -352,7 +352,7 @@ function render () {
                   'data-ng-show': "currentLocation === 'charlotte'"
                 }),
                 h("h4.charlotteOfficeTxt", "CHARLOTTE OFFICE"),
-                h("p", ["120 Greenwich Road", h('br'), "Charlotte, NC", h('br'), "704.749.3545"]),
+                h("p", ["5601 Seventy-Seven Center Drive", h('br'), "Charlotte, NC", h('br'), "704.749.3545"]),
 
               ])
             ])
