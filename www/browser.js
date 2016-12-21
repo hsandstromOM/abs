@@ -202,8 +202,11 @@ function render () {
         //])
       ]),
       h("div.closeNav", [
+      h("div.overlay",{
+        'style': 'pointer-events: none'
+      }),
       h('ng-map.breakMargin', {
-        'style': 'display:block;width:100%;height:600px;',
+        'style': 'display:block;width:100%;height:600px; pointer-events: none ',
         'data-zoom-to-include-markers': 'true'
       }, [
           h('marker', {
