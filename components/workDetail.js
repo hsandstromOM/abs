@@ -122,10 +122,10 @@ function render () {
                   h("span.Centerer"),
                   h("img.Centered", {
                     "style":"margin-top:-185px",
-                    "src":"img/honeycomb_shape.png"
+                    "src":"img/doubleHoney.png"
                   }),
                   h("div.gallery-text", {
-                    'style':'margin-top:-25px;'
+                    'style':'margin-top:-30px;'
                   },[
                     h('img',{'src':'img/contact_icon.png'}),
                     h("h4.hextitle", [

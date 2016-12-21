@@ -1861,11 +1861,13 @@ function render () {
               })
             ]),
             h("div.col-sm-8", {
-              'style': 'border-bottom:1px solid #d9dedc;padding-bottom:20px;'
+              'style': 'border-bottom:1px solid #d9dedc;padding-bottom:60px;'
             }, [
               h('br'),
               h("h2.mg-md.tc-prussian-blue", [
-                h("strong", '{{workProject.fields.title}}')
+                h("p", {
+                  "style": "text-transform: uppercase;font-weight:bold"
+                }, '{{workProject.fields.title}}')
               ]),
               h("p", {
                 'data-marked': 'workProject.fields.workProjectSummary'
@@ -2011,10 +2013,10 @@ function render () {
                   h("span.Centerer"),
                   h("img.Centered", {
                     "style":"margin-top:-185px",
-                    "src":"img/honeycomb_shape.png"
+                    "src":"img/doubleHoney.png"
                   }),
                   h("div.gallery-text", {
-                    'style':'margin-top:-25px;'
+                    'style':'margin-top:-30px;'
                   },[
                     h('img',{'src':'img/contact_icon.png'}),
                     h("h4.hextitle", [
