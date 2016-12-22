@@ -352,7 +352,9 @@ function render () {
                   'data-ng-show': "currentLocation === 'charlotte'"
                 }),
                 h("h4.charlotteOfficeTxt", "CHARLOTTE OFFICE"),
-                h("p", ["5601 Seventy-Seven Center Drive", h('br'), "Charlotte, NC", h('br'), "704.749.3545"]),
+                h("p", {
+                  "style": "margin-left: 10px; margin-right: 10px;"
+                }, ["5601 Seventy-Seven Center Drive", h('br'), "Charlotte, NC", h('br'), "704.749.3545"]),
 
               ])
             ])

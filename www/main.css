@@ -167,7 +167,7 @@
   float: left; }
 
 .greenNav {
-  background-color: rgba(115, 181, 61, 0.75); }
+  background-color: #73b53d; }
 
 .active {
   color: #83B65D !important; }
@@ -239,7 +239,7 @@ a.ltc-royal-blue-traditional:hover {
   height: 65px; }
 
 .subnav-navigation div:hover div {
-  background-color: rgba(115, 181, 61, 0.75); }
+  background-color: #73b53d; }
 
 /*-----------------------------------------------------------------------------------
 	    ABS
@@ -1223,7 +1223,7 @@ li {
   background-color: #0b1e60; }
 
 .greenContact {
-  background-color: #73B53d; }
+  background-color: #73b53d; }
 
 .blueContact:hover {
   background-color: #73B53d !important; }
@@ -1260,7 +1260,8 @@ li {
 
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  transition: all 300ms ease-in-out; }
 
 body {
   background-color: #efefef; }
@@ -1337,4 +1338,4 @@ a:hover img {
   opacity: 1; }
 
 a:hover p {
-  opacity: 0; }
+  opacity: 1; }

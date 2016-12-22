@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  //transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 body {
   background-color: #efefef;
@@ -88,5 +88,5 @@ a:hover img {
 
 }
 a:hover p {
-  opacity: 0;
+  opacity: 1;
 }
