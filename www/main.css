@@ -170,14 +170,14 @@
   background-color: #73b53d; }
 
 .active {
-  color: #73b53d !important; }
+  color: #83B65D !important; }
 
 .overlayer {
   opacity: .7;
   position: absolute; }
 
 .hexResponsive:hover .overlayer {
-  opacity: 1; }
+  opacity: 0; }
 
 .topMargin {
   margin-top: -65px; }
@@ -1260,8 +1260,7 @@ li {
 
 * {
   margin: 0;
-  padding: 0;
-  transition: all 300ms ease-in-out; }
+  padding: 0; }
 
 body {
   background-color: #efefef; }
@@ -1333,9 +1332,10 @@ body {
   filter: grayscale(100%);
   opacity: .25; }
 
-a:hover img {
+.hexThumb:hover img {
   filter: grayscale(0%);
-  opacity: 1; }
+  opacity: 1;
+  filter: brightness(0.7); }
 
-a:hover p {
+.hexThumb:hover p {
   opacity: 1; }
