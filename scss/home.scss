@@ -18,12 +18,11 @@
   color:#83B65D !important;
 }
 .overlayer {
-  opacity: .7;
   position: absolute;
 }
 .hexResponsive:hover {
   .overlayer {
-    opacity: 0;
+//    opacity: 1;
   }
 }
 .topMargin{
@@ -811,7 +810,7 @@ li{
 }
 
 .overlayer {
-  opacity: .7;
+//  opacity: .7;
   position: absolute;
 }
 h2 strong{

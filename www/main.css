@@ -82,7 +82,7 @@
     width: 100% !important;
     position: absolute;
     text-align: center;
-    top: 42% !important; }
+    top: 40% !important; }
   .hexResponsive {
     width: 100% !important; }
     .hexResponsive a {
@@ -173,11 +173,7 @@
   color: #83B65D !important; }
 
 .overlayer {
-  opacity: .7;
   position: absolute; }
-
-.hexResponsive:hover .overlayer {
-  opacity: 0; }
 
 .topMargin {
   margin-top: -65px; }
@@ -877,7 +873,6 @@ li {
   .honeyComb:hover .overlayer {
     opacity: 0; }
   .overlayer {
-    opacity: .7;
     position: absolute; }
   h2 strong {
     margin-left: 10px; }
@@ -1044,14 +1039,14 @@ li {
   font-family: "aaux-next", sans-serif;
   font-size: 18px;
   position: absolute;
-  top: 41%;
-  left: 17%;
+  top: 40%;
+  left: 25%;
   right: 15%;
-  letter-spacing: 1px;
+  letter-spacing: .5px;
   z-index: 1000; }
 
 .overlayer {
-  opacity: .7;
+  opacity: 1;
   position: absolute; }
 
 .fourRow {

@@ -693,35 +693,12 @@ function render () {
         'data-ui-sref': 'services({service: service})',
        'data-ng-repeat': 'service in allServices[0]'
       }, [
-        h("p", {
-          "style":"font-weight:bold;color:white",
-        }, "{{service.fields.pageTitle}}"),
         h("img.overlayer", {
-          "src":'img/homeGreen.png',
+          "src":'img/Green_Hex.png',
           'style': 'position:absolute;'
         }),
         h("img", {
-          "src":"img/homeHoney.png"
-        }),
-        //h("div.hexText", [
-          h("p", {
-            "style":"font-weight:bold;color:white",
-          }, "{{service.fields.pageTitle}}")
-        //])
-      ])
-    ]),
-    h('.homeHoneyTwo', [
-      h("a.honeyCombHome", {
-        'data-ng-click': 'setSelectedService(service)',
-        'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[1]'
-      }, [
-        h("img.overlayer", {
-          "src":'img/homeGreen.png',
-          'style': 'position:absolute;'
-        }),
-        h("img", {
-          "src":"img/homeHoney.png"
+          "src":"img/Color_Hex.png"
         }),
         h("div.hexText", [
           h("p", {
@@ -731,17 +708,39 @@ function render () {
       ])
     ]),
     h('.homeHoneyTwo', [
-      h("a.honeyComb", {
+      h("a.honeyCombHome", {
+        'data-ng-click': 'setSelectedService(service)',
+        'data-ui-sref': 'services({service: service})',
+       'data-ng-repeat': 'service in allServices[1]'
+      }, [
+        h("img.overlayer", {
+          "src":'img/Green_Hex.png',
+          'style': 'position:absolute;'
+        }),
+        h("img", {
+          "src":"img/Color_Hex.png"
+        }),
+        h("div.hexText", {
+          "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
+        },[
+          h("p", {
+            "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle",
+          }, "{{service.fields.pageTitle}}")
+        ])
+      ])
+    ]),
+    h('.homeHoneyTwo', [
+      h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
        'data-ng-repeat': 'service in allServices[2]'
       }, [
         h("img.overlayer", {
-          "src":'img/homeGreen.png',
+          "src":'img/Green_Hex.png',
           'style': 'position:absolute;'
         }),
         h("img", {
-          "src":"img/homeHoney.png"
+          "src":"img/Color_Hex.png"
         }),
         h("div.hexText", {
           "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
@@ -753,17 +752,17 @@ function render () {
       ])
     ]),
     h('.homeHoneyTwo', [
-      h("a.honeyComb", {
+      h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
        'data-ng-repeat': 'service in allServices[3]'
       }, [
         h("img.overlayer", {
-          "src":'img/homeGreen.png',
+          "src":'img/Green_Hex.png',
           'style': 'position:absolute;'
         }),
         h("img", {
-          "src":"img/homeHoney.png"
+          "src":"img/Color_Hex.png"
         }),
         h("div.hexText", {
           "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
