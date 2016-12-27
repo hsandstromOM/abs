@@ -493,6 +493,9 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
   $scope.goToService = function (service) {
     console.log(service)
   }
+  $scope.goToWorkProject = function (workProject) {
+    console.log(workProject)
+  }
 }
 
 function render () {
