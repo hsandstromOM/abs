@@ -91,7 +91,7 @@ function render () {
         'data-mainPage': 'mainPage',
         'data-slide': 'slide'
       }),
-      h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:75vh;'},[
+      h("div#bloc-1.bloc.bgc-white.bg-Header-Placeholder.d-bloc", {'style':'max-height:75vh;'},[
         h('img.honeycomb-left',{
           'src':'img/honeycomb_pattern.png',
           'style':"max-height:275px;z-index:1;margin-left:-50px !important;"
@@ -103,7 +103,7 @@ function render () {
         //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
           h("div.row", [
             h("div.col-sm-12", {'style':'margin-top:-180px;text-transform: uppercase;'},[
-              h("h4.mg-md.tc-white.text-center", "WORK / BUILDING ENCLOSURE:"),
+              h("h4.mg-md.tc-white.text-center.ng-binding", "WORK/{{currentServiceProvided.fields.pageTitle}}:"),
               h("h1.mg-md.tc-white.text-center", "{{workProject.fields.title}}")
             ])
           ])

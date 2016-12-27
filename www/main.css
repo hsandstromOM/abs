@@ -830,6 +830,12 @@ li {
 .bg-Architecture-Header2 {
   background-image: url("img/Architecture_Header2.jpg"); }
 
+.bg-Header-Placeholder {
+  background-image: url("img/BlueBar.jpg"); }
+
+.bg-Contact-Header {
+  background-image: url("img/ABS-Header-contact.jpg"); }
+
 .dropdown-menu {
   display: none !important; }
 
