@@ -1711,49 +1711,55 @@ function render () {
             "role": 'document'
           }, [
             h("div.modal-content", {
-              "style":"border-radius:0;height:442px;width:130%"
+              "style":"border-radius:0;height:380px;width:140%"
             }, [
               h("div.modal-body", {
                 "style":"padding:0"
               }, [
-                h("i.fa.fa-times-circle", {
-                  "style":"padding:10px; margin-left: 350px",
-                  "type": 'button',
-                  'aria-label': 'close',
-                  "aria-hidden":"true",
-                  'data-dismiss': 'modal'
-                }
-              ),
+
                 h("div.col-sm-6", {
-                 "style":"padding-left: 0px;  padding-right: 0px;"
+                 "style":"padding-left: 0px;  padding-right: 0px;width: 360px"
                }, [
                  h("img.img-responsive", {
+                   "style": "max-height: 380px",
                    "data-ng-src":"{{currentTeamMember.fields.fullImage.fields.file.url}}",
                    "alt":""
                  })
                ]),
 
                 h("div.col-sm-6", {
-                  "style":"padding-left:40px"
+                  "style":"padding-left:30px;padding-right:20px; height: 380px;width: 450px"
                 }, [
-                  h("h4", {
-                    "style":"padding-top:5px;text-transform: uppercase;"
+                  h("i.fa.fa-times-circle", {
+                    "style":"padding:10px;margin-left: 410px",
+                    "type": 'button',
+                    'aria-label': 'close',
+                    "aria-hidden":"true",
+                    'data-dismiss': 'modal'
+                  }
+                ),
+                  h("h4.tk-aaux-next", {
+                    "style":"padding-top:20px;text-transform: uppercase;padding-bottom: 5px"
                   }, [
-                    h("strong", "{{currentTeamMember.fields.name}}"," ", '{{currentTeamMember.fields.lastName}}')
+                    h("strong", "{{currentTeamMember.fields.name}}"," ", "{{currentTeamMember.fields.lastName}}", ",")
                   ]),
-                  h("h4", "{{currentTeamMember.fields.certificationsAndLicenses}}"),
-                  h("p", "{{currentTeamMember.fields.bio}}" ),
+                  h("h4", {
+                    "style": "padding-bottom: 5px"
+                  }, "{{currentTeamMember.fields.certificationsAndLicenses}}"),
+                  h("p", {
+                    "style": "letter-spacing: -0.7px;line-height: 1.3em;padding-bottom: 15px"
+                  }, "{{currentTeamMember.fields.bio}}" ),
                   h("div", {
                     "style":"display:block"
                   }, [
                     h("p", [
                       h("a.tk-industry", {
-                        "style":"color:#73B53d;display:inline;text-decoration:underline;text-transform: uppercase;margin-right: 10px",
+                        "style":"font-size:16px;color:#73B53d;display:inline;text-decoration:underline;text-transform: uppercase;margin-right: 10px;letter-spacing: .1em",
                         'data-ng-href': 'mailto:{{currentTeamMember.fields.emailAddress}}'
                       }, "EMAIL {{currentTeamMember.fields.name}}"),
                       h("nbsp", " "),
                       h("a.tk-industry", {
-                        "style":"color:#73B53d;display:inline;text-decoration:underline"
+                        "style":"font-size:16px;color:#73B53d;display:inline;text-decoration:underline;letter-spacing: .1em"
                       }, "DOWNLOAD C.V.")
                     ])
 
