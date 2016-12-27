@@ -134,7 +134,7 @@ function template () {
          h("div.container.bloc-md", [
            h("div.row", [
             h("div.col-sm-12", [
-              h("img.img-responsive", {
+              h("img", {
                  "src":"img/ABS_footer_logo.png"
                })
              ])

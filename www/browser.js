@@ -588,16 +588,16 @@ function render () {
               h("div.col-sm-12", [
                 h("br"),
                 h("br"),
-                h("h2.mg-md.text-center.tk-industry.tc-prussian-blue", "TEAM MEMBER SPOTLIGHT"),
+                h("h2.mg-md.text-center.tk-industry.tc-prussian-blue", "PROJECT SPOTLIGHT"),
                 h("p.text-center", {
                   'style': "margin-left:200px; margin-right:200px; margin-bottom:65px;",
-                  'data-marked': 'contentfulData.fields.teamMemberSpotlightContent'
+                  'data-marked': 'contentfulData.fields.projectSpotlightContent'
                 }),
                 h("div.text-center.tk-industry", [
-                  h("a.btn.wire-btn-green-ryb.btn-sq.btn-lg.tk-industry", {
-                    // "href":"index.html"
-                      "style":"font-weight:strong;letter-spacing: 1px"
-                  }, "{{contentfulData.fields.buttonText}}")
+                  h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
+                    "data-ng-click":"setSelectedSpotlightButton(spotlightButton)",
+                    'data-ui-sref': "workDetail({obj: workProject})",
+                  }, "Learn More")
                 ])
               ])
             ])
@@ -1028,7 +1028,7 @@ function template () {
          h("div.container.bloc-md", [
            h("div.row", [
             h("div.col-sm-12", [
-              h("img.img-responsive", {
+              h("img", {
                  "src":"img/ABS_footer_logo.png"
                })
              ])
@@ -1746,14 +1746,17 @@ function render () {
                   h("div", {
                     "style":"display:block"
                   }, [
-                    h("a.tk-industry", {
-                      "style":"color:#73B53d;display:inline;text-decoration:underline;text-transform: uppercase;",
-                      'data-ng-href': 'mailto:{{currentTeamMember.fields.emailAddress}}'
-                    }, "EMAIL {{currentTeamMember.fields.name}}"),
-                    h('br'),
-                    h("a.tk-industry", {
-                      "style":"color:#73B53d;display:inline;text-decoration:underline"
-                    }, "DOWNLOAD C.V.")
+                    h("p", [
+                      h("a.tk-aaux-next", {
+                        "style":"color:#73B53d;display:inline;text-decoration:underline;text-transform: uppercase;",
+                        'data-ng-href': 'mailto:{{currentTeamMember.fields.emailAddress}}'
+                      }, "EMAIL {{currentTeamMember.fields.name}}"),
+                      h('nbsp'),
+                      h("a.tk-aaux-next", {
+                        "style":"color:#73B53d;display:inline;text-decoration:underline"
+                      }, "DOWNLOAD C.V.")
+                    ])
+
                   ])
                 ])
               ])

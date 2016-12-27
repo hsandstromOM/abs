@@ -312,14 +312,17 @@ function render () {
                   h("div", {
                     "style":"display:block"
                   }, [
-                    h("a.tk-industry", {
-                      "style":"color:#73B53d;display:inline;text-decoration:underline;text-transform: uppercase;",
-                      'data-ng-href': 'mailto:{{currentTeamMember.fields.emailAddress}}'
-                    }, "EMAIL {{currentTeamMember.fields.name}}"),
-                    h('br'),
-                    h("a.tk-industry", {
-                      "style":"color:#73B53d;display:inline;text-decoration:underline"
-                    }, "DOWNLOAD C.V.")
+                    h("p", [
+                      h("a.tk-aaux-next", {
+                        "style":"color:#73B53d;display:inline;text-decoration:underline;text-transform: uppercase;",
+                        'data-ng-href': 'mailto:{{currentTeamMember.fields.emailAddress}}'
+                      }, "EMAIL {{currentTeamMember.fields.name}}"),
+                      h('nbsp'),
+                      h("a.tk-aaux-next", {
+                        "style":"color:#73B53d;display:inline;text-decoration:underline"
+                      }, "DOWNLOAD C.V.")
+                    ])
+
                   ])
                 ])
               ])
