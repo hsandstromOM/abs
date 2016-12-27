@@ -313,12 +313,12 @@ function render () {
                     "style":"display:block"
                   }, [
                     h("p", [
-                      h("a.tk-aaux-next", {
-                        "style":"color:#73B53d;display:inline;text-decoration:underline;text-transform: uppercase;",
+                      h("a.tk-industry", {
+                        "style":"color:#73B53d;display:inline;text-decoration:underline;text-transform: uppercase;margin-right: 10px",
                         'data-ng-href': 'mailto:{{currentTeamMember.fields.emailAddress}}'
                       }, "EMAIL {{currentTeamMember.fields.name}}"),
-                      h('nbsp'),
-                      h("a.tk-aaux-next", {
+                      h("nbsp", " "),
+                      h("a.tk-industry", {
                         "style":"color:#73B53d;display:inline;text-decoration:underline"
                       }, "DOWNLOAD C.V.")
                     ])
