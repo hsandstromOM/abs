@@ -188,7 +188,7 @@ function render () {
       h("div#bloc-1.bloc.bgc-white.bg-Contact-Header.d-bloc", {'style':'max-height:75vh;'},[
         h('img.honeycomb-left',{
           'src':'img/honeycomb_pattern.png',
-          'style':"max-height:275px;z-index:1;margin-left:-50px !important;"
+          'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
         }),
         h('img.honeycomb-right',{
           'src':'img/honeycomb.png',
@@ -827,7 +827,7 @@ function render () {
       h("div#bloc-1.bloc.bgc-white.bg-Header-Placeholder.d-bloc", {'style':'max-height:75vh;'},[
         h('img.honeycomb-left',{
           'src':'img/honeycomb_pattern.png',
-          'style':"max-height:275px;z-index:1;margin-left:-50px !important;"
+          'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
         }),
         h('img.honeycomb-right',{
           'src':'img/honeycomb.png',
@@ -1388,30 +1388,14 @@ function template () {
     ////////////// servcies subnav full view///////
 
     //////// team subnav full view////////////
+
     h("div.row.subnav-navigation.subnavbar.slideNav#teamNav", {
-      'style':'background-color:#c5ceca;box-shadow: 1.5px 2.598px 27px 0px rgba(0, 0, 0, 0.35);',
+      'style':'background-color:#c5ceca;overflow-x:scroll;overflow-y:hidden;white-space:nowrap;',
       'data-ng-class': "slide.teamNav ? 'slideNavDown' : 'slideNavUp'"
     }, [
-      h("div.subnavitem.col-xs-3.col-md-3",
-      {
-        "style":"border-left:none;"
-      }, [
-        h("div", {
-          'data-ng-click': "setDivision('All')",
-          'data-ui-sref': "team({division: 'All'})",
-          'style':'border-right:1px solid white;',
-          'data-ng-class': "headerDivision.current === 'All' ? 'greenNav' : 'clearNav'"
-        }, "ALL")
-      ]),
-      h("div.subnavitem.col-xs-3.col-md-3", [
-        h("div", {
-          'data-ng-click': "setDivision('Leadership')",
-          'data-ui-sref': "team({division: 'All'})",
-          'style':'border-right:1px solid white;',
-          'data-ng-class': "headerDivision.current === 'Leadership' ? 'greenNav' : 'clearNav'"
-        }, "LEADERSHIP")
-      ]),
-      h("div.subnavitem.col-xs-3.col-md-3", [
+      h("div.subnavitem.col-xs-3.col-md-3", {
+        "style":"border-left:none;border-right:1px solid white;display:inline-block !important; width:20%",
+      },[
         h("div", {
           'data-ng-click': "setDivision('Architecture')",
           'data-ui-sref': "team({division: 'Architecture'})",
@@ -1419,13 +1403,53 @@ function template () {
           'data-ng-class': "headerDivision.current === 'Architecture' ? 'greenNav' : 'clearNav'"
         }, "ARCHITECTURE")
       ]),
-      h("div.subnavitem.col-xs-3.col-md-3", [
+      h("div.subnavitem.col-xs-3.col-md-3", {
+        "style":"border-left:none;border-right:1px solid white;display:inline-block !important; width:20%",
+      }, [
+        h("div", {
+          'data-ng-click': "setDivision('Forensic Consulting')",
+          'data-ui-sref': "team({division: 'Forensic Consulting'})",
+          'style':'border-right:1px solid white;',
+          'data-ng-class': "headerDivision.current === 'Forensic Consulting' ? 'greenNav' : 'clearNav'"
+        }, "FORENSIC CONSULTING"),
+      ]),
+      h("div.subnavitem.col-xs-3.col-md-3", {
+        "style":"border-left:none;border-right:1px solid white;display:inline-block !important; width:20%",
+      }, [
+        h("div", {
+          'data-ng-click': "setDivision('Building Enclosure')",
+          'data-ui-sref': "team({division: 'Building Enclosure'})",
+          'style':'border-right:1px solid white;',
+          'data-ng-class': "headerDivision.current === 'Building Enclosure' ? 'greenNav' : 'clearNav'"
+        }, "BUILDING ENCLOSURE")
+      ]),
+      h("div.subnavitem.col-xs-3.col-md-3", {
+        "style":"border-left:none;border-right:1px solid white;display:inline-block !important; width:20%",
+      },[
+        h("div", {
+          'data-ng-click': "setDivision('Life Safety & Human Factors')",
+          'data-ui-sref': "team({division: 'Life Safety & Human Factors'})",
+          'data-ng-class': "headerDivision.current === 'Life Safety & Human Factors' ? 'greenNav' : 'clearNav'"
+        }, "LIFE SAFETY & HUMAN FACTORS")
+      ]),
+      h("div.subnavitem.col-xs-3.col-md-3", {
+        "style":"border-left:none;border-right:1px solid white;display:inline-block !important; width:20%",
+      }, [
         h("div", {
           'data-ng-click': "setDivision('Engineering')",
           'data-ui-sref': "team({division: 'Engineering'})",
           'data-ng-class': "headerDivision.current === 'Engineering' ? 'greenNav' : 'clearNav'"
         }, "ENGINEERING")
       ]),
+      // h("div.subnavitem.col-xs-3.col-md-3", {
+      //   "style":"border-left:none;border-right:1px solid white;display:inline-block !important; width:20%",
+      // },[
+      //   h("div", {
+      //     'data-ng-click': "setDivision('Leadership')",
+      //     'data-ui-sref': "team({division: 'Leadership'})",
+      //     'data-ng-class': "headerDivision.current === 'Leadership' ? 'greenNav' : 'clearNav'"
+      //   }, "LEADERSHIP")
+      // ]),
     ])
 
     //////// work subnav full view////////////
@@ -1540,7 +1564,7 @@ function render () {
       h("div#bloc-1.bloc.bgc-white.bg-Header-Placeholder.d-bloc", {'style':'max-height:75vh;'},[
         h('img.honeycomb-left',{
           'src':'img/honeycomb_pattern.png',
-          'style':"max-height:275px;z-index:1;margin-left:-50px !important;"
+          'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
         }),
         h('img.honeycomb-right',{
           'src':'img/honeycomb.png',
@@ -1843,7 +1867,7 @@ function render () {
       h("div#bloc-1.bloc.bgc-white.bg-Header-Placeholder.d-bloc", {'style':'max-height:75vh;'},[
         h('img.honeycomb-left',{
           'src':'img/honeycomb_pattern.png',
-          'style':"max-height:275px;z-index:1;margin-left:-50px !important;"
+          'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
         }),
         h('img.honeycomb-right',{
           'src':'img/honeycomb.png',
@@ -1998,7 +2022,7 @@ function render () {
       h("div#bloc-1.bloc.bgc-white.bg-Header-Placeholder.d-bloc", {'style':'max-height:75vh;'},[
         h('img.honeycomb-left',{
           'src':'img/honeycomb_pattern.png',
-          'style':"max-height:275px;z-index:1;margin-left:-50px !important;"
+          'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
         }),
         h('img.honeycomb-right',{
           'src':'img/honeycomb.png',

@@ -102,7 +102,7 @@ function render () {
       h("div#bloc-1.bloc.bgc-white.bg-Contact-Header.d-bloc", {'style':'max-height:75vh;'},[
         h('img.honeycomb-left',{
           'src':'img/honeycomb_pattern.png',
-          'style':"max-height:275px;z-index:1;margin-left:-50px !important;"
+          'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
         }),
         h('img.honeycomb-right',{
           'src':'img/honeycomb.png',
