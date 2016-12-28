@@ -1480,7 +1480,7 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
   $scope.sortReverse = false
 
   $scope.filteredMembers= [
-    [],[],[],[],[],[],[],[],[]
+    [],[],[],[],[],[],[],[],[],[],[],[]
   ]
   $scope.setCurrentTeamMember = function (member) {
     $scope.currentTeamMember = member
