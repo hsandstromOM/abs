@@ -135,7 +135,7 @@ function render () {
                 }),
                 h("div.text-center.tk-industry", [
                   h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
-                    'data-ui-sref': 'spotlightButton({obj: workProjects})',
+                    'data-ng-href': '{{contentfulData.fields.spotlightButton}}',
                   }, "Learn More")
                 ])
               ])
