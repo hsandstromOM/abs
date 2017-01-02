@@ -493,8 +493,8 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
   $scope.goToService = function (service) {
     console.log(service)
   }
-  $scope.goToWorkProject = function (workProject) {
-    console.log(workProject)
+  $scope.goToWorkProjects = function (workProjects) {
+    console.log(workProjects)
   }
 }
 
@@ -598,8 +598,7 @@ function render () {
                 }),
                 h("div.text-center.tk-industry", [
                   h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
-                    "data-ng-click":"setSelectedSpotlightButton(spotlightButton)",
-                    'data-ui-sref': "workDetail({obj: workProject})",
+                    'data-ui-sref': 'spotlightButton({obj: workProjects})',
                   }, "Learn More")
                 ])
               ])
@@ -1170,7 +1169,7 @@ function template () {
                 h("#team.tk-industry", {
                   "style":"cursor:pointer;font-size: 18px;font-weight:normal;line-height:21px;padding-top: 15px;padding-bottom: 15px;",
                   "data-ui-sref":"team",
-                  'data-ng-class': "page === 'team' ? 'selectedGreen' : 'nonSelectedBlue'"
+                  'data-ng-class': "mainPage === 'team' ? 'selectedGreen' : 'nonSelectedBlue'"
                 }, "TEAM")
               ]),
               h("li", {
@@ -1180,7 +1179,7 @@ function template () {
                   "style": "cursor:pointer;font-size: 18px;font-weight:normal;line-height:21px;padding-top: 15px;padding-bottom: 15px;",
                   'data-ui-sref': 'work({service: defaultWorkService})',
                   'data-ng-click': 'setWorkService()',
-                  'data-ng-class': "page === 'work' ? 'selectedGreen' : 'nonSelectedBlue'"
+                  'data-ng-class': "mainPage === 'work' ? 'selectedGreen' : 'nonSelectedBlue'"
                 }, "WORK")
               ]),
               h("li", {
@@ -1190,7 +1189,7 @@ function template () {
                   "style": "cursor: pointer; font-size: 18px;font-weight:normal;line-height: 21px; padding-top: 15px; padding-bottom: 15px;",
                   'data-ng-click': 'setSelectedService()',
                   'data-ui-sref': 'services()',
-                  'data-ng-class': "page === 'services' ? 'selectedGreen' : 'nonSelectedBlue'"
+                  'data-ng-class': "mainPage === 'services' ? 'selectedGreen' : 'nonSelectedBlue'"
                 }, "SERVICES"),
               ]),
               h("li", {

@@ -30,8 +30,8 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
   $scope.goToService = function (service) {
     console.log(service)
   }
-  $scope.goToWorkProject = function (workProject) {
-    console.log(workProject)
+  $scope.goToWorkProjects = function (workProjects) {
+    console.log(workProjects)
   }
 }
 
@@ -135,8 +135,7 @@ function render () {
                 }),
                 h("div.text-center.tk-industry", [
                   h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
-                    "data-ng-click":"setSelectedSpotlightButton(spotlightButton)",
-                    'data-ui-sref': "workDetail({obj: workProject})",
+                    'data-ui-sref': 'spotlightButton({obj: workProjects})',
                   }, "Learn More")
                 ])
               ])
