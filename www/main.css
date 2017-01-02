@@ -892,6 +892,7 @@ li:hover {
     box-shadow: rgba(0, 0, 0, 0.0470588) 0px 3px 8px 4px inset; }
   .nav > li {
     background-color: transparent !important;
+    padding-top: 20px;
     margin-left: 2px;
     border-bottom: none !important; }
   .page-container {
