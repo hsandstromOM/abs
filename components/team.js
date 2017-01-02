@@ -327,6 +327,7 @@ function render () {
                       h("a.tk-industry", {
                         "style":"font-size:16px;color:#73B53d;display:inline;text-decoration:underline;letter-spacing: .1em",
                         'data-ng-href': '{{currentTeamMember.fields.cV}}',
+                        'target': '_blank',
                       }, "DOWNLOAD C.V.")
                     ])
 
