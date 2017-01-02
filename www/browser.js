@@ -1784,7 +1784,8 @@ function render () {
                       }, "EMAIL {{currentTeamMember.fields.name}}"),
                       h("nbsp", " "),
                       h("a.tk-industry", {
-                        "style":"font-size:16px;color:#73B53d;display:inline;text-decoration:underline;letter-spacing: .1em"
+                        "style":"font-size:16px;color:#73B53d;display:inline;text-decoration:underline;letter-spacing: .1em",
+                        'data-ng-href': '{{currentTeamMember.fields.cV}}',
                       }, "DOWNLOAD C.V.")
                     ])
 
