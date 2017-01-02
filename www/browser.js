@@ -599,6 +599,7 @@ function render () {
                 h("div.text-center.tk-industry", [
                   h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
                     'data-ng-href': '{{contentfulData.fields.spotlightButton}}',
+                    "data-ui-sref":"spotlightButton({obj: workProject})",
                   }, "Learn More")
                 ])
               ])
@@ -1785,8 +1786,9 @@ function render () {
                       h("nbsp", " "),
                       h("a.tk-industry", {
                         "style":"font-size:16px;color:#73B53d;display:inline;text-decoration:underline;letter-spacing: .1em",
-                        'data-ng-href': '{{currentTeamMember.fields.cV}}',
-                        'target': '_blank',
+                        'data-ng-href': '{{currentTeamMember.fields.cV.fields.file.url}}',
+                        'target': '_self',
+                        'download': '{{currentTeamMember.fields.cV.fields.file.url}}',
                       }, "DOWNLOAD C.V.")
                     ])
 
