@@ -258,7 +258,7 @@ function template () {
               }, [
                 h('div', {
                   'style':'border-bottom:1px solid white;margin: auto; padding:20px;width:300px; color:white;',
-                  'data-ng-repeat': 'serviceProvided in allWorkServicesProvided',
+                  'data-ng-repeat': 'serviceProvided in allWorkServicesProvided | limitTo:3',
                   'data-ui-sref': 'work({service: serviceProvided})'
               }, '{{serviceProvided.fields.pageTitle}}')
               ])
@@ -309,7 +309,7 @@ function template () {
     }, [
       h("div.subnavitem.col-xs-3.col-md-3",
       {
-        "style":"border-left:none;border-right:1px solid white;display:inline-block !important; width:20%",
+        "style":"border-left:none;border-right:1px solid white;display:inline-block !important; width:33.3%",
         'data-ng-repeat': 'serviceProvided in allWorkServicesProvided',
         'data-ng-click': 'setWorkService(serviceProvided)'
       }, [

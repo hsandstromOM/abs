@@ -57,7 +57,7 @@ function render () {
         'data-mainPage': 'mainPage',
         'data-slide': 'slide'
       }),
-      h("div#bloc-1.bloc.bgc-white.bg-Header-Placeholder.d-bloc", {'style':'max-height:75vh;'},[
+      h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-BuildingEnclosure.d-bloc", {'style':'max-height:75vh;'},[
         h('img.honeycomb-left',{
           'src':'img/honeycomb_pattern.png',
           'style':"max-height:310px;z-index:1;margin-left:-50px !important;"

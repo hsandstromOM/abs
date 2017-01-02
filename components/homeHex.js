@@ -53,14 +53,54 @@ function render () {
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[0]'
+       'data-ng-repeat': 'service in allServices[0]',
       }, [
         h("img.overlayer", {
-          "src":'img/Green_Hex.png',
+          "src":'img/ABS-LifeSafety-ServiceHex-Green.png',
           'style': 'position:absolute;'
         }),
         h("img", {
-          "src":"img/Color_Hex.png"
+          "src":"img/ABS-LifeSafety-ServiceHex-Color.png"
+        }),
+        h("div.hexText", [
+          h("p", {
+            "style":"font-weight:bold;color:white",
+          }, "{{service.fields.pageTitle}}")
+        ])
+      ])
+    ]),
+    h('.homeHoneyThree', [
+      h("a.honeyCombHome", {
+        'data-ng-click': 'setSelectedService(service)',
+        'data-ui-sref': 'services({service: service})',
+       'data-ng-repeat': 'service in allServices[1]',
+      }, [
+        h("img.overlayer", {
+          "src":'img/ABS-Engineering-ServiceHex-Green.png',
+          'style': 'position:absolute;'
+        }),
+        h("img", {
+          "src":"img/ABS-Engineering-ServiceHex-Color.png"
+        }),
+        h("div.hexText", [
+          h("p", {
+            "style":"font-weight:bold;color:white",
+          }, "{{service.fields.pageTitle}}")
+        ])
+      ])
+    ]),
+    h('.homeHoneyThree', [
+      h("a.honeyCombHome", {
+        'data-ng-click': 'setSelectedService(service)',
+        'data-ui-sref': 'services({service: service})',
+       'data-ng-repeat': 'service in allServices[2]'
+      }, [
+        h("img.overlayer", {
+          "src":'img/ABS-BuildingEnclosure-ServiceHex-Green.png',
+          'style': 'position:absolute;'
+        }),
+        h("img", {
+          "src":"img/ABS-BuildingEnclosure-ServiceHex-Color.png"
         }),
         h("div.hexText", [
           h("p", {
@@ -73,14 +113,14 @@ function render () {
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[1]'
+       'data-ng-repeat': 'service in allServices[3]'
       }, [
         h("img.overlayer", {
-          "src":'img/Green_Hex.png',
+          "src":'img/ABS-Architecture-ServiceHex-Green.png',
           'style': 'position:absolute;'
         }),
         h("img", {
-          "src":"img/Color_Hex.png"
+          "src":"img/ABS-Architecture-ServiceHex-Color.png"
         }),
         h("div.hexText", {
           "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
@@ -95,10 +135,10 @@ function render () {
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[2]'
+       'data-ng-repeat': 'service in allServices[4]'
       }, [
         h("img.overlayer", {
-          "src":'img/Green_Hex.png',
+          "src":'img/ABS-ForensicConsulting-ServiceHex-Green.png',
           'style': 'position:absolute;'
         }),
         h("img", {
@@ -117,7 +157,7 @@ function render () {
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[3]'
+       'data-ng-repeat': 'service in allServices[5]'
       }, [
         h("img.overlayer", {
           "src":'img/Green_Hex.png',

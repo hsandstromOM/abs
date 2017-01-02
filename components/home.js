@@ -33,6 +33,10 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
   $scope.goToWorkProjects = function (workProjects) {
     console.log(workProjects)
   }
+  $scope.allWorkProjects = []
+  contentful.entries('content_type=workProjects').then(function(res) {
+    $scope.allWorkProjects = res.data.items
+  })
 }
 
 function render () {
@@ -135,8 +139,9 @@ function render () {
                 }),
                 h("div.text-center.tk-industry", [
                   h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
-                    'data-ng-href': '{{contentfulData.fields.spotlightButton}}',
-                    "data-ui-sref":"spotlightButton({obj: workProject})",
+                    //'data-ng-click':
+                    'data-ui-sref': "workDetail({obj: workProject})"
+
                   }, "Learn More")
                 ])
               ])

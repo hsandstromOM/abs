@@ -496,6 +496,10 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
   $scope.goToWorkProjects = function (workProjects) {
     console.log(workProjects)
   }
+  $scope.allWorkProjects = []
+  contentful.entries('content_type=workProjects').then(function(res) {
+    $scope.allWorkProjects = res.data.items
+  })
 }
 
 function render () {
@@ -598,8 +602,9 @@ function render () {
                 }),
                 h("div.text-center.tk-industry", [
                   h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
-                    'data-ng-href': '{{contentfulData.fields.spotlightButton}}',
-                    "data-ui-sref":"spotlightButton({obj: workProject})",
+                    //'data-ng-click':
+                    'data-ui-sref': "workDetail({obj: workProject})"
+
                   }, "Learn More")
                 ])
               ])
@@ -694,14 +699,54 @@ function render () {
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[0]'
+       'data-ng-repeat': 'service in allServices[0]',
       }, [
         h("img.overlayer", {
-          "src":'img/Green_Hex.png',
+          "src":'img/ABS-LifeSafety-ServiceHex-Green.png',
           'style': 'position:absolute;'
         }),
         h("img", {
-          "src":"img/Color_Hex.png"
+          "src":"img/ABS-LifeSafety-ServiceHex-Color.png"
+        }),
+        h("div.hexText", [
+          h("p", {
+            "style":"font-weight:bold;color:white",
+          }, "{{service.fields.pageTitle}}")
+        ])
+      ])
+    ]),
+    h('.homeHoneyThree', [
+      h("a.honeyCombHome", {
+        'data-ng-click': 'setSelectedService(service)',
+        'data-ui-sref': 'services({service: service})',
+       'data-ng-repeat': 'service in allServices[1]',
+      }, [
+        h("img.overlayer", {
+          "src":'img/ABS-Engineering-ServiceHex-Green.png',
+          'style': 'position:absolute;'
+        }),
+        h("img", {
+          "src":"img/ABS-Engineering-ServiceHex-Color.png"
+        }),
+        h("div.hexText", [
+          h("p", {
+            "style":"font-weight:bold;color:white",
+          }, "{{service.fields.pageTitle}}")
+        ])
+      ])
+    ]),
+    h('.homeHoneyThree', [
+      h("a.honeyCombHome", {
+        'data-ng-click': 'setSelectedService(service)',
+        'data-ui-sref': 'services({service: service})',
+       'data-ng-repeat': 'service in allServices[2]'
+      }, [
+        h("img.overlayer", {
+          "src":'img/ABS-BuildingEnclosure-ServiceHex-Green.png',
+          'style': 'position:absolute;'
+        }),
+        h("img", {
+          "src":"img/ABS-BuildingEnclosure-ServiceHex-Color.png"
         }),
         h("div.hexText", [
           h("p", {
@@ -714,14 +759,14 @@ function render () {
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[1]'
+       'data-ng-repeat': 'service in allServices[3]'
       }, [
         h("img.overlayer", {
-          "src":'img/Green_Hex.png',
+          "src":'img/ABS-Architecture-ServiceHex-Green.png',
           'style': 'position:absolute;'
         }),
         h("img", {
-          "src":"img/Color_Hex.png"
+          "src":"img/ABS-Architecture-ServiceHex-Color.png"
         }),
         h("div.hexText", {
           "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
@@ -736,10 +781,10 @@ function render () {
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[2]'
+       'data-ng-repeat': 'service in allServices[4]'
       }, [
         h("img.overlayer", {
-          "src":'img/Green_Hex.png',
+          "src":'img/ABS-ForensicConsulting-ServiceHex-Green.png',
           'style': 'position:absolute;'
         }),
         h("img", {
@@ -758,7 +803,7 @@ function render () {
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[3]'
+       'data-ng-repeat': 'service in allServices[5]'
       }, [
         h("img.overlayer", {
           "src":'img/Green_Hex.png',
@@ -824,7 +869,7 @@ function render () {
         'data-mainPage': 'mainPage',
         'data-slide': 'slide'
       }),
-      h("div#bloc-1.bloc.bgc-white.bg-Header-Placeholder.d-bloc", {'style':'max-height:75vh;'},[
+      h("div#bloc-1.bloc.bgc-white.bg-Architecture-Header2.d-bloc", {'style':'max-height:75vh;'},[
         h('img.honeycomb-left',{
           'src':'img/honeycomb_pattern.png',
           'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
@@ -1304,7 +1349,7 @@ function template () {
               }, [
                 h('div', {
                   'style':'border-bottom:1px solid white;margin: auto; padding:20px;width:300px; color:white;',
-                  'data-ng-repeat': 'serviceProvided in allWorkServicesProvided',
+                  'data-ng-repeat': 'serviceProvided in allWorkServicesProvided | limitTo:3',
                   'data-ui-sref': 'work({service: serviceProvided})'
               }, '{{serviceProvided.fields.pageTitle}}')
               ])
@@ -1355,7 +1400,7 @@ function template () {
     }, [
       h("div.subnavitem.col-xs-3.col-md-3",
       {
-        "style":"border-left:none;border-right:1px solid white;display:inline-block !important; width:20%",
+        "style":"border-left:none;border-right:1px solid white;display:inline-block !important; width:33.3%",
         'data-ng-repeat': 'serviceProvided in allWorkServicesProvided',
         'data-ng-click': 'setWorkService(serviceProvided)'
       }, [
@@ -1561,7 +1606,7 @@ function render () {
         'data-mainPage': 'mainPage',
         'data-slide': 'slide',
       }),
-      h("div#bloc-1.bloc.bgc-white.bg-Header-Placeholder.d-bloc", {'style':'max-height:75vh;'},[
+      h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-Engineering.d-bloc", {'style':'max-height:75vh;'},[
         h('img.honeycomb-left',{
           'src':'img/honeycomb_pattern.png',
           'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
@@ -1867,7 +1912,7 @@ function render () {
         'data-mainPage': 'mainPage',
         'data-slide': 'slide'
       }),
-      h("div#bloc-1.bloc.bgc-white.bg-Header-Placeholder.d-bloc", {'style':'max-height:75vh;'},[
+      h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-BuildingEnclosure.d-bloc", {'style':'max-height:75vh;'},[
         h('img.honeycomb-left',{
           'src':'img/honeycomb_pattern.png',
           'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
