@@ -207,7 +207,7 @@ function template () {
                 'style':'text-align: center; color:white;  padding:10px; font-size:16px;list-style:none; width:100%;'
               }, [
                 h('div', {
-                  'style':'cursor:pointer;border-bottom:1px solid white; margin: auto;padding:20px;width:300px; color:white;',
+                  'style':'cursor:pointer;border-bottom:1px solid white;padding-top:15px;padding-bottom:20px;width:300px; color:white;',
                   'data-ui-sref':'team'
                 },'ARCHITECTURE')
               ]),
@@ -215,7 +215,7 @@ function template () {
                 'style':'text-align: center; color:white;  padding:10px; font-size:16px;list-style:none; width:100%;'
               }, [
                 h('div', {
-                  'style':'cursor:pointer;border-bottom:1px solid white; margin: auto; padding:20px;width:300px;color:white;',
+                  'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;width:300px;color:white;',
                 },[
                   h('div', {
                     'data-ui-sref':"team({division: 'Forensic Consulting'})"
@@ -226,23 +226,23 @@ function template () {
                 'style':'text-align: center; color:white;  padding:10px; font-size:16px;list-style:none; width:100%;'
               }, [
                 h('div', {
-                  'style':'cursor:pointer;border-bottom:1px solid white;margin: auto; padding:20px;width:300px; color:white;',
+                  'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;width:300px; color:white;',
                   'data-ui-sref':"team({division: 'Building Enclosure'})"
                 },'BUILDING ENCLOSURE')
               ]),
               h('li', {
-                'style':'text-align: center; color:white; padding:20px; font-size:16px;list-style:none; width:100%;'
+                'style':'text-align: center; color:white; padding:10px; font-size:16px;list-style:none; width:100%;'
               }, [
                 h('div', {
-                  'style':' color:white;cursor:pointer;',
+                  'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;width:300px; color:white;',
                   'data-ui-sref':"team({division: 'Life Safety & Human Factors'})"
                 },'LIFE SAFETY & HUMAN FACTORS')
               ]),
               h('li', {
-                'style':'text-align: center; color:white; padding:20px; font-size:16px;list-style:none; width:100%;'
+                'style':'text-align: center; color:white; padding:10px; font-size:16px;list-style:none; width:100%;'
               }, [
                 h('div', {
-                  'style':' color:white;cursor:pointer;',
+                  'style':'cursor:pointer;padding-bottom:20px;width:300px; color:white;',
                   'data-ui-sref':"team({division: 'Engineering'})"
                 },'ENGINEERING')
               ]),
