@@ -846,24 +846,122 @@ function render () {
         'data-mainPage': 'mainPage',
         'data-slide': 'slide'
       }),
-      h("div#bloc-1.bloc.bgc-white.bg-Architecture-Header2.d-bloc", {'style':'max-height:100vh;'},[
-        h('img.honeycomb-left',{
-          'src':'img/honeycomb_pattern.png',
-          'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
-        }),
-        h('img.honeycomb-right',{
-          'src':'img/honeycomb.png',
-          'style':"max-height:475px;z-index:1;margin-right:-50px !important;"
-        }),
-        //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
-          h("div.row", [
-            h("div.col-sm-12", {'style':'margin-top:-180px;'},[
-              h("h4.mg-md.text-center.tc-white", "SERVICES:"),
-              h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}")
+      h("div", {
+        'data-ng-if': 'currentService.fields.pageTitle === "ARCHITECTURE"'
+      },[
+        h("div#bloc-1.bloc.bgc-white.bg-Architecture-Header2.d-bloc", {
+          'style':'max-height:100vh;'},[
+          h('img.honeycomb-left',{
+            'src':'img/honeycomb_pattern.png',
+            'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
+          }),
+          h('img.honeycomb-right',{
+            'src':'img/honeycomb.png',
+            'style':"max-height:475px;z-index:1;margin-right:-50px !important;"
+          }),
+          //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
+            h("div.row", [
+              h("div.col-sm-12", {'style':'margin-top:-180px;'},[
+                h("h4.mg-md.text-center.tc-white", "SERVICES:"),
+                h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}")
+              ])
             ])
-          ])
-        //])
+          //])
+        ])
       ]),
+      h("div", {
+        'data-ng-if': 'currentService.fields.pageTitle === "FORENSIC CONSULTING"'
+      },[
+        h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-ForensicConsulting.d-bloc", {
+          'style':'max-height:100vh;'},[
+          h('img.honeycomb-left',{
+            'src':'img/honeycomb_pattern.png',
+            'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
+          }),
+          h('img.honeycomb-right',{
+            'src':'img/honeycomb.png',
+            'style':"max-height:475px;z-index:1;margin-right:-50px !important;"
+          }),
+          //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
+            h("div.row", [
+              h("div.col-sm-12", {'style':'margin-top:-180px;'},[
+                h("h4.mg-md.text-center.tc-white", "SERVICES:"),
+                h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}")
+              ])
+            ])
+          //])
+        ])
+      ]),
+      h("div", {
+        'data-ng-if': 'currentService.fields.pageTitle === "ENGINEERING"'
+      },[
+        h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-Engineering.d-bloc", {
+          'style':'max-height:100vh;'},[
+          h('img.honeycomb-left',{
+            'src':'img/honeycomb_pattern.png',
+            'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
+          }),
+          h('img.honeycomb-right',{
+            'src':'img/honeycomb.png',
+            'style':"max-height:475px;z-index:1;margin-right:-50px !important;"
+          }),
+          //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
+            h("div.row", [
+              h("div.col-sm-12", {'style':'margin-top:-180px;'},[
+                h("h4.mg-md.text-center.tc-white", "SERVICES:"),
+                h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}")
+              ])
+            ])
+          //])
+        ])
+      ]),
+      h("div", {
+        'data-ng-if': 'currentService.fields.pageTitle === "LIFE SAFETY & HUMAN FACTORS"'
+      },[
+        h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-LifeSafety.d-bloc", {
+          'style':'max-height:100vh;'},[
+          h('img.honeycomb-left',{
+            'src':'img/honeycomb_pattern.png',
+            'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
+          }),
+          h('img.honeycomb-right',{
+            'src':'img/honeycomb.png',
+            'style':"max-height:475px;z-index:1;margin-right:-50px !important;"
+          }),
+          //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
+            h("div.row", [
+              h("div.col-sm-12", {'style':'margin-top:-180px;'},[
+                h("h4.mg-md.text-center.tc-white", "SERVICES:"),
+                h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}")
+              ])
+            ])
+          //])
+        ])
+      ]),
+      h("div", {
+        'data-ng-if': 'currentService.fields.pageTitle === "BUILDING ENCLOSURE"'
+      },[
+        h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-BuildingEnclosure.d-bloc", {
+          'style':'max-height:100vh;'},[
+          h('img.honeycomb-left',{
+            'src':'img/honeycomb_pattern.png',
+            'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
+          }),
+          h('img.honeycomb-right',{
+            'src':'img/honeycomb.png',
+            'style':"max-height:475px;z-index:1;margin-right:-50px !important;"
+          }),
+          //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
+            h("div.row", [
+              h("div.col-sm-12", {'style':'margin-top:-180px;'},[
+                h("h4.mg-md.text-center.tc-white", "SERVICES:"),
+                h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}")
+              ])
+            ])
+          //])
+        ])
+      ]),
+
       h("div.closeNav", [
         h("div#bloc-2.bloc.bg-Halftone-Pattern.tc-prussian-blue.bgc-white", {
           "style": "background-color:#F6F6F6;-webkit-box-shadow:inset 0 10px 5px 2px rgba(0,0,0,.05);box-shadow:inset 0 -3px 8px 4px rgba(0,0,0,.05)"
