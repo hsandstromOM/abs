@@ -699,7 +699,8 @@ function render () {
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[0]',
+        'data-ng-repeat': 'service in allServices[0]',
+        'data-ng-if': 'service.fields.pageTitle === "LIFE SAFETY & HUMAN FACTORS"',
       }, [
         h("img.overlayer", {
           "src":'img/ABS-LifeSafety-ServiceHex-Green.png',
@@ -713,13 +714,12 @@ function render () {
             "style":"font-weight:bold;color:white",
           }, "{{service.fields.pageTitle}}")
         ])
-      ])
-    ]),
-    h('.homeHoneyThree', [
+      ]),
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[1]',
+       'data-ng-repeat': 'service in allServices[0]',
+       'data-ng-if': 'service.fields.pageTitle === "ENGINEERING"',
       }, [
         h("img.overlayer", {
           "src":'img/ABS-Engineering-ServiceHex-Green.png',
@@ -733,13 +733,12 @@ function render () {
             "style":"font-weight:bold;color:white",
           }, "{{service.fields.pageTitle}}")
         ])
-      ])
-    ]),
-    h('.homeHoneyThree', [
+      ]),
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[2]'
+       'data-ng-repeat': 'service in allServices[0]',
+       'data-ng-if': 'service.fields.pageTitle === "BUILDING ENCLOSURE"',
       }, [
         h("img.overlayer", {
           "src":'img/ABS-BuildingEnclosure-ServiceHex-Green.png',
@@ -759,7 +758,8 @@ function render () {
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[3]'
+       'data-ng-repeat': 'service in allServices[1]',
+       'data-ng-if': 'service.fields.pageTitle === "ARCHITECTURE"',
       }, [
         h("img.overlayer", {
           "src":'img/ABS-Architecture-ServiceHex-Green.png',
@@ -775,13 +775,12 @@ function render () {
             "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle",
           }, "{{service.fields.pageTitle}}")
         ])
-      ])
-    ]),
-    h('.homeHoneyTwo', [
+      ]),
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[4]'
+       'data-ng-repeat': 'service in allServices[1]',
+       'data-ng-if': 'service.fields.pageTitle === "FORENSIC CONSULTING"',
       }, [
         h("img.overlayer", {
           "src":'img/ABS-ForensicConsulting-ServiceHex-Green.png',
@@ -799,28 +798,6 @@ function render () {
         ])
       ])
     ]),
-    h('.homeHoneyTwo', [
-      h("a.honeyCombHome", {
-        'data-ng-click': 'setSelectedService(service)',
-        'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[5]'
-      }, [
-        h("img.overlayer", {
-          "src":'img/Green_Hex.png',
-          'style': 'position:absolute;'
-        }),
-        h("img", {
-          "src":"img/Color_Hex.png"
-        }),
-        h("div.hexText", {
-          "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
-        }, [
-          h("p", {
-            "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle",
-          }, "{{service.fields.pageTitle}}")
-        ])
-      ])
-    ])
   ])
 }
 
