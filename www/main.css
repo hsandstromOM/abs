@@ -1301,7 +1301,8 @@ body {
   backface-visibility: hidden;
   -webkit-clip-path: url("#hexContainer");
   clip-path: url("#hexContainer");
-  -webkit-transform: translateZ(0); }
+  -webkit-transform: translateZ(0);
+  transition: all 300ms ease-in-out; }
 
 .hexThumb {
   display: block;
@@ -1322,7 +1323,8 @@ body {
   backface-visibility: hidden;
   -webkit-clip-path: url("#hexThumb");
   clip-path: url("#hexThumb");
-  -webkit-transform: translateZ(0); }
+  -webkit-transform: translateZ(0);
+  transition: all 300ms ease-in-out; }
 
 .old {
   /*-webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 80% 100%);

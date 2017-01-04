@@ -2138,7 +2138,7 @@ function render () {
                                 "href":"#x",
                               }, [
                                 h("img.img-responsive", {
-                                  "src":"http://placehold.it/500x500",
+                                  "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
                                   "alt":"Image"
                                 })
                               ])
@@ -2148,7 +2148,7 @@ function render () {
                                 "href":"#x"
                               }, [
                                 h("img.img-responsive", {
-                                  "src":"http://placehold.it/500x500",
+                                  "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
                                   "alt":"Image"
                                 })
                               ])
@@ -2158,7 +2158,7 @@ function render () {
                                 "href":"#x"
                               }, [
                                 h("img.img-responsive", {
-                                  "src":"http://placehold.it/500x500",
+                                  "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
                                   "alt":"Image"
                                 })
                               ])
@@ -2168,7 +2168,7 @@ function render () {
                                 "href":"#x"
                               }, [
                                 h("img.img-responsive", {
-                                  "src":"http://placehold.it/500x500",
+                                  "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
                                   "alt":"Image"
                                 })
                               ])
@@ -2178,7 +2178,7 @@ function render () {
                                 "href":"#x"
                               }, [
                                 h("img.img-responsive", {
-                                  "src":"http://placehold.it/500x500",
+                                  "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
                                   "alt":"Image"
                                 })
                               ])
@@ -2188,7 +2188,7 @@ function render () {
                                 "href":"#x"
                               }, [
                                 h("img.img-responsive", {
-                                  "src":"http://placehold.it/500x500",
+                                  "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
                                   "alt":"Image"
                                 })
                               ])
@@ -2202,7 +2202,7 @@ function render () {
                                 "href":"#x"
                               }, [
                                 h("img.img-responsive", {
-                                  "src":"http://placehold.it/500x500",
+                                  "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
                                   "alt":"Image"})
                                 ])
                               ]),
@@ -2211,7 +2211,7 @@ function render () {
                                   "href":"#x"
                                 }, [
                                   h("img.img-responsive", {
-                                    "src":"http://placehold.it/500x500",
+                                    "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
                                     "alt":"Image"})
                                   ])
                                 ]),
@@ -2220,7 +2220,7 @@ function render () {
                                     "href":"#x"
                                   }, [
                                     h("img.img-responsive", {
-                                      "src":"http://placehold.it/500x500",
+                                      "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
                                       "alt":"Image"
                                     })
                                   ])
@@ -2230,7 +2230,7 @@ function render () {
                                     "href":"#x"
                                   }, [
                                     h("img.img-responsive", {
-                                      "src":"http://placehold.it/500x500",
+                                      "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
                                       "alt":"Image"
                                     })
                                   ])
@@ -2240,7 +2240,7 @@ function render () {
                                     "href":"#x"
                                   }, [
                                     h("img.img-responsive", {
-                                      "src":"http://placehold.it/500x500",
+                                      "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
                                       "alt":"Image"
                                     })
                                   ])
@@ -2250,7 +2250,7 @@ function render () {
                                     "href":"#x"
                                   }, [
                                     h("img.img-responsive", {
-                                      "src":"http://placehold.it/500x500",
+                                      "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
                                       "alt":"Image"
                                     })
                                   ])
@@ -2264,7 +2264,7 @@ function render () {
                                     "href":"#x"
                                   }, [
                                     h("img.img-responsive", {
-                                      "src":"http://placehold.it/500x500",
+                                      "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
                                       "alt":"Image"
                                     })
                                   ])
@@ -2274,7 +2274,7 @@ function render () {
                                     "href":"#x"
                                   }, [
                                     h("img.img-responsive", {
-                                      "src":"http://placehold.it/500x500",
+                                      "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
                                       "alt":"Image"
                                     })
                                   ])
@@ -2284,7 +2284,7 @@ function render () {
                                     "href":"#x"
                                   }, [
                                     h("img.img-responsive", {
-                                      "src":"http://placehold.it/500x500",
+                                      "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
                                       "alt":"Image"
                                     })
                                   ])
@@ -2294,7 +2294,7 @@ function render () {
                                     "href":"#x"
                                   }, [
                                     h("img.img-responsive", {
-                                      "src":"http://placehold.it/500x500",
+                                      "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
                                       "alt":"Image"
                                     })
                                   ])
@@ -2304,7 +2304,7 @@ function render () {
                                     "href":"#x"
                                   }, [
                                     h("img.img-responsive", {
-                                      "src":"http://placehold.it/500x500",
+                                      "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
                                       "alt":"Image"
                                     })
                                   ])
@@ -2314,7 +2314,7 @@ function render () {
                                     "href":"#x"
                                   }, [
                                     h("img.img-responsive", {
-                                      "src":"http://placehold.it/500x500",
+                                      "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
                                       "alt":"Image"
                                     })
                                   ])
@@ -2328,7 +2328,7 @@ function render () {
                             "data-slide":"prev"
                           }, [
                             h("i.fa.fa-2x.fa-angle-left", {
-                              "style":"color:white;padding-top:60px"
+                              "style":"color:white;padding-top:70px"
                             })
                           ]),
                           h("a.right.carousel-control", {
@@ -2337,7 +2337,7 @@ function render () {
                             "data-slide":"next"
                           }, [
                             h("i.fa.fa-2x.fa-angle-right", {
-                              "style":"color:white;padding-top:60px"
+                              "style":"color:white;padding-top:70px"
                             })
                           ])
                         ])
