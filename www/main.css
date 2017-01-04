@@ -830,25 +830,25 @@ li:hover {
   background-image: url("img/team_header.jpg"); }
 
 .bg-Architecture-Header2 {
-  background-image: url("img/ABS-Headers-Architecture.jpg"); }
+  background: url("img/ABS-Headers-Architecture.jpg") center 100px; }
 
 .bg-Header-Placeholder {
   background-image: url("img/BlueBar.jpg"); }
 
 .bg-Contact-Header {
-  background-image: url("img/ABS-Header-contact.jpg"); }
+  background: url("img/ABS-Header-contact.jpg") center -15px; }
 
 .bg-ABS-Headers-BuildingEnclosure {
-  background-image: url("img/ABS-Headers-BuildingEnclosure.jpg"); }
+  background: url("img/ABS-Headers-BuildingEnclosure.jpg") center 100px; }
 
 .bg-ABS-Headers-Engineering {
-  background-image: url("img/ABS-Headers-Engineering.jpg"); }
+  background: url("img/ABS-Headers-Engineering.jpg") center 100px; }
 
 .bg-ABS-Headers-ForensicConsulting {
-  background-image: url("img/ABS-Headers-ForensicConsulting.jpg"); }
+  background: url("img/ABS-Headers-ForensicConsulting.jpg") center 100px; }
 
 .bg-ABS-Headers-LifeSafety {
-  background-image: url("img/ABS-Headers-LifeSafety.jpg"); }
+  background: url("img/ABS-Headers-LifeSafety.jpg") center 100px; }
 
 .dropdown-menu {
   display: none !important; }
