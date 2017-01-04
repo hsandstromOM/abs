@@ -924,7 +924,8 @@ li:hover {
     -webkit-background-size: auto 200%;
     -moz-background-size: auto 200%;
     -o-background-size: auto 200%;
-    background-size: auto 200%; }
+    background-size: auto 200%;
+    background-position: center center; }
   .b-parallax {
     background-attachment: scroll; }
   .navbar .nav {
