@@ -1987,24 +1987,73 @@ function render () {
         'data-mainPage': 'mainPage',
         'data-slide': 'slide'
       }),
-      h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-BuildingEnclosure.d-bloc", {'style':'max-height:100vh;'},[
-        h('img.honeycomb-left',{
-          'src':'img/honeycomb_pattern.png',
-          'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
-        }),
-        h('img.honeycomb-right',{
-          'src':'img/honeycomb.png',
-          'style':"max-height:475px;z-index:1;margin-right:-50px !important;"
-        }),
-        //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
-          h("div.row", [
-            h("div.col-sm-12", {'style':'margin-top:-180px;'},[
-              h("h4.mg-md.text-center.tc-white", "WORK:"),
-              h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}")
+      h("div", {
+        'data-ng-if':'currentServiceProvided.fields.pageTitle === "ARCHITECTURE"'
+      },[
+        h("div#bloc-1.bloc.bgc-white.bg-Architecture-Header2.d-bloc", {'style':'max-height:100vh;'},[
+          h('img.honeycomb-left',{
+            'src':'img/honeycomb_pattern.png',
+            'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
+          }),
+          h('img.honeycomb-right',{
+            'src':'img/honeycomb.png',
+            'style':"max-height:475px;z-index:1;margin-right:-50px !important;"
+          }),
+          //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
+            h("div.row", [
+              h("div.col-sm-12", {'style':'margin-top:-180px;'},[
+                h("h4.mg-md.text-center.tc-white", "WORK:"),
+                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}")
+              ])
             ])
-          ])
-        //])
+          //])
+        ])
       ]),
+      h("div", {
+        'data-ng-if':'currentServiceProvided.fields.pageTitle === "FORENSIC CONSULTING"'
+      },[
+        h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-ForensicConsulting.d-bloc", {'style':'max-height:100vh;'},[
+          h('img.honeycomb-left',{
+            'src':'img/honeycomb_pattern.png',
+            'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
+          }),
+          h('img.honeycomb-right',{
+            'src':'img/honeycomb.png',
+            'style':"max-height:475px;z-index:1;margin-right:-50px !important;"
+          }),
+          //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
+            h("div.row", [
+              h("div.col-sm-12", {'style':'margin-top:-180px;'},[
+                h("h4.mg-md.text-center.tc-white", "WORK:"),
+                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}")
+              ])
+            ])
+          //])
+        ])
+      ]),
+      h("div", {
+        'data-ng-if':'currentServiceProvided.fields.pageTitle === "BUILDING ENCLOSURE"'
+      },[
+        h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-BuildingEnclosure.d-bloc", {'style':'max-height:100vh;'},[
+          h('img.honeycomb-left',{
+            'src':'img/honeycomb_pattern.png',
+            'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
+          }),
+          h('img.honeycomb-right',{
+            'src':'img/honeycomb.png',
+            'style':"max-height:475px;z-index:1;margin-right:-50px !important;"
+          }),
+          //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
+            h("div.row", [
+              h("div.col-sm-12", {'style':'margin-top:-180px;'},[
+                h("h4.mg-md.text-center.tc-white", "WORK:"),
+                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}")
+              ])
+            ])
+          //])
+        ])
+      ]),
+
       h("div.closeNav", [
       h("div#bloc-12.bloc.bg-Halftone-Pattern.tc-prussian-blue.bgc-white", {
         'style':'background-color:#F6F6F6;'
