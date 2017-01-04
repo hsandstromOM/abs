@@ -787,7 +787,7 @@ function render () {
           'style': 'position:absolute;'
         }),
         h("img", {
-          "src":"img/Color_Hex.png"
+          "src":"img/ABS-ForensicConsulting-ServiceHex-Color.png"
         }),
         h("div.hexText", {
           "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
