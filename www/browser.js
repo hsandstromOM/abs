@@ -1375,7 +1375,7 @@ function template () {
                 h('div', {
                   'style':'cursor:pointer;border-bottom:1px solid white; margin: auto;padding:20px;width:300px; color:white;',
                   'data-ui-sref':'team'
-                },'ALL')
+                },'ARCHITECTURE')
               ]),
               h('li', {
                 'style':'text-align: center; color:white;  padding:10px; font-size:16px;list-style:none; width:100%;'
@@ -1384,8 +1384,8 @@ function template () {
                   'style':'cursor:pointer;border-bottom:1px solid white; margin: auto; padding:20px;width:300px;color:white;',
                 },[
                   h('div', {
-                    'data-ui-sref':"team({division: 'Leadership'})"
-                  },'LEADERSHIP')
+                    'data-ui-sref':"team({division: 'Forensic Consulting'})"
+                  },'FORENSIC CONSULTING')
                 ])
               ]),
               h('li', {
@@ -1393,8 +1393,16 @@ function template () {
               }, [
                 h('div', {
                   'style':'cursor:pointer;border-bottom:1px solid white;margin: auto; padding:20px;width:300px; color:white;',
-                  'data-ui-sref':"team({division: 'Architecture'})"
-                },'ARCHITECTURE')
+                  'data-ui-sref':"team({division: 'Building Enclosure'})"
+                },'BUILDING ENCLOSURE')
+              ]),
+              h('li', {
+                'style':'text-align: center; color:white; padding:20px; font-size:16px;list-style:none; width:100%;'
+              }, [
+                h('div', {
+                  'style':' color:white;cursor:pointer;',
+                  'data-ui-sref':"team({division: 'Life Safety & Human Factors'})"
+                },'LIFE SAFETY & HUMAN FACTORS')
               ]),
               h('li', {
                 'style':'text-align: center; color:white; padding:20px; font-size:16px;list-style:none; width:100%;'
@@ -1520,7 +1528,7 @@ function template () {
           'data-ng-click': "setDivision('Architecture')",
           'data-ui-sref': "team({division: 'Architecture'})",
           'style':'border-right:1px solid white;',
-          'data-ng-class': "headerDivision.current === 'Architecture' ? 'greenNav' : 'clearNav'"
+          'data-ng-class': "headerDivision.current === 'ARCHITECTURE' ? 'greenNav' : 'clearNav'"
         }, "ARCHITECTURE")
       ]),
       h("div.subnavitem.col-xs-3.col-md-3", {
