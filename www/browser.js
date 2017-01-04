@@ -1287,7 +1287,7 @@ function template () {
               h("li", {
                 "style":"padding-right:2vh; text-align:center;"
               }, [
-                h("#team.tk-industry", {
+                h("#team.tk-industry.customText", {
                   "style":"cursor:pointer;font-size: 18px;font-weight:normal;line-height:21px;padding-top: 15px;padding-bottom: 15px;",
                   "data-ui-sref":"team",
                   'data-ng-class': "mainPage === 'team' ? 'selectedGreen' : 'nonSelectedBlue'"
@@ -1296,7 +1296,7 @@ function template () {
               h("li", {
                 "style":"padding-right:2vh; text-align:center;"
               }, [
-                h("#work.tk-industry", {
+                h("#work.tk-industry.customText", {
                   "style": "cursor:pointer;font-size: 18px;font-weight:normal;line-height:21px;padding-top: 15px;padding-bottom: 15px;",
                   'data-ui-sref': 'work({service: defaultWorkService})',
                   'data-ng-click': 'setWorkService()',
@@ -1306,7 +1306,7 @@ function template () {
               h("li", {
                 "style":"padding-right:2vh; text-align:center;"
               }, [
-                h("div#services.tk-industry", {
+                h("div#services.tk-industry.customText", {
                   "style": "cursor: pointer; font-size: 18px;font-weight:normal;line-height: 21px; padding-top: 15px; padding-bottom: 15px;",
                   'data-ng-click': 'setSelectedService()',
                   'data-ui-sref': 'services()',
