@@ -603,9 +603,11 @@ function render () {
                 h("div.text-center.tk-industry", [
                   h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
                     'data-ng-src': "{{contentfulData.fields.spotlight}}",
-                    'data-ui-sref':"workProjects({obj: workDetail})"
+                    "data-ui-sref":"workDetail({obj: workProject})",
+                    'href':"/workDetail"
                   }, "Learn More")
                 ])
+
               ])
             ])
           ])
