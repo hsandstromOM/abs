@@ -20,6 +20,29 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <!--   <script src="http://maps.google.com/maps/api/js"></script> -->
    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXGcQrZuDz0YvTvgQ_Ods0hUiVO-UbAyo&amp"></script>
+   <script>
+      window.prerenderReady = false;
+    </script>
+
+    <script type="text/javascript">
+      function setUserAgent(window, userAgent) {
+        if (window.navigator.userAgent != userAgent) {
+          var userAgentProp = {
+            get: function () {
+              return userAgent;
+            }
+          };
+          try {
+            Object.defineProperty(window.navigator, 'userAgent', userAgentProp);
+          } catch (e) {
+            window.navigator = Object.create(navigator, {userAgent: userAgentProp});
+          }
+        }
+      }
+      if (navigator.userAgent.indexOf('Prerender') !== -1) {
+        setUserAgent(window, navigator.userAgent + 'chrome');
+      }
+    </script>
 
     <title>Home</title>
 
