@@ -32,6 +32,7 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
     $scope.allWorkProjects = res.data.items
     console.log($scope.allWorkProjects[0])
   })
+
   $scope.open = function () {
 
     var modalInstance = $uibModal.open({
@@ -157,10 +158,12 @@ function render () {
                       h("div.carousel-inner", [
                         h("div.item.active", [
                           h("div.row", [
-                            h("div.col-sm-2", {
-                              "ng-repeat":"image in workProjectCtrl.fields.workProjectGallery[0] ",
-                              "ng-style":"{ 'background-image' : 'url({{ image.fields.file.url }})'}",
-                            }),
+                            h("div.col-sm-2", [
+                              h("a.carousel-inner", {
+                                'data-ng-repeat': 'workProjectGallery in allWorkProjects',
+                                'data-ui-sref': 'workProjectGallery({workProject: workProject})'
+                              })
+                            ]),
                             h("div.col-sm-2", [
                               h("a", {
                                 "href":"#x"
