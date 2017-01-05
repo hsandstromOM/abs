@@ -603,7 +603,7 @@ function render () {
                 h("div.text-center.tk-industry", [
                   h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
                     //'data-ng-click':
-                    'data-ui-sref': "workDetail({obj: workProject})"
+                    'data-ng-click': 'client.getEntry(6ksM1zHr9KSO4EcEIUm8W0)'
 
                   }, "Learn More")
                 ])
