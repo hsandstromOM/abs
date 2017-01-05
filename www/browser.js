@@ -2136,18 +2136,18 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
   } else {
     $state.go('buildingEnclosure')
   }
-  // contentful.entries('content_type=workProjects').then(function(res) {
-  //   $scope.allWorkProjects = res.data.items
-  //   console.log($scope.allWorkProjects[0])
-  // })
-  // $scope.open = function () {
-  //
-  //   var modalInstance = $uibModal.open({
-  //     animation: $scope.animationsEnabled,
-  //     template: volunteerModal().outerHTML,
-  //     controller: 'ModalInstanceCtrl'
-  //   });
-  // }
+  contentful.entries('content_type=workProjects').then(function(res) {
+    $scope.allWorkProjects = res.data.items
+    console.log($scope.allWorkProjects[0])
+  })
+  $scope.open = function () {
+
+    var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      template: volunteerModal().outerHTML,
+      controller: 'ModalInstanceCtrl'
+    });
+  }
 
   if($state.params.service) {
     $scope.page = $state.params.service
@@ -2265,22 +2265,13 @@ function render () {
                       h("div.carousel-inner", [
                         h("div.item.active", [
                           h("div.row", [
-                            h("div.col-sm-2",[
-                              h("a", {
-                                "href":"#x",
-                              }, [
-                                h("img.img-responsive", {
-                                  "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
-                                  "alt":"Image"
-                                })
-                              ])
-                            ]),
                             h("div.col-sm-2", [
                               h("a", {
                                 "href":"#x"
                               }, [
                                 h("img.img-responsive", {
-                                  "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
+                                  'ng-repeat':'workProjectImage in $workProjects.items[0].fields.workProjectImages',
+                                  "src": "{{workProjects.fields.workProjectImages.fields.file.url}}",
                                   "alt":"Image"
                                 })
                               ])
