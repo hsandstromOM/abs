@@ -152,7 +152,7 @@ function render () {
                 'data-marked': 'workProject.fields.workProjectSummary'
               }),
               h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
-                "data-ui-sref":"workDetail({obj: workProject})"
+                "data-ui-sref":"workDetail({obj: workProject}).slugify"
               }, "Read More")
             ])
           ])

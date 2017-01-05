@@ -3,8 +3,8 @@ var HttpCors = require('http-cors')
 var cors = new HttpCors()
 var HttpHashRouter = require('http-hash-router')
 var router = HttpHashRouter()
-var prerender = require('prerender-node');
-
+var prerender = require('prerender-node')
+var slugify = require('angular-slugify/angular-slugify')
 var bodyJSON = require('body/json')
 var sendJSON = require('send-data/json')
 var sendError = require('send-data/error')

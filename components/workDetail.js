@@ -11,7 +11,7 @@ module.exports = {
   }
 }
 
-function component ($scope, $state, store, contentful,  $uibModal, $window) {
+function component ($scope, $state, store, contentful,  $uibModal, $window, slug) {
   $scope.page = 'workDetail'
   $scope.custom = true
   $scope.custom1 = false
@@ -19,6 +19,10 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
   $scope.slide = {
     'down' : true
   }
+  var vm = this;
+  vm.slugify = function(string) {
+  return Slug.slugify(string);
+};
   if ($state.params.obj) {
     $scope.workProject = $state.params.obj
     store.set('workProject', $state.params.obj)
@@ -159,7 +163,7 @@ function render () {
                         h("div.item.active", [
                           h("div.row", [
                             h("div.col-sm-2", [
-                              h("a.carousel-inner", {
+                              h("img", {
                                 'data-ui-sref': 'workProject.fields.workProjectGallery.fields.file.url',
                                 'data-ng-repeat': 'workProjectGallery in allWorkProjects'
                               })

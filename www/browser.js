@@ -603,7 +603,7 @@ function render () {
                 h("div.text-center.tk-industry", [
                   h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
                     'data-ng-src': "{{contentfulData.fields.spotlight}}",
-                    'data-ui-sref':"workDetail({obj: workProject})"
+                    'data-ui-sref':"workProjects({obj: workDetail})"
                   }, "Learn More")
                 ])
               ])
@@ -1087,7 +1087,7 @@ function controller ($scope, $state, $stateParams, contentful, store) {
 function template () {
    return h('div', [
     h("a.bloc-button.btn.btn-d.scrollToTop", {
-       "onclick":"scrollToTarget('1')"
+       "ng-click":"scrollToTarget()"
      }, [
        h("span.fa.fa-chevron-up")
     ]),
@@ -2089,7 +2089,7 @@ function render () {
                 'data-marked': 'workProject.fields.workProjectSummary'
               }),
               h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
-                "data-ui-sref":"workDetail({obj: workProject})"
+                "data-ui-sref":"workDetail({obj: workProject}).slugify"
               }, "Read More")
             ])
           ])
@@ -2118,7 +2118,7 @@ module.exports = {
   }
 }
 
-function component ($scope, $state, store, contentful,  $uibModal, $window) {
+function component ($scope, $state, store, contentful,  $uibModal, $window, slug) {
   $scope.page = 'workDetail'
   $scope.custom = true
   $scope.custom1 = false
@@ -2126,6 +2126,10 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
   $scope.slide = {
     'down' : true
   }
+  var vm = this;
+  vm.slugify = function(string) {
+  return Slug.slugify(string);
+};
   if ($state.params.obj) {
     $scope.workProject = $state.params.obj
     store.set('workProject', $state.params.obj)
@@ -2266,7 +2270,7 @@ function render () {
                         h("div.item.active", [
                           h("div.row", [
                             h("div.col-sm-2", [
-                              h("a.carousel-inner", {
+                              h("img", {
                                 'data-ui-sref': 'workProject.fields.workProjectGallery.fields.file.url',
                                 'data-ng-repeat': 'workProjectGallery in allWorkProjects'
                               })

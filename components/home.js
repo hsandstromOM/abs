@@ -140,7 +140,7 @@ function render () {
                 h("div.text-center.tk-industry", [
                   h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
                     'data-ng-src': "{{contentfulData.fields.spotlight}}",
-                    'data-ui-sref':"workDetail({obj: workProject})"
+                    'data-ui-sref':"workProjects({obj: workDetail})"
                   }, "Learn More")
                 ])
               ])

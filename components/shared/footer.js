@@ -72,7 +72,7 @@ function controller ($scope, $state, $stateParams, contentful, store) {
 function template () {
    return h('div', [
     h("a.bloc-button.btn.btn-d.scrollToTop", {
-       "onclick":"scrollToTarget('1')"
+       "ng-click":"scrollToTarget()"
      }, [
        h("span.fa.fa-chevron-up")
     ]),
