@@ -2265,17 +2265,10 @@ function render () {
                       h("div.carousel-inner", [
                         h("div.item.active", [
                           h("div.row", [
-                            h("div.col-sm-2", [
-                              h("a", {
-                                "href":"#x"
-                              }, [
-                                h("img.img-responsive", {
-                                  'ng-repeat':'workProjectImage in $workProjects.items[0].fields.workProjectImages',
-                                  "src": "{{workProjects.fields.workProjectImages.fields.file.url}}",
-                                  "alt":"Image"
-                                })
-                              ])
-                            ]),
+                            h("div.col-sm-2", {
+                              "ng-repeat":"image in workProjectCtrl.fields.workProjectGallery[0] ",
+                              "ng-style":"{ 'background-image' : 'url({{ image.fields.file.url }})'}",
+                            }),
                             h("div.col-sm-2", [
                               h("a", {
                                 "href":"#x"
@@ -2286,162 +2279,7 @@ function render () {
                                 })
                               ])
                             ]),
-                            h("div.col-sm-2", [
-                              h("a", {
-                                "href":"#x"
-                              }, [
-                                h("img.img-responsive", {
-                                  "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
-                                  "alt":"Image"
-                                })
-                              ])
-                            ]),
-                            h("div.col-sm-2", [
-                              h("a", {
-                                "href":"#x"
-                              }, [
-                                h("img.img-responsive", {
-                                  "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
-                                  "alt":"Image"
-                                })
-                              ])
-                            ]),
-                            h("div.col-sm-2", [
-                              h("a", {
-                                "href":"#x"
-                              }, [
-                                h("img.img-responsive", {
-                                  "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
-                                  "alt":"Image"
-                                })
-                              ])
-                            ])
-                          ])
-                        ]),
-                        h("div.item", [
-                          h("div.row", [
-                            h("div.col-sm-2", [
-                              h("a", {
-                                "href":"#x"
-                              }, [
-                                h("img.img-responsive", {
-                                  "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
-                                  "alt":"Image"})
-                                ])
-                              ]),
-                              h("div.col-sm-2", [
-                                h("a", {
-                                  "href":"#x"
-                                }, [
-                                  h("img.img-responsive", {
-                                    "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
-                                    "alt":"Image"})
-                                  ])
-                                ]),
-                                h("div.col-sm-2", [
-                                  h("a", {
-                                    "href":"#x"
-                                  }, [
-                                    h("img.img-responsive", {
-                                      "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
-                                      "alt":"Image"
-                                    })
-                                  ])
-                                ]),
-                                h("div.col-sm-2", [
-                                  h("a", {
-                                    "href":"#x"
-                                  }, [
-                                    h("img.img-responsive", {
-                                      "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
-                                      "alt":"Image"
-                                    })
-                                  ])
-                                ]),
-                                h("div.col-sm-2", [
-                                  h("a", {
-                                    "href":"#x"
-                                  }, [
-                                    h("img.img-responsive", {
-                                      "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
-                                      "alt":"Image"
-                                    })
-                                  ])
-                                ]),
-                                h("div.col-sm-2", [
-                                  h("a", {
-                                    "href":"#x"
-                                  }, [
-                                    h("img.img-responsive", {
-                                      "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
-                                      "alt":"Image"
-                                    })
-                                  ])
-                                ])
-                              ])
-                            ]),
-                            h("div.item", [
-                              h("div.row", [
-                                h("div.col-sm-2", [
-                                  h("a", {
-                                    "href":"#x"
-                                  }, [
-                                    h("img.img-responsive", {
-                                      "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
-                                      "alt":"Image"
-                                    })
-                                  ])
-                                ]),
-                                h("div.col-sm-2", [
-                                  h("a", {
-                                    "href":"#x"
-                                  }, [
-                                    h("img.img-responsive", {
-                                      "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
-                                      "alt":"Image"
-                                    })
-                                  ])
-                                ]),
-                                h("div.col-sm-2", [
-                                  h("a", {
-                                    "href":"#x"
-                                  }, [
-                                    h("img.img-responsive", {
-                                      "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
-                                      "alt":"Image"
-                                    })
-                                  ])
-                                ]),
-                                h("div.col-sm-2", [
-                                  h("a", {
-                                    "href":"#x"
-                                  }, [
-                                    h("img.img-responsive", {
-                                      "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
-                                      "alt":"Image"
-                                    })
-                                  ])
-                                ]),
-                                h("div.col-sm-2", [
-                                  h("a", {
-                                    "href":"#x"
-                                  }, [
-                                    h("img.img-responsive", {
-                                      "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
-                                      "alt":"Image"
-                                    })
-                                  ])
-                                ]),
-                                h("div.col-sm-2", [
-                                  h("a", {
-                                    "href":"#x"
-                                  }, [
-                                    h("img.img-responsive", {
-                                      "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
-                                      "alt":"Image"
-                                    })
-                                  ])
-                                ])
+
                               ])
                             ])
                           ]),
