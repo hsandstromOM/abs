@@ -3,7 +3,6 @@ var HttpCors = require('http-cors')
 var cors = new HttpCors()
 var HttpHashRouter = require('http-hash-router')
 var router = HttpHashRouter()
-var prerender-node = require('prerender-node').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR'))
 
 var bodyJSON = require('body/json')
 var sendJSON = require('send-data/json')
