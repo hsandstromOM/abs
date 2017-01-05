@@ -85,7 +85,7 @@ function render () {
         h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-ForensicConsulting.d-bloc", {'style':'max-height:100vh;'},[
           h('img.honeycomb-left',{
             'src':'img/honeycomb_pattern.png',
-            'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
+            'style':"max-height:350px;z-index:1;margin-left:-50px !important;"
           }),
           h('img.honeycomb-right',{
             'src':'img/honeycomb.png',
