@@ -49,15 +49,15 @@ function render () {
           'style':'max-height:100vh;'},[
           h('img.honeycomb-left',{
             'src':'img/honeycomb_pattern.png',
-            'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
+            'style':"max-height:350px;z-index:1;margin-left:-50px !important;"
           }),
           h('img.honeycomb-right',{
             'src':'img/honeycomb.png',
-            'style':"max-height:475px;z-index:1;margin-right:-50px !important;"
+            'style':"max-height:540px;z-index:1;margin-right:-50px !important;"
           }),
           //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
             h("div.row", [
-              h("div.col-sm-12", {'style':'margin-top:-180px;'},[
+              h("div.col-sm-12", {'style':'margin-top:-240px;'},[
                 h("h4.mg-md.text-center.tc-white", "SERVICES:"),
                 h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}")
               ])
@@ -72,15 +72,15 @@ function render () {
           'style':'max-height:100vh;'},[
           h('img.honeycomb-left',{
             'src':'img/honeycomb_pattern.png',
-            'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
+            'style':"max-height:350px;z-index:1;margin-left:-50px !important;"
           }),
           h('img.honeycomb-right',{
             'src':'img/honeycomb.png',
-            'style':"max-height:475px;z-index:1;margin-right:-50px !important;"
+            'style':"max-height:540px;z-index:1;margin-right:-50px !important;"
           }),
           //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
             h("div.row", [
-              h("div.col-sm-12", {'style':'margin-top:-180px;'},[
+              h("div.col-sm-12", {'style':'margin-top:-240px;'},[
                 h("h4.mg-md.text-center.tc-white", "SERVICES:"),
                 h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}")
               ])
@@ -95,15 +95,15 @@ function render () {
           'style':'max-height:100vh;'},[
           h('img.honeycomb-left',{
             'src':'img/honeycomb_pattern.png',
-            'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
+            'style':"max-height:350px;z-index:1;margin-left:-50px !important;"
           }),
           h('img.honeycomb-right',{
             'src':'img/honeycomb.png',
-            'style':"max-height:475px;z-index:1;margin-right:-50px !important;"
+            'style':"max-height:540px;z-index:1;margin-right:-50px !important;"
           }),
           //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
             h("div.row", [
-              h("div.col-sm-12", {'style':'margin-top:-180px;'},[
+              h("div.col-sm-12", {'style':'margin-top:-240px;'},[
                 h("h4.mg-md.text-center.tc-white", "SERVICES:"),
                 h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}")
               ])
@@ -118,15 +118,15 @@ function render () {
           'style':'max-height:100vh;'},[
           h('img.honeycomb-left',{
             'src':'img/honeycomb_pattern.png',
-            'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
+            'style':"max-height:350px;z-index:1;margin-left:-50px !important;"
           }),
           h('img.honeycomb-right',{
             'src':'img/honeycomb.png',
-            'style':"max-height:475px;z-index:1;margin-right:-50px !important;"
+            'style':"max-height:540px;z-index:1;margin-right:-50px !important;"
           }),
           //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
             h("div.row", [
-              h("div.col-sm-12", {'style':'margin-top:-180px;'},[
+              h("div.col-sm-12", {'style':'margin-top:-240px;'},[
                 h("h4.mg-md.text-center.tc-white", "SERVICES:"),
                 h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}")
               ])
@@ -141,15 +141,15 @@ function render () {
           'style':'max-height:100vh;'},[
           h('img.honeycomb-left',{
             'src':'img/honeycomb_pattern.png',
-            'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
+            'style':"max-height:350px;z-index:1;margin-left:-50px !important;"
           }),
           h('img.honeycomb-right',{
             'src':'img/honeycomb.png',
-            'style':"max-height:475px;z-index:1;margin-right:-50px !important;"
+            'style':"max-height:540px;z-index:1;margin-right:-50px !important;"
           }),
           //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
             h("div.row", [
-              h("div.col-sm-12", {'style':'margin-top:-180px;'},[
+              h("div.col-sm-12", {'style':'margin-top:-240px;'},[
                 h("h4.mg-md.text-center.tc-white", "SERVICES:"),
                 h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}")
               ])
