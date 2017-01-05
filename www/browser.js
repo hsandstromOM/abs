@@ -2268,8 +2268,8 @@ function render () {
                           h("div.row", [
                             h("div.col-sm-2", [
                               h("a.carousel-inner", {
-                                'data-ng-repeat': 'workProjectGallery in allWorkProjects',
-                                'data-ui-sref': 'workProjectGallery({workProject: workProject})'
+                                'data-ui-sref': 'workProject.fields.workProjectGallery.fields.file.url',
+                                'data-ng-repeat': 'workProjectGallery in allWorkProjects'
                               })
                             ]),
                             h("div.col-sm-2", [
