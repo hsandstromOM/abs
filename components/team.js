@@ -324,12 +324,12 @@ function render () {
                         'data-ng-href': 'mailto:{{currentTeamMember.fields.emailAddress}}'
                       }, "EMAIL {{currentTeamMember.fields.name}}"),
                       h("nbsp", " "),
-                      h("a.tk-industry", {
-                        "style":"font-size:16px;color:#73B53d;display:inline;text-decoration:underline;letter-spacing: .1em",
-                        'data-ng-href': '{{currentTeamMember.fields.cV.fields.file.url}}',
-                        'target': '_self',
-                        'download': '{{currentTeamMember.fields.cV.fields.file.url}}',
-                      }, "DOWNLOAD C.V.")
+                      // h("a.tk-industry", {
+                      //   "style":"font-size:16px;color:#73B53d;display:inline;text-decoration:underline;letter-spacing: .1em",
+                      //   'data-ng-href': '{{currentTeamMember.fields.cV.fields.file.url}}',
+                      //   'target': '_self',
+                      //   'download': '{{currentTeamMember.fields.cV.fields.file.url}}',
+                      // }, "DOWNLOAD C.V.")
                     ])
 
                   ])
