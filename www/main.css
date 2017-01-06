@@ -703,6 +703,24 @@ li {
 li:hover {
   color: #73b53d; }
 
+ol,
+ul {
+  margin: 0 0 0 1em; }
+
+ul {
+  padding: 0 1em;
+  list-style: none; }
+
+li {
+  margin: 0 0 .75em 0;
+  line-height: 1.1em; }
+
+li:before {
+  content: "::";
+  display: inline-block;
+  margin-left: -1em;
+  position: absolute; }
+
 .customText {
   color: #344274; }
 
