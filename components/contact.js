@@ -122,14 +122,15 @@ function render () {
       }),
       h('ng-map.breakMargin', {
         'style': 'display:block;width:100%;height:600px;',
-        'data-zoom-to-include-markers': 'true'
+        'data-zoom-to-include-markers': 'true',
+        'center':'current-location'
       }, [
           h('marker', {
             'data-ng-repeat': '(id, office) in allOffices',
             "id":  '{{id}}',
             'data-position': '{{office.fields.location.lat}}, {{office.fields.location.lon}}',
             'data-icon': 'img/mapMarker.png',
-            'data-on-click': 'showOffice(event, id)'
+            'data-on-click': 'showOffice(event, id)',
           }),
         //   h('info-window#foo', {
         //   },[
@@ -140,6 +141,7 @@ function render () {
         // ]),
 
         h('info-window#foo', {
+          'position':'current-location'
       },[
         h('div', {
         //  "style": "width: 100%; line-height: 1.5em"
@@ -163,6 +165,14 @@ function render () {
               //   'style': 'font-size:1em;color:rgb(111, 114, 107); display: inline-block'
               // }, '{{parkMarker.fields.hours | uppercase}}hello')
             ]),
+            h('.directions', {
+              'draggable':"true",
+              'travel-mode':"DRIVING",
+              'origin':"current-location",
+              'destination':"{{office.fields.address}}",
+              'data-ng-click':'setLocation("currentLocation")',
+            }),
+
           ]),
   ///******* //// use below if other features needed in infowindow////////////////*****
           // h('.mobileParkHead erInfo', {

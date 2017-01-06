@@ -13,6 +13,18 @@ module.exports = function () {
 }
 
 function controller ($scope, $state, $stateParams, contentful, store) {
+  $('a[href^="#"]').on('click', function(event) {
+
+    var target = $(this.getAttribute('href'));
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+
+});
   $scope.allWorkServicesProvided = []
   $scope.allServices = []
   $scope.teamDropClosed = true
@@ -72,7 +84,7 @@ function controller ($scope, $state, $stateParams, contentful, store) {
 function template () {
    return h('div', [
     h("a.bloc-button.btn.btn-d.scrollToTop", {
-       "ng-click":"scrollToTarget()"
+       "href":"#top"
      }, [
        h("span.fa.fa-chevron-up")
     ]),
