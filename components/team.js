@@ -331,6 +331,7 @@ function render () {
                       //   'download': '{{currentTeamMember.fields.cV.fields.file.url}}',
                       // }, "DOWNLOAD C.V.")
                     ])
+
                   ])
                 ])
               ])
