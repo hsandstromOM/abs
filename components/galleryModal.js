@@ -20,7 +20,7 @@ module.exports = function () {
               'data-index': '$index'
             }, [
               h('img', {
-                'data-ng-src': '{{slide.fields.file.url}}',
+                'data-ng-src': '{{workProject.fields.thumbnailImage.file.url}}',
                 'style': 'width:100%',
                 'alt': '{{slide.fields.description || slide.fields.title}}'
               })

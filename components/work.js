@@ -129,7 +129,7 @@ function render () {
         'style':'background-color:#F6F6F6;'
       }, [
         h("div.container.bloc-lg", {
-          'style': 'padding-right:10%;padding-left:10%;'
+          'style': 'padding-right:5%;padding-left:5%;'
         }, [
           h("div.row", {
             'data-ng-repeat': "workProject in allWorkProjects | serviceProvided: selectedService | orderBy: 'fields.priority'"
@@ -141,7 +141,7 @@ function render () {
               h("div.shadow", [
                 h("div.hexContainerWork", [
                   h(".hexThumbWork",[
-                    h("img.img-responsive.center-block", {
+                    h("img", {
                       "data-ng-src": "{{workProject.fields.thumbnailImage.fields.file.url}}"
                     }),
                   ])
@@ -149,7 +149,7 @@ function render () {
               ]),
             ]),
             h("div.col-sm-8", {
-              'style': 'border-bottom:1px solid #d9dedc;padding-bottom:60px;'
+              'style': 'border-bottom:1px solid #d9dedc;padding-bottom:80px;'
             }, [
               h('br'),
               h("h2.mg-md.tc-prussian-blue", [
@@ -158,10 +158,11 @@ function render () {
                 }, '{{workProject.fields.title}}')
               ]),
               h("p", {
-                'data-marked': 'workProject.fields.workProjectSummary'
+                'data-marked': 'workProject.fields.workProjectSummary',
+                  'style':'padding-bottom: 3px;'
               }),
               h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
-                "data-ui-sref":"workDetail({obj: workProject})"
+                "data-ui-sref":"workDetail({obj: workProject})",
               }, "Read More")
             ])
           ])
