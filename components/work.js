@@ -135,9 +135,18 @@ function render () {
             'data-ng-repeat': "workProject in allWorkProjects | serviceProvided: selectedService | orderBy: 'fields.priority'"
           }, [
             h("div.col-sm-4", [
-              h("img.img-responsive.center-block", {
-                "data-ng-src":"{{workProject.fields.thumbnailImage.fields.file.url}}"
-              }),
+              // h("img.img-responsive.center-block", {
+              //   "data-ng-src":"{{workProject.fields.thumbnailImage.fields.file.url}}"
+              // }),
+              h("div.shadow", [
+                h("div.hexContainerWork", [
+                  h(".hexThumbWork",[
+                    h("img.img-responsive.center-block", {
+                      "data-ng-src": "{{workProject.fields.thumbnailImage.fields.file.url}}"
+                    }),
+                  ])
+                ]),
+              ]),
             ]),
             h("div.col-sm-8", {
               'style': 'border-bottom:1px solid #d9dedc;padding-bottom:60px;'
