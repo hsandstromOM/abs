@@ -23,6 +23,8 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, slug
   vm.slugify = function(string) {
   return Slug.slugify(string);
 };
+  $window.scrollTo(0,0);
+  
   if ($state.params.obj) {
     $scope.workProject = $state.params.obj
     store.set('workProject', $state.params.obj)

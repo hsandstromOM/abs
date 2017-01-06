@@ -127,6 +127,8 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
     }
   }
 
+  $window.scrollTo(0,0);
+
 
   $scope.setMarker = function(office) {
     console.log(office.latLng);
@@ -483,6 +485,7 @@ module.exports = {
 
 function component ($scope, $state, store, contentful,  $uibModal, $window) {
   $scope.page = 'home'
+  $window.scrollTo(0,0);
   var left = true
   $scope.certsLeft = []
   $scope.certsRight = []
@@ -847,6 +850,7 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
     $scope.currentService = store.get('selectedService')
     $scope.page = $scope.currentService.fields.pageTitle
   }
+  $window.scrollTo(0,0);
 }
 
 function render () {
@@ -1990,6 +1994,7 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
     $scope.currentServiceProvided = serviceProvided
     $scope.page = $scope.currentServiceProvided
   }
+  $window.scrollTo(0,0);
 
 //// below needed for service subnav to display///////
   $scope.allServices = []
@@ -2164,6 +2169,8 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, slug
   vm.slugify = function(string) {
   return Slug.slugify(string);
 };
+  $window.scrollTo(0,0);
+  
   if ($state.params.obj) {
     $scope.workProject = $state.params.obj
     store.set('workProject', $state.params.obj)

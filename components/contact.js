@@ -41,6 +41,8 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
     }
   }
 
+  $window.scrollTo(0,0);
+
 
   $scope.setMarker = function(office) {
     console.log(office.latLng);

@@ -10,6 +10,7 @@ module.exports = {
 
 function component ($scope, $state, store, contentful,  $uibModal, $window) {
   $scope.page = 'home'
+  $window.scrollTo(0,0);
   var left = true
   $scope.certsLeft = []
   $scope.certsRight = []

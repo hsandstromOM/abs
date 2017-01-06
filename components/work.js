@@ -29,6 +29,7 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
     $scope.currentServiceProvided = serviceProvided
     $scope.page = $scope.currentServiceProvided
   }
+  $window.scrollTo(0,0);
 
 //// below needed for service subnav to display///////
   $scope.allServices = []

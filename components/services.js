@@ -32,6 +32,7 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
     $scope.currentService = store.get('selectedService')
     $scope.page = $scope.currentService.fields.pageTitle
   }
+  $window.scrollTo(0,0);
 }
 
 function render () {
