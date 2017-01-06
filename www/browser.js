@@ -603,7 +603,7 @@ function render () {
                 h("div.text-center.tk-industry", [
                   h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
                     'data-ng-src': "{{contentfulData.fields.spotlight}}",
-                    "data-ui-sref":"workDetail({obj: workProject})",
+                    'data-ui-sref':"workProjects({obj: workDetail})",
                     'href':"/workDetail"
                   }, "Learn More")
                 ])
@@ -2260,64 +2260,185 @@ function render () {
                 'data-marked':'workProject.fields.description'
               }),
               h("div.container", [
+              h('br'),
+              h("div.col-md-12", [
                 h('br'),
-                h("div.col-md-12", [
-                  h('br'),
-                  h('br'),
-                  h("div.well", {
-                    "style":"background-color:none;border:none;border-radius:0;-webkit-box-shadow:none;box-shadow:none"
-                  }, [
-                    h("div#myCarousel.carousel.slide", [
-                      h("div.carousel-inner", [
-                        h("div.item.active", [
-                          h("div.row", [
-                            h("div.col-sm-2", [
-                              h("img", {
-                                'data-ui-sref': 'workProject.fields.workProjectGallery.fields.file.url',
-                                'data-ng-repeat': 'workProjectGallery in allWorkProjects'
-                              })
-                            ]),
-                            h("div.col-sm-2", [
-                              h("a", {
-                                "href":"#x"
-                              }, [
-                                h("img.img-responsive", {
-                                  "src":"{{workProject.fields.thumbnailImage.fields.file.url}}",
-                                  "alt":"Image"
-                                })
-                              ])
-                            ]),
-
+                h('br'),
+                h("div.well", {
+                  "style":"background-color:none;border:none;border-radius:0;-webkit-box-shadow:none;box-shadow:none"
+                }, [
+                  h("div#myCarousel.carousel.slide", [
+                        h("div.carousel-inner", [
+                          h("div.item.active", [
+                            h("div.row", [
+                              h("div.col-sm-3", [
+                                h("a", {
+                                  "href":"#x"
+                                }, [
+                                  h("img.img-responsive", {
+                                    "src":"{{workProject.fields.img1.fields.file.url}}",
+                                    'style':'height:200px; width:230px',
+                                    "alt":"Image"
+                                  })
+                                ])
+                              ]),
+                              h("div.col-sm-3", [
+                                h("a", {
+                                  "href":"#x"
+                                }, [
+                                  h("img.img-responsive", {
+                                    "src":"{{workProject.fields.img2.fields.file.url}}",
+                                    'style':'height:200px; width:230px',
+                                    "alt":"Image"
+                                  })
+                                ])
+                              ]),
+                              h("div.col-sm-3", [
+                                h("a", {
+                                  "href":"#x"
+                                }, [
+                                  h("img.img-responsive", {
+                                    "src":"{{workProject.fields.img3.fields.file.url}}",
+                                    'style':'height:200px; width:230px',
+                                    "alt":"Image"
+                                  })
+                                ])
+                              ]),
+                              h("div.col-sm-3", [
+                                h("a", {
+                                  "href":"#x"
+                                }, [
+                                  h("img.img-responsive", {
+                                    "src":"{{workProject.fields.img4.fields.file.url}}",
+                                    'style':'height:200px; width:230px',
+                                    "alt":"Image"
+                                  })
+                                ])
                               ])
                             ])
                           ]),
-                          h("a.left.carousel-control", {
-                            "style":"margin-left:-50px;background-color:grey;width:40px;background-image:none",
-                            "href":"#myCarousel",
-                            "data-slide":"prev"
-                          }, [
-                            h("i.fa.fa-2x.fa-angle-left", {
-                              "style":"color:white;padding-top:70px"
-                            })
-                          ]),
-                          h("a.right.carousel-control", {
-                            "style":"margin-right:-50px;background-color:grey;width:40px;background-image:none",
-                            "href":"#myCarousel",
-                            "data-slide":"next"
-                          }, [
-                            h("i.fa.fa-2x.fa-angle-right", {
-                              "style":"color:white;padding-top:70px"
-                            })
+                          h("div.item", [
+                            h("div.row", [
+                              h("div.col-sm-3", [
+                                h("a", {
+                                  "href":"#x"
+                                }, [
+                                  h("img.img-responsive", {
+                                    "src":"{{workProject.fields.img5.fields.file.url}}",
+                                    'style':'height:200px; width:230px',
+                                    "alt":"Image"})
+                                  ])
+                                ]),
+                                h("div.col-sm-3", [
+                                  h("a", {
+                                    "href":"#x"
+                                  }, [
+                                    h("img.img-responsive", {
+                                      "src":"{{workProject.fields.img6.fields.file.url}}",
+                                      'style':'height:200px; width:230px',
+                                      "alt":"Image"})
+                                    ])
+                                  ]),
+                                  h("div.col-sm-3", [
+                                    h("a", {
+                                      "href":"#x"
+                                    }, [
+                                      h("img.img-responsive", {
+                                        "src":"{{workProject.fields.img7.fields.file.url}}",
+                                        'style':'height:200px; width:230px',
+                                        "alt":"Image"
+                                      })
+                                    ])
+                                  ]),
+                                  h("div.col-sm-3", [
+                                    h("a", {
+                                      "href":"#x"
+                                    }, [
+                                      h("img.img-responsive", {
+                                        "src":"{{workProject.fields.img8.fields.file.url}}",
+                                        'style':'height:200px; width:230px',
+                                        "alt":"Image"
+                                      })
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              h("div.item", [
+                                h("div.row", [
+                                  h("div.col-sm-3", [
+                                    h("a", {
+                                      "href":"#x"
+                                    }, [
+                                      h("img.img-responsive", {
+                                        "src":"{{workProject.fields.img9.fields.file.url}}",
+                                        'style':'height:200px; width:230px',
+                                        "alt":"Image"
+                                      })
+                                    ])
+                                  ]),
+                                  h("div.col-sm-3", [
+                                    h("a", {
+                                      "href":"#x"
+                                    }, [
+                                      h("img.img-responsive", {
+                                        "src":"{{workProject.fields.img10.fields.file.url}}",
+                                        'style':'height:200px; width:230px',
+                                        "alt":"Image"
+                                      })
+                                    ])
+                                  ]),
+                                  h("div.col-sm-3", [
+                                    h("a", {
+                                      "href":"#x"
+                                    }, [
+                                      h("img.img-responsive", {
+                                        "src":"{{workProject.fields.img11.fields.file.url}}",
+                                        'style':'height:200px; width:230px',
+                                        "alt":"Image"
+                                      })
+                                    ])
+                                  ]),
+                                  h("div.col-sm-3", [
+                                    h("a", {
+                                      "href":"#x"
+                                    }, [
+                                      h("img.img-responsive", {
+                                        "src":"{{workProject.fields.img12.fields.file.url}}",
+                                        'style':'height:200px; width:230px',
+                                        "alt":"Image"
+                                      })
+                                    ])
+                                  ])
+                                ])
+                              ])
+                            ]),
+                            h("a.left.carousel-control", {
+                              "style":"margin-left:-50px;background-color:grey;width:40px;background-image:none",
+                              "href":"#myCarousel",
+                              "data-slide":"prev"
+                            }, [
+                              h("h3", {
+                                "style":"color:white;padding-top:80px"
+                              }, "‹")
+                            ]),
+                            h("a.right.carousel-control", {
+                              "style":"margin-right:-50px;background-color:grey;width:40px;background-image:none",
+                              "href":"#myCarousel",
+                              "data-slide":"next"
+                            }, [
+                              h("h3", {
+                                "style":"color:white;padding-top:80px"
+                              }, "›")
+                            ])
                           ])
                         ])
                       ])
-                    ])
-                  ]),
-                  h("br"),
-                  h("br")
+                    ]),
+                    h("br"),
+                    h("br")
+                  ])
                 ])
-              ])
-            ]),
+              ]),
     //  footer
     h('div', {
       'data-footermenu': ''
