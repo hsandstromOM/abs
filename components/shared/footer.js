@@ -102,7 +102,7 @@ function template () {
                    h("h6.mg-md", {'data-ui-sref':'work', 'style':'cursor:pointer'},"WORK"),
                    h("h5.mg-md.tk-aaux-next", {
                      'data-ui-sref':'work({service: serviceProvided})',
-                     'data-ng-repeat': 'serviceProvided in allWorkServicesProvided',
+                     'data-ng-repeat': 'serviceProvided in allWorkServicesProvided | limitTo:3',
                      'style':'cursor:pointer'},
                      '{{serviceProvided.fields.pageTitle}}')
                  ]),

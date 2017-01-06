@@ -168,7 +168,7 @@ function render () {
                                 }, [
                                   h("img.img-responsive", {
                                     "src":"{{workProject.fields.img1.fields.file.url}}",
-                                    'style':'height:200px; width:230px',
+                                    'style':'height:200px; width:220px',
                                     "alt":"Image"
                                   })
                                 ])
