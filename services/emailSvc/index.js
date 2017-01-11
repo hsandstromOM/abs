@@ -14,12 +14,12 @@ module.exports = function () {
 	    "from_email": event.object.email,
 	    "from_name": "Move-it",
 	    "to": [{
-	      "email": "kimo@lincs.io",
+	      "email": "hosea@obviouslee.com",
 	      "name": "Recipient Name",
 	      "type": "to"
 	    }],
 	    "headers": {
-	      "Reply-To": "info@lincs.io"
+	      "Reply-To": "hosea@obviouslee.com"
 	    },
 	    "important": false,
 	    "track_opens": null,

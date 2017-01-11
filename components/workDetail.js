@@ -24,7 +24,7 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, slug
   return Slug.slugify(string);
 };
   $window.scrollTo(0,0);
-  
+
   if ($state.params.obj) {
     $scope.workProject = $state.params.obj
     store.set('workProject', $state.params.obj)
@@ -166,44 +166,48 @@ function render () {
                             h("div.row", [
                               h("div.col-sm-3", [
                                 h("a", {
-                                  "href":"#x"
+                                  "data-toggle":"modal",
+                                  "data-target":"#myModal"
                                 }, [
                                   h("img.img-responsive", {
                                     "src":"{{workProject.fields.img1.fields.file.url}}",
-                                    'style':'height:200px; width:220px',
+                                    'style':'height:200px; width:253px',
                                     "alt":"Image"
                                   })
                                 ])
                               ]),
                               h("div.col-sm-3", [
                                 h("a", {
-                                  "href":"#x"
+                                  "data-toggle":"modal",
+                                  "data-target":"#myModal"
                                 }, [
                                   h("img.img-responsive", {
                                     "src":"{{workProject.fields.img2.fields.file.url}}",
-                                    'style':'height:200px; width:230px',
+                                    'style':'height:200px; width:253px',
                                     "alt":"Image"
                                   })
                                 ])
                               ]),
                               h("div.col-sm-3", [
                                 h("a", {
-                                  "href":"#x"
+                                  "data-toggle":"modal",
+                                  "data-target":"#myModal"
                                 }, [
                                   h("img.img-responsive", {
                                     "src":"{{workProject.fields.img3.fields.file.url}}",
-                                    'style':'height:200px; width:230px',
+                                    'style':'height:200px; width:253px',
                                     "alt":"Image"
                                   })
                                 ])
                               ]),
                               h("div.col-sm-3", [
                                 h("a", {
-                                  "href":"#x"
+                                  "data-toggle":"modal",
+                                  "data-target":"#myModal"
                                 }, [
                                   h("img.img-responsive", {
                                     "src":"{{workProject.fields.img4.fields.file.url}}",
-                                    'style':'height:200px; width:230px',
+                                    'style':'height:200px; width:253px',
                                     "alt":"Image"
                                   })
                                 ])
@@ -214,42 +218,46 @@ function render () {
                             h("div.row", [
                               h("div.col-sm-3", [
                                 h("a", {
-                                  "href":"#x"
+                                  "data-toggle":"modal",
+                                  "data-target":"#myModal"
                                 }, [
                                   h("img.img-responsive", {
                                     "src":"{{workProject.fields.img5.fields.file.url}}",
-                                    'style':'height:200px; width:230px',
+                                    'style':'height:200px; width:253px',
                                     "alt":"Image"})
                                   ])
                                 ]),
                                 h("div.col-sm-3", [
                                   h("a", {
-                                    "href":"#x"
+                                    "data-toggle":"modal",
+                                    "data-target":"#myModal"
                                   }, [
                                     h("img.img-responsive", {
                                       "src":"{{workProject.fields.img6.fields.file.url}}",
-                                      'style':'height:200px; width:230px',
+                                      'style':'height:200px; width:253px',
                                       "alt":"Image"})
                                     ])
                                   ]),
                                   h("div.col-sm-3", [
                                     h("a", {
-                                      "href":"#x"
+                                      "data-toggle":"modal",
+                                      "data-target":"#myModal"
                                     }, [
                                       h("img.img-responsive", {
                                         "src":"{{workProject.fields.img7.fields.file.url}}",
-                                        'style':'height:200px; width:230px',
+                                        'style':'height:200px; width:253px',
                                         "alt":"Image"
                                       })
                                     ])
                                   ]),
                                   h("div.col-sm-3", [
                                     h("a", {
-                                      "href":"#x"
+                                      "data-toggle":"modal",
+                                      "data-target":"#myModal"
                                     }, [
                                       h("img.img-responsive", {
                                         "src":"{{workProject.fields.img8.fields.file.url}}",
-                                        'style':'height:200px; width:230px',
+                                        'style':'height:200px; width:253px',
                                         "alt":"Image"
                                       })
                                     ])
@@ -260,44 +268,48 @@ function render () {
                                 h("div.row", [
                                   h("div.col-sm-3", [
                                     h("a", {
-                                      "href":"#x"
+                                      "data-toggle":"modal",
+                                      "data-target":"#myModal"
                                     }, [
                                       h("img.img-responsive", {
                                         "src":"{{workProject.fields.img9.fields.file.url}}",
-                                        'style':'height:200px; width:230px',
+                                        'style':'height:200px; width:253px',
                                         "alt":"Image"
                                       })
                                     ])
                                   ]),
                                   h("div.col-sm-3", [
                                     h("a", {
-                                      "href":"#x"
+                                      "data-toggle":"modal",
+                                      "data-target":"#myModal"
                                     }, [
                                       h("img.img-responsive", {
                                         "src":"{{workProject.fields.img10.fields.file.url}}",
-                                        'style':'height:200px; width:230px',
+                                        'style':'height:200px; width:253px',
                                         "alt":"Image"
                                       })
                                     ])
                                   ]),
                                   h("div.col-sm-3", [
                                     h("a", {
-                                      "href":"#x"
+                                      "data-toggle":"modal",
+                                      "data-target":"#myModal"
                                     }, [
                                       h("img.img-responsive", {
                                         "src":"{{workProject.fields.img11.fields.file.url}}",
-                                        'style':'height:200px; width:230px',
+                                        'style':'height:200px; width:253px',
                                         "alt":"Image"
                                       })
                                     ])
                                   ]),
                                   h("div.col-sm-3", [
                                     h("a", {
-                                      "href":"#x"
+                                      "data-toggle":"modal",
+                                      "data-target":"#myModal"
                                     }, [
                                       h("img.img-responsive", {
                                         "src":"{{workProject.fields.img12.fields.file.url}}",
-                                        'style':'height:200px; width:230px',
+                                        'style':'height:200px; width:253px',
                                         "alt":"Image"
                                       })
                                     ])
@@ -310,47 +322,85 @@ function render () {
                               "href":"#myCarousel",
                               "data-slide":"prev"
                             }, [
-                              h("h3", {
-                                "style":"color:white;vertical-align: center"
-                              }, "‹")
+                              h("i.fa.fa-2x.fa-angle-left", {
+                                "style":"color:white;padding-top:8vh;font-size:1.5em"
+                              })
                             ]),
                             h("a.right.carousel-control", {
                               "style":"margin-right:-50px;background-color:grey;width:40px;background-image:none",
                               "href":"#myCarousel",
                               "data-slide":"next"
                             }, [
-                              h("h3", {
-                                "style":"color:white;padding-top:80px"
-                              }, "›")
+                              h("i.fa.fa-2x.fa-angle-right", {
+                                "style":"color:white;padding-top:8vh;font-size:1.5em"
+                              })
                             ]),
-                            h('.div#workModal.modal.fade', [
-                              h('.donateModal', {
-                                'style': 'width: 100%; margin: 0 auto; '
+
+                          ])
+                        ]),
+                        h("div#myModal.modal.fade", {
+                          "tabindex":"-1;",
+                          "role":"dialog;",
+                          "aria-labelledby":"myModalLabel"
+                        }, [
+                          h("div.modal-dialog", {
+                            "style":"margin-top:150px;left:-6%",
+                            "role": 'document'
+                          }, [
+                            h("div.modal-content", {
+                              "style":"border-radius:0;height:800px;width:140%"
+                            }, [
+                              h("div.well", {
+                                "style":"background-color:none;border:none;border-radius:0;-webkit-box-shadow:none;box-shadow:none"
                               }, [
-                                h('.modalBody', {
-                                  'style': 'display:block;float:left;padding:20px;width:100%;background-color:white;'
-                                }, [
-                                  h('div.carouselHero', {
-                                    'style': 'display:block;float:left;width:100%;',
-                                  }, [
-                                    h('uib-carousel', {
-                                      'data-active': 'active',
-                                      'data-interval': 'myInterval'
-                                    }, [
-                                      h('uib-slide', {
-                                        'data-ng-repeat': 'slide in gallery track by $index',
-                                        'data-index': '$index'
-                                      }, [
-                                        h('img', {
-                                          'data-ng-src': '{{workProject.fields.thumbnailImage.file.url}}',
-                                          'style': 'width:100%',
-                                          'alt': '{{slide.fields.description || slide.fields.title}}'
-                                        })
-                                      ])
-                                    ])
-                                  ])
-                                ])
-                              ])
+                                h("div#myCarousel2.carousel.slide", [
+                                      h("div.carousel-inner", [
+                                        h("div.item.active", [
+                                          h("div.row", [
+                                            h("div", [
+                                                h("img", {
+                                                  "src":"{{workProject.fields.img1.fields.file.url}}",
+                                                  "style":"height: 775px",
+                                                  "alt":""
+                                                })
+                                            ]),
+                                          ])
+                                        ]),
+                                        h("div.item", [
+                                          h("div.row", [
+                                            h("div", [
+                                                h("img", {
+                                                  "src":"{{workProject.fields.img2.fields.file.url}}",
+                                                  "style":"height: 775px",
+                                                  "alt":""
+                                                })
+                                            ]),
+                                          ])
+                                        ]),
+
+
+                                          ]),
+                                          h("a.left.carousel-control", {
+                                            "style":"margin-left:-20px;background-color:grey;width:40px;background-image:none",
+                                            "href":"#myCarousel2",
+                                            "data-slide":"prev"
+                                          }, [
+                                            h("i.fa.fa-2x.fa-angle-left", {
+                                              "style":"color:white;padding-top:35vh;font-size:1.5em"
+                                            })
+                                          ]),
+                                          h("a.right.carousel-control", {
+                                            "style":"margin-right:-20px;background-color:grey;width:40px;background-image:none",
+                                            "href":"#myCarousel2",
+                                            "data-slide":"next"
+                                          }, [
+                                            h("i.fa.fa-2x.fa-angle-right", {
+                                              "style":"color:white;padding-top:35vh;font-size:1.5em"
+                                            })
+                                          ]),
+
+                                        ])
+                                      ]),
                             ])
                           ])
                         ])

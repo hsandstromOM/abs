@@ -1,6 +1,7 @@
 var h = require('hyperscript')
 var headerNav = require('./shared/headerNav')
 var footer = require('./shared/footer')
+var nodemailer = require('nodemailer')
 module.exports = {
   url: '/contact',
   template: render().outerHTML,
@@ -62,31 +63,38 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
     console.log('yo');
     console.log($scope.contact);
   }
+  $scope.contactForm = {
+      'contactInfo': ''
+  }
+  $scope.submitForm = function() {
+    if ($scope.contactForm.contactInfo === '') {
+      var url =  "/email/send"
+      var obj = $scope.contactForm
+
+    emailSvc.send(obj).then(function success() {
+    $http.post(url, obj).then(function success() {
+        console.log('success')
+        $scope.confirm()
+
+      }, function error() {
+          console.log('error')
+
+      })
+    })
+    } else {
+      console.log('spam boi')
+    }
+    return {
+        sendEmail: sendEmail,
+      };
+  }
 
 
 }
 // ####### Email code is here, tie form data to this
 // ####### Leave contact info blank, its a honeypot check to keep bots out
-// $scope.contactForm = {
-//     'contactInfo': ''
-// }
-// $scope.submitForm = function() {
-//   if ($scope.contactForm.contactInfo === '') {
-//     var url =  "/api/email/send"
-//     var obj = $scope.contactForm
-//   //  emailSvc.send(obj).then(function success() {
-//   $http.post(url, obj).then(function success() {
-//       console.log('success')
-//       $scope.confirm()
 
-//     }, function error() {
-//         console.log('error')
 
-//     })
-//   } else {
-//     console.log('spam boi')
-//   }
-// }
 
 angular.module('app').controller('ModalInstanceCtrl', function( $scope, $uibModalInstance) {
   $scope.cancel = function (){
@@ -354,7 +362,7 @@ function render () {
             h('.col-md-12', [
               h(".wire-btn-green-ryb.btn-sq.btn-lg", {
                 "style":"float:right;background-color:#F6F6F6",
-                //"type":"submit"
+                "type":"submit",
                 'data-ng-click':'sendContact()'
               }, '{{contentfulData.fields.buttonText}}')
             ])

@@ -7,7 +7,8 @@ module.exports = {
   template: render().outerHTML,
   controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window', '$q', component],
   params: {
-    'division': null
+    'division': null,
+    'division2': null
   }
 }
 
@@ -35,6 +36,10 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
     $scope.currentDivision = $state.params.division
   } else {
     $scope.currentDivision = 'All'
+  }
+
+  if($state.params.division2) {
+    $scope.currentDivision2 = $state.params.division2
   }
 
   function comparePriority(a,b) {
