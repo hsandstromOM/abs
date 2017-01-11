@@ -323,7 +323,7 @@ function render () {
                               "data-slide":"prev"
                             }, [
                               h("i.fa.fa-2x.fa-angle-left", {
-                                "style":"color:white;padding-top:8vh;font-size:1.5em"
+                                "style":"color:white;padding-top:6vh;font-size:1.5em"
                               })
                             ]),
                             h("a.right.carousel-control", {
@@ -332,7 +332,7 @@ function render () {
                               "data-slide":"next"
                             }, [
                               h("i.fa.fa-2x.fa-angle-right", {
-                                "style":"color:white;padding-top:8vh;font-size:1.5em"
+                                "style":"color:white;padding-top:6vh;font-size:1.5em"
                               })
                             ]),
 
@@ -468,20 +468,20 @@ function render () {
                                           ]),
                                           h("a.left.carousel-control", {
                                             "style":"background-color:#333;width:40px;background-image:none",
-                                            "href":"#myCarousel2",
+                                            "data-ng-href":"#myCarousel2",
                                             "data-slide":"prev"
                                           }, [
                                             h("i.fa.fa-2x.fa-angle-left", {
-                                              "style":"color:white;padding-top:35vh;font-size:1.5em"
+                                              "style":"color:white;padding-top:26vh;font-size:1.5em"
                                             })
                                           ]),
                                           h("a.right.carousel-control", {
                                             "style":"background-color:#333;width:40px;background-image:none",
-                                            "href":"#myCarousel2",
+                                            "data-ng-href":"#myCarousel2",
                                             "data-slide":"next"
                                           }, [
                                             h("i.fa.fa-2x.fa-angle-right", {
-                                              "style":"color:white;padding-top:35vh;font-size:1.5em"
+                                              "style":"color:white;padding-top:26vh;font-size:1.5em"
                                             })
                                           ]),
 
