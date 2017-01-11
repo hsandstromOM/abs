@@ -169,7 +169,7 @@ function render () {
                                   "data-toggle":"modal",
                                   "data-target":"#myModal"
                                 }, [
-                                  h("img.img-responsive", {
+                                  h("img", {
                                     "src":"{{workProject.fields.img1.fields.file.url}}",
                                     'style':'height:200px; width:253px',
                                     "alt":"Image"
@@ -181,7 +181,7 @@ function render () {
                                   "data-toggle":"modal",
                                   "data-target":"#myModal"
                                 }, [
-                                  h("img.img-responsive", {
+                                  h("img", {
                                     "src":"{{workProject.fields.img2.fields.file.url}}",
                                     'style':'height:200px; width:253px',
                                     "alt":"Image"
@@ -193,7 +193,7 @@ function render () {
                                   "data-toggle":"modal",
                                   "data-target":"#myModal"
                                 }, [
-                                  h("img.img-responsive", {
+                                  h("img", {
                                     "src":"{{workProject.fields.img3.fields.file.url}}",
                                     'style':'height:200px; width:253px',
                                     "alt":"Image"
@@ -205,7 +205,7 @@ function render () {
                                   "data-toggle":"modal",
                                   "data-target":"#myModal"
                                 }, [
-                                  h("img.img-responsive", {
+                                  h("img", {
                                     "src":"{{workProject.fields.img4.fields.file.url}}",
                                     'style':'height:200px; width:253px',
                                     "alt":"Image"
@@ -221,7 +221,7 @@ function render () {
                                   "data-toggle":"modal",
                                   "data-target":"#myModal"
                                 }, [
-                                  h("img.img-responsive", {
+                                  h("img", {
                                     "src":"{{workProject.fields.img5.fields.file.url}}",
                                     'style':'height:200px; width:253px',
                                     "alt":"Image"})
@@ -232,7 +232,7 @@ function render () {
                                     "data-toggle":"modal",
                                     "data-target":"#myModal"
                                   }, [
-                                    h("img.img-responsive", {
+                                    h("img", {
                                       "src":"{{workProject.fields.img6.fields.file.url}}",
                                       'style':'height:200px; width:253px',
                                       "alt":"Image"})
@@ -243,7 +243,7 @@ function render () {
                                       "data-toggle":"modal",
                                       "data-target":"#myModal"
                                     }, [
-                                      h("img.img-responsive", {
+                                      h("img", {
                                         "src":"{{workProject.fields.img7.fields.file.url}}",
                                         'style':'height:200px; width:253px',
                                         "alt":"Image"
@@ -255,7 +255,7 @@ function render () {
                                       "data-toggle":"modal",
                                       "data-target":"#myModal"
                                     }, [
-                                      h("img.img-responsive", {
+                                      h("img", {
                                         "src":"{{workProject.fields.img8.fields.file.url}}",
                                         'style':'height:200px; width:253px',
                                         "alt":"Image"
@@ -271,7 +271,7 @@ function render () {
                                       "data-toggle":"modal",
                                       "data-target":"#myModal"
                                     }, [
-                                      h("img.img-responsive", {
+                                      h("img", {
                                         "src":"{{workProject.fields.img9.fields.file.url}}",
                                         'style':'height:200px; width:253px',
                                         "alt":"Image"
@@ -283,7 +283,7 @@ function render () {
                                       "data-toggle":"modal",
                                       "data-target":"#myModal"
                                     }, [
-                                      h("img.img-responsive", {
+                                      h("img", {
                                         "src":"{{workProject.fields.img10.fields.file.url}}",
                                         'style':'height:200px; width:253px',
                                         "alt":"Image"
@@ -295,7 +295,7 @@ function render () {
                                       "data-toggle":"modal",
                                       "data-target":"#myModal"
                                     }, [
-                                      h("img.img-responsive", {
+                                      h("img", {
                                         "src":"{{workProject.fields.img11.fields.file.url}}",
                                         'style':'height:200px; width:253px',
                                         "alt":"Image"
@@ -307,7 +307,7 @@ function render () {
                                       "data-toggle":"modal",
                                       "data-target":"#myModal"
                                     }, [
-                                      h("img.img-responsive", {
+                                      h("img", {
                                         "src":"{{workProject.fields.img12.fields.file.url}}",
                                         'style':'height:200px; width:253px',
                                         "alt":"Image"
@@ -319,7 +319,7 @@ function render () {
                             ]),
                             h("a.left.carousel-control", {
                               "style":"margin-left:-50px;background-color:grey;width:40px;background-image:none",
-                              "href":"#myCarousel",
+                              "data-ng-href":"#myCarousel",
                               "data-slide":"prev"
                             }, [
                               h("i.fa.fa-2x.fa-angle-left", {
@@ -328,7 +328,7 @@ function render () {
                             ]),
                             h("a.right.carousel-control", {
                               "style":"margin-right:-50px;background-color:grey;width:40px;background-image:none",
-                              "href":"#myCarousel",
+                              "data-ng-href":"#myCarousel",
                               "data-slide":"next"
                             }, [
                               h("i.fa.fa-2x.fa-angle-right", {
