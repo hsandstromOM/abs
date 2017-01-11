@@ -344,11 +344,11 @@ function render () {
                           "aria-labelledby":"myModalLabel"
                         }, [
                           h("div.modal-dialog", {
-                            "style":"margin-top:150px;left:-6%",
+                            "style":"margin-top:150px",
                             "role": 'document'
                           }, [
                             h("div.modal-content", {
-                              "style":"border-radius:0;height:800px;width:140%"
+                              "style":"border-radius:0;height:775px;width:725px"
                             }, [
                               h("div.well", {
                                 "style":"background-color:none;border:none;border-radius:0;-webkit-box-shadow:none;box-shadow:none"
@@ -357,31 +357,117 @@ function render () {
                                       h("div.carousel-inner", [
                                         h("div.item.active", [
                                           h("div.row", [
-                                            h("div", [
                                                 h("img", {
                                                   "src":"{{workProject.fields.img1.fields.file.url}}",
-                                                  "style":"height: 775px",
+                                                  "style":"height: 750px",
                                                   "alt":""
                                                 })
-                                            ]),
                                           ])
                                         ]),
                                         h("div.item", [
                                           h("div.row", [
-                                            h("div", [
                                                 h("img", {
                                                   "src":"{{workProject.fields.img2.fields.file.url}}",
-                                                  "style":"height: 775px",
+                                                  "style":"height: 750px",
                                                   "alt":""
                                                 })
-                                            ]),
+                                          ])
+                                        ]),
+                                        h("div.item", [
+                                          h("div.row", [
+                                                h("img", {
+                                                  "src":"{{workProject.fields.img3.fields.file.url}}",
+                                                  "style":"height: 750px",
+                                                  "alt":""
+                                                })
+                                          ])
+                                        ]),
+                                        h("div.item", [
+                                          h("div.row", [
+                                                h("img", {
+                                                  "src":"{{workProject.fields.img4.fields.file.url}}",
+                                                  "style":"height: 750px",
+                                                  "alt":""
+                                                })
+                                          ])
+                                        ]),
+                                        h("div.item", [
+                                          h("div.row", [
+                                                h("img", {
+                                                  "src":"{{workProject.fields.img5.fields.file.url}}",
+                                                  "style":"height: 750px",
+                                                  "alt":""
+                                                })
+                                          ])
+                                        ]),
+                                        h("div.item", [
+                                          h("div.row", [
+                                                h("img", {
+                                                  "src":"{{workProject.fields.img6.fields.file.url}}",
+                                                  "style":"height: 750px",
+                                                  "alt":""
+                                                })
+                                          ])
+                                        ]),
+                                        h("div.item", [
+                                          h("div.row", [
+                                                h("img", {
+                                                  "src":"{{workProject.fields.img7.fields.file.url}}",
+                                                  "style":"height: 750px",
+                                                  "alt":""
+                                                })
+                                          ])
+                                        ]),
+                                        h("div.item", [
+                                          h("div.row", [
+                                                h("img", {
+                                                  "src":"{{workProject.fields.img8.fields.file.url}}",
+                                                  "style":"height: 750px",
+                                                  "alt":""
+                                                })
+                                          ])
+                                        ]),
+                                        h("div.item", [
+                                          h("div.row", [
+                                                h("img", {
+                                                  "src":"{{workProject.fields.img9.fields.file.url}}",
+                                                  "style":"height: 750px",
+                                                  "alt":""
+                                                })
+                                          ])
+                                        ]),
+                                        h("div.item", [
+                                          h("div.row", [
+                                                h("img", {
+                                                  "src":"{{workProject.fields.img10.fields.file.url}}",
+                                                  "style":"height: 750px",
+                                                  "alt":""
+                                                })
+                                          ])
+                                        ]),
+                                        h("div.item", [
+                                          h("div.row", [
+                                                h("img", {
+                                                  "src":"{{workProject.fields.img11.fields.file.url}}",
+                                                  "style":"height: 750px",
+                                                  "alt":""
+                                                })
+                                          ])
+                                        ]),
+                                        h("div.item", [
+                                          h("div.row", [
+                                                h("img", {
+                                                  "src":"{{workProject.fields.img12.fields.file.url}}",
+                                                  "style":"height: 750px",
+                                                  "alt":""
+                                                })
                                           ])
                                         ]),
 
 
                                           ]),
                                           h("a.left.carousel-control", {
-                                            "style":"margin-left:-20px;background-color:grey;width:40px;background-image:none",
+                                            "style":"background-color:#333;width:40px;background-image:none",
                                             "href":"#myCarousel2",
                                             "data-slide":"prev"
                                           }, [
@@ -390,7 +476,7 @@ function render () {
                                             })
                                           ]),
                                           h("a.right.carousel-control", {
-                                            "style":"margin-right:-20px;background-color:grey;width:40px;background-image:none",
+                                            "style":"background-color:#333;width:40px;background-image:none",
                                             "href":"#myCarousel2",
                                             "data-slide":"next"
                                           }, [
