@@ -53,7 +53,7 @@ function render () {
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-        'data-ng-repeat': 'service in allServices[0]',
+        'data-ng-repeat': 'service in allServices[1]',
         'data-ng-if': 'service.fields.pageTitle === "LIFE SAFETY & HUMAN FACTORS"',
       }, [
         h("img.overlayer", {
@@ -72,7 +72,7 @@ function render () {
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[1]',
+       'data-ng-repeat': 'service in allServices[0]',
        'data-ng-if': 'service.fields.pageTitle === "ENGINEERING"',
       }, [
         h("img.overlayer", {
@@ -91,7 +91,7 @@ function render () {
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[1]',
+       'data-ng-repeat': 'service in allServices[0]',
        'data-ng-if': 'service.fields.pageTitle === "BUILDING ENCLOSURE"',
       }, [
         h("img.overlayer", {
@@ -112,7 +112,7 @@ function render () {
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[0]',
+       'data-ng-repeat': 'service in allServices[1]',
        'data-ng-if': 'service.fields.pageTitle === "ARCHITECTURE"',
       }, [
         h("img.overlayer", {
