@@ -25,7 +25,7 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
     $scope.allOffices = res.data.items
     console.log($scope.allOffices)
   })
-  $scope.currentLocation = 'charleston'
+  $scope.currentLocation = 'currentLocation'
   $scope.setLocation = function (location) {
     if(location === 'charleston') {
       $scope.map.setCenter(new google.maps.LatLng(32.8270709, -79.94791599999996))
@@ -175,13 +175,13 @@ function render () {
               //   'style': 'font-size:1em;color:rgb(111, 114, 107); display: inline-block'
               // }, '{{parkMarker.fields.hours | uppercase}}hello')
             ]),
-            h('.directions', {
+            h('a.directions', {
               'draggable':"true",
               'travel-mode':"DRIVING",
               'origin':"current-location",
               'destination':"{{office.fields.address}}",
               'data-ng-click':'setLocation("currentLocation")',
-            }),
+            },"Get Directions")
 
           ]),
   ///******* //// use below if other features needed in infowindow////////////////*****
