@@ -49,7 +49,7 @@ function render () {
         'data-slide': 'slide'
       }),
       /* bloc-0 END */
-      h("div.closeNav", [
+      //h("div.closeNav", [
         /* bloc-1 */
         h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc", {'style':'max-height:175vh;'},[
           h('img.honeycomb-left',{
@@ -130,19 +130,18 @@ function render () {
         }, [
           h("div.container.bloc-lg", [
             h("div.row", [
-              h("div.col-sm-12", [
+              h("div.col-sm-12", {
+              },[
                 h("br"),
                 h("br"),
                 h("h2.mg-md.text-center.tk-industry.tc-prussian-blue", "PROJECT SPOTLIGHT"),
-                h("p.text-center", {
+                h("p", {
                   'style': "margin-left:200px; margin-right:200px; margin-bottom:65px;",
                   'data-marked': 'contentfulData.fields.projectSpotlightContent'
                 }),
-                h("div.text-center.tk-industry", [
+                h(".text-center", [
                   h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
-                    'data-ng-src': "{{contentfulData.fields.spotlight}}",
-                    'data-ui-sref':"workProjects({obj: workDetail})",
-                    'href':"/workDetail"
+                    "href":"http://www.contentful.com"
                   }, "Learn More")
                 ])
 
@@ -177,7 +176,7 @@ function render () {
       h('div', {
         'data-footermenu': ''
       }),
-      ])
+    //  ])
     ])
   ])
 }
