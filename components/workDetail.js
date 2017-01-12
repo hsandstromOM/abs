@@ -323,7 +323,7 @@ function render () {
                               "data-slide":"prev"
                             }, [
                               h("i.fa.fa-2x.fa-angle-left", {
-                                "style":"color:white;padding-top:6vh;font-size:1.5em"
+                                "style":"color:white;padding-top:80px;font-size:1.5em"
                               })
                             ]),
                             h("a.right.carousel-control", {
@@ -332,7 +332,7 @@ function render () {
                               "data-slide":"next"
                             }, [
                               h("i.fa.fa-2x.fa-angle-right", {
-                                "style":"color:white;padding-top:6vh;font-size:1.5em"
+                                "style":"color:white;padding-top:80px;font-size:1.5em"
                               })
                             ]),
 
@@ -472,7 +472,7 @@ function render () {
                                             "data-slide":"prev"
                                           }, [
                                             h("i.fa.fa-2x.fa-angle-left", {
-                                              "style":"color:white;padding-top:26vh;font-size:1.5em"
+                                              "style":"color:white;padding-top:375px;font-size:1.5em"
                                             })
                                           ]),
                                           h("a.right.carousel-control", {
@@ -481,7 +481,7 @@ function render () {
                                             "data-slide":"next"
                                           }, [
                                             h("i.fa.fa-2x.fa-angle-right", {
-                                              "style":"color:white;padding-top:26vh;font-size:1.5em"
+                                              "style":"color:white;padding-top:375px;font-size:1.5em"
                                             })
                                           ]),
 
