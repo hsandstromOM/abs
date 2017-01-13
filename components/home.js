@@ -117,7 +117,7 @@ function render () {
 
 
       h('div.col-md-12', {
-
+        "style":"z-index:2"
       },[
         h('div',{
           'style':'display:block; margin:auto; text-align:center;',
@@ -126,7 +126,7 @@ function render () {
       ]),
     ]),
         h("div#bloc-5.bloc.bg-Halftone-Pattern.tc-prussian-blue.bgc-white", {
-          'style':"background-color:#F6F6F6; -webkit-box-shadow:inset 0 10px 5px 2px rgba(0,0,0,.05);box-shadow:inset 0 3px 8px 4px rgba(0,0,0,.05);z-index:-1;"
+          'style':"background-color:#F6F6F6; -webkit-box-shadow:inset 0 10px 5px 2px rgba(0,0,0,.05);box-shadow:inset 0 3px 8px 4px rgba(0,0,0,.05);z-index:1;"
         }, [
           h("div.container.bloc-lg", [
             h("div.row", [

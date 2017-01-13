@@ -176,12 +176,11 @@ function render () {
               // }, '{{parkMarker.fields.hours | uppercase}}hello')
             ]),
             h('a.directions', {
-              'draggable':"true",
+
               'travel-mode':"DRIVING",
               'origin':"current-location",
               'destination':"{{office.fields.address}}",
-              'data-ng-click':'setLocation("currentLocation")',
-              "href":"https://www.google.com/maps/place/Applied+Building+Sciences+(ABS)/@32.8269671,-79.9501071,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x7f2fc35d89cd783a!8m2!3d32.8269671!4d-79.9479184"
+              //'data-ng-click':'setLocation("currentLocation")',
             },"Get Directions")
 
           ]),
