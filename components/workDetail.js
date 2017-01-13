@@ -7,7 +7,8 @@ module.exports = {
   controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window', component],
   params: {
     obj: null,
-    service: null
+    service: null,
+    projname:null,
   }
 }
 
@@ -47,6 +48,20 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, slug
       controller: 'ModalInstanceCtrl'
     });
   }
+  if ($state.params.obj) {
+   $scope.workProject = $state.params.obj
+   store.set('workProject', $state.params.obj)
+} else if ($state.params.projname) {
+   contentful.entries('content_type=workProjects&fields.title=' + $state.params.projname).then(function(res) {
+     $scope.workProject = res.data.items[0]
+     console.log('current passed project', $scope.workProject)
+   })
+} else if (store.get('workProject')) {
+   $scope.workProject = store.get('workProject')
+   console.log('workProject', $scope.workProject)
+ } else {
+   $state.go('buildingEnclosure')
+ }
 
   if($state.params.service) {
     $scope.page = $state.params.service

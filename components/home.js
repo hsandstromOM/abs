@@ -141,8 +141,10 @@ function render () {
                 }),
                 h(".text-center", [
                   h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
-                    "href":"http://www.contentful.com"
-                  }, "Learn More")
+                    'style': 'cursor: pointer;',
+                    //"data-ng-src": 'contentfulData.fields.projectSpotlightTitle',
+                    "data-ui-sref":"workDetail({projname: '{{contentfulData.fields.projectSpotlightTitle}}'})"
+                  }, "{{contentfulData.fields.buttonText}}")
                 ])
 
               ])
