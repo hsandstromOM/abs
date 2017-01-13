@@ -33,14 +33,14 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
   })
 
   if($state.params.division) {
-    $scope.currentDivision = $state.params.division
+    $scope.currentDivision = ($state.params.division || $state.params.division2 || $state.params.division3 || $state.params.division4 )
   } else {
     $scope.currentDivision = 'All'
   }
 
-  if($state.params.division2) {
-    $scope.currentDivision2 = $state.params.division2
-  }
+  //if($state.params.division2) {
+  //  $scope.currentDivision2 = $state.params.division2
+  //}
 
   function comparePriority(a,b) {
     if (a.fields.priority < b.fields.priority)
@@ -71,6 +71,75 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
         angular.forEach(sortedMembers, function(member){
           if(member.fields.division){
             if(member.fields.division === $scope.currentDivision || $scope.currentDivision === 'All') {
+              if(switchAt === 5) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 4
+                  index = 1
+                  arrayVal ++
+                }
+              } else if (switchAt === 4) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 5
+                  index = 1
+                  arrayVal ++
+                }
+              }
+            }
+          }
+          if(member.fields.division2){
+            if(member.fields.division2 === $scope.currentDivision) {
+              if(switchAt === 5) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 4
+                  index = 1
+                  arrayVal ++
+                }
+              } else if (switchAt === 4) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 5
+                  index = 1
+                  arrayVal ++
+                }
+              }
+            }
+          }
+          if(member.fields.division3){
+            if(member.fields.division3 === $scope.currentDivision) {
+              if(switchAt === 5) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 4
+                  index = 1
+                  arrayVal ++
+                }
+              } else if (switchAt === 4) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 5
+                  index = 1
+                  arrayVal ++
+                }
+              }
+            }
+          }
+          if(member.fields.division4){
+            if(member.fields.division4 === $scope.currentDivision) {
               if(switchAt === 5) {
                 if(index < switchAt) {
                   $scope.filteredMembers[arrayVal].push(member)
