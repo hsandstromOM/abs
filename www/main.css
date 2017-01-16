@@ -1194,6 +1194,13 @@ p, label, .btn, a, li {
   .fourRow {
     margin: auto !important;
     text-align: center;
+    width: 100%; }
+  .modal-dialog {
+    margin-top: 10px;
+    left: 0; }
+  .modal-content {
+    height: auto;
+    text-align: center;
     width: 100%; } }
 
 ::-webkit-scrollbar {

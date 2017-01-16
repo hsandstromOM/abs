@@ -57,14 +57,14 @@ module.exports = function () {
 	mandrill_client.messages.send({"message": message, "async": async, "ip_pool": ip_pool, "send_at": send_at}, function(result) {
 	    console.log(result)
 	    return(result)
-	    /*
+
 	    [{
 	      "email": "recipient.email@example.com",
 	      "status": "sent",
 	      "reject_reason": "hard-bounce",
 	      "_id": "abc123abc123abc123abc123abc123"
 	    }]
-	    */
+	    
 	}, function(e) {
 	    // Mandrill returns the error as an object with name and message keys
 	    console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);

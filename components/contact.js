@@ -1,7 +1,6 @@
 var h = require('hyperscript')
 var headerNav = require('./shared/headerNav')
 var footer = require('./shared/footer')
-var nodemailer = require('nodemailer')
 module.exports = {
   url: '/contact',
   template: render().outerHTML,
@@ -84,9 +83,6 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
     } else {
       console.log('spam boi')
     }
-    return {
-        sendEmail: sendEmail,
-      };
   }
 
 
@@ -363,7 +359,8 @@ function render () {
               h(".wire-btn-green-ryb.btn-sq.btn-lg", {
                 "style":"float:right;background-color:#F6F6F6",
                 "type":"submit",
-                'data-ng-click':'sendContact()'
+                'data-ng-click':'submitForm()',
+                "name":"submit"
               }, '{{contentfulData.fields.buttonText}}')
             ])
 

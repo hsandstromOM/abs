@@ -136,7 +136,7 @@ function render () {
                 h("br"),
                 h("h2.mg-md.text-center.tk-industry.tc-prussian-blue", "PROJECT SPOTLIGHT"),
                 h("p", {
-                  'style': "margin-left:200px; margin-right:200px; margin-bottom:65px;",
+                  'style': " margin-bottom:65px;",
                   'data-marked': 'contentfulData.fields.projectSpotlightContent'
                 }),
                 h(".text-center", [
