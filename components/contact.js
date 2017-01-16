@@ -176,7 +176,8 @@ function render () {
               'travel-mode':"DRIVING",
               'origin':"current-location",
               'destination':"{{office.fields.address}}",
-              //'data-ng-click':'setLocation("currentLocation")',
+              'data-ng-href':'https://www.google.com/maps/dir/Current+Location/"{{office.fields.address}}"',
+              'target': '_blank'
             },"Get Directions")
 
           ]),
@@ -284,7 +285,7 @@ function render () {
                 h("h4.charlotteOfficeTxt", "CHARLOTTE OFFICE"),
                 h("p", {
                   "style": "margin-left: 10px; margin-right: 10px;"
-                }, ["5601 Seventy-Seven Center Drive", h('br'), "Charlotte, NC", h('br'), "704.749.3545"]),
+                }, ["5601 77 Center Drive", h('br'), "Charlotte, NC", h('br'), "704.749.3545"]),
 
               ])
             ])
