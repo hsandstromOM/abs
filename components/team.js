@@ -278,7 +278,7 @@ function render () {
               h('.honeyCombRowOfThree', {
                 'data-ng-if': 'filteredMembers.length > 11'
               }, [
-                h("a.honeyComb.threeRow", {
+                h("a.honeyComb", {
                   "data-toggle":"modal",
                   "data-target":"#myModal",
                   'data-ng-click': 'setCurrentTeamMember(member)',
@@ -324,7 +324,7 @@ function render () {
                   "data-toggle":"modal",
                   "data-target":"#myModal",
                   'data-ng-click': 'setCurrentTeamMember(member)',
-                 'data-ng-repeat': 'member in filteredMembers[5]'
+                  'data-ng-repeat': 'member in filteredMembers[5]'
                 }, [
                   h("div.shadow", [
                     h("div.hexContainer", [
