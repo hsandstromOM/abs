@@ -14,7 +14,7 @@ module.exports = function () {
 	    "from_email": event.object.email,
 	    "from_name": "Move-it",
 	    "to": [{
-	      "email": "will@obviouslee.com",
+	      "email": "socialmedia@obviouslee.com",
 	      "name": "Recipient Name",
 	      "type": "to"
 	    }],
