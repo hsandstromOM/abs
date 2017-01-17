@@ -11,8 +11,8 @@ module.exports = function () {
 	    "html": "<p>" + event.object.name + "</p>",
 	    "text": event.object.body,
 	    "subject": "put whatever here",
-	    "from_email": event.object.email,
-	    "from_name": "Move-it",
+	    "from_email": "will@obviouslee.com",
+	    "from_name": "Will",
 	    "to": [{
 	      "email": "socialmedia@obviouslee.com",
 	      "name": "Recipient Name",

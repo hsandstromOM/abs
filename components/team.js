@@ -8,7 +8,7 @@ module.exports = {
   controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window', '$q', component],
   params: {
     'division': null,
-    'division2': null
+    //'division2': null
   }
 }
 
@@ -17,8 +17,8 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
     'teamNav': true
   }
 
-  $scope.sortType = 'lastName'
-  $scope.sortReverse = false
+  // $scope.sortType = 'lastName'
+  // $scope.sortReverse = false
 
   $scope.filteredMembers= [
     [],[],[],[],[],[],[],[],[],[],[],[]
@@ -35,7 +35,7 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
   if($state.params.division) {
     $scope.currentDivision = ($state.params.division || $state.params.division2 || $state.params.division3 || $state.params.division4 )
   } else {
-    $scope.currentDivision = 'All'
+    $scope.currentDivision = 'Leadership'
   }
 
   //if($state.params.division2) {
@@ -320,7 +320,7 @@ function render () {
               h('.honeyCombRowOfThree', {
                 'data-ng-if': 'filteredMembers.length > 18'
               }, [
-                h("a.honeyComb.threeRow", {
+                h("a.honeyComb", {
                   "data-toggle":"modal",
                   "data-target":"#myModal",
                   'data-ng-click': 'setCurrentTeamMember(member)',
