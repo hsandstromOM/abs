@@ -315,7 +315,7 @@ function render () {
               }, "NAME"),
               h("input#name.form-control", {
                 "type":"text",
-                'data-ng-model': 'contact.name',
+                'data-ng-model': 'contactForm.name',
               })
             ]),
             h("div.form-group.col-md-6", [
@@ -324,7 +324,7 @@ function render () {
               }, "EMAIL"),
               h("input#email.form-control", {
                 "type":"email",
-                'data-ng-model': 'contact.email',
+                'data-ng-model': 'contactForm.email',
               })
             ]),
             h("div.form-group.col-md-6", [
@@ -333,7 +333,7 @@ function render () {
               }, "SUBJECT"),
               h("div", [
                 h("select#subject.form-control", {
-                  'data-ng-model': "contact.subject",
+                  'data-ng-model': "contactForm.subject",
                 },[
                   h("option", "Architecture"),
                   h("option", "Forensic Consulting"),
@@ -349,7 +349,7 @@ function render () {
               }, "PHONE"),
               h("input#phone.form-control", {
                 "type":"text",
-                'data-ng-model': 'contact.phone',
+                'data-ng-model': 'contactForm.phone',
               })
             ]),
             h("div.form-group.col-md-12", [
@@ -358,7 +358,7 @@ function render () {
               }, "MESSAGE"),
               h("textarea#message.form-control", {
                 "rows":"15",
-                'data-ng-model': 'contact.message',
+                'data-ng-model': 'contactForm.message',
               })
             ]),
             h('.col-md-12', [

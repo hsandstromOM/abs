@@ -17,8 +17,8 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
     'teamNav': true
   }
 
-  // $scope.sortType = 'lastName'
-  // $scope.sortReverse = false
+   $scope.sortType = 'lastName'
+   $scope.sortReverse = false
 
   $scope.filteredMembers= [
     [],[],[],[],[],[],[],[],[],[],[],[]
@@ -33,7 +33,7 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
   })
 
   if($state.params.division) {
-    $scope.currentDivision = ($state.params.division || $state.params.division2 || $state.params.division3 || $state.params.division4 )
+    $scope.currentDivision = ($state.params.division || $state.params.division2 || $state.params.division3 || $state.params.division4 || $state.params.division5 || $state.params.division6 )
   } else {
     $scope.currentDivision = 'Leadership'
   }
