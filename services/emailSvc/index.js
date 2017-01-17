@@ -8,18 +8,18 @@ module.exports = function () {
   return function (ee) {
   	ee.on('/email/send', function (event) {
   		var message = {
-	    "html": "<p>" + event.object.name + "</p>",
-	    "text": event.object.body,
-	    "subject": "put whatever here",
-	    "from_email": event.object.email,
-	    "from_name": "Move-it",
+	    "html": "<p>" + event.object.message + event.object.phone + "</p>",
+	    "text": 'Hello world',
+	    "subject": event.object.subject,
+	    "from_email": "will@obviouslee.com",
+	    "from_name": "Will",
 	    "to": [{
-	      "email": "hosea@obviouslee.com",
-	      "name": "Recipient Name",
+	      "email": event.object.email,
+	      "name": event.object.name,
 	      "type": "to"
 	    }],
 	    "headers": {
-	      "Reply-To": "hosea@obviouslee.com"
+	      "Reply-To": "will@obviouslee.com"
 	    },
 	    "important": false,
 	    "track_opens": null,
@@ -58,12 +58,12 @@ module.exports = function () {
 	    console.log(result)
 	    return(result)
 
-	    [{
-	      "email": "recipient.email@example.com",
-	      "status": "sent",
-	      "reject_reason": "hard-bounce",
-	      "_id": "abc123abc123abc123abc123abc123"
-	    }]
+	    // [{
+	    //   "email": "recipient.email@example.com",
+	    //   "status": "sent",
+	    //   "reject_reason": "hard-bounce",
+	    //   "_id": "abc123abc123abc123abc123abc123"
+	    // }]
 
 	}, function(e) {
 	    // Mandrill returns the error as an object with name and message keys
