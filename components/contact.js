@@ -66,8 +66,9 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
      'contactInfo': '',
      'email': '',
      'name': '',
-     'body': '',
-     'phone': ''
+     'message': '',
+     'phone': '',
+     'subject': ''
    }
   $scope.submitForm = function() {
     if ($scope.contactForm.contactInfo === '') {

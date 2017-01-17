@@ -8,18 +8,18 @@ module.exports = function () {
   return function (ee) {
   	ee.on('/email/send', function (event) {
   		var message = {
-	    "html": "<p>" + event.object.name + "</p>",
-	    "text": event.object.body,
-	    "subject": "put whatever here",
-	    "from_email": "will@obviouslee.com",
-	    "from_name": "Will",
+	    "html": "<p>" + event.object.message + "</p>",
+	    "text": event.object.phone,
+	    "subject": event.object.subject,
+	    "from_email": event.object.email,
+	    "from_name": event.object.name,
 	    "to": [{
 	      "email": "socialmedia@obviouslee.com",
 	      "name": "Recipient Name",
 	      "type": "to"
 	    }],
 	    "headers": {
-	      "Reply-To": "hosea@obviouslee.com"
+	      "Reply-To": "info@appliedbuildingservices.com"
 	    },
 	    "important": false,
 	    "track_opens": null,
