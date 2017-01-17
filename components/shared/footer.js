@@ -154,7 +154,37 @@ function template () {
          ])
        ])
      /* Footer - bloc-18 END */
+   ]),
+   h("div.bloc-group", [
+     h("div#bloc-19.bloc.l-bloc.bgc-white.bloc-tile-3", [
+       h("div.container.bloc-md", [
+         h("div.row", [
+           h("div.col-sm-12")
+         ])
+       ])
+     ]),
+     h("div#bloc-20.bloc.l-bloc.bgc-white.bloc-tile-3", [
+       h("div.container.bloc-md", [
+         h("div.row", [
+           h("div.col-sm-12",[
+             h("h6.mg-md.tk-aaux-next",[
+               h("a.mg-md.tk-aaux-next",{
+                 "href":"http://obviouslee.com"
+               },"SITE BY OBVIOUSLEE MARKETING")
+             ])
+           ])
+         ])
+       ])
+     ]),
+     h("div#bloc-21.bloc.l-bloc.bgc-white.bloc-tile-3", [
+       h("div.container.bloc-md", [
+         h("div.row", [
+           h("div.col-sm-12")
+         ])
+       ])
      ])
+   ])
+
    ])
  }
  //}

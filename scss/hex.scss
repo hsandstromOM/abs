@@ -32,9 +32,9 @@ body {
   background-color: #fff;
   text-align: center;
   backface-visibility: hidden;
-  -webkit-clip-path: url("/team#hexContainer");
-  -ms-clip-path: url("/team#hexContainer");
-  clip-path: url("/team#hexContainer");
+  -webkit-clip-path: url("team#hexContainer");
+  -ms-clip-path: url("team#hexContainer");
+  clip-path: url("team#hexContainer");
   -webkit-transform:translateZ(0);
   transition: all 300ms ease-in-out;
 
@@ -56,9 +56,9 @@ body {
   text-transform: uppercase;
   text-align: center;
   backface-visibility: hidden;
-  -webkit-clip-path: url("/team#hexThumb");
-  -ms-clip-path: url("/team#hexThumb");
-  clip-path: url("/team#hexThumb");
+  -webkit-clip-path: url("team#hexThumb");
+  -ms-clip-path: url("team#hexThumb");
+  clip-path: url("team#hexThumb");
   -webkit-transform:translateZ(0);
   transition: all 300ms ease-in-out;
 
@@ -104,9 +104,9 @@ body {
   background-color: #fff;
   text-align: center;
   backface-visibility: hidden;
-  -webkit-clip-path: url("/work#hexContainer");
-  -ms-clip-path: url("/work#hexContainer");
-  clip-path: url("/work#hexContainer");
+  -webkit-clip-path: url("work#hexContainer");
+  -ms-clip-path: url("work#hexContainer");
+  clip-path: url("work#hexContainer");
   -webkit-transform:translateZ(0);
   transition: all 300ms ease-in-out;
 
@@ -128,9 +128,9 @@ body {
   text-transform: uppercase;
   text-align: center;
   backface-visibility: hidden;
-  -webkit-clip-path: url("/work#hexThumb");
-  -ms-clip-path: url("/work#hexThumb");
-  clip-path: url("/work#hexThumb");
+  -webkit-clip-path: url("work#hexThumb");
+  -ms-clip-path: url("work#hexThumb");
+  clip-path: url("work#hexThumb");
   -webkit-transform:translateZ(0);
   transition: all 300ms ease-in-out;
 

@@ -362,7 +362,7 @@ function template () {
           'data-ng-click': "setDivision('Architecture')",
           'data-ui-sref': "team({division: 'Architecture'})",
           'style':'border-right:1px solid white;',
-          'data-ng-class': "headerDivision.current === 'ARCHITECTURE' ? 'greenNav' : 'clearNav'"
+          'data-ng-class': "headerDivision.current === 'ARCHITECTURE'"
         }, "ARCHITECTURE")
       ]),
       h("div.subnavitem.col-xs-3.col-md-3", {
@@ -372,7 +372,7 @@ function template () {
           'data-ng-click': "setDivision('Forensic Consulting')",
           'data-ui-sref': "team({division: 'Forensic Consulting'})",
           'style':'border-right:1px solid white;',
-          'data-ng-class': "headerDivision.current === 'Forensic Consulting' ? 'greenNav' : 'clearNav'"
+          'data-ng-class': "headerDivision.current === 'Forensic Consulting'"
         }, "FORENSIC CONSULTING"),
       ]),
       h("div.subnavitem.col-xs-3.col-md-3", {
@@ -382,7 +382,7 @@ function template () {
           'data-ng-click': "setDivision('Building Enclosure')",
           'data-ui-sref': "team({division: 'Building Enclosure'})",
           'style':'border-right:1px solid white;',
-          'data-ng-class': "headerDivision.current === 'Building Enclosure' ? 'greenNav' : 'clearNav'"
+          'data-ng-class': "headerDivision.current === 'Building Enclosure'"
         }, "BUILDING ENCLOSURE")
       ]),
       h("div.subnavitem.col-xs-3.col-md-3", {
@@ -391,7 +391,7 @@ function template () {
         h("div", {
           'data-ng-click': "setDivision('Life Safety & Human Factors')",
           'data-ui-sref': "team({division: 'Life Safety & Human Factors'})",
-          'data-ng-class': "headerDivision.current === 'Life Safety & Human Factors' ? 'greenNav' : 'clearNav'"
+          'data-ng-class': "headerDivision.current === 'Life Safety & Human Factors'"
         }, "LIFE SAFETY & HUMAN FACTORS")
       ]),
       h("div.subnavitem.col-xs-3.col-md-3", {
@@ -400,7 +400,7 @@ function template () {
         h("div", {
           'data-ng-click': "setDivision('Engineering')",
           'data-ui-sref': "team({division: 'Engineering'})",
-          'data-ng-class': "headerDivision.current === 'Engineering' ? 'greenNav' : 'clearNav'"
+          'data-ng-class': "headerDivision.current === 'Engineering'"
         }, "ENGINEERING")
       ]),
       // h("div.subnavitem.col-xs-3.col-md-3", {
