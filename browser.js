@@ -19,7 +19,7 @@ require('./components/contentfulWrapper')
 require('ngMap')
 require('angular-ui-bootstrap')
 require('angular-marked')
-require('prerender-node')
+require('prerender-node').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR')
 
 document.body.appendChild(
   h('div', { 'data-ui-view': '' })
