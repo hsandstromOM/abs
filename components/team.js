@@ -35,7 +35,7 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
   if($state.params.division) {
     $scope.currentDivision = ($state.params.division || $state.params.division2 || $state.params.division3 || $state.params.division4 || $state.params.division5 || $state.params.division6 )
   } else {
-    $scope.currentDivision = 'Leadership'
+    $scope.currentDivision = 'All'
   }
 
   //if($state.params.division2) {
@@ -93,7 +93,7 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
             }
           }
           if(member.fields.division2){
-            if(member.fields.division2 === $scope.currentDivision || $scope.currentDivision === 'All') {
+            if(member.fields.division2 === $scope.currentDivision ) {
               if(switchAt === 5) {
                 if(index < switchAt) {
                   $scope.filteredMembers[arrayVal].push(member)
@@ -116,7 +116,7 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
             }
           }
           if(member.fields.division3){
-            if(member.fields.division3 === $scope.currentDivision || $scope.currentDivision === 'All') {
+            if(member.fields.division3 === $scope.currentDivision ) {
               if(switchAt === 5) {
                 if(index < switchAt) {
                   $scope.filteredMembers[arrayVal].push(member)
@@ -139,7 +139,7 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
             }
           }
           if(member.fields.division4){
-            if(member.fields.division4 === $scope.currentDivision || $scope.currentDivision === 'All') {
+            if(member.fields.division4 === $scope.currentDivision ) {
               if(switchAt === 5) {
                 if(index < switchAt) {
                   $scope.filteredMembers[arrayVal].push(member)
@@ -162,7 +162,7 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
             }
           }
           if(member.fields.division5){
-            if(member.fields.division5 === $scope.currentDivision || $scope.currentDivision === 'All') {
+            if(member.fields.division5 === $scope.currentDivision ) {
               if(switchAt === 5) {
                 if(index < switchAt) {
                   $scope.filteredMembers[arrayVal].push(member)
@@ -185,7 +185,7 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
             }
           }
           if(member.fields.division6){
-            if(member.fields.division6 === $scope.currentDivision || $scope.currentDivision === 'All') {
+            if(member.fields.division6 === $scope.currentDivision ) {
               if(switchAt === 5) {
                 if(index < switchAt) {
                   $scope.filteredMembers[arrayVal].push(member)
@@ -371,6 +371,27 @@ function render () {
                   "data-target":"#myModal",
                   'data-ng-click': 'setCurrentTeamMember(member)',
                   'data-ng-repeat': 'member in filteredMembers[5]'
+                }, [
+                  h("div.shadow", [
+                    h("div.hexContainer", [
+                      h(".hexThumb",[
+                        h("img", {
+                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
+                        }),
+                        h("p", '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
+                      ])
+                    ]),
+                  ]),
+                ])
+              ]),
+              h('.honeyCombRowOfFour', {
+                'data-ng-if': 'filteredMembers.length > 22'
+              }, [
+                h("a.honeyComb", {
+                  "data-toggle":"modal",
+                  "data-target":"#myModal",
+                  'data-ng-click': 'setCurrentTeamMember(member)',
+                  'data-ng-repeat': 'member in filteredMembers[6]'
                 }, [
                   h("div.shadow", [
                     h("div.hexContainer", [
