@@ -1,5 +1,5 @@
 var mandrill = require('mandrill-api/mandrill')
-var mandrill_client = new mandrill.Mandrill('OqwCA1IJ1Ks7ssRmnfFJlw')
+var mandrill_client = new mandrill.Mandrill('v-rcDbGl9In6Rkvxx69mkQ')
 var response = require('palmettoflow-event').response
 var responseError = require('palmettoflow-event').responseError
 
@@ -64,7 +64,7 @@ module.exports = function () {
 	      "reject_reason": "hard-bounce",
 	      "_id": "abc123abc123abc123abc123abc123"
 	    }]
-	    
+
 	}, function(e) {
 	    // Mandrill returns the error as an object with name and message keys
 	    console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);

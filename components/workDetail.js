@@ -185,6 +185,7 @@ function render () {
                                   "data-target":"#myModal"
                                 }, [
                                   h("img", {
+                                    'data-ng-if': 'workProject.fields.img1.fields.file.url',
                                     "src":"{{workProject.fields.img1.fields.file.url}}",
                                     'style':'height:200px; width:253px',
                                     "alt":"Image"
@@ -197,6 +198,7 @@ function render () {
                                   "data-target":"#myModal"
                                 }, [
                                   h("img", {
+                                    'data-ng-if': 'workProject.fields.img2.fields.file.url',
                                     "src":"{{workProject.fields.img2.fields.file.url}}",
                                     'style':'height:200px; width:253px',
                                     "alt":"Image"
@@ -209,6 +211,7 @@ function render () {
                                   "data-target":"#myModal"
                                 }, [
                                   h("img", {
+                                    'data-ng-if': 'workProject.fields.img3.fields.file.url',
                                     "src":"{{workProject.fields.img3.fields.file.url}}",
                                     'style':'height:200px; width:253px',
                                     "alt":"Image"
@@ -221,6 +224,7 @@ function render () {
                                   "data-target":"#myModal"
                                 }, [
                                   h("img", {
+                                    'data-ng-if': 'workProject.fields.img4.fields.file.url',
                                     "src":"{{workProject.fields.img4.fields.file.url}}",
                                     'style':'height:200px; width:253px',
                                     "alt":"Image"
@@ -237,6 +241,7 @@ function render () {
                                   "data-target":"#myModal"
                                 }, [
                                   h("img", {
+                                    'data-ng-if': 'workProject.fields.img5.fields.file.url',
                                     "src":"{{workProject.fields.img5.fields.file.url}}",
                                     'style':'height:200px; width:253px',
                                     "alt":"Image"})
@@ -248,6 +253,7 @@ function render () {
                                     "data-target":"#myModal"
                                   }, [
                                     h("img", {
+                                      'data-ng-if': 'workProject.fields.img6.fields.file.url',
                                       "src":"{{workProject.fields.img6.fields.file.url}}",
                                       'style':'height:200px; width:253px',
                                       "alt":"Image"})
@@ -259,6 +265,7 @@ function render () {
                                       "data-target":"#myModal"
                                     }, [
                                       h("img", {
+                                        'data-ng-if': 'workProject.fields.img7.fields.file.url',
                                         "src":"{{workProject.fields.img7.fields.file.url}}",
                                         'style':'height:200px; width:253px',
                                         "alt":"Image"
@@ -271,6 +278,7 @@ function render () {
                                       "data-target":"#myModal"
                                     }, [
                                       h("img", {
+                                        'data-ng-if': 'workProject.fields.img8.fields.file.url',
                                         "src":"{{workProject.fields.img8.fields.file.url}}",
                                         'style':'height:200px; width:253px',
                                         "alt":"Image"
@@ -287,6 +295,7 @@ function render () {
                                       "data-target":"#myModal"
                                     }, [
                                       h("img", {
+                                        'data-ng-if': 'workProject.fields.img9.fields.file.url',
                                         "src":"{{workProject.fields.img9.fields.file.url}}",
                                         'style':'height:200px; width:253px',
                                         "alt":"Image"
@@ -299,6 +308,7 @@ function render () {
                                       "data-target":"#myModal"
                                     }, [
                                       h("img", {
+                                        'data-ng-if': 'workProject.fields.img10.fields.file.url',
                                         "src":"{{workProject.fields.img10.fields.file.url}}",
                                         'style':'height:200px; width:253px',
                                         "alt":"Image"
@@ -311,6 +321,7 @@ function render () {
                                       "data-target":"#myModal"
                                     }, [
                                       h("img", {
+                                        'data-ng-if': 'workProject.fields.img11.fields.file.url',
                                         "src":"{{workProject.fields.img11.fields.file.url}}",
                                         'style':'height:200px; width:253px',
                                         "alt":"Image"
@@ -323,6 +334,7 @@ function render () {
                                       "data-target":"#myModal"
                                     }, [
                                       h("img", {
+                                        'data-ng-if': 'workProject.fields.img12.fields.file.url',
                                         "src":"{{workProject.fields.img12.fields.file.url}}",
                                         'style':'height:200px; width:253px',
                                         "alt":"Image"

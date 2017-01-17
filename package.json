@@ -53,7 +53,7 @@
     "palmettoflow-event": "^1.1.2",
     "palmettoflow-nodejs": "^1.0.1",
     "pouchdb": "^5.0.0",
-    "prerender-node": "^2.6.0",
+    "prerender-node": "^2.7.0",
     "send-data": "^7.0.0",
     "underscore": "^1.8.3",
     "xhr": "^2.1.0",

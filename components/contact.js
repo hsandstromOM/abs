@@ -4,10 +4,10 @@ var footer = require('./shared/footer')
 module.exports = {
   url: '/contact',
   template: render().outerHTML,
-  controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window', 'NgMap', '$http', component]
+  controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window', 'NgMap', '$http', 'emailSvc', component]
 }
 
-function component ($scope, $state, store, contentful,  $uibModal, $window, NgMap, $http) {
+function component ($scope, $state, store, contentful,  $uibModal, $window, NgMap, $http, emailSvc) {
   NgMap.getMap().then(function(map) {
   $scope.map = map;
   $scope.map.setOptions({draggable: false, zoomControl: false, scrollwheel: false, disableDoubleClickZoom: true});
@@ -63,8 +63,12 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
     console.log($scope.contact);
   }
   $scope.contactForm = {
-      'contactInfo': ''
-  }
+     'contactInfo': '',
+     'email': '',
+     'name': '',
+     'body': '',
+     'phone': ''
+   }
   $scope.submitForm = function() {
     if ($scope.contactForm.contactInfo === '') {
       var url =  "/email/send"
