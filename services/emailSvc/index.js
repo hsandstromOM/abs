@@ -8,11 +8,11 @@ module.exports = function () {
   return function (ee) {
   	ee.on('/email/send', function (event) {
   		var message = {
-	    "html": "<p>" + request.body.message + "</p>",
-	    "text": 'Hello World',
-	    "subject": request.body.subject,
-	    "from_email": request.body.email,
-	    "from_name": request.body.name,
+	    "html": "<p>" + event.object.name + "</p>",
+	    "text": event.object.body,
+	    "subject": "put whatever here",
+	    "from_email": "will@obviouslee.com",
+	    "from_name": "Will",
 	    "to": [{
 	      "email": "socialmedia@obviouslee.com",
 	      "name": "Recipient Name",
