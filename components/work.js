@@ -10,7 +10,7 @@ module.exports = {
   }
 }
 
-function component ($scope, $state, store, contentful,  $uibModal, $window) {
+function component ($scope, $state, store, contentful,  $uibModal, $window, slug) {
   if($state.params.service) {
     $scope.page = $state.params.service
     $scope.currentServiceProvided = $state.params.service
@@ -25,6 +25,9 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
   $scope.slide = {
     'workNav' : true
   }
+  $scope.slugify = function(string) {
+      return Slug.slugify(string);
+  };
   $scope.selectServiceProvided = function (serviceProvided) {
     $scope.currentServiceProvided = serviceProvided
     $scope.page = $scope.currentServiceProvided

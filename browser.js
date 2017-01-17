@@ -20,6 +20,7 @@ require('ngMap')
 require('angular-ui-bootstrap')
 require('angular-marked')
 require('prerender-node').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR')
+require('angular-slugify/angular-slugify.js')
 
 document.body.appendChild(
   h('div', { 'data-ui-view': '' })
