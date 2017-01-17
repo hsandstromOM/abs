@@ -93,7 +93,7 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
             }
           }
           if(member.fields.division2){
-            if(member.fields.division2 === $scope.currentDivision) {
+            if(member.fields.division2 === $scope.currentDivision || $scope.currentDivision === 'All') {
               if(switchAt === 5) {
                 if(index < switchAt) {
                   $scope.filteredMembers[arrayVal].push(member)
@@ -116,7 +116,7 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
             }
           }
           if(member.fields.division3){
-            if(member.fields.division3 === $scope.currentDivision) {
+            if(member.fields.division3 === $scope.currentDivision || $scope.currentDivision === 'All') {
               if(switchAt === 5) {
                 if(index < switchAt) {
                   $scope.filteredMembers[arrayVal].push(member)
@@ -139,7 +139,53 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
             }
           }
           if(member.fields.division4){
-            if(member.fields.division4 === $scope.currentDivision) {
+            if(member.fields.division4 === $scope.currentDivision || $scope.currentDivision === 'All') {
+              if(switchAt === 5) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 4
+                  index = 1
+                  arrayVal ++
+                }
+              } else if (switchAt === 4) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 5
+                  index = 1
+                  arrayVal ++
+                }
+              }
+            }
+          }
+          if(member.fields.division5){
+            if(member.fields.division5 === $scope.currentDivision || $scope.currentDivision === 'All') {
+              if(switchAt === 5) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 4
+                  index = 1
+                  arrayVal ++
+                }
+              } else if (switchAt === 4) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 5
+                  index = 1
+                  arrayVal ++
+                }
+              }
+            }
+          }
+          if(member.fields.division6){
+            if(member.fields.division6 === $scope.currentDivision || $scope.currentDivision === 'All') {
               if(switchAt === 5) {
                 if(index < switchAt) {
                   $scope.filteredMembers[arrayVal].push(member)

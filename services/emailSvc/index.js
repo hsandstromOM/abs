@@ -30,7 +30,7 @@ module.exports = function () {
 	    "url_strip_qs": null,
 	    "preserve_recipients": null,
 	    "view_content_link": null,
-	    "bcc_address": "message.bcc_address@example.com",
+	    "bcc_address": "hosea@obviouslee.com",
 	    "tracking_domain": null,
 	    "signing_domain": null,
 	    "return_path_domain": null,
