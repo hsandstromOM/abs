@@ -8,8 +8,8 @@ module.exports = function () {
   return function (ee) {
   	ee.on('/email/send', function (event) {
   		var message = {
-	    "html": "<p>" + event.object.message + "</p>",
-	    "text": event.object.phone,
+	    "html": "<p>" + event.object.message + "</p>" + "<p>" + event.object.phone + "</p>",
+	    "text": "Hello World!",
 	    "subject": event.object.subject,
 	    "from_email": "will@obviouslee.com",
 	    "from_name": event.object.name,
