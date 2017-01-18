@@ -1081,8 +1081,7 @@ p, label, .btn, a, li {
   width: 100%;
   margin-top: -70px;
   display: block;
-  float: left;
-  text-align: center; }
+  float: left; }
 
 .honeyCombRowOfThree {
   width: 100%;
@@ -1225,11 +1224,12 @@ p, label, .btn, a, li {
     width: 100%; }
   .fa-times-circle {
     position: absolute;
-    top: -445px;
+    top: -438px;
     right: -20px; }
   .col-sm-6 {
     padding-left: 20px;
     padding-right: 0px;
+    padding-top: 20px;
     width: 360px; } }
 
 ::-webkit-scrollbar {

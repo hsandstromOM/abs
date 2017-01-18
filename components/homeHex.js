@@ -54,7 +54,7 @@ function render () {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
         'data-ng-repeat': 'service in allServices[1]',
-        'data-ng-if': 'service.fields.pageTitle === "BUILDING ENCLOSURE"',
+        'data-ng-if': 'service.fields.pageTitle === "Building Enclosure"',
       }, [
         h("img.overlayer", {
           "src":'img/ABS-BuildingEnclosure-ServiceHex-Green.png',
@@ -65,7 +65,7 @@ function render () {
         }),
         h("div.hexText", [
           h("p", {
-            "style":"font-weight:bold;color:white",
+            "style":"font-weight:bold;color:white;text-transform: uppercase",
           }, "{{service.fields.pageTitle}}")
         ])
       ]),
@@ -73,7 +73,7 @@ function render () {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
        'data-ng-repeat': 'service in allServices[0]',
-       'data-ng-if': 'service.fields.pageTitle === "FORENSIC CONSULTING"',
+       'data-ng-if': 'service.fields.pageTitle === "Forensic Consulting"',
       }, [
         h("img.overlayer", {
           "src":'img/ABS-ForensicConsulting-ServiceHex-Green.png',
@@ -84,15 +84,15 @@ function render () {
         }),
         h("div.hexText", [
           h("p", {
-            "style":"font-weight:bold;color:white",
+            "style":"font-weight:bold;color:white;text-transform: uppercase",
           }, "{{service.fields.pageTitle}}")
         ])
       ]),
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[0]',
-       'data-ng-if': 'service.fields.pageTitle === "LIFE SAFETY & HUMAN FACTORS"',
+       'data-ng-repeat': 'service in allServices[1]',
+       'data-ng-if': 'service.fields.pageTitle === "Life Safety & Human Factors"',
       }, [
         h("img.overlayer", {
           "src":'img/ABS-LifeSafety-ServiceHex-Green.png',
@@ -103,7 +103,7 @@ function render () {
         }),
         h("div.hexText", [
           h("p", {
-            "style":"font-weight:bold;color:white",
+            "style":"font-weight:bold;color:white;text-transform: uppercase",
           }, "{{service.fields.pageTitle}}")
         ])
       ])
@@ -113,7 +113,7 @@ function render () {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
        'data-ng-repeat': 'service in allServices[0]',
-       'data-ng-if': 'service.fields.pageTitle === "ARCHITECTURE"',
+       'data-ng-if': 'service.fields.pageTitle === "Architecture"',
       }, [
         h("img.overlayer", {
           "src":'img/ABS-Architecture-ServiceHex-Green.png',
@@ -126,15 +126,15 @@ function render () {
           "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
         },[
           h("p", {
-            "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle",
+            "style":"font-weight:bold;color:white;text-transform: uppercase;padding-top:17px",
           }, "{{service.fields.pageTitle}}")
         ])
       ]),
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[1]',
-       'data-ng-if': 'service.fields.pageTitle === "ENGINEERING"',
+       'data-ng-repeat': 'service in allServices[0]',
+       'data-ng-if': 'service.fields.pageTitle === "Engineering"',
       }, [
         h("img.overlayer", {
           "src":'img/ABS-Engineering-ServiceHex-Green.png',
@@ -147,7 +147,7 @@ function render () {
           "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
         }, [
           h("p", {
-            "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle",
+            "style":"font-weight:bold;color:white;text-transform: uppercase;padding-top:17px",
           }, "{{service.fields.pageTitle}}")
         ])
       ])

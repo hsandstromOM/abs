@@ -62,7 +62,7 @@ function render () {
         'data-slide': 'slide'
       }),
       h("div", {
-        'data-ng-if':'currentServiceProvided.fields.pageTitle === "ARCHITECTURE"'
+        'data-ng-if':'currentServiceProvided.fields.pageTitle === "Architecture"'
       },[
         h("div#bloc-1.bloc.bgc-white.bg-Architecture-Header2.d-bloc", {'style':'max-height:100vh;'},[
           h('img.honeycomb-left',{
@@ -77,14 +77,16 @@ function render () {
             h("div.row", [
               h("div.col-sm-12", {'style':'margin-top:-240px;'},[
                 h("h4.mg-md.text-center.tc-white", "WORK:"),
-                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}")
+                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}", {
+                  'style':'text-transform:uppercase'
+                })
               ])
             ])
           //])
         ])
       ]),
       h("div", {
-        'data-ng-if':'currentServiceProvided.fields.pageTitle === "FORENSIC CONSULTING"'
+        'data-ng-if':'currentServiceProvided.fields.pageTitle === "Forensic Consulting"'
       },[
         h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-ForensicConsulting.d-bloc", {'style':'max-height:100vh;'},[
           h('img.honeycomb-left',{
@@ -99,14 +101,16 @@ function render () {
             h("div.row", [
               h("div.col-sm-12", {'style':'margin-top:-240px;'},[
                 h("h4.mg-md.text-center.tc-white", "WORK:"),
-                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}")
+                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}", {
+                  'style':'text-transform:uppercase'
+                })
               ])
             ])
           //])
         ])
       ]),
       h("div", {
-        'data-ng-if':'currentServiceProvided.fields.pageTitle === "BUILDING ENCLOSURE"'
+        'data-ng-if':'currentServiceProvided.fields.pageTitle === "Building Enclosure"'
       },[
         h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-BuildingEnclosure.d-bloc", {'style':'max-height:100vh;'},[
           h('img.honeycomb-left',{
@@ -121,14 +125,16 @@ function render () {
             h("div.row", [
               h("div.col-sm-12", {'style':'margin-top:-240px;'},[
                 h("h4.mg-md.text-center.tc-white", "WORK:"),
-                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}")
+                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}", {
+                  'style':'text-transform:uppercase'
+                })
               ])
             ])
           //])
         ])
       ]),
       h("div", {
-        'data-ng-if':'currentServiceProvided.fields.pageTitle === "LIFE SAFETY & HUMAN FACTORS"'
+        'data-ng-if':'currentServiceProvided.fields.pageTitle === "Life Safety & Human Factors"'
       },[
         h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-LifeSafety.d-bloc", {'style':'max-height:100vh;'},[
           h('img.honeycomb-left',{
@@ -143,14 +149,16 @@ function render () {
             h("div.row", [
               h("div.col-sm-12", {'style':'margin-top:-240px;'},[
                 h("h4.mg-md.text-center.tc-white", "WORK:"),
-                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}")
+                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}", {
+                  'style':'text-transform:uppercase'
+                })
               ])
             ])
           //])
         ])
       ]),
       h("div", {
-        'data-ng-if':'currentServiceProvided.fields.pageTitle === "ENGINEERING"'
+        'data-ng-if':'currentServiceProvided.fields.pageTitle === "Engineering"'
       },[
         h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-Engineering.d-bloc", {'style':'max-height:100vh;'},[
           h('img.honeycomb-left',{
@@ -165,7 +173,9 @@ function render () {
             h("div.row", [
               h("div.col-sm-12", {'style':'margin-top:-240px;'},[
                 h("h4.mg-md.text-center.tc-white", "WORK:"),
-                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}")
+                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}", {
+                  'style':'text-transform:uppercase'
+                })
               ])
             ])
           //])

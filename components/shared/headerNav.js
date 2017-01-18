@@ -194,7 +194,7 @@ function template () {
             },[
 
               h('p', {
-                "style":"cursor:pointer;font-size: 20px;line-height:5px;padding-top: 15px;padding-bottom: 15px;",
+                "style":"cursor:pointer;font-size: 20px;line-height:5px;padding-top: 15px;padding-bottom: 15px;text-transform:uppercase",
                 'data-ng-class': "mainPage === 'team' ? 'active' : 'ltc-royal-blue-traditional'",
                 'data-ng-click':'teamDropClosed = !teamDropClosed; workDropClosed = true; serviceDropClosed = true',
               }, 'TEAM')
@@ -207,44 +207,44 @@ function template () {
                 'style':'text-align: center; color:white;  padding:10px; font-size:16px;list-style:none; width:100%;'
               }, [
                 h('div', {
-                  'style':'cursor:pointer;border-bottom:1px solid white;padding-top:15px;padding-bottom:20px;width:300px; color:white;',
+                  'style':'cursor:pointer;border-bottom:1px solid white;padding-top:15px;padding-bottom:20px;width:300px; color:white;;text-transform:uppercase',
                   'data-ui-sref':'team'
-                },'ARCHITECTURE')
+                },'Architecture')
               ]),
               h('li', {
                 'style':'text-align: center; color:white;  padding:10px; font-size:16px;list-style:none; width:100%;'
               }, [
                 h('div', {
-                  'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;width:300px;color:white;',
+                  'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;width:300px;color:white;text-transform:uppercase',
                 },[
                   h('div', {
                     'data-ui-sref':"team({division: 'Forensic Consulting'})"
-                  },'FORENSIC CONSULTING')
+                  },'Forensic Consulting')
                 ])
               ]),
               h('li', {
                 'style':'text-align: center; color:white;  padding:10px; font-size:16px;list-style:none; width:100%;'
               }, [
                 h('div', {
-                  'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;width:300px; color:white;',
+                  'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;width:300px; color:white;text-transform:uppercase',
                   'data-ui-sref':"team({division: 'Building Enclosure'})"
-                },'BUILDING ENCLOSURE')
+                },'Building Enclosure')
               ]),
               h('li', {
                 'style':'text-align: center; color:white; padding:10px; font-size:16px;list-style:none; width:100%;'
               }, [
                 h('div', {
-                  'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;width:300px; color:white;',
+                  'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;width:300px; color:white;text-transform:uppercase',
                   'data-ui-sref':"team({division: 'Life Safety & Human Factors'})"
-                },'LIFE SAFETY & HUMAN FACTORS')
+                },'Life Safety & Human Factors')
               ]),
               h('li', {
                 'style':'text-align: center; color:white; padding:10px; font-size:16px;list-style:none; width:100%;'
               }, [
                 h('div', {
-                  'style':'cursor:pointer;padding-bottom:20px;width:300px; color:white;',
+                  'style':'cursor:pointer;padding-bottom:20px;width:300px; color:white;text-transform:uppercase',
                   'data-ui-sref':"team({division: 'Engineering'})"
-                },'ENGINEERING')
+                },'Engineering')
               ]),
             ]),
             ////// work mobile//////

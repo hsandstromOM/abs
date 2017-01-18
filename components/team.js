@@ -8,7 +8,6 @@ module.exports = {
   controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window', '$q', component],
   params: {
     'division': null,
-    //'division2': null
   }
 }
 
@@ -17,12 +16,12 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
     'teamNav': true
   }
 
-   $scope.sortType = 'lastName'
-   $scope.sortReverse = false
+  //  $scope.sortType = 'lastName'
+  //  $scope.sortReverse = false
 
   $scope.filteredMembers= [
     [],[],[],[],[],[],[],[],[],[],[],[]
-  ]
+  ],
   $scope.setCurrentTeamMember = function (member) {
     $scope.currentTeamMember = member
   }
@@ -32,15 +31,14 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
     $scope.teamPage = res.data.items[0]
   })
 
+  $state.params.all = 'All'
+
   if($state.params.division) {
-    $scope.currentDivision = ($state.params.division || $state.params.division2 || $state.params.division3 || $state.params.division4 || $state.params.division5 || $state.params.division6 )
+    $scope.currentDivision = ($state.params.division)
   } else {
-    $scope.currentDivision = 'All'
+    $scope.currentDivision = "All"
   }
 
-  //if($state.params.division2) {
-  //  $scope.currentDivision2 = $state.params.division2
-  //}
 
   function comparePriority(a,b) {
     if (a.fields.priority < b.fields.priority)
@@ -69,8 +67,35 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
       var arrayVal = 0
       sortMembers(items).then(function(sortedMembers){
         angular.forEach(sortedMembers, function(member){
+          if(member.fields.all){
+            if(member.fields.all === $scope.currentDivision) {
+              if(switchAt === 5) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 4
+                  index = 1
+                  arrayVal ++
+                }
+              } else if (switchAt === 4) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 5
+                  index = 1
+                  arrayVal ++
+                }
+              }
+            }
+          }
+        })
+      })
+      sortMembers(items).then(function(sortedMembers){
+        angular.forEach(sortedMembers, function(member){
           if(member.fields.division){
-            if(member.fields.division === $scope.currentDivision || $scope.currentDivision === 'All') {
+            if(member.fields.division === $scope.currentDivision) {
               if(switchAt === 5) {
                 if(index < switchAt) {
                   $scope.filteredMembers[arrayVal].push(member)

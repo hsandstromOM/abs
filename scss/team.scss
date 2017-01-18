@@ -3,7 +3,7 @@
  margin-top:-70px;
  display:block;
  float:left;
- text-align:center;
+ //text-align:center;
 }
 .honeyCombRowOfThree {
  width:100%;
@@ -175,7 +175,7 @@
   }
   .fa-times-circle {
   	position: absolute;
-  	top: -445px;
+  	top: -438px;
   	right: -20px;
   	//border: 3px solid #fff;
   //	border-radius: 50%;
@@ -183,6 +183,7 @@
   .col-sm-6 {
     padding-left: 20px;
     padding-right: 0px;
+    padding-top: 20px;
     width: 360px;
 }
 
