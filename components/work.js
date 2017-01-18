@@ -75,7 +75,7 @@ function render () {
             h("div.row", [
               h("div.col-sm-12", {'style':'margin-top:-240px;'},[
                 h("h4.mg-md.text-center.tc-white", "WORK:"),
-                h("h1.mg-md.text-center.tc-white.ng-binding", "Slug: {{currentServiceProvided.fields.pageTitle | slugify}}", {
+                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}", {
                   'style':'text-transform:uppercase'
                 })
               ])

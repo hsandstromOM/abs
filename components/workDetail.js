@@ -6,6 +6,7 @@ module.exports = {
   template: render().outerHTML,
   controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window',  component],
   params: {
+    slug: null,
     obj: null,
     service: null,
     projname:null,
@@ -39,9 +40,9 @@ function component ($scope, $state, store, contentful,  $uibModal, $window ) {
     $scope.allWorkProjects = res.data.items
     console.log($scope.allWorkProjects[0])
   })
-  contentful.entries('content_type=workProjects&fields.slug=' + $state.params.slug + '&include=3').then(function(res) {
-   $scope.currentWorkProject = res.data.items
-  })
+  //contentful.entries('content_type=workProjects&fields.slug=' + $state.params.slug + '&include=3').then(function(res) {
+//   $scope.currentWorkProject = res.data.items
+//  })
 
   $scope.open = function () {
 
