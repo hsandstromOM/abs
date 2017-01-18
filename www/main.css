@@ -1533,3 +1533,46 @@ body {
     display: block;
     float: none;
     margin: 0 auto; } }
+
+.modal-content {
+  border-radius: 0;
+  height: 775px;
+  width: 725px; }
+
+img {
+  height: 750px; }
+
+.left.carousel-control {
+  background-color: #333;
+  width: 40px;
+  background-image: none; }
+
+.right.carousel-control {
+  background-color: #333;
+  width: 40px;
+  background-image: none; }
+
+.fa-2x.fa-angle-left {
+  color: white;
+  padding-top: 375px;
+  font-size: 1.5em; }
+
+.fa-2x.fa-angle-right {
+  color: white;
+  padding-top: 375px;
+  font-size: 1.5em; }
+
+@media (max-width: 776px) {
+  .modal-content {
+    height: 300px;
+    width: 340px; }
+  img {
+    height: 325px; }
+  .fa-2x.fa-angle-left {
+    color: white;
+    padding-top: 150px;
+    font-size: 1.5em; }
+  .fa-2x.fa-angle-right {
+    color: white;
+    padding-top: 150px;
+    font-size: 1.5em; } }
