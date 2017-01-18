@@ -209,7 +209,7 @@ function template () {
                 h('div', {
                   'style':'cursor:pointer;border-bottom:1px solid white;padding-top:15px;padding-bottom:20px;width:300px; color:white;;text-transform:uppercase',
                   'data-ui-sref':'team'
-                },'Architecture')
+                },'ARCHITECTURE')
               ]),
               h('li', {
                 'style':'text-align: center; color:white;  padding:10px; font-size:16px;list-style:none; width:100%;'
@@ -219,7 +219,7 @@ function template () {
                 },[
                   h('div', {
                     'data-ui-sref':"team({division: 'Forensic Consulting'})"
-                  },'Forensic Consulting')
+                  },'FORENSIC CONSULTING')
                 ])
               ]),
               h('li', {
@@ -228,7 +228,7 @@ function template () {
                 h('div', {
                   'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;width:300px; color:white;text-transform:uppercase',
                   'data-ui-sref':"team({division: 'Building Enclosure'})"
-                },'Building Enclosure')
+                },'BUILDING ENCLOSURE')
               ]),
               h('li', {
                 'style':'text-align: center; color:white; padding:10px; font-size:16px;list-style:none; width:100%;'
@@ -236,7 +236,7 @@ function template () {
                 h('div', {
                   'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;width:300px; color:white;text-transform:uppercase',
                   'data-ui-sref':"team({division: 'Life Safety & Human Factors'})"
-                },'Life Safety & Human Factors')
+                },'LIFE SAFETY & HUMAN FACTORS')
               ]),
               h('li', {
                 'style':'text-align: center; color:white; padding:10px; font-size:16px;list-style:none; width:100%;'
@@ -244,7 +244,7 @@ function template () {
                 h('div', {
                   'style':'cursor:pointer;padding-bottom:20px;width:300px; color:white;text-transform:uppercase',
                   'data-ui-sref':"team({division: 'Engineering'})"
-                },'Engineering')
+                },'ENGINEERING')
               ]),
             ]),
             ////// work mobile//////
@@ -323,7 +323,7 @@ function template () {
       }, [
         h("div", {
           'data-ui-sref': 'work({service: serviceProvided})',
-          'style':'border-right:1px solid white',
+          'style':'border-right:1px solid white; text-transform: uppercase',
           'data-ng-class': "selectedWorkService.fields.pageTitle === serviceProvided.fields.pageTitle ? 'greenNav' : 'clearNav'"
         }, "{{serviceProvided.fields.pageTitle}}") ///// work full view
 
@@ -342,6 +342,7 @@ function template () {
         'data-ng-click': 'setSelectedService(service)'
       }, [
         h("div", {
+          'style': 'text-transform:uppercase',
           'data-ui-sref': 'services({service: service})',
           'data-ng-class': "selectedService.fields.pageTitle === service.fields.pageTitle ? 'greenNav' : 'clearNav'"
         }, "{{service.fields.pageTitle}}") /// services full view

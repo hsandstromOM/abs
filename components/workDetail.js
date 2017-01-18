@@ -4,7 +4,7 @@ var footer = require('./shared/footer')
 module.exports = {
   url: '/workDetail',
   template: render().outerHTML,
-  controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window', component],
+  controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window',  component],
   params: {
     obj: null,
     service: null,
@@ -12,7 +12,7 @@ module.exports = {
   }
 }
 
-function component ($scope, $state, store, contentful,  $uibModal, $window, slug) {
+function component ($scope, $state, store, contentful,  $uibModal, $window ) {
   $scope.page = 'workDetail'
   $scope.custom = true
   $scope.custom1 = false
@@ -20,11 +20,11 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, slug
   $scope.slide = {
     'down' : true
   }
-  var vm = this;
-  vm.slugify = function(string) {
-  return Slug.slugify(string);
-};
+
   $window.scrollTo(0,0);
+
+
+
 
   if ($state.params.obj) {
     $scope.workProject = $state.params.obj
@@ -38,6 +38,9 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, slug
   contentful.entries('content_type=workProjects').then(function(res) {
     $scope.allWorkProjects = res.data.items
     console.log($scope.allWorkProjects[0])
+  })
+  contentful.entries('content_type=workProjects&fields.slug=' + $state.params.slug + '&include=3').then(function(res) {
+   $scope.currentWorkProject = res.data.items
   })
 
   $scope.open = function () {
@@ -99,6 +102,7 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, slug
     $scope.allWorkProjects = res.data.items
   })
 }
+
 
 angular.module('app').controller('ModalInstanceCtrl', function( $scope, $uibModalInstance) {
   $scope.cancel = function (){

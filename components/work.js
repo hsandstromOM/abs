@@ -25,9 +25,7 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, slug
   $scope.slide = {
     'workNav' : true
   }
-  $scope.slugify = function(string) {
-      return Slug.slugify(string);
-  };
+
   $scope.selectServiceProvided = function (serviceProvided) {
     $scope.currentServiceProvided = serviceProvided
     $scope.page = $scope.currentServiceProvided
@@ -77,7 +75,7 @@ function render () {
             h("div.row", [
               h("div.col-sm-12", {'style':'margin-top:-240px;'},[
                 h("h4.mg-md.text-center.tc-white", "WORK:"),
-                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}", {
+                h("h1.mg-md.text-center.tc-white.ng-binding", "Slug: {{currentServiceProvided.fields.pageTitle | slugify}}", {
                   'style':'text-transform:uppercase'
                 })
               ])
