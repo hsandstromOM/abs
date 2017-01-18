@@ -84,6 +84,47 @@
 	padding:10px;
   margin-left: 440px;
 }
+@media (max-width: 1380px){
+  .honeyCombContainer{
+    width:100% !important;
+  }
+
+  .honeyCombRowOfFour{
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+
+  .honeyCombRowOfThree{
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+  .threeRowStart{
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+  .threeRow {
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+  .fourRow {
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+
+  .hexText{
+    height: auto !important;
+    padding-top: 0 !important;
+    width: 100% !important;
+    position: absolute;
+    text-align: center;
+    top: 41% !important;
+  }
+}
 
 @media (max-width: 992px){
   .honeyCombContainer{
