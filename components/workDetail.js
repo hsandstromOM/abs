@@ -6,7 +6,6 @@ module.exports = {
   template: render().outerHTML,
   controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window',  component],
   params: {
-    slug: null,
     obj: null,
     service: null,
     projname:null,
@@ -191,6 +190,7 @@ function render () {
                         h("div.carousel-inner", [
                           h("div.item.active", [
                             h("div.row", [
+
                               h("div.col-md-3.col-xs-12", [
                                 h("a", {
                                   "data-toggle":"modal",
