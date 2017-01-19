@@ -20,7 +20,7 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
   //  $scope.sortReverse = false
 
   $scope.filteredMembers= [
-    [],[],[],[],[],[],[],[],[],[],[],[]
+    [],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]
   ],
   $scope.setCurrentTeamMember = function (member) {
     $scope.currentTeamMember = member
@@ -63,27 +63,29 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
     contentful.entries('content_type=teamMembers&include=3').then(function(res) {
       var items = res.data.items
       var index = 1
-      var switchAt = 5
+      var switchAt = 4
       var arrayVal = 0
       sortMembers(items).then(function(sortedMembers){
         angular.forEach(sortedMembers, function(member){
           if(member.fields.all){
             if(member.fields.all === $scope.currentDivision) {
-              if(switchAt === 5) {
+              if(switchAt === 4) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 3
+                    $scope.filteredMembers[arrayVal].push(member)
+                  index = 1
+                  arrayVal ++
+                }
+              } else if (switchAt === 3) {
                 if(index < switchAt) {
                   $scope.filteredMembers[arrayVal].push(member)
                   index ++
                 } else {
                   switchAt = 4
-                  index = 1
-                  arrayVal ++
-                }
-              } else if (switchAt === 4) {
-                if(index < switchAt) {
-                  $scope.filteredMembers[arrayVal].push(member)
-                  index ++
-                } else {
-                  switchAt = 5
+                    $scope.filteredMembers[arrayVal].push(member)
                   index = 1
                   arrayVal ++
                 }
@@ -96,21 +98,23 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
         angular.forEach(sortedMembers, function(member){
           if(member.fields.division){
             if(member.fields.division === $scope.currentDivision) {
-              if(switchAt === 5) {
+              if(switchAt === 4) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 3
+                    $scope.filteredMembers[arrayVal].push(member)
+                  index = 1
+                  arrayVal ++
+                }
+              } else if (switchAt === 3) {
                 if(index < switchAt) {
                   $scope.filteredMembers[arrayVal].push(member)
                   index ++
                 } else {
                   switchAt = 4
-                  index = 1
-                  arrayVal ++
-                }
-              } else if (switchAt === 4) {
-                if(index < switchAt) {
-                  $scope.filteredMembers[arrayVal].push(member)
-                  index ++
-                } else {
-                  switchAt = 5
+                    $scope.filteredMembers[arrayVal].push(member)
                   index = 1
                   arrayVal ++
                 }
@@ -119,21 +123,23 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
           }
           if(member.fields.division2){
             if(member.fields.division2 === $scope.currentDivision ) {
-              if(switchAt === 5) {
+              if(switchAt === 4) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 3
+                    $scope.filteredMembers[arrayVal].push(member)
+                  index = 1
+                  arrayVal ++
+                }
+              } else if (switchAt === 3) {
                 if(index < switchAt) {
                   $scope.filteredMembers[arrayVal].push(member)
                   index ++
                 } else {
                   switchAt = 4
-                  index = 1
-                  arrayVal ++
-                }
-              } else if (switchAt === 4) {
-                if(index < switchAt) {
-                  $scope.filteredMembers[arrayVal].push(member)
-                  index ++
-                } else {
-                  switchAt = 5
+                    $scope.filteredMembers[arrayVal].push(member)
                   index = 1
                   arrayVal ++
                 }
@@ -142,21 +148,23 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
           }
           if(member.fields.division3){
             if(member.fields.division3 === $scope.currentDivision ) {
-              if(switchAt === 5) {
+              if(switchAt === 4) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 3
+                    $scope.filteredMembers[arrayVal].push(member)
+                  index = 1
+                  arrayVal ++
+                }
+              } else if (switchAt === 3) {
                 if(index < switchAt) {
                   $scope.filteredMembers[arrayVal].push(member)
                   index ++
                 } else {
                   switchAt = 4
-                  index = 1
-                  arrayVal ++
-                }
-              } else if (switchAt === 4) {
-                if(index < switchAt) {
-                  $scope.filteredMembers[arrayVal].push(member)
-                  index ++
-                } else {
-                  switchAt = 5
+                    $scope.filteredMembers[arrayVal].push(member)
                   index = 1
                   arrayVal ++
                 }
@@ -165,21 +173,23 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
           }
           if(member.fields.division4){
             if(member.fields.division4 === $scope.currentDivision ) {
-              if(switchAt === 5) {
+              if(switchAt === 4) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 3
+                    $scope.filteredMembers[arrayVal].push(member)
+                  index = 1
+                  arrayVal ++
+                }
+              } else if (switchAt === 3) {
                 if(index < switchAt) {
                   $scope.filteredMembers[arrayVal].push(member)
                   index ++
                 } else {
                   switchAt = 4
-                  index = 1
-                  arrayVal ++
-                }
-              } else if (switchAt === 4) {
-                if(index < switchAt) {
-                  $scope.filteredMembers[arrayVal].push(member)
-                  index ++
-                } else {
-                  switchAt = 5
+                    $scope.filteredMembers[arrayVal].push(member)
                   index = 1
                   arrayVal ++
                 }
@@ -188,21 +198,23 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
           }
           if(member.fields.division5){
             if(member.fields.division5 === $scope.currentDivision ) {
-              if(switchAt === 5) {
+              if(switchAt === 4) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 3
+                    $scope.filteredMembers[arrayVal].push(member)
+                  index = 1
+                  arrayVal ++
+                }
+              } else if (switchAt === 3) {
                 if(index < switchAt) {
                   $scope.filteredMembers[arrayVal].push(member)
                   index ++
                 } else {
                   switchAt = 4
-                  index = 1
-                  arrayVal ++
-                }
-              } else if (switchAt === 4) {
-                if(index < switchAt) {
-                  $scope.filteredMembers[arrayVal].push(member)
-                  index ++
-                } else {
-                  switchAt = 5
+                    $scope.filteredMembers[arrayVal].push(member)
                   index = 1
                   arrayVal ++
                 }
@@ -211,21 +223,23 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
           }
           if(member.fields.division6){
             if(member.fields.division6 === $scope.currentDivision ) {
-              if(switchAt === 5) {
+              if(switchAt === 4) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 3
+                    $scope.filteredMembers[arrayVal].push(member)
+                  index = 1
+                  arrayVal ++
+                }
+              } else if (switchAt === 3) {
                 if(index < switchAt) {
                   $scope.filteredMembers[arrayVal].push(member)
                   index ++
                 } else {
                   switchAt = 4
-                  index = 1
-                  arrayVal ++
-                }
-              } else if (switchAt === 4) {
-                if(index < switchAt) {
-                  $scope.filteredMembers[arrayVal].push(member)
-                  index ++
-                } else {
-                  switchAt = 5
+                    $scope.filteredMembers[arrayVal].push(member)
                   index = 1
                   arrayVal ++
                 }
