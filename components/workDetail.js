@@ -100,6 +100,7 @@ function component ($scope, $state, store, contentful,  $uibModal, $window ) {
   $scope.selectService = function (service) {
     $scope.currentService = service
     $scope.page = $scope.currentService.fields.pageTitle
+    $scope.page = $scope.currentService.fields.contactPerson
   }
   $scope.allWorkProjects = []
   contentful.entries('content_type=workProjects&include=3').then(function(res) {

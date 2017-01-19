@@ -266,7 +266,7 @@ function template () {
               }, [
                 h('div', {
                   'style':'border-bottom:1px solid white;padding:20px;width:300px; color:white;',
-                  'data-ng-repeat': 'serviceProvided in allWorkServicesProvided | limitTo:5',
+                  'data-ng-repeat': 'serviceProvided in allWorkServicesProvided',
                   'data-ui-sref': 'work({service: serviceProvided})'
               }, '{{serviceProvided.fields.pageTitle}}')
               ])
