@@ -190,7 +190,7 @@ function render () {
                         h("div.carousel-inner", [
                           h("div.item.active", [
                             h("div.row", [
-                              h("div.col-sm-3.col-xs-12", [
+                              h("div.col-md-3.col-xs-12", [
                                 h("a", {
                                   "data-toggle":"modal",
                                   "data-target":"#myModal"
@@ -203,7 +203,7 @@ function render () {
                                   })
                                 ])
                               ]),
-                              h("div.col-sm-3.col-xs-12", [
+                              h("div.col-md-3.col-xs-12", [
                                 h("a", {
                                   "data-toggle":"modal",
                                   "data-target":"#myModal"
@@ -216,7 +216,7 @@ function render () {
                                   })
                                 ])
                               ]),
-                              h("div.col-sm-3.col-xs-12", [
+                              h("div.col-md-3.col-xs-12", [
                                 h("a", {
                                   "data-toggle":"modal",
                                   "data-target":"#myModal"
@@ -229,7 +229,7 @@ function render () {
                                   })
                                 ])
                               ]),
-                              h("div.col-sm-3.col-xs-12", [
+                              h("div.col-md-3.col-xs-12", [
                                 h("a", {
                                   "data-toggle":"modal",
                                   "data-target":"#myModal"
@@ -246,7 +246,7 @@ function render () {
                           ]),
                           h("div.item", [
                             h("div.row", [
-                              h("div.col-sm-3.col-xs-12", [
+                              h("div.col-md-3.col-xs-12", [
                                 h("a", {
                                   "data-toggle":"modal",
                                   "data-target":"#myModal"
@@ -258,7 +258,7 @@ function render () {
                                     "alt":"Image"})
                                   ])
                                 ]),
-                                h("div.col-sm-3.col-xs-12", [
+                                h("div.col-md-3.col-xs-12", [
                                   h("a", {
                                     "data-toggle":"modal",
                                     "data-target":"#myModal"
@@ -270,7 +270,7 @@ function render () {
                                       "alt":"Image"})
                                     ])
                                   ]),
-                                  h("div.col-sm-3.col-xs-12", [
+                                  h("div.col-md-3.col-xs-12", [
                                     h("a", {
                                       "data-toggle":"modal",
                                       "data-target":"#myModal"
@@ -283,7 +283,7 @@ function render () {
                                       })
                                     ])
                                   ]),
-                                  h("div.col-sm-3.col-xs-12", [
+                                  h("div.col-md-3.col-xs-12", [
                                     h("a", {
                                       "data-toggle":"modal",
                                       "data-target":"#myModal"
@@ -300,7 +300,7 @@ function render () {
                               ]),
                               h("div.item", [
                                 h("div.row", [
-                                  h("div.col-sm-3.col-xs-12", [
+                                  h("div.col-md-3.col-xs-12", [
                                     h("a", {
                                       "data-toggle":"modal",
                                       "data-target":"#myModal"
@@ -313,7 +313,7 @@ function render () {
                                       })
                                     ])
                                   ]),
-                                  h("div.col-sm-3.col-xs-12", [
+                                  h("div.col-md-3.col-xs-12", [
                                     h("a", {
                                       "data-toggle":"modal",
                                       "data-target":"#myModal"
@@ -326,7 +326,7 @@ function render () {
                                       })
                                     ])
                                   ]),
-                                  h("div.col-sm-3.col-xs-12", [
+                                  h("div.col-md-3.col-xs-12", [
                                     h("a", {
                                       "data-toggle":"modal",
                                       "data-target":"#myModal"
@@ -339,7 +339,7 @@ function render () {
                                       })
                                     ])
                                   ]),
-                                  h("div.col-sm-3.col-xs-12", [
+                                  h("div.col-md-3.col-xs-12", [
                                     h("a", {
                                       "data-toggle":"modal",
                                       "data-target":"#myModal"
@@ -356,21 +356,21 @@ function render () {
                               ])
                             ]),
                             h("a.left.carousel-control", {
-                              "style":"margin-left:-50px;background-color:grey;width:40px;background-image:none",
+                            //  "style":"margin-left:-50px;background-color:grey;width:40px;background-image:none",
                               "data-ng-href":"#myCarousel",
                               "data-slide":"prev"
                             }, [
                               h("i.fa.fa-2x.fa-angle-left", {
-                                "style":"color:white;padding-top:80px;font-size:1.5em"
+                              //  "style":"color:white;padding-top:80px;font-size:1.5em"
                               })
                             ]),
                             h("a.right.carousel-control", {
-                              "style":"margin-right:-50px;background-color:grey;width:40px;background-image:none",
+                            //  "style":"margin-right:-50px;background-color:grey;width:40px;background-image:none",
                               "data-ng-href":"#myCarousel",
                               "data-slide":"next"
                             }, [
                               h("i.fa.fa-2x.fa-angle-right", {
-                                "style":"color:white;padding-top:80px;font-size:1.5em"
+                              //  "style":"color:white;padding-top:80px;font-size:1.5em"
                               })
                             ]),
 
