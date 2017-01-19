@@ -65,19 +65,31 @@ function controller ($scope, $state, $stateParams, contentful, store) {
             var index = $scope.allWorkServicesProvided.indexOf(service)
             if (index < 0) {
               $scope.allWorkServicesProvided.push(service)
+              $scope.allWorkServicesProvided.sort(comparePriority)
+              $scope.defaultWorkService = $scope.allWorkServicesProvided[0]
+              store.set('defaultWorkService', $scope.defaultWorkService)
+              console.log($scope.defaultWorkService)
             }
           }
         })
-        $scope.defaultWorkService = $scope.allWorkServicesProvided[0]
       }
     })
   })
+  function comparePriority(a,b) {
+  if (a.fields.priority < b.fields.priority)
+    return -1;
+  if (a.fields.priority > b.fields.priority)
+    return 1;
+  return 0;
+  }
   contentful.entries('content_type=serviceTypes&include=3').then(function(res) {
     var items = res.data.items
     angular.forEach(items, function(item){
       $scope.allServices.push(item)
+      $scope.allServices.sort(comparePriority)
     })
     $scope.defaultService = $scope.allServices[0]
+    store.set('defaultService', $scope.defaultService)
   })
 }
 

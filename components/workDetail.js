@@ -387,7 +387,7 @@ function render () {
                             h("div.modal-content.mod", {
                               //"style":"border-radius:0;height:775px;width:725px"
                             }, [
-                              h("div.well", {
+                              h("div.well.mod", {
                                 "style":"background-color:none;border:none;border-radius:0;-webkit-box-shadow:none;box-shadow:none"
                               }, [
                                 h("div#myCarousel2.carousel.slide", [
