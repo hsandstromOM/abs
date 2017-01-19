@@ -71,10 +71,13 @@ function component ($scope, $state, store, contentful,  $uibModal, $window ) {
     $scope.page = $state.params.service
     $scope.currentServiceProvided = $state.params.service
     $scope.selectedService = $state.params.service.fields.pageTitle
+    $scope.selectedService = $state.params.service.fields.contactPerson
     store.set('workService', $scope.selectedService)
   } else if(store.get('selectedWorkService')){
     $scope.currentServiceProvided = store.get('selectedWorkService')
     $scope.selectedService = $scope.currentServiceProvided.fields.pageTitle
+    $scope.selectedService = $scope.currentServiceProvided.fields.contactPerson
+
   }
 
   $scope.mainPage = 'work'
@@ -160,12 +163,15 @@ function render () {
                       h("br"),
                       "WORKING TOGETHER?"
                     ]),
-                    h("h5.hexname.tk-aaux-next", "SCOTT A. HARVEY,"),
-                    h("p", "AIA, RWC, LEED AP"),
-                    h("p", {
-                      "style":"margin-bottom:5px"
-                    }, "Registered Architect"),
-                    h("a.tk-aaux-next", "EMAIL SCOTT")
+                    h("h5.hexname.tk-aaux-next", "{{currentServiceProvided.fields.contactPerson.fields.name}} {{currentServiceProvided.fields.contactPerson.fields.lastName}},"),
+                    h("p", "{{currentServiceProvided.fields.contactPerson.fields.certificationsAndLicenses}}"),
+                    // h("p", {
+                    //   "style":"margin-bottom:5px"
+                    // }, "Registered Architect"),
+                    h("a.tk-aaux-next", {
+                      'data-ng-href': 'mailto:{{currentServiceProvided.fields.contactPerson.fields.emailAddress}}',
+                      'style':'text-transform:uppercase'
+                    },"EMAIL {{currentServiceProvided.fields.contactPerson.fields.name}}")
                   ])
                 ])
               ]),
