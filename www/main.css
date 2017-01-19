@@ -1569,7 +1569,7 @@ body {
 
 .modal-content.mod {
   border-radius: 0;
-  height: 600px;
+  max-height: 750px;
   width: 725px; }
 
 iframe {
