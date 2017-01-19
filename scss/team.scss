@@ -28,28 +28,33 @@
 .honeyCombHome {
   display: inline-block;
   position: relative;
-  width: 253px !important;
-  height: 284px !important;
+  width: 300px !important;
+  height: 338.9px !important;
   //margin-right: 5px;
 }
 .honeyCombHome:hover {
   .overlayer {
+    max-width: 250px;
     opacity: 0;
 
   }
 }
+.honeyThumb {
+    max-width: 300px;
+  }
 .honeyCombHome p {
   font-family: "aaux-next", sans-serif;
   font-size: 18px;
   position: absolute;
-  top: 40%;
-  left:25%;
-  right:15%;
+  top: 50%;
+  left:30%;
+  right:13%;
   letter-spacing: .5px;
   z-index: 1000;
 }
 .overlayer {
   opacity: 1;
+  max-width: 300px;
   position: absolute;
 }
 .fourRow {

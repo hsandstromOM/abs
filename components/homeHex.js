@@ -57,13 +57,15 @@ function render () {
         'data-ng-if': 'service.fields.pageTitle === "Building Enclosure"',
       }, [
         h("img.overlayer", {
-          "src":'img/ABS-BuildingEnclosure-ServiceHex-Green.png',
+          "src":'img/ABS-Homehex-building-enclosure-green_@2x.png',
           'style': 'position:absolute;'
         }),
-        h("img", {
-          "src":"img/ABS-BuildingEnclosure-ServiceHex-Color.png"
+        h("img.honeyThumb", {
+          "src":"img/ABS-Homehex-building-enclosure-hover_@2x.png"
         }),
-        h("div.hexText", [
+        h("div.hexText", {
+          "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
+        },[
           h("p", {
             "style":"font-weight:bold;color:white;text-transform: uppercase",
           }, "{{service.fields.pageTitle}}")
@@ -76,13 +78,15 @@ function render () {
        'data-ng-if': 'service.fields.pageTitle === "Forensic Consulting"',
       }, [
         h("img.overlayer", {
-          "src":'img/ABS-ForensicConsulting-ServiceHex-Green.png',
+          "src":'img/ABS-Homehex-forensic-consulting-green_@2x.png',
           'style': 'position:absolute;'
         }),
-        h("img", {
-          "src":"img/ABS-ForensicConsulting-ServiceHex-Color.png"
+        h("img.honeyThumb", {
+          "src":"img/ABS-Homehex-forensic-consulting-hover_@2x.png"
         }),
-        h("div.hexText", [
+        h("div.hexText", {
+          "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
+        },[
           h("p", {
             "style":"font-weight:bold;color:white;text-transform: uppercase",
           }, "{{service.fields.pageTitle}}")
@@ -95,13 +99,15 @@ function render () {
        'data-ng-if': 'service.fields.pageTitle === "Life Safety & Human Factors"',
       }, [
         h("img.overlayer", {
-          "src":'img/ABS-LifeSafety-ServiceHex-Green.png',
+          "src":'img/ABS-Homehex-life-safety-human-factors-green_@2x.png',
           'style': 'position:absolute;'
         }),
-        h("img", {
-          "src":"img/ABS-LifeSafety-ServiceHex-Color.png"
+        h("img.honeyThumb", {
+          "src":"img/ABS-Homehex-life-safety-human-factors-hover_@2x.png"
         }),
-        h("div.hexText", [
+        h("div.hexText", {
+          "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
+        },[
           h("p", {
             "style":"font-weight:bold;color:white;text-transform: uppercase",
           }, "{{service.fields.pageTitle}}")
@@ -116,11 +122,11 @@ function render () {
        'data-ng-if': 'service.fields.pageTitle === "Architecture"',
       }, [
         h("img.overlayer", {
-          "src":'img/ABS-Architecture-ServiceHex-Green.png',
+          "src":'img/ABS-Homehex-architecture-green_@2x.png',
           'style': 'position:absolute;'
         }),
-        h("img", {
-          "src":"img/ABS-Architecture-ServiceHex-Color.png"
+        h("img.honeyThumb", {
+          "src":"img/ABS-Homehex-architecture-hover_@2x.png"
         }),
         h("div.hexText", {
           "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
@@ -137,11 +143,11 @@ function render () {
        'data-ng-if': 'service.fields.pageTitle === "Engineering"',
       }, [
         h("img.overlayer", {
-          "src":'img/ABS-Engineering-ServiceHex-Green.png',
+          "src":'img/ABS-Homehex-engineering-green_@2x.png',
           'style': 'position:absolute;'
         }),
-        h("img", {
-          "src":"img/ABS-Engineering-ServiceHex-Color.png"
+        h("img.honeyThumb", {
+          "src":"img/ABS-Homehex-architecture-hover_@2x.png"
         }),
         h("div.hexText", {
           "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
