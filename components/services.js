@@ -15,10 +15,12 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
     $scope.page = $state.params.service
     $scope.currentServiceProvided = $state.params.service
     $scope.selectedService = $state.params.service.fields.pageTitle
+    
     store.set('services', $scope.selectedService)
   } else if(store.get('selectedServices')){
     $scope.currentServiceProvided = store.get('selectedServices')
     $scope.selectedService = $scope.currentServiceProvided.fields.pageTitle
+
   }
    $scope.allServicesProvided = []
    $scope.slide = {
@@ -28,9 +30,11 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
   if($state.params.service) {
     $scope.currentService = $state.params.service
     $scope.page = $scope.currentService.fields.pageTitle
+    $scope.email = $scope.currentService.fields.contactPerson
   } else if (store.get('selectedService')){
     $scope.currentService = store.get('selectedService')
     $scope.page = $scope.currentService.fields.pageTitle
+    $scope.email = $scope.currentService.fields.contactPerson
   }
   $window.scrollTo(0,0);
 }
@@ -192,12 +196,15 @@ function render () {
                       h("br"),
                       "WORKING TOGETHER?"
                     ]),
-                    h("h5.hexname.tk-aaux-next", "SCOTT A. HARVEY,"),
-                    h("p", "AIA, RWC, LEED AP"),
-                    h("p", {
-                      "style":"margin-bottom:5px"
-                    }, "Registered Architect"),
-                    h("a.tk-aaux-next", "EMAIL SCOTT")
+                    h("h5.hexname.tk-aaux-next", "{{currentService.fields.contactPerson.fields.name}} {{currentService.fields.contactPerson.fields.lastName}},"),
+                    h("p", "{{currentService.fields.contactPerson.fields.certificationsAndLicenses}}"),
+                    // h("p", {
+                    //   "style":"margin-bottom:5px"
+                    // }, "Registered Architect"),
+                    h("a.tk-aaux-next", {
+                      'data-ng-href': 'mailto:{{currentService.fields.contactPerson.fields.emailAddress}}',
+                      'style':'text-transform:uppercase'
+                    },"EMAIL {{currentService.fields.contactPerson.fields.name}}")
                   ])
                 ])
               ]),
