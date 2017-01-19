@@ -57,11 +57,11 @@ function render () {
         'data-ng-if': 'service.fields.pageTitle === "Building Enclosure"',
       }, [
         h("img.overlayer", {
-          "src":'img/ABS-Homehex-building-enclosure-green.png',
+          "src":'img/ABS-HomeHex-building-enclosure-green.png',
           'style': 'position:absolute;'
         }),
         h("img.honeyThumb", {
-          "src":"img/ABS-Homehex-building-enclosure-hover.png"
+          "src":"img/ABS-HomeHex-building-enclosure-hover.png"
         }),
         h("div.hexText", {
           "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
@@ -78,11 +78,11 @@ function render () {
        'data-ng-if': 'service.fields.pageTitle === "Forensic Consulting"',
       }, [
         h("img.overlayer", {
-          "src":'img/ABS-Homehex-forensic-consulting-green.png',
+          "src":'img/ABS-HomeHex-forensic-consulting-green.png',
           'style': 'position:absolute;'
         }),
         h("img.honeyThumb", {
-          "src":"img/ABS-Homehex-forensic-consulting-hover.png"
+          "src":"img/ABS-HomeHex-forensic-consulting-hover.png"
         }),
         h("div.hexText", {
           "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
@@ -99,11 +99,11 @@ function render () {
        'data-ng-if': 'service.fields.pageTitle === "Life Safety & Human Factors"',
       }, [
         h("img.overlayer", {
-          "src":'img/ABS-Homehex-life-safety-human-factors-green.png',
+          "src":'img/ABS-HomeHex-life-safety-human-factors-green.png',
           'style': 'position:absolute;'
         }),
         h("img.honeyThumb", {
-          "src":"img/ABS-Homehex-life-safety-human-factors-hover.png"
+          "src":"img/ABS-HomeHex-life-safety-human-factors-hover.png"
         }),
         h("div.hexText", {
           "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
@@ -122,11 +122,11 @@ function render () {
        'data-ng-if': 'service.fields.pageTitle === "Architecture"',
       }, [
         h("img.overlayer", {
-          "src":'img/ABS-Homehex-architecture-green.png',
+          "src":'img/ABS-HomeHex-architecture-green.png',
           'style': 'position:absolute;'
         }),
         h("img.honeyThumb", {
-          "src":"img/ABS-Homehex-architecture-hover.png"
+          "src":"img/ABS-HomeHex-architecture-hover.png"
         }),
         h("div.hexText", {
           "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
@@ -143,11 +143,11 @@ function render () {
        'data-ng-if': 'service.fields.pageTitle === "Engineering"',
       }, [
         h("img.overlayer", {
-          "src":'img/ABS-Homehex-engineering-green.png',
+          "src":'img/ABS-HomeHex-engineering-green.png',
           'style': 'position:absolute;'
         }),
         h("img.honeyThumb", {
-          "src":"img/ABS-Homehex-architecture-hover.png"
+          "src":"img/ABS-HomeHex-architecture-hover.png"
         }),
         h("div.hexText", {
           "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
