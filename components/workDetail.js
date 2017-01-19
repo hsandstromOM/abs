@@ -66,6 +66,14 @@ function component ($scope, $state, store, contentful,  $uibModal, $window ) {
    $state.go('buildingEnclosure')
  }
 
+  $scope.mainPage = 'work'
+  $scope.slide = {
+    'workNav' : true
+  }
+  $scope.selectServiceProvided = function (serviceProvided) {
+    $scope.currentServiceProvided = serviceProvided
+    $scope.page = $scope.currentServiceProvided
+  }
   if($state.params.service) {
     $scope.page = $state.params.service
     $scope.currentServiceProvided = $state.params.service
@@ -77,15 +85,6 @@ function component ($scope, $state, store, contentful,  $uibModal, $window ) {
     $scope.selectedService = $scope.currentServiceProvided.fields.pageTitle
     $scope.selectedService = $scope.currentServiceProvided.fields.contactPerson
 
-  }
-
-  $scope.mainPage = 'work'
-  $scope.slide = {
-    'workNav' : true
-  }
-  $scope.selectServiceProvided = function (serviceProvided) {
-    $scope.currentServiceProvided = serviceProvided
-    $scope.page = $scope.currentServiceProvided
   }
 
 //// below needed for service subnav to display///////
@@ -190,7 +189,17 @@ function render () {
                         h("div.carousel-inner", [
                           h("div.item.active", [
                             h("div.row", [
-
+                              // h("div.col-md-3.col-xs-12", [
+                              //   h("a", {
+                              //     "data-toggle":"modal",
+                              //     "data-target":"#myModal"
+                              //   }, [
+                              //     h("iframe", {
+                              //       "style":"width:253px; height:200px; frameborder: 0; allowfullscreen",
+                              //       "src":"https://www.youtube.com/embed/5G1XFtwfs5U"
+                              //     })
+                              //   ])
+                              // ]),
                               h("div.col-md-3.col-xs-12", [
                                 h("a", {
                                   "data-toggle":"modal",
@@ -396,6 +405,10 @@ function render () {
                                       h("div.carousel-inner", [
                                         h("div.item.active", [
                                           h("div.row", [
+                                                h("div", {
+                                                  "style":"width:253px; height:200px; allowfullscreen",
+                                                  "src":"https://www.youtube.com/embed/5G1XFtwfs5U"
+                                                }),
                                                 h("img", {
                                                   "src":"{{workProject.fields.img1.fields.file.url}}",
                                                 //  "style":"height: 750px",

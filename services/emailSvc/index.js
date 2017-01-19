@@ -14,7 +14,7 @@ module.exports = function () {
 	    "from_email": "will@obviouslee.com",
 	    "from_name": event.object.name,
 	    "to": [{
-	      "email": "hosea@obviouslee.com",
+	      "email": "will@obviouslee.com",
 	      "name": "Recipient Name",
 	      "type": "to"
 	    }],
@@ -30,7 +30,7 @@ module.exports = function () {
 	    "url_strip_qs": null,
 	    "preserve_recipients": null,
 	    "view_content_link": null,
-	    "bcc_address": "hosea@obviouslee.com",
+	    "bcc_address": "will@obviouslee.com",
 	    "tracking_domain": null,
 	    "signing_domain": null,
 	    "return_path_domain": null,
