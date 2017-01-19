@@ -15,7 +15,7 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
     $scope.page = $state.params.service
     $scope.currentServiceProvided = $state.params.service
     $scope.selectedService = $state.params.service.fields.pageTitle
-    
+
     store.set('services', $scope.selectedService)
   } else if(store.get('selectedServices')){
     $scope.currentServiceProvided = store.get('selectedServices')
@@ -179,14 +179,14 @@ function render () {
         }, [
           h("div.container.bloc-lg", [
             h("div.hexagon.row", [
-              h("div.col-md-4.col-cd-offset-1.col-xs-12", [
+              h("div.col-md-4.col-cd-offset-1.col-xs-12.serv", [
                 h("div#over", [
                   h("span.Centerer"),
                   h("img.hexImg.Centered", {
                     "style":"margin-top:-129px !important;",
                     "src":"img/doubleHoney.png"
                   }),
-                  h("div.gallery-text", {
+                  h("div.gallery-text.serv", {
                     'style':'margin-top:20px;'
 
                   },[

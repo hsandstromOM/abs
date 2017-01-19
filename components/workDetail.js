@@ -132,7 +132,7 @@ function render () {
         }),
         //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
           h("div.row", [
-            h("div.col-sm-12", {'style':'margin-top:-160px;text-transform: uppercase;'},[
+            h("div.wrkDetail.col-sm-12", [
               h("h4.mg-md.tc-white.text-center.ng-binding", "WORK/{{currentServiceProvided.fields.pageTitle}}:"),
               h("h1.mg-md.tc-white.text-center", "{{workProject.fields.title}}")
             ])
