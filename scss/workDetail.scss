@@ -1,11 +1,15 @@
-.modal-content{
+.modal-content.mod{
   border-radius:0;
-  height: 775px;
+  max-height:750px
   width:725px;
 }
-// img {
-//   height:750px;
+// .row.mod img {
+//   max-height:750px;
 // }
+iframe {
+  height:750px;
+  width:725px;
+}
 .left.carousel-control {
   margin-left: -50px;
   background-color:#333;
@@ -29,6 +33,28 @@
   padding-top:80px;
   font-size:1.5em
 }
+.left.carousel-control.mod {
+  margin-left: 0px;
+  background-color:#333;
+  width:40px;
+  background-image:none
+}
+.right.carousel-control.mod {
+  margin-right: 0px;
+  background-color:#333;
+  width:40px;
+  background-image:none
+}
+.fa-2x.fa-angle-left.mod {
+  color:white;
+  padding-top:330px;
+  font-size:1.5em
+}
+.fa-2x.fa-angle-right.mod {
+  color:white;
+  padding-top:330px;
+  font-size:1.5em
+}
 .wrkDetail.col-sm-12 {
   margin-top: -160px;
 }
@@ -39,8 +65,8 @@
   }
 
   .modal-content{
-    height: 300px;
-    width:340px;
+    height: 300px !important;
+    width:340px !important;
   }
 
   .col-md-4.col-cd-offset-1.col-xs-12 {

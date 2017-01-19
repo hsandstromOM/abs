@@ -189,17 +189,6 @@ function render () {
                         h("div.carousel-inner", [
                           h("div.item.active", [
                             h("div.row", [
-                              // h("div.col-md-3.col-xs-12", [
-                              //   h("a", {
-                              //     "data-toggle":"modal",
-                              //     "data-target":"#myModal"
-                              //   }, [
-                              //     h("iframe", {
-                              //       "style":"width:253px; height:200px; frameborder: 0; allowfullscreen",
-                              //       "src":"https://www.youtube.com/embed/5G1XFtwfs5U"
-                              //     })
-                              //   ])
-                              // ]),
                               h("div.col-md-3.col-xs-12", [
                                 h("a", {
                                   "data-toggle":"modal",
@@ -395,7 +384,7 @@ function render () {
                             "style":"margin-top:150px",
                             "role": 'document'
                           }, [
-                            h("div.modal-content", {
+                            h("div.modal-content.mod", {
                               //"style":"border-radius:0;height:775px;width:725px"
                             }, [
                               h("div.well", {
@@ -403,15 +392,12 @@ function render () {
                               }, [
                                 h("div#myCarousel2.carousel.slide", [
                                       h("div.carousel-inner", [
+
                                         h("div.item.active", [
                                           h("div.row", [
-                                                h("div", {
-                                                  "style":"width:253px; height:200px; allowfullscreen",
-                                                  "src":"https://www.youtube.com/embed/5G1XFtwfs5U"
-                                                }),
                                                 h("img", {
                                                   "src":"{{workProject.fields.img1.fields.file.url}}",
-                                                //  "style":"height: 750px",
+                                                  //"style":"height: 750px",
                                                   "alt":""
                                                 })
                                           ])
@@ -518,21 +504,21 @@ function render () {
 
 
                                           ]),
-                                          h("a.left.carousel-control", {
+                                          h("a.left.carousel-control.mod", {
                                         //    "style":"background-color:#333;width:40px;background-image:none",
                                             "data-ng-href":"#myCarousel2",
                                             "data-slide":"prev"
                                           }, [
-                                            h("i.fa.fa-2x.fa-angle-left", {
+                                            h("i.fa.fa-2x.fa-angle-left.mod", {
                                           //    "style":"color:white;padding-top:375px;font-size:1.5em"
                                             })
                                           ]),
-                                          h("a.right.carousel-control", {
+                                          h("a.right.carousel-control.mod", {
                                         //    "style":"background-color:#333;width:40px;background-image:none",
                                             "data-ng-href":"#myCarousel2",
                                             "data-slide":"next"
                                           }, [
-                                            h("i.fa.fa-2x.fa-angle-right", {
+                                            h("i.fa.fa-2x.fa-angle-right.mod", {
                                         //      "style":"color:white;padding-top:375px;font-size:1.5em"
                                             })
                                           ]),
