@@ -312,7 +312,9 @@ function render () {
                         h("img", {
                           "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
                         }),
-                        h("p", '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
+                        h("p", {
+                        //  "style":"font-weight:bold;color:white;text-transform: uppercase;padding-top:17px"
+                      },'{{member.fields.name}}'," ",'{{member.fields.middleName}}'," ",'{{member.fields.lastName}}')
                       ])
                     ]),
                   ]),

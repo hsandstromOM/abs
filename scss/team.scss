@@ -47,7 +47,7 @@
   font-size: 18px;
   position: absolute;
   top: 50%;
-  left:30%;
+  left:31%;
   right:13%;
   letter-spacing: .5px;
   z-index: 1000;
@@ -191,6 +191,11 @@
   }
   .honeycombContainer{
     width:100%;
+  }
+  .honeyCombHome p {
+    position: absolute;
+    left:20%;
+    right:20%;
   }
   .gallery-text{
     margin-top:-25px !important;

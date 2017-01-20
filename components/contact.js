@@ -70,6 +70,22 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
      'phone': '',
      'subject': ''
    }
+
+  //  $scope.submitForm = function() {
+  //      console.log("form data: " + vm.form);
+  //      ///SETUP FOR THANK YOU MESSAGE
+  //      // var myForm = angular.element(document.querySelector('.form-control'))
+  //      // $scope.myForm.setUntouched()
+  //      var myEl = angular.element(document.querySelector('.contactFormDiv'));
+  //      myEl.addClass('hidden');
+  //      var myElToShow = angular.element(document.querySelector('.thankYouDiv'));
+  //      myElToShow.removeClass('hidden');
+   //
+  //      window.setTimeout(function() {
+  //        // myElToShow.addClass('hidden');
+  //        // myEl.removeClass('hidden')
+  //         $state.reload();
+  //      }, 3000);
   $scope.submitForm = function() {
     if ($scope.contactForm.contactInfo === '') {
       var url =  "/email/send"
@@ -143,13 +159,6 @@ function render () {
             'data-icon': 'img/mapMarker.png',
             'data-on-click': 'showOffice(event, id)',
           }),
-        //   h('info-window#foo', {
-        //   },[
-        //     h('div', {
-        //     //  "style": "width: 100%; line-height: 1.5em"
-        //     },'{{office.fields.address}}'),
-        //
-        // ]),
 
         h('info-window#foo', {
           'position':'current-location'
@@ -172,9 +181,6 @@ function render () {
               h('boldHours', {
                 'style': 'display:inline-block;'
               }, '{{office.fields.phoneNumber | telephone:filter}}'),
-              // h('.dataHours', {
-              //   'style': 'font-size:1em;color:rgb(111, 114, 107); display: inline-block'
-              // }, '{{parkMarker.fields.hours | uppercase}}hello')
             ]),
             h('a.directions', {
 
@@ -290,7 +296,7 @@ function render () {
                 h("h4.charlotteOfficeTxt", "CHARLOTTE OFFICE"),
                 h("p", {
                   "style": "margin-left: 10px; margin-right: 10px;"
-                }, ["5601 77 Center Drive", h('br'), "Charlotte, NC", h('br'), "704.749.3545"]),
+                }, ["5601 77 Center Drive", h('br'), "Charlotte, NC", h('br'), "980.219.7084"]),
 
               ])
             ])
@@ -364,9 +370,9 @@ function render () {
             h('.col-md-12', [
               h(".wire-btn-green-ryb.btn-sq.btn-lg", {
                 "style":"float:right;background-color:#F6F6F6",
-                "type":"submit",
+                //"type":"submit",
                 'data-ng-click':'submitForm()',
-                "name":"submit"
+              //  "name":"submit"
               }, '{{contentfulData.fields.buttonText}}')
             ])
 

@@ -76,13 +76,6 @@
     margin-top: -210px; }
   .hexBottom {
     padding-bottom: 90px; }
-  .hexText {
-    height: auto !important;
-    padding-top: 0 !important;
-    width: 100% !important;
-    position: absolute;
-    text-align: center;
-    top: 40% !important; }
   .hexResponsive {
     width: 100% !important; }
     .hexResponsive a {
@@ -1116,7 +1109,7 @@ p, label, .btn, a, li {
   font-size: 18px;
   position: absolute;
   top: 50%;
-  left: 30%;
+  left: 31%;
   right: 13%;
   letter-spacing: .5px;
   z-index: 1000; }
@@ -1235,6 +1228,10 @@ p, label, .btn, a, li {
     width: 100%; }
   .honeycombContainer {
     width: 100%; }
+  .honeyCombHome p {
+    position: absolute;
+    left: 20%;
+    right: 20%; }
   .gallery-text {
     margin-top: -25px !important; }
   .threeRowStart {
@@ -1504,7 +1501,7 @@ body {
 .hexThumb img {
   max-width: 250px;
   filter: grayscale(100%);
-  opacity: .25; }
+  opacity: .19; }
 
 .hexThumb:hover img {
   filter: grayscale(0%);

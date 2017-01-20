@@ -8,18 +8,24 @@ module.exports = function () {
   return function (ee) {
   	ee.on('/email/send', function (event) {
   		var message = {
-	    "html": "<p>" + event.object.message + "</p>" + "<p>" + event.object.phone + "</p>",
+	    "html": "<p>" + event.object.message + "</p>" +
+      "<p>" + " " + "</p>" +
+      "<p><strong>" + "Person Requesting Information" + "</strong></p>" +
+      "<p>NAME:  " + event.object.name + "</p>" +
+      "<p>EMAIL:  " + event.object.email + "</p>" +
+      "<p>PHONE:  " + event.object.phone + "</p>",
+
 	    "text": "Hello World!",
-	    "subject": event.object.subject,
-	    "from_email": "will@obviouslee.com",
-	    "from_name": event.object.name,
+	    "subject": event.object.subject + " - " + 'Information Request',
+	    "from_email":"info@appliedbuildingsciences.com",
+	    "from_name": event.object.name ,
 	    "to": [{
-	      "email": "will@obviouslee.com",
+	      "email": "hosea@obviouslee.com",
 	      "name": "Recipient Name",
 	      "type": "to"
 	    }],
 	    "headers": {
-	      "Reply-To": "info@appliedbuildingservices.com"
+	      "Reply-To": event.object.name + ' <' + event.object.email + '>'
 	    },
 	    "important": false,
 	    "track_opens": null,
@@ -30,7 +36,7 @@ module.exports = function () {
 	    "url_strip_qs": null,
 	    "preserve_recipients": null,
 	    "view_content_link": null,
-	    "bcc_address": "will@obviouslee.com",
+	    "bcc_address": "bcc_address.email@example.com",
 	    "tracking_domain": null,
 	    "signing_domain": null,
 	    "return_path_domain": null,
@@ -58,12 +64,12 @@ module.exports = function () {
 	    console.log(result)
 	    return(result)
 
-	    [{
-	      "email": "recipient.email@example.com",
-	      "status": "sent",
-	      "reject_reason": "hard-bounce",
-	      "_id": "abc123abc123abc123abc123abc123"
-	    }]
+	    // [{
+	    //   "email": "recipient.email@example.com",
+	    //   "status": "sent",
+	    //   "reject_reason": "hard-bounce",
+	    //   "_id": "abc123abc123abc123abc123abc123"
+	    // }]
 
 	}, function(e) {
 	    // Mandrill returns the error as an object with name and message keys

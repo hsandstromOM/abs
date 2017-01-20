@@ -45,6 +45,7 @@
     "http-hash-router": "^1.1.0",
     "hyperscript": "^1.4.7",
     "jquery": "^2.2.3",
+    "lightgallery.js": "^1.0.1",
     "mandrill-api": "^1.0.45",
     "moment": "^2.10.6",
     "ngmap": "^1.17.1",
