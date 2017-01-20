@@ -464,12 +464,20 @@ function render () {
               h("div.modal-body", {
               //  "style":"padding:0"
               }, [
-
+                h("i.fa.fa-times-circle", {
+                //  "style":"padding:10px;margin-left: 410px",
+                  "type": 'button',
+                  'aria-label': 'close',
+                  "aria-hidden":"true",
+                  'data-dismiss': 'modal'
+                }
+              ),
                 h("div.col-sm-6", {
               //   "style":"padding-left: 0px;  padding-right: 0px;width: 360px"
                }, [
-                 h("img.img-responsive", {
-                   "style": "max-height: 380px; text-align:center",
+
+                 h("img.tm.img-responsive", {
+                //   "style": "max-height: 380px;text-align:center",
                    "data-ng-src":"{{currentTeamMember.fields.fullImage.fields.file.url}}",
                    "alt":""
                  })
@@ -478,14 +486,7 @@ function render () {
                 h("div.col-sm-6", {
                 //  "style":"padding-left:30px;padding-right:20px; height: 380px;width: 450px"
                 }, [
-                  h("i.fa.fa-times-circle", {
-                  //  "style":"padding:10px;margin-left: 410px",
-                    "type": 'button',
-                    'aria-label': 'close',
-                    "aria-hidden":"true",
-                    'data-dismiss': 'modal'
-                  }
-                ),
+
                   h("h4.tk-aaux-next", {
                     "style":"padding-top:20px;text-transform: uppercase;padding-bottom: 5px"
                   }, [

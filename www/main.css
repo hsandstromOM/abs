@@ -1147,6 +1147,10 @@ p, label, .btn, a, li {
   padding-right: 0px;
   width: 360px; }
 
+img.tm {
+  max-height: 380px;
+  text-align: center; }
+
 .fa-times-circle {
   padding: 10px;
   margin-left: 440px; }
@@ -1253,10 +1257,12 @@ p, label, .btn, a, li {
     height: 100%;
     text-align: center;
     width: 100%; }
+  img.tm {
+    max-width: 330px;
+    padding-right: .5em;
+    padding-left: .5em; }
   .fa-times-circle {
-    position: absolute;
-    top: -438px;
-    right: -20px; }
+    margin-left: 310px; }
   .col-sm-6 {
     padding-left: 20px;
     padding-right: 0px;
@@ -1623,7 +1629,7 @@ iframe {
 @media (max-width: 776px) {
   .wrkDetail.col-sm-12 {
     margin-top: -260px; }
-  .modal-content {
+  .modal-content.mod {
     height: 300px !important;
     width: 340px !important; }
   .col-md-4.col-cd-offset-1.col-xs-12 {
