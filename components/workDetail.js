@@ -391,7 +391,7 @@ function render () {
                                 "style":"background-color:none;border:none;border-radius:0;-webkit-box-shadow:none;box-shadow:none"
                               }, [
                                 h("div#myCarousel2.carousel.slide", [
-                                      h("div.carousel-inner", [
+                                      h("div.carousel-inner.mod", [
 
                                         h("div.item.active", [
                                           h("div.row", [
