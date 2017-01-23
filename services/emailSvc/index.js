@@ -17,7 +17,7 @@ module.exports = function () {
 
 	    "text": "Hello World!",
 	    "subject": event.object.subject + " - " + 'Information Request',
-	    "from_email":"info@appliedbuildingsciences.com",
+	    "from_email":"hosea@obviouslee.com",
 	    "from_name": event.object.name ,
 	    "to": [{
 	      "email": "hosea@obviouslee.com",
