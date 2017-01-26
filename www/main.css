@@ -54,7 +54,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 65px; }
+    max-width: 200px; }
 
 .subnav-navigation div:hover a {
   background-color: rgba(115, 181, 61, 0.75); }

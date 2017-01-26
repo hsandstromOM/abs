@@ -70,9 +70,43 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
      'phone': '',
      'subject': ''
    }
+   $scope.submitForm = function() {
+    console.log('success');
+    ///SETUP FOR THANK YOU MESSAGE
+    // var myForm = angular.element(document.querySelector('.form-control'))
+    // $scope.myForm.setUntouched()
+    var myEl = angular.element(document.querySelector('.contactFormDiv'));
+    myEl.addClass('hidden');
+    var myElToShow = angular.element(document.querySelector('.thankYouDiv'));
+    myElToShow.removeClass('hidden');
+
+    window.setTimeout(function() {
+      // myElToShow.addClass('hidden');
+      // myEl.removeClass('hidden')
+       $state.reload();
+    }, 3000);
+// $scope.submitForm = function() {
+ if ($scope.contactForm.contactInfo === '') {
+   var url =  "/email/send"
+   var obj = $scope.contactForm
+
+ emailSvc.send(obj).then(function success() {
+ $http.post(url, obj).then(function success() {
+     console.log('success')
+     //$scope.confirm()
+
+   })
+  })
+} else {
+    console.log('spam boi')
+  }
+}
+
+
+}
 
   //  $scope.submitForm = function() {
-  //      console.log("form data: " + vm.form);
+  //      console.log("form data: " + $scope.contactForm);
   //      ///SETUP FOR THANK YOU MESSAGE
   //      // var myForm = angular.element(document.querySelector('.form-control'))
   //      // $scope.myForm.setUntouched()
@@ -86,28 +120,31 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
   //        // myEl.removeClass('hidden')
   //         $state.reload();
   //      }, 3000);
-  $scope.submitForm = function() {
-    if ($scope.contactForm.contactInfo === '') {
-      var url =  "/email/send"
-      var obj = $scope.contactForm
+  //    }
+  //  $scope.submitForm = function() {
+  //   if ($scope.contactForm.contactInfo === '') {
+  //     var url =  "/email/send"
+  //     var obj = $scope.contactForm
+   //
+  //   emailSvc.send(obj).then(function success() {
+  //   $http.post(url, obj).then(function success() {
+  //       console.log('success')
+  //       $scope.confirm()
+   //
+  //     }, function error() {
+  //         console.log('error')
+   //
+  //     })
+  //   })
+  //   } else {
+  //     console.log('spam boi')
+  //   }
+  //  }
+//}
 
-    emailSvc.send(obj).then(function success() {
-    $http.post(url, obj).then(function success() {
-        console.log('success')
-        $scope.confirm()
-
-      }, function error() {
-          console.log('error')
-
-      })
-    })
-    } else {
-      console.log('spam boi')
-    }
-  }
 
 
-}
+
 // ####### Email code is here, tie form data to this
 // ####### Leave contact info blank, its a honeypot check to keep bots out
 
@@ -320,6 +357,7 @@ function render () {
 
               }, "NAME"),
               h("input#name.form-control", {
+                "value": "",
                 "type":"text",
                 'data-ng-model': 'contactForm.name',
               })
@@ -345,7 +383,8 @@ function render () {
                   h("option", "Forensic Consulting"),
                   h("option", "Building Enclosure"),
                   h("option", ["Life Safety and Human Factors" ]),
-                  h("option",  "Engineering Services")
+                  h("option",  "Engineering Services"),
+                  h("option",  "Other")
                 ])
               ])
             ]),
@@ -354,7 +393,7 @@ function render () {
                 "for":"phone"
               }, "PHONE"),
               h("input#phone.form-control", {
-                "type":"text",
+                "type":"tel",
                 'data-ng-model': 'contactForm.phone',
               })
             ]),
