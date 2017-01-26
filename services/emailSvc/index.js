@@ -17,10 +17,10 @@ module.exports = function () {
 
 	    "text": "Hello World!",
 	    "subject": event.object.subject + " - " + 'Information Request',
-	    "from_email":"will@obviouslee.com",
+	    "from_email":"info@appliedbuildingsciences.com",
 	    "from_name": event.object.name ,
 	    "to": [{
-	      "email": "will@obviouslee.com",
+	      "email": "info@appliedbuildingsciences.com",
 	      "name": "Recipient Name",
 	      "type": "to"
 	    }],
