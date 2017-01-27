@@ -2,16 +2,17 @@ var h = require('hyperscript')
 var headerNav = require('./shared/headerNav')
 var footer = require('./shared/footer')
 module.exports = {
-  url: '/workDetail',
+  url: '/workDetail/:slug',
   template: render().outerHTML,
   controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window', component],
   params: {
     obj: null,
-    service: null
+    service: null,
+    slug: null
   }
 }
 
-function component ($scope, $state, store, contentful,  $uibModal, $window, slug) {
+function component ($scope, $state, store, contentful,  $uibModal, $window) {
   $scope.page = 'workDetail'
   $scope.custom = true
   $scope.custom1 = false
@@ -19,18 +20,22 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, slug
   $scope.slide = {
     'down' : true
   }
-  var vm = this;
-  vm.slugify = function(string) {
-  return Slug.slugify(string);
-};
+
   $window.scrollTo(0,0);
 
   if ($state.params.obj) {
     $scope.workProject = $state.params.obj
     store.set('workProject', $state.params.obj)
-  } else if (store.get('workProject')) {
+} else if ($state.params.slug) {
+    console.log('this is the slug', $state.params.slug)
+    contentful.entries('content_type=workProjects&fields.slug=' + $state.params.slug).then(function(res) {
+        console.log('this is res', res)
+         $scope.workProject = res.data.items[0]
+         console.log('current passed project', $scope.workProject)
+       })
+} else if (store.get('workProject')) {
     $scope.workProject = store.get('workProject')
-    console.log('workProject', $scope.workProject)
+    console.log('workProject from store', $scope.workProject)
   } else {
     $state.go('buildingEnclosure')
   }
