@@ -33,7 +33,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#98a09c', end
 
 }
 .subnav-navigation {
-height:65px;
+  height:65px;
 }
 
 .flex-center{
@@ -58,9 +58,9 @@ height:65px;
     line-height:15px;
     font-size:13px;
     display: flex;
-     justify-content: center;
-     flex-direction: column;
-     height: 65px;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 200px;
   }
 }
 .subnav-navigation  div:hover{
@@ -81,6 +81,12 @@ height:65px;
 }
 
 @media (max-width: 767px){
+
+
+}
+
+
+@media (max-width: 767px){
   .navBig{
     display:none;
   }
@@ -98,14 +104,6 @@ height:65px;
   }
   .hexBottom{
     padding-bottom: 90px;
-  }
-  .hexText{
-    height: auto !important;
-    padding-top: 0 !important;
-    width: 100% !important;
-    position: absolute;
-    text-align: center;
-    top: 40% !important;
   }
   .hexResponsive{
     width:100% !important;
@@ -201,3 +199,4 @@ text-align:center;
 @import 'contact.scss';
 @import 'work.scss';
 @import 'hex.scss';
+@import 'workDetail.scss'

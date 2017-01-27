@@ -1,0 +1,123 @@
+.modal-content.mod{
+  border-radius:0;
+  max-height:750px;
+  width:725px;
+}
+// .row.mod img {
+//   max-height:750px;
+// }
+iframe {
+  height:750px;
+  width:725px;
+}
+.left.carousel-control {
+  margin-left: -50px;
+  background-color:#333;
+  width:40px;
+  background-image:none
+}
+.right.carousel-control {
+  margin-right: -50px;
+  background-color:#333;
+  width:40px;
+  background-image:none
+}
+
+.fa-2x.fa-angle-left {
+  color:white;
+  padding-top:80px;
+  font-size:1.5em
+}
+.fa-2x.fa-angle-right {
+  color:white;
+  padding-top:80px;
+  font-size:1.5em
+}
+.left.carousel-control.mod {
+  margin-left: 0px;
+  background-color:#333;
+  width:40px;
+  background-image:none
+}
+.right.carousel-control.mod {
+  margin-right: 0px;
+  background-color:#333;
+  width:40px;
+  background-image:none
+}
+.fa-2x.fa-angle-left.mod {
+  color:white;
+  padding-top:330px;
+  font-size:1.5em
+}
+.fa-2x.fa-angle-right.mod {
+  color:white;
+  padding-top:330px;
+  font-size:1.5em
+}
+.wrkDetail.col-sm-12 {
+  margin-top: -160px;
+}
+
+@media (max-width: 776px){
+  .wrkDetail.col-sm-12 {
+    margin-top: -260px;
+  }
+  // .well.mod {
+  //   height: 300px;
+  //   width: 300px;
+  // }
+  // .carousel-inner.mod {
+  //   height: 300px;
+  //   width: 300px;
+  // }
+
+  .modal-content.mod{
+    height: 300px;
+    width:300px;
+  }
+
+  .col-md-4.col-cd-offset-1.col-xs-12 {
+        margin-top: 40px;
+  }
+
+  .col-md-4.col-cd-offset-1.col-xs-12.serv {
+        margin-top: 60px;
+  }
+
+  .hexagon .gallery-text {
+    top: -90px;
+  }
+
+  .gallery-text.serv {
+    top: -50px;
+  }
+
+  .carousel-inner {
+    text-align: center;
+  }
+
+  .left.carousel-control {
+    margin-left: -30px;
+    background-color:#333;
+    width:60px;
+    background-image:none
+  }
+  .right.carousel-control {
+    margin-right: -30px;
+    background-color:#333;
+    width:60px;
+    background-image:none
+  }
+
+  .fa-2x.fa-angle-left {
+    color:white;
+    padding-top:375px;
+    font-size:1.5em
+  }
+  .fa-2x.fa-angle-right {
+    color:white;
+    padding-top:375px;
+    font-size:1.5em
+  }
+}

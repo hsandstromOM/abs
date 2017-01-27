@@ -54,18 +54,20 @@ function render () {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
         'data-ng-repeat': 'service in allServices[1]',
-        'data-ng-if': 'service.fields.pageTitle === "LIFE SAFETY & HUMAN FACTORS"',
+        'data-ng-if': 'service.fields.pageTitle === "Building Enclosure"',
       }, [
         h("img.overlayer", {
-          "src":'img/ABS-LifeSafety-ServiceHex-Green.png',
+          "src":'img/ABS-HomeHex-building-enclosure-green.png',
           'style': 'position:absolute;'
         }),
-        h("img", {
-          "src":"img/ABS-LifeSafety-ServiceHex-Color.png"
+        h("img.honeyThumb", {
+          "src":"img/ABS-HomeHex-building-enclosure-hover.png"
         }),
-        h("div.hexText", [
+        h("div.hexText", {
+          "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
+        },[
           h("p", {
-            "style":"font-weight:bold;color:white",
+            "style":"font-weight:bold;color:white;text-transform: uppercase",
           }, "{{service.fields.pageTitle}}")
         ])
       ]),
@@ -73,37 +75,41 @@ function render () {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
        'data-ng-repeat': 'service in allServices[0]',
-       'data-ng-if': 'service.fields.pageTitle === "ENGINEERING"',
+       'data-ng-if': 'service.fields.pageTitle === "Forensic Consulting"',
       }, [
         h("img.overlayer", {
-          "src":'img/ABS-Engineering-ServiceHex-Green.png',
+          "src":'img/ABS-HomeHex-forensic-consulting-green.png',
           'style': 'position:absolute;'
         }),
-        h("img", {
-          "src":"img/ABS-Engineering-ServiceHex-Color.png"
+        h("img.honeyThumb", {
+          "src":"img/ABS-HomeHex-forensic-consulting-hover.png"
         }),
-        h("div.hexText", [
+        h("div.hexText", {
+          "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
+        },[
           h("p", {
-            "style":"font-weight:bold;color:white",
+            "style":"font-weight:bold;color:white;text-transform: uppercase",
           }, "{{service.fields.pageTitle}}")
         ])
       ]),
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[0]',
-       'data-ng-if': 'service.fields.pageTitle === "BUILDING ENCLOSURE"',
+       'data-ng-repeat': 'service in allServices[1]',
+       'data-ng-if': 'service.fields.pageTitle === "Life Safety & Human Factors"',
       }, [
         h("img.overlayer", {
-          "src":'img/ABS-BuildingEnclosure-ServiceHex-Green.png',
+          "src":'img/ABS-HomeHex-life-safety-human-factors-green.png',
           'style': 'position:absolute;'
         }),
-        h("img", {
-          "src":"img/ABS-BuildingEnclosure-ServiceHex-Color.png"
+        h("img.honeyThumb", {
+          "src":"img/ABS-HomeHex-life-safety-human-factors-hover.png"
         }),
-        h("div.hexText", [
+        h("div.hexText", {
+          "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
+        },[
           h("p", {
-            "style":"font-weight:bold;color:white",
+            "style":"font-weight:bold;color:white;text-transform: uppercase",
           }, "{{service.fields.pageTitle}}")
         ])
       ])
@@ -112,21 +118,21 @@ function render () {
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[1]',
-       'data-ng-if': 'service.fields.pageTitle === "ARCHITECTURE"',
+       'data-ng-repeat': 'service in allServices[0]',
+       'data-ng-if': 'service.fields.pageTitle === "Architecture"',
       }, [
         h("img.overlayer", {
-          "src":'img/ABS-Architecture-ServiceHex-Green.png',
+          "src":'img/ABS-HomeHex-architecture-green.png',
           'style': 'position:absolute;'
         }),
-        h("img", {
-          "src":"img/ABS-Architecture-ServiceHex-Color.png"
+        h("img.honeyThumb", {
+          "src":"img/ABS-HomeHex-architecture-hover.png"
         }),
         h("div.hexText", {
           "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
         },[
           h("p", {
-            "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle",
+            "style":"font-weight:bold;color:white;text-transform: uppercase;padding-top:17px",
           }, "{{service.fields.pageTitle}}")
         ])
       ]),
@@ -134,20 +140,20 @@ function render () {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
        'data-ng-repeat': 'service in allServices[0]',
-       'data-ng-if': 'service.fields.pageTitle === "FORENSIC CONSULTING"',
+       'data-ng-if': 'service.fields.pageTitle === "Engineering"',
       }, [
         h("img.overlayer", {
-          "src":'img/ABS-ForensicConsulting-ServiceHex-Green.png',
+          "src":'img/ABS-HomeHex-engineering-green.png',
           'style': 'position:absolute;'
         }),
-        h("img", {
-          "src":"img/ABS-ForensicConsulting-ServiceHex-Color.png"
+        h("img.honeyThumb", {
+          "src":"img/ABS-HomeHex-engineering-hover.png"
         }),
         h("div.hexText", {
           "style":"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;",
         }, [
           h("p", {
-            "style":"font-weight:bold;color:white;display:inline-block;vertical-align:middle",
+            "style":"font-weight:bold;color:white;text-transform: uppercase;padding-top:17px",
           }, "{{service.fields.pageTitle}}")
         ])
       ])

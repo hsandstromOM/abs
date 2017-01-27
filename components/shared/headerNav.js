@@ -73,6 +73,7 @@ function controller ($scope, $state, $stateParams, contentful, store) {
               $scope.allWorkServicesProvided.push(service)
               $scope.allWorkServicesProvided.sort(comparePriority)
               $scope.defaultWorkService = $scope.allWorkServicesProvided[0]
+              store.set('defaultWorkService', $scope.defaultWorkService)
               console.log($scope.defaultWorkService)
             }
           }
@@ -194,7 +195,7 @@ function template () {
             },[
 
               h('p', {
-                "style":"cursor:pointer;font-size: 20px;line-height:5px;padding-top: 15px;padding-bottom: 15px;",
+                "style":"cursor:pointer;font-size: 20px;line-height:5px;padding-top: 15px;padding-bottom: 15px;text-transform:uppercase",
                 'data-ng-class': "mainPage === 'team' ? 'active' : 'ltc-royal-blue-traditional'",
                 'data-ng-click':'teamDropClosed = !teamDropClosed; workDropClosed = true; serviceDropClosed = true',
               }, 'TEAM')
@@ -207,7 +208,7 @@ function template () {
                 'style':'text-align: center; color:white;  padding:10px; font-size:16px;list-style:none; width:100%;'
               }, [
                 h('div', {
-                  'style':'cursor:pointer;border-bottom:1px solid white;padding-top:15px;padding-bottom:20px;width:300px; color:white;',
+                  'style':'cursor:pointer;border-bottom:1px solid white;padding-top:15px;padding-bottom:20px;width:300px; color:white;;text-transform:uppercase',
                   'data-ui-sref':'team'
                 },'ARCHITECTURE')
               ]),
@@ -215,7 +216,7 @@ function template () {
                 'style':'text-align: center; color:white;  padding:10px; font-size:16px;list-style:none; width:100%;'
               }, [
                 h('div', {
-                  'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;width:300px;color:white;',
+                  'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;width:300px;color:white;text-transform:uppercase',
                 },[
                   h('div', {
                     'data-ui-sref':"team({division: 'Forensic Consulting'})"
@@ -226,7 +227,7 @@ function template () {
                 'style':'text-align: center; color:white;  padding:10px; font-size:16px;list-style:none; width:100%;'
               }, [
                 h('div', {
-                  'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;width:300px; color:white;',
+                  'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;width:300px; color:white;text-transform:uppercase',
                   'data-ui-sref':"team({division: 'Building Enclosure'})"
                 },'BUILDING ENCLOSURE')
               ]),
@@ -234,7 +235,7 @@ function template () {
                 'style':'text-align: center; color:white; padding:10px; font-size:16px;list-style:none; width:100%;'
               }, [
                 h('div', {
-                  'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;width:300px; color:white;',
+                  'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;width:300px; color:white;text-transform:uppercase',
                   'data-ui-sref':"team({division: 'Life Safety & Human Factors'})"
                 },'LIFE SAFETY & HUMAN FACTORS')
               ]),
@@ -242,7 +243,7 @@ function template () {
                 'style':'text-align: center; color:white; padding:10px; font-size:16px;list-style:none; width:100%;'
               }, [
                 h('div', {
-                  'style':'cursor:pointer;padding-bottom:20px;width:300px; color:white;',
+                  'style':'cursor:pointer;padding-bottom:20px;width:300px; color:white;text-transform:uppercase',
                   'data-ui-sref':"team({division: 'Engineering'})"
                 },'ENGINEERING')
               ]),
@@ -266,8 +267,9 @@ function template () {
               }, [
                 h('div', {
                   'style':'border-bottom:1px solid white;padding:20px;width:300px; color:white;',
-                  'data-ng-repeat': 'serviceProvided in allWorkServicesProvided | limitTo:3',
-                  'data-ui-sref': 'work({service: serviceProvided})'
+                  'data-ng-repeat': 'serviceProvided in allWorkServicesProvided',
+                  'data-ui-sref': 'work({service: serviceProvided})',
+                  'data-ng-click': 'setWorkService(serviceProvided)'
               }, '{{serviceProvided.fields.pageTitle}}')
               ])
             ]),
@@ -317,13 +319,13 @@ function template () {
     }, [
       h("div.subnavitem.col-xs-3.col-md-3",
       {
-        "style":"border-left:none;border-right:1px solid white;display:inline-block !important; width:33.3%",
+        "style":"border-left:none;border-right:1px solid white;display:inline-block !important; width:20%",
         'data-ng-repeat': 'serviceProvided in allWorkServicesProvided',
         'data-ng-click': 'setWorkService(serviceProvided)'
       }, [
         h("div", {
           'data-ui-sref': 'work({service: serviceProvided})',
-          'style':'border-right:1px solid white',
+          'style':'border-right:1px solid white; text-transform: uppercase',
           'data-ng-class': "selectedWorkService.fields.pageTitle === serviceProvided.fields.pageTitle ? 'greenNav' : 'clearNav'"
         }, "{{serviceProvided.fields.pageTitle}}") ///// work full view
 
@@ -342,6 +344,7 @@ function template () {
         'data-ng-click': 'setSelectedService(service)'
       }, [
         h("div", {
+          'style': 'text-transform:uppercase',
           'data-ui-sref': 'services({service: service})',
           'data-ng-class': "selectedService.fields.pageTitle === service.fields.pageTitle ? 'greenNav' : 'clearNav'"
         }, "{{service.fields.pageTitle}}") /// services full view
@@ -362,7 +365,7 @@ function template () {
           'data-ng-click': "setDivision('Architecture')",
           'data-ui-sref': "team({division: 'Architecture'})",
           'style':'border-right:1px solid white;',
-          'data-ng-class': "headerDivision.current === 'ARCHITECTURE' ? 'greenNav' : 'clearNav'"
+          'data-ng-class': "headerDivision.current === 'ARCHITECTURE'"
         }, "ARCHITECTURE")
       ]),
       h("div.subnavitem.col-xs-3.col-md-3", {
@@ -372,7 +375,7 @@ function template () {
           'data-ng-click': "setDivision('Forensic Consulting')",
           'data-ui-sref': "team({division: 'Forensic Consulting'})",
           'style':'border-right:1px solid white;',
-          'data-ng-class': "headerDivision.current === 'Forensic Consulting' ? 'greenNav' : 'clearNav'"
+          'data-ng-class': "headerDivision.current === 'Forensic Consulting'"
         }, "FORENSIC CONSULTING"),
       ]),
       h("div.subnavitem.col-xs-3.col-md-3", {
@@ -382,7 +385,7 @@ function template () {
           'data-ng-click': "setDivision('Building Enclosure')",
           'data-ui-sref': "team({division: 'Building Enclosure'})",
           'style':'border-right:1px solid white;',
-          'data-ng-class': "headerDivision.current === 'Building Enclosure' ? 'greenNav' : 'clearNav'"
+          'data-ng-class': "headerDivision.current === 'Building Enclosure'"
         }, "BUILDING ENCLOSURE")
       ]),
       h("div.subnavitem.col-xs-3.col-md-3", {
@@ -391,7 +394,7 @@ function template () {
         h("div", {
           'data-ng-click': "setDivision('Life Safety & Human Factors')",
           'data-ui-sref': "team({division: 'Life Safety & Human Factors'})",
-          'data-ng-class': "headerDivision.current === 'Life Safety & Human Factors' ? 'greenNav' : 'clearNav'"
+          'data-ng-class': "headerDivision.current === 'Life Safety & Human Factors'"
         }, "LIFE SAFETY & HUMAN FACTORS")
       ]),
       h("div.subnavitem.col-xs-3.col-md-3", {
@@ -400,7 +403,7 @@ function template () {
         h("div", {
           'data-ng-click': "setDivision('Engineering')",
           'data-ui-sref': "team({division: 'Engineering'})",
-          'data-ng-class': "headerDivision.current === 'Engineering' ? 'greenNav' : 'clearNav'"
+          'data-ng-class': "headerDivision.current === 'Engineering'"
         }, "ENGINEERING")
       ]),
       // h("div.subnavitem.col-xs-3.col-md-3", {

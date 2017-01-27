@@ -15,10 +15,12 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
     $scope.page = $state.params.service
     $scope.currentServiceProvided = $state.params.service
     $scope.selectedService = $state.params.service.fields.pageTitle
+
     store.set('services', $scope.selectedService)
   } else if(store.get('selectedServices')){
     $scope.currentServiceProvided = store.get('selectedServices')
     $scope.selectedService = $scope.currentServiceProvided.fields.pageTitle
+
   }
    $scope.allServicesProvided = []
    $scope.slide = {
@@ -28,9 +30,11 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
   if($state.params.service) {
     $scope.currentService = $state.params.service
     $scope.page = $scope.currentService.fields.pageTitle
+    $scope.email = $scope.currentService.fields.contactPerson
   } else if (store.get('selectedService')){
     $scope.currentService = store.get('selectedService')
     $scope.page = $scope.currentService.fields.pageTitle
+    $scope.email = $scope.currentService.fields.contactPerson
   }
   $window.scrollTo(0,0);
 }
@@ -44,7 +48,7 @@ function render () {
         'data-slide': 'slide'
       }),
       h("div", {
-        'data-ng-if': 'currentService.fields.pageTitle === "ARCHITECTURE"'
+        'data-ng-if': 'currentService.fields.pageTitle === "Architecture"'
       },[
         h("div#bloc-1.bloc.bgc-white.bg-Architecture-Header2.d-bloc", {
           'style':'max-height:100vh;'},[
@@ -60,14 +64,16 @@ function render () {
             h("div.row", [
               h("div.col-sm-12", {'style':'margin-top:-240px;'},[
                 h("h4.mg-md.text-center.tc-white", "SERVICES:"),
-                h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}")
+                h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}", {
+                  'style':'text-transform:uppercase'
+                })
               ])
             ])
           //])
         ])
       ]),
       h("div", {
-        'data-ng-if': 'currentService.fields.pageTitle === "FORENSIC CONSULTING"'
+        'data-ng-if': 'currentService.fields.pageTitle === "Forensic Consulting"'
       },[
         h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-ForensicConsulting.d-bloc", {
           'style':'max-height:100vh;'},[
@@ -83,14 +89,16 @@ function render () {
             h("div.row", [
               h("div.col-sm-12", {'style':'margin-top:-240px;'},[
                 h("h4.mg-md.text-center.tc-white", "SERVICES:"),
-                h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}")
+                h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}", {
+                  'style':'text-transform:uppercase'
+                })
               ])
             ])
           //])
         ])
       ]),
       h("div", {
-        'data-ng-if': 'currentService.fields.pageTitle === "ENGINEERING"'
+        'data-ng-if': 'currentService.fields.pageTitle === "Engineering"'
       },[
         h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-Engineering.d-bloc", {
           'style':'max-height:100vh;'},[
@@ -106,14 +114,16 @@ function render () {
             h("div.row", [
               h("div.col-sm-12", {'style':'margin-top:-240px;'},[
                 h("h4.mg-md.text-center.tc-white", "SERVICES:"),
-                h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}")
+                h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}", {
+                  'style':'text-transform:uppercase'
+                })
               ])
             ])
           //])
         ])
       ]),
       h("div", {
-        'data-ng-if': 'currentService.fields.pageTitle === "LIFE SAFETY & HUMAN FACTORS"'
+        'data-ng-if': 'currentService.fields.pageTitle === "Life Safety & Human Factors"'
       },[
         h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-LifeSafety.d-bloc", {
           'style':'max-height:100vh;'},[
@@ -129,14 +139,16 @@ function render () {
             h("div.row", [
               h("div.col-sm-12", {'style':'margin-top:-240px;'},[
                 h("h4.mg-md.text-center.tc-white", "SERVICES:"),
-                h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}")
+                h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}", {
+                  'style':'text-transform:uppercase'
+                })
               ])
             ])
           //])
         ])
       ]),
       h("div", {
-        'data-ng-if': 'currentService.fields.pageTitle === "BUILDING ENCLOSURE"'
+        'data-ng-if': 'currentService.fields.pageTitle === "Building Enclosure"'
       },[
         h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-BuildingEnclosure.d-bloc", {
           'style':'max-height:100vh;'},[
@@ -152,7 +164,9 @@ function render () {
             h("div.row", [
               h("div.col-sm-12", {'style':'margin-top:-240px;'},[
                 h("h4.mg-md.text-center.tc-white", "SERVICES:"),
-                h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}")
+                h("h1.mg-md.text-center.tc-white", "{{currentService.fields.pageTitle}}",{
+                  'style':'text-transform:uppercase'
+                })
               ])
             ])
           //])
@@ -165,14 +179,14 @@ function render () {
         }, [
           h("div.container.bloc-lg", [
             h("div.hexagon.row", [
-              h("div.col-md-4.col-cd-offset-1.col-xs-12", [
+              h("div.col-md-4.col-cd-offset-1.col-xs-12.serv", [
                 h("div#over", [
                   h("span.Centerer"),
                   h("img.hexImg.Centered", {
                     "style":"margin-top:-129px !important;",
                     "src":"img/doubleHoney.png"
                   }),
-                  h("div.gallery-text", {
+                  h("div.gallery-text.serv", {
                     'style':'margin-top:20px;'
 
                   },[
@@ -182,12 +196,15 @@ function render () {
                       h("br"),
                       "WORKING TOGETHER?"
                     ]),
-                    h("h5.hexname.tk-aaux-next", "SCOTT A. HARVEY,"),
-                    h("p", "AIA, RWC, LEED AP"),
-                    h("p", {
-                      "style":"margin-bottom:5px"
-                    }, "Registered Architect"),
-                    h("a.tk-aaux-next", "EMAIL SCOTT")
+                    h("h5.hexname.tk-aaux-next", "{{currentService.fields.contactPerson.fields.name}} {{currentService.fields.contactPerson.fields.lastName}},"),
+                    h("p", "{{currentService.fields.contactPerson.fields.certificationsAndLicenses}}"),
+                    // h("p", {
+                    //   "style":"margin-bottom:5px"
+                    // }, "Registered Architect"),
+                    h("a.tk-aaux-next", {
+                      'data-ng-href': 'mailto:{{currentService.fields.contactPerson.fields.emailAddress}}',
+                      'style':'text-transform:uppercase'
+                    },"EMAIL {{currentService.fields.contactPerson.fields.name}}")
                   ])
                 ])
               ]),

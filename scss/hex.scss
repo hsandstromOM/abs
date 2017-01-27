@@ -32,8 +32,9 @@ body {
   background-color: #fff;
   text-align: center;
   backface-visibility: hidden;
-  -webkit-clip-path: url("#hexContainer");
-  clip-path: url("#hexContainer");
+  -webkit-clip-path: url("team#hexContainer");
+  -ms-clip-path: url("team#hexContainer");
+  clip-path: url("team#hexContainer");
   -webkit-transform:translateZ(0);
   transition: all 300ms ease-in-out;
 
@@ -55,8 +56,9 @@ body {
   text-transform: uppercase;
   text-align: center;
   backface-visibility: hidden;
-  -webkit-clip-path: url("#hexThumb");
-  clip-path: url("#hexThumb");
+  -webkit-clip-path: url("team#hexThumb");
+  -ms-clip-path: url("team#hexThumb");
+  clip-path: url("team#hexThumb");
   -webkit-transform:translateZ(0);
   transition: all 300ms ease-in-out;
 
@@ -78,7 +80,7 @@ body {
 .hexThumb img {
   max-width: 250px;
   filter: grayscale(100%);
-  opacity: .25;
+  opacity: .19;
 
 }
 .hexThumb:hover img {
@@ -102,8 +104,9 @@ body {
   background-color: #fff;
   text-align: center;
   backface-visibility: hidden;
-  -webkit-clip-path: url("#hexContainer");
-  clip-path: url("#hexContainer");
+  -webkit-clip-path: url("work#hexContainer");
+  -ms-clip-path: url("work#hexContainer");
+  clip-path: url("work#hexContainer");
   -webkit-transform:translateZ(0);
   transition: all 300ms ease-in-out;
 
@@ -125,8 +128,9 @@ body {
   text-transform: uppercase;
   text-align: center;
   backface-visibility: hidden;
-  -webkit-clip-path: url("#hexThumb");
-  clip-path: url("#hexThumb");
+  -webkit-clip-path: url("work#hexThumb");
+  -ms-clip-path: url("work#hexThumb");
+  clip-path: url("work#hexThumb");
   -webkit-transform:translateZ(0);
   transition: all 300ms ease-in-out;
 
@@ -136,4 +140,15 @@ body {
   //filter: grayscale(100%);
   opacity: 1;
 
+}
+@media (max-width: 776px) {
+  .shadow {
+    position: relative;
+    //width:300px;
+  //  height: 338.9px;
+    background: url("https://images.contentful.com/lxejsmju70ex/4RTiiatzXi6Y6GqCo8oa2k/1ede9da97f318799dba2b81698962610/ABS-hexShadowBlur.png") no-repeat center center;
+    display: block;
+    float: none;
+    margin: 0 auto;
+  }
 }

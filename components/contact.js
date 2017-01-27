@@ -1,14 +1,13 @@
 var h = require('hyperscript')
 var headerNav = require('./shared/headerNav')
 var footer = require('./shared/footer')
-var nodemailer = require('nodemailer')
 module.exports = {
   url: '/contact',
   template: render().outerHTML,
-  controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window', 'NgMap', '$http', component]
+  controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window', 'NgMap', '$http', 'emailSvc', component]
 }
 
-function component ($scope, $state, store, contentful,  $uibModal, $window, NgMap, $http) {
+function component ($scope, $state, store, contentful,  $uibModal, $window, NgMap, $http, emailSvc) {
   NgMap.getMap().then(function(map) {
   $scope.map = map;
   $scope.map.setOptions({draggable: false, zoomControl: false, scrollwheel: false, disableDoubleClickZoom: true});
@@ -64,33 +63,88 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
     console.log($scope.contact);
   }
   $scope.contactForm = {
-      'contactInfo': ''
+     'contactInfo': '',
+     'email': '',
+     'name': '',
+     'message': '',
+     'phone': '',
+     'subject': ''
+   }
+   $scope.submitForm = function() {
+    console.log('success');
+    ///SETUP FOR THANK YOU MESSAGE
+    // var myForm = angular.element(document.querySelector('.form-control'))
+    // $scope.myForm.setUntouched()
+    var myEl = angular.element(document.querySelector('.contactFormDiv'));
+    myEl.addClass('hidden');
+    var myElToShow = angular.element(document.querySelector('.thankYouDiv'));
+    myElToShow.removeClass('hidden');
+
+    window.setTimeout(function() {
+      // myElToShow.addClass('hidden');
+      // myEl.removeClass('hidden')
+       $state.reload();
+    }, 3000);
+// $scope.submitForm = function() {
+ if ($scope.contactForm.contactInfo === '') {
+   var url =  "/email/send"
+   var obj = $scope.contactForm
+
+ emailSvc.send(obj).then(function success() {
+ $http.post(url, obj).then(function success() {
+     console.log('success')
+     //$scope.confirm()
+
+   })
+  })
+} else {
+    console.log('spam boi')
   }
-  $scope.submitForm = function() {
-    if ($scope.contactForm.contactInfo === '') {
-      var url =  "/email/send"
-      var obj = $scope.contactForm
-
-    emailSvc.send(obj).then(function success() {
-    $http.post(url, obj).then(function success() {
-        console.log('success')
-        $scope.confirm()
-
-      }, function error() {
-          console.log('error')
-
-      })
-    })
-    } else {
-      console.log('spam boi')
-    }
-    return {
-        sendEmail: sendEmail,
-      };
-  }
+}
 
 
 }
+
+  //  $scope.submitForm = function() {
+  //      console.log("form data: " + $scope.contactForm);
+  //      ///SETUP FOR THANK YOU MESSAGE
+  //      // var myForm = angular.element(document.querySelector('.form-control'))
+  //      // $scope.myForm.setUntouched()
+  //      var myEl = angular.element(document.querySelector('.contactFormDiv'));
+  //      myEl.addClass('hidden');
+  //      var myElToShow = angular.element(document.querySelector('.thankYouDiv'));
+  //      myElToShow.removeClass('hidden');
+   //
+  //      window.setTimeout(function() {
+  //        // myElToShow.addClass('hidden');
+  //        // myEl.removeClass('hidden')
+  //         $state.reload();
+  //      }, 3000);
+  //    }
+  //  $scope.submitForm = function() {
+  //   if ($scope.contactForm.contactInfo === '') {
+  //     var url =  "/email/send"
+  //     var obj = $scope.contactForm
+   //
+  //   emailSvc.send(obj).then(function success() {
+  //   $http.post(url, obj).then(function success() {
+  //       console.log('success')
+  //       $scope.confirm()
+   //
+  //     }, function error() {
+  //         console.log('error')
+   //
+  //     })
+  //   })
+  //   } else {
+  //     console.log('spam boi')
+  //   }
+  //  }
+//}
+
+
+
+
 // ####### Email code is here, tie form data to this
 // ####### Leave contact info blank, its a honeypot check to keep bots out
 
@@ -142,13 +196,6 @@ function render () {
             'data-icon': 'img/mapMarker.png',
             'data-on-click': 'showOffice(event, id)',
           }),
-        //   h('info-window#foo', {
-        //   },[
-        //     h('div', {
-        //     //  "style": "width: 100%; line-height: 1.5em"
-        //     },'{{office.fields.address}}'),
-        //
-        // ]),
 
         h('info-window#foo', {
           'position':'current-location'
@@ -171,17 +218,14 @@ function render () {
               h('boldHours', {
                 'style': 'display:inline-block;'
               }, '{{office.fields.phoneNumber | telephone:filter}}'),
-              // h('.dataHours', {
-              //   'style': 'font-size:1em;color:rgb(111, 114, 107); display: inline-block'
-              // }, '{{parkMarker.fields.hours | uppercase}}hello')
             ]),
             h('a.directions', {
-              'draggable':"true",
+
               'travel-mode':"DRIVING",
               'origin':"current-location",
               'destination':"{{office.fields.address}}",
-              'data-ng-click':'setLocation("currentLocation")',
-              "href":"https://www.google.com/maps/place/Applied+Building+Sciences+(ABS)/@32.8269671,-79.9501071,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x7f2fc35d89cd783a!8m2!3d32.8269671!4d-79.9479184"
+              'data-ng-href':'https://www.google.com/maps/dir/Current+Location/"{{office.fields.address}}"',
+              'target': '_blank'
             },"Get Directions")
 
           ]),
@@ -289,7 +333,7 @@ function render () {
                 h("h4.charlotteOfficeTxt", "CHARLOTTE OFFICE"),
                 h("p", {
                   "style": "margin-left: 10px; margin-right: 10px;"
-                }, ["5601 Seventy-Seven Center Drive", h('br'), "Charlotte, NC", h('br'), "704.749.3545"]),
+                }, ["5601 77 Center Drive", h('br'), "Charlotte, NC", h('br'), "980.219.7084"]),
 
               ])
             ])
@@ -313,8 +357,9 @@ function render () {
 
               }, "NAME"),
               h("input#name.form-control", {
+                "value": "",
                 "type":"text",
-                'data-ng-model': 'contact.name',
+                'data-ng-model': 'contactForm.name',
               })
             ]),
             h("div.form-group.col-md-6", [
@@ -323,7 +368,7 @@ function render () {
               }, "EMAIL"),
               h("input#email.form-control", {
                 "type":"email",
-                'data-ng-model': 'contact.email',
+                'data-ng-model': 'contactForm.email',
               })
             ]),
             h("div.form-group.col-md-6", [
@@ -332,13 +377,14 @@ function render () {
               }, "SUBJECT"),
               h("div", [
                 h("select#subject.form-control", {
-                  'data-ng-model': "contact.subject",
+                  'data-ng-model': "contactForm.subject",
                 },[
                   h("option", "Architecture"),
                   h("option", "Forensic Consulting"),
                   h("option", "Building Enclosure"),
                   h("option", ["Life Safety and Human Factors" ]),
-                  h("option",  "Engineering Services")
+                  h("option",  "Engineering Services"),
+                  h("option",  "Other")
                 ])
               ])
             ]),
@@ -347,8 +393,8 @@ function render () {
                 "for":"phone"
               }, "PHONE"),
               h("input#phone.form-control", {
-                "type":"text",
-                'data-ng-model': 'contact.phone',
+                "type":"tel",
+                'data-ng-model': 'contactForm.phone',
               })
             ]),
             h("div.form-group.col-md-12", [
@@ -357,14 +403,15 @@ function render () {
               }, "MESSAGE"),
               h("textarea#message.form-control", {
                 "rows":"15",
-                'data-ng-model': 'contact.message',
+                'data-ng-model': 'contactForm.message',
               })
             ]),
             h('.col-md-12', [
               h(".wire-btn-green-ryb.btn-sq.btn-lg", {
                 "style":"float:right;background-color:#F6F6F6",
-                "type":"submit",
-                'data-ng-click':'sendContact()'
+                //"type":"submit",
+                'data-ng-click':'submitForm()',
+              //  "name":"submit"
               }, '{{contentfulData.fields.buttonText}}')
             ])
 

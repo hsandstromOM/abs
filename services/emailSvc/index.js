@@ -1,5 +1,5 @@
 var mandrill = require('mandrill-api/mandrill')
-var mandrill_client = new mandrill.Mandrill('OqwCA1IJ1Ks7ssRmnfFJlw')
+var mandrill_client = new mandrill.Mandrill('v-rcDbGl9In6Rkvxx69mkQ')
 var response = require('palmettoflow-event').response
 var responseError = require('palmettoflow-event').responseError
 
@@ -8,18 +8,24 @@ module.exports = function () {
   return function (ee) {
   	ee.on('/email/send', function (event) {
   		var message = {
-	    "html": "<p>" + event.object.name + "</p>",
-	    "text": event.object.body,
-	    "subject": "put whatever here",
-	    "from_email": event.object.email,
-	    "from_name": "Move-it",
+	    "html": "<p>" + event.object.message + "</p>" +
+      "<p>" + " " + "</p>" +
+      "<p><strong>" + "Person Requesting Information" + "</strong></p>" +
+      "<p>NAME:  " + event.object.name + "</p>" +
+      "<p>EMAIL:  " + event.object.email + "</p>" +
+      "<p>PHONE:  " + event.object.phone + "</p>",
+
+	    "text": "Hello World!",
+	    "subject": event.object.subject + " - " + 'Information Request',
+	    "from_email":"info@appliedbuildingsciences.com",
+	    "from_name": event.object.name ,
 	    "to": [{
-	      "email": "hosea@obviouslee.com",
+	      "email": "info@appliedbuildingsciences.com",
 	      "name": "Recipient Name",
 	      "type": "to"
 	    }],
 	    "headers": {
-	      "Reply-To": "hosea@obviouslee.com"
+	      "Reply-To": event.object.name + ' <' + event.object.email + '>'
 	    },
 	    "important": false,
 	    "track_opens": null,
@@ -30,7 +36,7 @@ module.exports = function () {
 	    "url_strip_qs": null,
 	    "preserve_recipients": null,
 	    "view_content_link": null,
-	    "bcc_address": "message.bcc_address@example.com",
+	    "bcc_address": "bcc_address.email@example.com",
 	    "tracking_domain": null,
 	    "signing_domain": null,
 	    "return_path_domain": null,
@@ -57,14 +63,14 @@ module.exports = function () {
 	mandrill_client.messages.send({"message": message, "async": async, "ip_pool": ip_pool, "send_at": send_at}, function(result) {
 	    console.log(result)
 	    return(result)
-	    /*
-	    [{
-	      "email": "recipient.email@example.com",
-	      "status": "sent",
-	      "reject_reason": "hard-bounce",
-	      "_id": "abc123abc123abc123abc123abc123"
-	    }]
-	    */
+
+	    // [{
+	    //   "email": "recipient.email@example.com",
+	    //   "status": "sent",
+	    //   "reject_reason": "hard-bounce",
+	    //   "_id": "abc123abc123abc123abc123abc123"
+	    // }]
+
 	}, function(e) {
 	    // Mandrill returns the error as an object with name and message keys
 	    console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);

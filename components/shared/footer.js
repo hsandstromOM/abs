@@ -65,19 +65,31 @@ function controller ($scope, $state, $stateParams, contentful, store) {
             var index = $scope.allWorkServicesProvided.indexOf(service)
             if (index < 0) {
               $scope.allWorkServicesProvided.push(service)
+              $scope.allWorkServicesProvided.sort(comparePriority)
+              $scope.defaultWorkService = $scope.allWorkServicesProvided[0]
+              store.set('defaultWorkService', $scope.defaultWorkService)
+              console.log($scope.defaultWorkService)
             }
           }
         })
-        $scope.defaultWorkService = $scope.allWorkServicesProvided[0]
       }
     })
   })
+  function comparePriority(a,b) {
+  if (a.fields.priority < b.fields.priority)
+    return -1;
+  if (a.fields.priority > b.fields.priority)
+    return 1;
+  return 0;
+  }
   contentful.entries('content_type=serviceTypes&include=3').then(function(res) {
     var items = res.data.items
     angular.forEach(items, function(item){
       $scope.allServices.push(item)
+      $scope.allServices.sort(comparePriority)
     })
     $scope.defaultService = $scope.allServices[0]
+    store.set('defaultService', $scope.defaultService)
   })
 }
 
@@ -114,7 +126,7 @@ function template () {
                    h("h6.mg-md", {'data-ui-sref':'work', 'style':'cursor:pointer'},"WORK"),
                    h("h5.mg-md.tk-aaux-next", {
                      'data-ui-sref':'work({service: serviceProvided})',
-                     'data-ng-repeat': 'serviceProvided in allWorkServicesProvided | limitTo:3',
+                     'data-ng-repeat': 'serviceProvided in allWorkServicesProvided',
                      'style':'cursor:pointer'},
                      '{{serviceProvided.fields.pageTitle}}')
                  ]),
@@ -154,7 +166,42 @@ function template () {
          ])
        ])
      /* Footer - bloc-18 END */
+   ]),
+   h("div.bloc-group", [
+     h("div#bloc-19.bloc.l-bloc.bgc-white.bloc-tile-3", [
+       h("div.container.bloc-md", [
+         h("div.row", [
+           h("div.col-sm-12")
+         ])
+       ])
+     ]),
+     h("div#bloc-20.bloc.l-bloc.bgc-white.bloc-tile-3", [
+       h("div.container.bloc-md", [
+         h("div.row", [
+           h("div.col-sm-12",{
+              "style":"text-align:center",
+           },[
+             h("h6.mg-md.tk-aaux-next",{
+               "style":"tex-align:center",
+             },[
+               h("a.mg-md.tk-aaux-next",{
+                 "style":"text-align:center",
+                 "href":"http://obviouslee.com"
+               },"SITE BY OBVIOUSLEE MARKETING")
+             ])
+           ])
+         ])
+       ])
+     ]),
+     h("div#bloc-21.bloc.l-bloc.bgc-white.bloc-tile-3", [
+       h("div.container.bloc-md", [
+         h("div.row", [
+           h("div.col-sm-12")
+         ])
+       ])
      ])
+   ])
+
    ])
  }
  //}

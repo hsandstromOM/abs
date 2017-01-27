@@ -19,6 +19,7 @@ require('./components/contentfulWrapper')
 require('ngMap')
 require('angular-ui-bootstrap')
 require('angular-marked')
+require('prerender-node').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR')
 
 document.body.appendChild(
   h('div', { 'data-ui-view': '' })
@@ -76,6 +77,7 @@ ng.module('app', [
    .directive('navheader', require('./components/shared/headerNav.js'))
    .directive('homehex', require('./components/homeHex.js'))
    .directive('footermenu', require('./components/shared/footer.js'))
+   .factory('emailSvc', ['$http', require('./factories/email')])
 
 // manually bootstrap angular
 ng.element(document).ready(function() {

@@ -10,7 +10,7 @@ module.exports = {
   }
 }
 
-function component ($scope, $state, store, contentful,  $uibModal, $window) {
+function component ($scope, $state, store, contentful,  $uibModal, $window, slug) {
   if($state.params.service) {
     $scope.page = $state.params.service
     $scope.currentServiceProvided = $state.params.service
@@ -25,6 +25,7 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
   $scope.slide = {
     'workNav' : true
   }
+
   $scope.selectServiceProvided = function (serviceProvided) {
     $scope.currentServiceProvided = serviceProvided
     $scope.page = $scope.currentServiceProvided
@@ -59,7 +60,7 @@ function render () {
         'data-slide': 'slide'
       }),
       h("div", {
-        'data-ng-if':'currentServiceProvided.fields.pageTitle === "ARCHITECTURE"'
+        'data-ng-if':'currentServiceProvided.fields.pageTitle === "Architecture"'
       },[
         h("div#bloc-1.bloc.bgc-white.bg-Architecture-Header2.d-bloc", {'style':'max-height:100vh;'},[
           h('img.honeycomb-left',{
@@ -74,14 +75,16 @@ function render () {
             h("div.row", [
               h("div.col-sm-12", {'style':'margin-top:-240px;'},[
                 h("h4.mg-md.text-center.tc-white", "WORK:"),
-                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}")
+                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}", {
+                  'style':'text-transform:uppercase'
+                })
               ])
             ])
           //])
         ])
       ]),
       h("div", {
-        'data-ng-if':'currentServiceProvided.fields.pageTitle === "FORENSIC CONSULTING"'
+        'data-ng-if':'currentServiceProvided.fields.pageTitle === "Forensic Consulting"'
       },[
         h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-ForensicConsulting.d-bloc", {'style':'max-height:100vh;'},[
           h('img.honeycomb-left',{
@@ -96,14 +99,16 @@ function render () {
             h("div.row", [
               h("div.col-sm-12", {'style':'margin-top:-240px;'},[
                 h("h4.mg-md.text-center.tc-white", "WORK:"),
-                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}")
+                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}", {
+                  'style':'text-transform:uppercase'
+                })
               ])
             ])
           //])
         ])
       ]),
       h("div", {
-        'data-ng-if':'currentServiceProvided.fields.pageTitle === "BUILDING ENCLOSURE"'
+        'data-ng-if':'currentServiceProvided.fields.pageTitle === "Building Enclosure"'
       },[
         h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-BuildingEnclosure.d-bloc", {'style':'max-height:100vh;'},[
           h('img.honeycomb-left',{
@@ -118,7 +123,57 @@ function render () {
             h("div.row", [
               h("div.col-sm-12", {'style':'margin-top:-240px;'},[
                 h("h4.mg-md.text-center.tc-white", "WORK:"),
-                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}")
+                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}", {
+                  'style':'text-transform:uppercase'
+                })
+              ])
+            ])
+          //])
+        ])
+      ]),
+      h("div", {
+        'data-ng-if':'currentServiceProvided.fields.pageTitle === "Life Safety & Human Factors"'
+      },[
+        h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-LifeSafety.d-bloc", {'style':'max-height:100vh;'},[
+          h('img.honeycomb-left',{
+            'src':'img/honeycomb_pattern.png',
+            'style':"max-height:350px;z-index:1;margin-left:-50px !important;"
+          }),
+          h('img.honeycomb-right',{
+            'src':'img/honeycomb.png',
+            'style':"max-height:540px;z-index:1;margin-right:-50px !important;"
+          }),
+          //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
+            h("div.row", [
+              h("div.col-sm-12", {'style':'margin-top:-240px;'},[
+                h("h4.mg-md.text-center.tc-white", "WORK:"),
+                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}", {
+                  'style':'text-transform:uppercase'
+                })
+              ])
+            ])
+          //])
+        ])
+      ]),
+      h("div", {
+        'data-ng-if':'currentServiceProvided.fields.pageTitle === "Engineering"'
+      },[
+        h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-Engineering.d-bloc", {'style':'max-height:100vh;'},[
+          h('img.honeycomb-left',{
+            'src':'img/honeycomb_pattern.png',
+            'style':"max-height:350px;z-index:1;margin-left:-50px !important;"
+          }),
+          h('img.honeycomb-right',{
+            'src':'img/honeycomb.png',
+            'style':"max-height:540px;z-index:1;margin-right:-50px !important;"
+          }),
+          //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
+            h("div.row", [
+              h("div.col-sm-12", {'style':'margin-top:-240px;'},[
+                h("h4.mg-md.text-center.tc-white", "WORK:"),
+                h("h1.mg-md.text-center.tc-white.ng-binding", "{{currentServiceProvided.fields.pageTitle}}", {
+                  'style':'text-transform:uppercase'
+                })
               ])
             ])
           //])
@@ -150,14 +205,12 @@ function render () {
               ]),
             ]),
             h("div.col-sm-8", {
-              'style': 'border-bottom:1px solid #d9dedc;padding-bottom:80px;'
+            //  'style': 'border-bottom:1px solid #d9dedc;padding-bottom:80px;'
             }, [
               h('br'),
-              h("h2.mg-md.tc-prussian-blue", [
-                h("p", {
-                  "style": "text-transform: uppercase;font-weight:bold"
-                }, '{{workProject.fields.title}}')
-              ]),
+              h("h2.mg-md.tc-prussian-blue",
+               '{{workProject.fields.title}}'
+              ),
               h("p", {
                 'data-marked': 'workProject.fields.workProjectSummary',
                   'style':'padding-bottom: 3px;'

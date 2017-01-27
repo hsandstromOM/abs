@@ -8,7 +8,6 @@ module.exports = {
   controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window', '$q', component],
   params: {
     'division': null,
-    'division2': null
   }
 }
 
@@ -17,12 +16,12 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
     'teamNav': true
   }
 
-  $scope.sortType = 'lastName'
-  $scope.sortReverse = false
+  //  $scope.sortType = 'lastName'
+  //  $scope.sortReverse = false
 
   $scope.filteredMembers= [
-    [],[],[],[],[],[],[],[],[],[],[],[]
-  ]
+    [],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]
+  ],
   $scope.setCurrentTeamMember = function (member) {
     $scope.currentTeamMember = member
   }
@@ -32,15 +31,14 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
     $scope.teamPage = res.data.items[0]
   })
 
+  $state.params.all = 'All'
+
   if($state.params.division) {
-    $scope.currentDivision = $state.params.division
+    $scope.currentDivision = ($state.params.division)
   } else {
-    $scope.currentDivision = 'All'
+    $scope.currentDivision = "All"
   }
 
-  if($state.params.division2) {
-    $scope.currentDivision2 = $state.params.division2
-  }
 
   function comparePriority(a,b) {
     if (a.fields.priority < b.fields.priority)
@@ -65,27 +63,183 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
     contentful.entries('content_type=teamMembers&include=3').then(function(res) {
       var items = res.data.items
       var index = 1
-      var switchAt = 5
+      var switchAt = 4
       var arrayVal = 0
       sortMembers(items).then(function(sortedMembers){
         angular.forEach(sortedMembers, function(member){
-          if(member.fields.division){
-            if(member.fields.division === $scope.currentDivision || $scope.currentDivision === 'All') {
-              if(switchAt === 5) {
+          if(member.fields.all){
+            if(member.fields.all === $scope.currentDivision) {
+              if(switchAt === 4) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 3
+                    $scope.filteredMembers[arrayVal].push(member)
+                  index = 1
+                  arrayVal ++
+                }
+              } else if (switchAt === 3) {
                 if(index < switchAt) {
                   $scope.filteredMembers[arrayVal].push(member)
                   index ++
                 } else {
                   switchAt = 4
+                    $scope.filteredMembers[arrayVal].push(member)
                   index = 1
                   arrayVal ++
                 }
-              } else if (switchAt === 4) {
+              }
+            }
+          }
+        })
+      })
+      sortMembers(items).then(function(sortedMembers){
+        angular.forEach(sortedMembers, function(member){
+          if(member.fields.division){
+            if(member.fields.division === $scope.currentDivision) {
+              if(switchAt === 4) {
                 if(index < switchAt) {
                   $scope.filteredMembers[arrayVal].push(member)
                   index ++
                 } else {
-                  switchAt = 5
+                  switchAt = 3
+                    $scope.filteredMembers[arrayVal].push(member)
+                  index = 1
+                  arrayVal ++
+                }
+              } else if (switchAt === 3) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 4
+                    $scope.filteredMembers[arrayVal].push(member)
+                  index = 1
+                  arrayVal ++
+                }
+              }
+            }
+          }
+          if(member.fields.division2){
+            if(member.fields.division2 === $scope.currentDivision ) {
+              if(switchAt === 4) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 3
+                    $scope.filteredMembers[arrayVal].push(member)
+                  index = 1
+                  arrayVal ++
+                }
+              } else if (switchAt === 3) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 4
+                    $scope.filteredMembers[arrayVal].push(member)
+                  index = 1
+                  arrayVal ++
+                }
+              }
+            }
+          }
+          if(member.fields.division3){
+            if(member.fields.division3 === $scope.currentDivision ) {
+              if(switchAt === 4) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 3
+                    $scope.filteredMembers[arrayVal].push(member)
+                  index = 1
+                  arrayVal ++
+                }
+              } else if (switchAt === 3) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 4
+                    $scope.filteredMembers[arrayVal].push(member)
+                  index = 1
+                  arrayVal ++
+                }
+              }
+            }
+          }
+          if(member.fields.division4){
+            if(member.fields.division4 === $scope.currentDivision ) {
+              if(switchAt === 4) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 3
+                    $scope.filteredMembers[arrayVal].push(member)
+                  index = 1
+                  arrayVal ++
+                }
+              } else if (switchAt === 3) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 4
+                    $scope.filteredMembers[arrayVal].push(member)
+                  index = 1
+                  arrayVal ++
+                }
+              }
+            }
+          }
+          if(member.fields.division5){
+            if(member.fields.division5 === $scope.currentDivision ) {
+              if(switchAt === 4) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 3
+                    $scope.filteredMembers[arrayVal].push(member)
+                  index = 1
+                  arrayVal ++
+                }
+              } else if (switchAt === 3) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 4
+                    $scope.filteredMembers[arrayVal].push(member)
+                  index = 1
+                  arrayVal ++
+                }
+              }
+            }
+          }
+          if(member.fields.division6){
+            if(member.fields.division6 === $scope.currentDivision ) {
+              if(switchAt === 4) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 3
+                    $scope.filteredMembers[arrayVal].push(member)
+                  index = 1
+                  arrayVal ++
+                }
+              } else if (switchAt === 3) {
+                if(index < switchAt) {
+                  $scope.filteredMembers[arrayVal].push(member)
+                  index ++
+                } else {
+                  switchAt = 4
+                    $scope.filteredMembers[arrayVal].push(member)
                   index = 1
                   arrayVal ++
                 }
@@ -158,7 +312,9 @@ function render () {
                         h("img", {
                           "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
                         }),
-                        h("p", '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
+                        h("p", {
+                        //  "style":"font-weight:bold;color:white;text-transform: uppercase;padding-top:17px"
+                      },'{{member.fields.name}}'," ",'{{member.fields.middleName}}'," ",'{{member.fields.lastName}}')
                       ])
                     ]),
                   ]),
@@ -209,7 +365,7 @@ function render () {
               h('.honeyCombRowOfThree', {
                 'data-ng-if': 'filteredMembers.length > 11'
               }, [
-                h("a.honeyComb.threeRow", {
+                h("a.honeyComb", {
                   "data-toggle":"modal",
                   "data-target":"#myModal",
                   'data-ng-click': 'setCurrentTeamMember(member)',
@@ -251,11 +407,32 @@ function render () {
               h('.honeyCombRowOfThree', {
                 'data-ng-if': 'filteredMembers.length > 18'
               }, [
-                h("a.honeyComb.threeRow", {
+                h("a.honeyComb", {
                   "data-toggle":"modal",
                   "data-target":"#myModal",
                   'data-ng-click': 'setCurrentTeamMember(member)',
-                 'data-ng-repeat': 'member in filteredMembers[5]'
+                  'data-ng-repeat': 'member in filteredMembers[5]'
+                }, [
+                  h("div.shadow", [
+                    h("div.hexContainer", [
+                      h(".hexThumb",[
+                        h("img", {
+                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
+                        }),
+                        h("p", '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
+                      ])
+                    ]),
+                  ]),
+                ])
+              ]),
+              h('.honeyCombRowOfFour', {
+                'data-ng-if': 'filteredMembers.length > 22'
+              }, [
+                h("a.honeyComb", {
+                  "data-toggle":"modal",
+                  "data-target":"#myModal",
+                  'data-ng-click': 'setCurrentTeamMember(member)',
+                  'data-ng-repeat': 'member in filteredMembers[6]'
                 }, [
                   h("div.shadow", [
                     h("div.hexContainer", [
@@ -278,37 +455,38 @@ function render () {
           "aria-labelledby":"myModalLabel"
         }, [
           h("div.modal-dialog", {
-            "style":"margin-top:150px;left:-6%",
+          //  "style":"margin-top:150px;left:-6%",
             "role": 'document'
           }, [
             h("div.modal-content", {
-              "style":"border-radius:0;height:380px;width:140%"
+            //  "style":"border-radius:0;height:380px;width:140%"
             }, [
               h("div.modal-body", {
-                "style":"padding:0"
+              //  "style":"padding:0"
               }, [
-
+                h("i.fa.fa-times-circle", {
+                //  "style":"padding:10px;margin-left: 410px",
+                  "type": 'button',
+                  'aria-label': 'close',
+                  "aria-hidden":"true",
+                  'data-dismiss': 'modal'
+                }
+              ),
                 h("div.col-sm-6", {
-                 "style":"padding-left: 0px;  padding-right: 0px;width: 360px"
+              //   "style":"padding-left: 0px;  padding-right: 0px;width: 360px"
                }, [
-                 h("img.img-responsive", {
-                   "style": "max-height: 380px",
+
+                 h("img.tm.img-responsive", {
+                //   "style": "max-height: 380px;text-align:center",
                    "data-ng-src":"{{currentTeamMember.fields.fullImage.fields.file.url}}",
                    "alt":""
                  })
                ]),
 
                 h("div.col-sm-6", {
-                  "style":"padding-left:30px;padding-right:20px; height: 380px;width: 450px"
+                //  "style":"padding-left:30px;padding-right:20px; height: 380px;width: 450px"
                 }, [
-                  h("i.fa.fa-times-circle", {
-                    "style":"padding:10px;margin-left: 410px",
-                    "type": 'button',
-                    'aria-label': 'close',
-                    "aria-hidden":"true",
-                    'data-dismiss': 'modal'
-                  }
-                ),
+
                   h("h4.tk-aaux-next", {
                     "style":"padding-top:20px;text-transform: uppercase;padding-bottom: 5px"
                   }, [
