@@ -2,13 +2,13 @@ var h = require('hyperscript')
 var headerNav = require('./shared/headerNav')
 var footer = require('./shared/footer')
 module.exports = {
-  url: '/workDetail',
+  url: '/workDetail/:slug',
   template: render().outerHTML,
   controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window',  component],
   params: {
     obj: null,
     service: null,
-    projname:null,
+    slug: null
   }
 }
 
@@ -23,25 +23,21 @@ function component ($scope, $state, store, contentful,  $uibModal, $window ) {
 
   $window.scrollTo(0,0);
 
-
-
-
   if ($state.params.obj) {
     $scope.workProject = $state.params.obj
     store.set('workProject', $state.params.obj)
+  } else if ($state.params.slug) {
+    contentful.entries('content_type=workProjects&fields.slug=' + $state.params.slug).then(function(res) {
+         $scope.workProject = res.data.items[0]
+       })
   } else if (store.get('workProject')) {
     $scope.workProject = store.get('workProject')
-    console.log('workProject', $scope.workProject)
   } else {
     $state.go('buildingEnclosure')
   }
   contentful.entries('content_type=workProjects').then(function(res) {
     $scope.allWorkProjects = res.data.items
-    console.log($scope.allWorkProjects[0])
   })
-  //contentful.entries('content_type=workProjects&fields.slug=' + $state.params.slug + '&include=3').then(function(res) {
-//   $scope.currentWorkProject = res.data.items
-//  })
 
   $scope.open = function () {
 
@@ -51,20 +47,6 @@ function component ($scope, $state, store, contentful,  $uibModal, $window ) {
       controller: 'ModalInstanceCtrl'
     });
   }
-  if ($state.params.obj) {
-   $scope.workProject = $state.params.obj
-   store.set('workProject', $state.params.obj)
-} else if ($state.params.projname) {
-   contentful.entries('content_type=workProjects&fields.title=' + $state.params.projname).then(function(res) {
-     $scope.workProject = res.data.items[0]
-     console.log('current passed project', $scope.workProject)
-   })
-} else if (store.get('workProject')) {
-   $scope.workProject = store.get('workProject')
-   console.log('workProject', $scope.workProject)
- } else {
-   $state.go('buildingEnclosure')
- }
 
   $scope.mainPage = 'work'
   $scope.slide = {
