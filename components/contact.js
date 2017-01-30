@@ -86,61 +86,24 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
        $state.reload();
     }, 3000);
 // $scope.submitForm = function() {
- if ($scope.contactForm.contactInfo === '') {
-   var url =  "/email/send"
-   var obj = $scope.contactForm
+    if ($scope.contactForm.contactInfo === '') {
+      var url =  "/email/send"
+      var obj = $scope.contactForm
 
- emailSvc.send(obj).then(function success() {
- $http.post(url, obj).then(function success() {
-     console.log('success')
-     //$scope.confirm()
+      emailSvc.send(obj).then(function success() {
+        $http.post(url, obj).then(function success() {
+          console.log('success')
+          //$scope.confirm()
 
-   })
-  })
-} else {
-    console.log('spam boi')
+          })
+        })
+      } else {
+        console.log('spam boi')
+      }
+    }
   }
-}
 
 
-}
-
-  //  $scope.submitForm = function() {
-  //      console.log("form data: " + $scope.contactForm);
-  //      ///SETUP FOR THANK YOU MESSAGE
-  //      // var myForm = angular.element(document.querySelector('.form-control'))
-  //      // $scope.myForm.setUntouched()
-  //      var myEl = angular.element(document.querySelector('.contactFormDiv'));
-  //      myEl.addClass('hidden');
-  //      var myElToShow = angular.element(document.querySelector('.thankYouDiv'));
-  //      myElToShow.removeClass('hidden');
-   //
-  //      window.setTimeout(function() {
-  //        // myElToShow.addClass('hidden');
-  //        // myEl.removeClass('hidden')
-  //         $state.reload();
-  //      }, 3000);
-  //    }
-  //  $scope.submitForm = function() {
-  //   if ($scope.contactForm.contactInfo === '') {
-  //     var url =  "/email/send"
-  //     var obj = $scope.contactForm
-   //
-  //   emailSvc.send(obj).then(function success() {
-  //   $http.post(url, obj).then(function success() {
-  //       console.log('success')
-  //       $scope.confirm()
-   //
-  //     }, function error() {
-  //         console.log('error')
-   //
-  //     })
-  //   })
-  //   } else {
-  //     console.log('spam boi')
-  //   }
-  //  }
-//}
 
 
 
@@ -229,27 +192,6 @@ function render () {
             },"Get Directions")
 
           ]),
-  ///******* //// use below if other features needed in infowindow////////////////*****
-          // h('.mobileParkHead erInfo', {
-          //   'style': 'padding:20px;position:relative; display: inline-block'
-          // }, [
-          //   h('.mobileOfficeName', {
-          //     'style': ''
-          //   }, 'ABS Building Sciences'),
-          //   h('.mobileOfficeAddress', {
-          //     'style': 'font-size:1em;color:rgb(111, 114, 107);'
-          //   }, '{{office.fields.address}}'),
-          //   h('.mobileParkHours', {
-          //     //'data-ng-show': 'parkMarker.fields.hours'
-          //   }, [
-          //     h('boldHours', {
-          //       'style': 'display:inline-block;'
-          //     }, 'HOURS: '),
-          //     // h('.dataHours', {
-          //     //   'style': 'font-size:1em;color:rgb(111, 114, 107); display: inline-block'
-          //     // }, '{{parkMarker.fields.hours | uppercase}}hello')
-          //   ]),
-          // ]),
         ]),
       ]),
       ]),
@@ -271,7 +213,6 @@ function render () {
                 'data-ng-class': "currentLocation === 'charleston' ? 'selectedGreen' : 'nonSelectedBlue'"
               }),
               h("div.honeyText", {
-                // "style": "position:absolute;left:0px;top:-20px;z-index:2;width:250px;text-align:center",
                 'data-ng-click': "setLocation('charleston')",
                 'data-ng-class': "currentLocation === 'charleston' ? 'selectedGreen' : 'nonSelectedBlue'"
               }, [
@@ -349,27 +290,41 @@ function render () {
             h('br')
           ]),
           h("form#contact", {
-            "action":""
+            'dtat-ng-submit':'submitForm() novalidate'
           }, [
-            h("div.form-group.col-md-6.tk-aaux-next", {'style':'font-size:16px;font-weight:400;'},[
+            h("div.form-group.col-md-6.tk-aaux-next", {
+              'data-ng-class':"{ 'has-error' : contact.name.$invalid && !contact.name.$pristine }",
+              'style':'font-size:16px;font-weight:400;',},[
               h("label.ltc-royal-blue-traditional", {'style':'font-size:16px;font-weight:400;'},{
                 "for":"name"
-
               }, "NAME"),
               h("input#name.form-control", {
-                "value": "",
                 "type":"text",
                 'data-ng-model': 'contactForm.name',
-              })
+              },[
+                h("p.help-block", {
+                  'attributes': {
+                    'data-ng-show': 'contact.name.$invalid && !contact.name.$pristine',
+                  }
+                }, "Your name is required.")
+              ])
             ]),
             h("div.form-group.col-md-6", [
-                h("label.ltc-royal-blue-traditional", {'style':'font-size:16px;font-weight:400;'},{
+                h("label.ltc-royal-blue-traditional", {
+                  'data-ng-class':"{ 'has-error' : contact.name.$invalid && !contact.name.$pristine }",
+                  'style':'font-size:16px;font-weight:400;'},{
                 "for":"email"
               }, "EMAIL"),
               h("input#email.form-control", {
                 "type":"email",
                 'data-ng-model': 'contactForm.email',
-              })
+              }, [
+                h("p.help-block", {
+                  'attributes': {
+                    'data-ng-show': 'contact.name.$invalid && !contact.name.$pristine',
+                  }
+                }, "A valid email is required.")
+              ])
             ]),
             h("div.form-group.col-md-6", [
                 h("label.ltc-royal-blue-traditional", {'style':'font-size:16px;font-weight:400;'},{
@@ -389,30 +344,45 @@ function render () {
               ])
             ]),
             h("div.form-group.col-md-6", [
-                h("label.ltc-royal-blue-traditional", {'style':'font-size:16px;font-weight:400;'},{
+                h("label.ltc-royal-blue-traditional", {
+                  'data-ng-class':"{ 'has-error' : contact.name.$invalid && !contact.name.$pristine }",
+                  'style':'font-size:16px;font-weight:400;'},{
                 "for":"phone"
               }, "PHONE"),
               h("input#phone.form-control", {
-                "name":"tel",
                 "type":"tel",
                 'data-ng-model': 'contactForm.phone',
-              })
+              }, [
+                h("p.help-block", {
+                  'attributes': {
+                    'data-ng-show': 'contact.name.$invalid && !contact.name.$pristine',
+                  }
+                }, "A valid phone number is required.")
+              ])
             ]),
             h("div.form-group.col-md-12", [
-                h("label.ltc-royal-blue-traditional", {'style':'font-size:16px;font-weight:400;'},{
+                h("label.ltc-royal-blue-traditional", {
+                  'data-ng-class':"{ 'has-error' : contact.name.$invalid && !contact.name.$pristine }",
+                  'style':'font-size:16px;font-weight:400;'},{
                 "for":"message"
               }, "MESSAGE"),
               h("textarea#message.form-control", {
                 "rows":"15",
                 'data-ng-model': 'contactForm.message',
-              })
+              }, [
+                h("p.help-block", {
+                  'attributes': {
+                    'data-ng-show': 'contact.name.$invalid && !contact.name.$pristine',
+                  }
+                }, "A message is required.")
+              ])
             ]),
             h('.col-md-12', [
               h(".wire-btn-green-ryb.btn-sq.btn-lg", {
                 "style":"float:right;background-color:#F6F6F6",
-                //"type":"submit",
+                'data-ng-disabled':'contact.$invalid',
                 'data-ng-click':'submitForm()',
-              //  "name":"submit"
+                //"type":"submit"
               }, '{{contentfulData.fields.buttonText}}')
             ])
 
