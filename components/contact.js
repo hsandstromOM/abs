@@ -393,6 +393,7 @@ function render () {
                 "for":"phone"
               }, "PHONE"),
               h("input#phone.form-control", {
+                "name":"tel",
                 "type":"tel",
                 'data-ng-model': 'contactForm.phone',
               })
