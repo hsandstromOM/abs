@@ -290,7 +290,7 @@ function render () {
             h('br')
           ]),
           h("form#contact", {
-            'dtat-ng-submit':'submitForm() novalidate'
+            'novalidate': ''
           }, [
             h("div.form-group.col-md-6.tk-aaux-next", {
               'data-ng-class':"{ 'has-error' : contact.name.$invalid && !contact.name.$pristine }",
