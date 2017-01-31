@@ -84,7 +84,7 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
       // myElToShow.addClass('hidden');
       // myEl.removeClass('hidden')
        $state.reload();
-    }, 3000);
+    }, 5000);
 // $scope.submitForm = function() {
     if ($scope.contactForm.contactInfo === '') {
       var url =  "/email/send"
@@ -289,6 +289,7 @@ function render () {
             h("p.ltc-royal-blue-traditional", "{{contentfulData.fields.formSubtitle}}"),
             h('br')
           ]),
+
           h("form#contact", {
             'novalidate': ''
           }, [
@@ -353,7 +354,7 @@ function render () {
                 "type":"tel",
                 'data-ng-model': 'contactForm.phone',
               }, [
-                h("p.help-block", {
+                h("p", {
                   'attributes': {
                     'data-ng-show': 'contact.name.$invalid && !contact.name.$pristine',
                   }
@@ -384,19 +385,38 @@ function render () {
                 'data-ng-click':'submitForm()',
                 //"type":"submit"
               }, '{{contentfulData.fields.buttonText}}')
+            ]),
+            h("div.thankYouDiv.hidden", [
+                h("h3", {
+                  "style": {
+                    "name": "style",
+                    "value": "text-align: center;"
+                  }
+                }, `Thank you for contacting us!`),
+                h("h5", {
+                  "style": {
+                    "name": "style",
+                    "value": "text-align: center;"
+                  }
+                }, `We will get back to you shortly.`),
+                h("h5", {
+                  "style": {
+                    "name": "style",
+                    "value": "text-align: center;"
+                  }
+                }, [
+                    `Return to our `,
+                    h("a", {
+                      "attributes": {
+                        "href": "http://www.appliedbuildingsciences.com/"
+                      }
+                    }, `homepage`)
+                ])
             ])
-
-            // h('div', [
-            //   h('div', {
-            //
-            //   }, 'SEND'),
-            // ])
-
-
-          ])
           ])
         ])
-        ]),
+      ])
+    ]),
     //  footer
     h('div', {
       'data-footermenu': ''
