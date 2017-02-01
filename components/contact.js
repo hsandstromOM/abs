@@ -85,7 +85,7 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
                  'subject': ''
                }
               $scope.$apply();
-            }, 3000);
+            }, 5000);
 
             if ($scope.contactForm.contactInfo === '') {
               var url =  "/email/send"
@@ -428,8 +428,34 @@ function render () {
           h('#thankYouMessage', {
             'data-ng-show': 'contactThankYou'
           }, [
-            h('p', 'thanks')
+            h('.col-md-12', [
+            h("h3", {
+              "style": {
+                "name": "style",
+                "value": "text-align: center;"
+              }
+            }, `Thank you for contacting us!`),
+            h("h5", {
+              "style": {
+                "name": "style",
+                "value": "text-align: center;"
+              }
+            }, `We will get back to you shortly.`),
+            h("h5", {
+              "style": {
+                "name": "style",
+                "value": "text-align: center;"
+              }
+            }, [
+                `Return to our `,
+                h("a", {
+                  "attributes": {
+                    "href": "http://www.appliedbuildingsciences.com/"
+                  }
+                }, `homepage`)
+            ])
           ])
+        ])
           ])
         ])
       ]),
