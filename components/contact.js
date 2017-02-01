@@ -70,36 +70,39 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
      'phone': '',
      'subject': ''
    }
-   $scope.submitForm = function() {
-    console.log('success');
-    ///SETUP FOR THANK YOU MESSAGE
-    // var myForm = angular.element(document.querySelector('.form-control'))
-    // $scope.myForm.setUntouched()
-    var myEl = angular.element(document.querySelector('.contactFormDiv'));
-    myEl.addClass('hidden');
-    var myElToShow = angular.element(document.querySelector('.thankYouDiv'));
-    myElToShow.removeClass('hidden');
+   $scope.submitForm = function(invalidStatus, form) {
+        if(!invalidStatus) {
+            $scope.contactThankYou = true
+            window.setTimeout(function() {
+              form.$setPristine();
+              $scope.contactThankYou = false
+              $scope.contactForm = {
+                 'contactInfo': '',
+                 'email': '',
+                 'name': '',
+                 'message': '',
+                 'phone': '',
+                 'subject': ''
+               }
+              $scope.$apply();
+            }, 3000);
 
-    window.setTimeout(function() {
-      // myElToShow.addClass('hidden');
-      // myEl.removeClass('hidden')
-       $state.reload();
-    }, 3000);
-// $scope.submitForm = function() {
-    if ($scope.contactForm.contactInfo === '') {
-      var url =  "/email/send"
-      var obj = $scope.contactForm
+            if ($scope.contactForm.contactInfo === '') {
+              var url =  "/email/send"
+              var obj = $scope.contactForm
 
-      emailSvc.send(obj).then(function success() {
-        $http.post(url, obj).then(function success() {
-          console.log('success')
-          //$scope.confirm()
-
-          })
-        })
-      } else {
-        console.log('spam boi')
-      }
+              emailSvc.send(obj).then(function success() {
+                $http.post(url, obj).then(function success() {
+                  console.log('success')
+                  //$scope.confirm()
+                  })
+                })
+              } else {
+                console.log('spam boi')
+              }
+        } else {
+            console.log('invalid form')
+        }
     }
   }
 
@@ -290,45 +293,49 @@ function render () {
             h('br')
           ]),
           h("form#contact", {
-            'novalidate': ''
+            'novalidate': 'true',
+            'name': 'contact',
+            'data-ng-hide': 'contactThankYou'
           }, [
             h("div.form-group.col-md-6.tk-aaux-next", {
               'data-ng-class':"{ 'has-error' : contact.name.$invalid && !contact.name.$pristine }",
-              'style':'font-size:16px;font-weight:400;',},[
-              h("label.ltc-royal-blue-traditional", {'style':'font-size:16px;font-weight:400;'},{
+              'style':'font-size:16px;font-weight:400;'
+            }, [
+              h("label.ltc-royal-blue-traditional", {
+                'style':'font-size:16px;font-weight:400;',
                 "for":"name"
               }, "NAME"),
               h("input#name.form-control", {
                 "type":"text",
                 'data-ng-model': 'contactForm.name',
-              },[
-                h("p.help-block", {
-                  'attributes': {
-                    'data-ng-show': 'contact.name.$invalid && !contact.name.$pristine',
-                  }
-                }, "Your name is required.")
-              ])
+                'name': 'name',
+                'required': 'true'
+              }),
+              h("p.help-block", {
+                'data-ng-show': 'contact.name.$invalid && !contact.name.$pristine'
+              }, "Your name is required.")
             ]),
-            h("div.form-group.col-md-6", [
-                h("label.ltc-royal-blue-traditional", {
-                  'data-ng-class':"{ 'has-error' : contact.name.$invalid && !contact.name.$pristine }",
-                  'style':'font-size:16px;font-weight:400;'},{
+            h("div.form-group.col-md-6", {
+              'data-ng-class':"{ 'has-error' : contact.email.$invalid && !contact.email.$pristine }"
+            }, [
+              h("label.ltc-royal-blue-traditional", {
+                'style':'font-size:16px;font-weight:400;',
                 "for":"email"
               }, "EMAIL"),
               h("input#email.form-control", {
                 "type":"email",
                 'data-ng-model': 'contactForm.email',
-              }, [
-                h("p.help-block", {
-                  'attributes': {
-                    'data-ng-show': 'contact.name.$invalid && !contact.name.$pristine',
-                  }
-                }, "A valid email is required.")
-              ])
+                'required': 'true',
+                'name': 'email'
+              }),
+              h("p.help-block", {
+                'data-ng-show': 'contact.email.$invalid && !contact.name.$pristine',
+              }, "A valid email is required.")
             ]),
             h("div.form-group.col-md-6", [
-                h("label.ltc-royal-blue-traditional", {'style':'font-size:16px;font-weight:400;'},{
-                "for":"subject"
+              h("label.ltc-royal-blue-traditional", {
+                'style':'font-size:16px;font-weight:400;',
+                'for': 'subject'
               }, "SUBJECT"),
               h("div", [
                 h("select#subject.form-control", {
@@ -343,64 +350,65 @@ function render () {
                 ])
               ])
             ]),
-            h("div.form-group.col-md-6", [
-                h("label.ltc-royal-blue-traditional", {
-                  'data-ng-class':"{ 'has-error' : contact.name.$invalid && !contact.name.$pristine }",
-                  'style':'font-size:16px;font-weight:400;'},{
-                "for":"phone"
+            h("div.form-group.col-md-6", {
+              'data-ng-class':"{ 'has-error' : contact.phone.$invalid && !contact.phone.$pristine }"
+            }, [
+              h("label.ltc-royal-blue-traditional", {
+                'style':'font-size:16px;font-weight:400;',
+                'for': 'phone'
               }, "PHONE"),
               h("input#phone.form-control", {
                 "type":"tel",
                 'data-ng-model': 'contactForm.phone',
-              }, [
-                h("p.help-block", {
-                  'attributes': {
-                    'data-ng-show': 'contact.name.$invalid && !contact.name.$pristine',
-                  }
-                }, "A valid phone number is required.")
-              ])
+                'name': 'phone',
+                'required': 'true'
+              }),
+              h("p.help-block", {
+                'data-ng-show': 'contact.phone.$invalid && !contact.phone.$pristine'
+              }, "A valid phone number is required.")
             ]),
-            h("div.form-group.col-md-12", [
-                h("label.ltc-royal-blue-traditional", {
-                  'data-ng-class':"{ 'has-error' : contact.name.$invalid && !contact.name.$pristine }",
-                  'style':'font-size:16px;font-weight:400;'},{
-                "for":"message"
+            h("div.form-group.col-md-12", {
+              'data-ng-class':"{ 'has-error' : contact.message.$invalid && !contact.message.$pristine }"
+            }, [
+              h("label.ltc-royal-blue-traditional", {
+                'style':'font-size:16px;font-weight:400;',
+                'for': 'message'
               }, "MESSAGE"),
               h("textarea#message.form-control", {
                 "rows":"15",
                 'data-ng-model': 'contactForm.message',
-              }, [
-                h("p.help-block", {
-                  'attributes': {
-                    'data-ng-show': 'contact.name.$invalid && !contact.name.$pristine',
-                  }
-                }, "A message is required.")
-              ])
+                'name': 'message',
+                'required': 'true'
+              }),
+              h("p.help-block", {
+                'data-ng-show': 'contact.message.$invalid && !contact.message.$pristine'
+              }, "A message is required.")
             ]),
             h('.col-md-12', [
               h(".wire-btn-green-ryb.btn-sq.btn-lg", {
                 "style":"float:right;background-color:#F6F6F6",
-                'data-ng-disabled':'contact.$invalid',
-                'data-ng-click':'submitForm()',
-                //"type":"submit"
+                'data-ng-click':'submitForm(contact.$invalid, contact)',
+                "type":"submit"
               }, '{{contentfulData.fields.buttonText}}')
             ])
-
             // h('div', [
             //   h('div', {
             //
             //   }, 'SEND'),
             // ])
-
-
+          ]),
+          h('#thankYouMessage', {
+            'data-ng-show': 'contactThankYou'
+          }, [
+            h('p', 'thanks')
           ])
           ])
         ])
-        ]),
-    //  footer
-    h('div', {
-      'data-footermenu': ''
-    }),
+      ]),
+      //  footer
+      h('div', {
+        'data-footermenu': ''
+      }),
     ])
   ])
 }
