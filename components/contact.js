@@ -85,7 +85,7 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
                  'subject': ''
                }
               $scope.$apply();
-            }, 5000);
+            }, 20000);
 
             if ($scope.contactForm.contactInfo === '') {
               var url =  "/email/send"
