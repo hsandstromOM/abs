@@ -292,6 +292,7 @@ function render () {
             h("p.ltc-royal-blue-traditional", "{{contentfulData.fields.formSubtitle}}"),
             h('br')
           ]),
+
           h("form#contact", {
             'novalidate': 'true',
             'name': 'contact',
@@ -390,6 +391,33 @@ function render () {
                 'data-ng-click':'submitForm(contact.$invalid, contact)',
                 "type":"submit"
               }, '{{contentfulData.fields.buttonText}}')
+            ]),
+            h("div.thankYouDiv.hidden", [
+                h("h3", {
+                  "style": {
+                    "name": "style",
+                    "value": "text-align: center;"
+                  }
+                }, `Thank you for contacting us!`),
+                h("h5", {
+                  "style": {
+                    "name": "style",
+                    "value": "text-align: center;"
+                  }
+                }, `We will get back to you shortly.`),
+                h("h5", {
+                  "style": {
+                    "name": "style",
+                    "value": "text-align: center;"
+                  }
+                }, [
+                    `Return to our `,
+                    h("a", {
+                      "attributes": {
+                        "href": "http://www.appliedbuildingsciences.com/"
+                      }
+                    }, `homepage`)
+                ])
             ])
             // h('div', [
             //   h('div', {
