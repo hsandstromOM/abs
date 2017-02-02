@@ -252,7 +252,7 @@ function render () {
                 }),
                 h("h4.chapinOfficeTxt", {
                   'data-ng-class': "currentLocation === 'chapin' ? 'selectedGreen' : 'nonSelectedBlue'"
-                }, "CHAPIN AREA"),
+                }, "IRMO OFFICE"),
                 h("p", ["P.O. Box 2856", h('br'), "Irmo, SC", h('br'), "29036"]),
 
               ])
