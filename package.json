@@ -41,7 +41,6 @@
     "ecstatic": "^1.1.3",
     "ejs": "^2.3.4",
     "express": "~4.5.1",
-    "express-redirect": "^1.2.2",
     "http-cors": "^1.0.1",
     "http-hash-router": "^1.1.0",
     "hyperscript": "^1.4.7",

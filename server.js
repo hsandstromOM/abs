@@ -4,9 +4,6 @@ var cors = new HttpCors()
 var HttpHashRouter = require('http-hash-router')
 var router = HttpHashRouter()
 var prerender = require('prerender-node');
-var express    = require('express');
-var app = express();
-var redirect = require('express-redirect');
 
 var bodyJSON = require('body/json')
 var sendJSON = require('send-data/json')
