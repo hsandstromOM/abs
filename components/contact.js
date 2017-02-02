@@ -252,8 +252,8 @@ function render () {
                 }),
                 h("h4.chapinOfficeTxt", {
                   'data-ng-class': "currentLocation === 'chapin' ? 'selectedGreen' : 'nonSelectedBlue'"
-                }, "CHAPIN OFFICE"),
-                h("p", ["1416 Chapin Road", h('br'), "Chapin, SC", h('br'), "803.345.3833"]),
+                }, "CHAPIN AREA"),
+                h("p", ["P.O. Box 2856", h('br'), "Irmo, SC", h('br'), "29036"]),
 
               ])
             ]),

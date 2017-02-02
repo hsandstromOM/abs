@@ -632,8 +632,10 @@ button {
   border-radius: 0 0 29px 29px; }
 
 /* iFrame */
-iframe {
-  border: 0; }
+iframe.workproj {
+  border: 0;
+  width: 257px;
+  height: 200px; }
 
 /* ScrollToTop button */
 .scrollToTop {
