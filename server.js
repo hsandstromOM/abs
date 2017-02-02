@@ -5,7 +5,6 @@ var HttpHashRouter = require('http-hash-router')
 var router = HttpHashRouter()
 var prerender = require('prerender-node');
 var redirect = require('express-redirect');
-redirect ('app');
 
 var bodyJSON = require('body/json')
 var sendJSON = require('send-data/json')
@@ -81,7 +80,7 @@ router.set('/main.css', ecstatic({ root: __dirname + '/www',  handleError: false
 // app.redirect('/pages/page.asp?page_id=289315', '/team', 301);
 //CV PDF
 // app.redirect('/uploads/abs_paul_kennedy_cv_672014.pdf', '/team', 301);
-app.redirect('/uploads/Alan_Campbell_Roof_Consult_cv.pdf', '/team', 301);
+server.redirect('/uploads/Alan_Campbell_Roof_Consult_cv.pdf', '/team', 301);
 // app.redirect('/uploads/Alan_Campbell_Life_safety_cv.pdf', '/team', 301);
 // app.redirect('/uploads/abs_jason_gregorie_cv_May_2015.pdf', '/team', 301);
 // app.redirect('/uploads/abs_bobby_funcik_cv_2016.pdf', '/team', 301);
