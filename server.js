@@ -5,6 +5,7 @@ var HttpHashRouter = require('http-hash-router')
 var router = HttpHashRouter()
 var prerender = require('prerender-node');
 var redirect = require('express-redirect');
+redirect('server');
 
 var bodyJSON = require('body/json')
 var sendJSON = require('send-data/json')
