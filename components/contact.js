@@ -35,7 +35,7 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
       $scope.map.setZoom(16)
       $scope.currentLocation = 'charlotte'
     } else if (location === 'chapin') {
-      $scope.map.setCenter(new google.maps.LatLng(34.168036, -81.35783600000002))
+      $scope.map.setCenter(new google.maps.LatLng(34.0884468,-81.2063686)) 
       $scope.map.setZoom(16)
       $scope.currentLocation = 'chapin'
     }

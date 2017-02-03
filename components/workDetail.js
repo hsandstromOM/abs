@@ -171,11 +171,15 @@ function render () {
                         h("div.carousel-inner", [
                           h("div.item.active", [
                             h("div.row", [
-                              h("div.col-md-3.col-xs-12", [
-                                // h("iframe.workproj", {
-                                //   'data-ng-show': 'workProject.fields.video1',
-                                //   "src":"https://www.youtube.com/embed/5G1XFtwfs5U"
-                                // }),
+                              h("div.col-md-3.col-xs-12", {
+                                'style':'height:200px;width:275px'
+                              },[
+                                h("iframe", {
+                                  'data-ng-show': 'workProject.fields.video1',
+                                  'data-ng-src':"https://www.youtube.com/embed/5G1XFtwfs5U",
+                                  'frameborder': "0",
+                                  'allowfullscreen': ""
+                                }),
                                 h("a", {
                                   "data-toggle":"modal",
                                   "data-target":"#myModal"
