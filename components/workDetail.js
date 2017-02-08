@@ -173,20 +173,14 @@ function render () {
                           h("div.item.active", [
                             h("div.row", [
                               h("div.col-md-3.col-xs-12", {
-                                'style':'height:200px;width:275px'
+                              //  'style':'height:200px;width:275px'
                               },[
-                                // h("iframe.workproj", {
-                                //   'data-ng-show': 'workProject.fields.video1',
-                                //   'data-ng-src':"https://www.youtube.com/embed/5G1XFtwfs5U",
-                                //   'frameborder': "0",
-                                //   'allowfullscreen': ""
-                                // }),
                                 h("a", {
                                   "data-toggle":"modal",
                                   "data-target":"#myModal"
                                 }, [
                                   h("img", {
-                                    'data-ng-if': 'workProject.fields.img1.fields.file.url',
+                            //        'data-ng-if': 'workProject.fields.img1.fields.file.url',
                                     "src":"{{workProject.fields.img1.fields.file.url}}",
                                     'style':'height:200px; width:253px',
                                     "alt":"Image"
@@ -199,7 +193,7 @@ function render () {
                                   "data-target":"#myModal"
                                 }, [
                                   h("img", {
-                                    'data-ng-if': 'workProject.fields.img2.fields.file.url',
+                              //      'data-ng-if': 'workProject.fields.img2.fields.file.url',
                                     "src":"{{workProject.fields.img2.fields.file.url}}",
                                     'style':'height:200px; width:253px',
                                     "alt":"Image"
@@ -212,7 +206,7 @@ function render () {
                                   "data-target":"#myModal"
                                 }, [
                                   h("img", {
-                                    'data-ng-if': 'workProject.fields.img3.fields.file.url',
+                                    'data-ng-show': 'workProject.fields.img3.fields.file.url',
                                     "src":"{{workProject.fields.img3.fields.file.url}}",
                                     'style':'height:200px; width:253px',
                                     "alt":"Image"
@@ -225,7 +219,7 @@ function render () {
                                   "data-target":"#myModal"
                                 }, [
                                   h("img", {
-                                    'data-ng-if': 'workProject.fields.img4.fields.file.url',
+                                    'data-ng-show': 'workProject.fields.img4.fields.file.url',
                                     "src":"{{workProject.fields.img4.fields.file.url}}",
                                     'style':'height:200px; width:253px',
                                     "alt":"Image"
@@ -254,7 +248,7 @@ function render () {
                                     "data-target":"#myModal"
                                   }, [
                                     h("img", {
-                                      'data-ng-if': 'workProject.fields.img6.fields.file.url',
+                                      'data-ng-show': 'workProject.fields.img6.fields.file.url',
                                       "src":"{{workProject.fields.img6.fields.file.url}}",
                                       'style':'height:200px; width:253px',
                                       "alt":"Image"})
@@ -266,7 +260,7 @@ function render () {
                                       "data-target":"#myModal"
                                     }, [
                                       h("img", {
-                                        'data-ng-if': 'workProject.fields.img7.fields.file.url',
+                                        'data-ng-show': 'workProject.fields.img7.fields.file.url',
                                         "src":"{{workProject.fields.img7.fields.file.url}}",
                                         'style':'height:200px; width:253px',
                                         "alt":"Image"
@@ -279,7 +273,7 @@ function render () {
                                       "data-target":"#myModal"
                                     }, [
                                       h("img", {
-                                        'data-ng-if': 'workProject.fields.img8.fields.file.url',
+                                        'data-ng-show': 'workProject.fields.img8.fields.file.url',
                                         "src":"{{workProject.fields.img8.fields.file.url}}",
                                         'style':'height:200px; width:253px',
                                         "alt":"Image"
@@ -296,7 +290,7 @@ function render () {
                                       "data-target":"#myModal"
                                     }, [
                                       h("img", {
-                                        'data-ng-if': 'workProject.fields.img9.fields.file.url',
+                                        'data-ng-show': 'workProject.fields.img9.fields.file.url',
                                         "src":"{{workProject.fields.img9.fields.file.url}}",
                                         'style':'height:200px; width:253px',
                                         "alt":"Image"
@@ -309,7 +303,7 @@ function render () {
                                       "data-target":"#myModal"
                                     }, [
                                       h("img", {
-                                        'data-ng-if': 'workProject.fields.img10.fields.file.url',
+                                        'data-ng-show': 'workProject.fields.img10.fields.file.url',
                                         "src":"{{workProject.fields.img10.fields.file.url}}",
                                         'style':'height:200px; width:253px',
                                         "alt":"Image"
@@ -322,7 +316,7 @@ function render () {
                                       "data-target":"#myModal"
                                     }, [
                                       h("img", {
-                                        'data-ng-if': 'workProject.fields.img11.fields.file.url',
+                                        'data-ng-show': 'workProject.fields.img11.fields.file.url',
                                         "src":"{{workProject.fields.img11.fields.file.url}}",
                                         'style':'height:200px; width:253px',
                                         "alt":"Image"
@@ -335,7 +329,7 @@ function render () {
                                       "data-target":"#myModal"
                                     }, [
                                       h("img", {
-                                        'data-ng-if': 'workProject.fields.img12.fields.file.url',
+                                        'data-ng-show': 'workProject.fields.img12.fields.file.url',
                                         "src":"{{workProject.fields.img12.fields.file.url}}",
                                         'style':'height:200px; width:253px',
                                         "alt":"Image"
@@ -346,21 +340,17 @@ function render () {
                               ])
                             ]),
                             h("a.left.carousel-control", {
-                            //  "style":"margin-left:-50px;background-color:grey;width:40px;background-image:none",
                               "data-ng-href":"#myCarousel",
                               "data-slide":"prev"
                             }, [
                               h("i.fa.fa-2x.fa-angle-left", {
-                              //  "style":"color:white;padding-top:80px;font-size:1.5em"
                               })
                             ]),
                             h("a.right.carousel-control", {
-                            //  "style":"margin-right:-50px;background-color:grey;width:40px;background-image:none",
                               "data-ng-href":"#myCarousel",
                               "data-slide":"next"
                             }, [
                               h("i.fa.fa-2x.fa-angle-right", {
-                              //  "style":"color:white;padding-top:80px;font-size:1.5em"
                               })
                             ]),
 
@@ -376,7 +366,6 @@ function render () {
                             "role": 'document'
                           }, [
                             h("div.modal-content.mod", {
-                              //"style":"border-radius:0;height:775px;width:725px"
                             }, [
                               h("div.well.mod", {
                                 "style":"background-color:none;border:none;border-radius:0;-webkit-box-shadow:none;box-shadow:none"
@@ -384,121 +373,114 @@ function render () {
                                 h("div#myCarousel2.carousel.slide", [
                                       h("div.carousel-inner.mod", [
                                         h("div.item.active", [
-                                          h("div.row", [
+                                          h("div.row.mod", [
                                             h("iframe", {
                                               'data-ng-show': 'workProject.fields.video1',
                                               'data-ng-src':"https://www.youtube.com/embed/5G1XFtwfs5U",
                                               'frameborder': "0",
                                               'allowfullscreen': ""
                                             }),
+                                            h("img", {
+                                              'data-ng-hide': 'workProject.fields.title === "Premises Safety – Trip & Fall"',
+                                              "src":"{{workProject.fields.img1.fields.file.url}}",
+                                              "alt":""
+                                            })
+
                                           ])
                                         ]),
-
-                                      //  h("div.item.active", [
-                                          h("div.row", [
-                                                h("img", {
-                                                  'data-ng-hide': 'workProject.fields.title === "Premises Safety – Trip & Fall"',
-                                                  "src":"{{workProject.fields.img1.fields.file.url}}",
-                                                  //"style":"height: 750px",
-                                                  "alt":""
-                                                })
-                                          ]),
-                                    //    ]),
+                                      //  h("div.item", [
+                                    //      h("div.row", [
+                                                // h("img", {
+                                                //   'data-ng-hide': 'workProject.fields.title === "Premises Safety – Trip & Fall"',
+                                                //   "src":"{{workProject.fields.img1.fields.file.url}}",
+                                                //   "alt":""
+                                                // }),
+                                      //    ])
+                                      //  ]),
                                         h("div.item", [
-                                          h("div.row", [
+                                          h("div.row.mod", [
                                                 h("img", {
                                                   "src":"{{workProject.fields.img2.fields.file.url}}",
-                                                  //"style":"height: 750px",
                                                   "alt":""
                                                 })
                                           ])
                                         ]),
                                         h("div.item", [
-                                          h("div.row", [
+                                          h("div.row.mod", [
                                                 h("img", {
                                                   "src":"{{workProject.fields.img3.fields.file.url}}",
-                                                //  "style":"height: 750px",
                                                   "alt":""
                                                 })
                                           ])
                                         ]),
                                         h("div.item", [
-                                          h("div.row", [
+                                          h("div.row.mod", [
                                                 h("img", {
                                                   "src":"{{workProject.fields.img4.fields.file.url}}",
-                                                //  "style":"height: 750px",
                                                   "alt":""
                                                 })
                                           ])
                                         ]),
                                         h("div.item", [
-                                          h("div.row", [
+                                          h("div.row.mod", [
                                                 h("img", {
                                                   "src":"{{workProject.fields.img5.fields.file.url}}",
-                                              //    "style":"height: 750px",
                                                   "alt":""
                                                 })
                                           ])
                                         ]),
                                         h("div.item", [
-                                          h("div.row", [
+                                          h("div.row.mod", [
                                                 h("img", {
                                                   "src":"{{workProject.fields.img6.fields.file.url}}",
-                                                //  "style":"height: 750px",
                                                   "alt":""
                                                 })
                                           ])
                                         ]),
                                         h("div.item", [
-                                          h("div.row", [
+                                          h("div.row.mod", [
                                                 h("img", {
                                                   "src":"{{workProject.fields.img7.fields.file.url}}",
-                                              //    "style":"height: 750px",
                                                   "alt":""
                                                 })
                                           ])
                                         ]),
                                         h("div.item", [
-                                          h("div.row", [
+                                          h("div.row.mod", [
                                                 h("img", {
                                                   "src":"{{workProject.fields.img8.fields.file.url}}",
-                                              //    "style":"height: 750px",
                                                   "alt":""
                                                 })
                                           ])
                                         ]),
                                         h("div.item", [
-                                          h("div.row", [
+                                          h("div.row.mod", [
                                                 h("img", {
                                                   "src":"{{workProject.fields.img9.fields.file.url}}",
-                                              //    "style":"height: 750px",
                                                   "alt":""
                                                 })
                                           ])
                                         ]),
                                         h("div.item", [
-                                          h("div.row", [
+                                          h("div.row.mod", [
                                                 h("img", {
                                                   "src":"{{workProject.fields.img10.fields.file.url}}",
-                                              //    "style":"height: 750px",
                                                   "alt":""
                                                 })
                                           ])
                                         ]),
                                         h("div.item", [
-                                          h("div.row", [
+                                          h("div.row.mod", [
                                                 h("img", {
                                                   "src":"{{workProject.fields.img11.fields.file.url}}",
-                                              //    "style":"height: 750px",
                                                   "alt":""
                                                 })
                                           ])
                                         ]),
                                         h("div.item", [
-                                          h("div.row", [
+                                          h("div.row.mod", [
                                                 h("img", {
                                                   "src":"{{workProject.fields.img12.fields.file.url}}",
-                                              //    "style":"height: 750px",
                                                   "alt":""
                                                 })
                                           ])
@@ -507,21 +489,17 @@ function render () {
 
                                           ]),
                                           h("a.left.carousel-control.mod", {
-                                        //    "style":"background-color:#333;width:40px;background-image:none",
                                             "data-ng-href":"#myCarousel2",
                                             "data-slide":"prev"
                                           }, [
                                             h("i.fa.fa-2x.fa-angle-left.mod", {
-                                          //    "style":"color:white;padding-top:375px;font-size:1.5em"
                                             })
                                           ]),
                                           h("a.right.carousel-control.mod", {
-                                        //    "style":"background-color:#333;width:40px;background-image:none",
                                             "data-ng-href":"#myCarousel2",
                                             "data-slide":"next"
                                           }, [
                                             h("i.fa.fa-2x.fa-angle-right.mod", {
-                                        //      "style":"color:white;padding-top:375px;font-size:1.5em"
                                             })
                                           ]),
 

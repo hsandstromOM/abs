@@ -6,20 +6,26 @@
 // .row.mod img {
 //   max-height:750px;
 // }
+.row.mod img {
+  height:700px;
+  width:800px;
+}
 iframe {
-  height:750px;
-  width:725px;
+  height:700px;
+  width:800px;
 }
 .left.carousel-control {
   margin-left: -50px;
   background-color:#333;
   width:40px;
+  height: 200px;
   background-image:none
 }
 .right.carousel-control {
   margin-right: -50px;
   background-color:#333;
   width:40px;
+  height: 200px;
   background-image:none
 }
 
@@ -37,12 +43,14 @@ iframe {
   margin-left: 0px;
   background-color:#333;
   width:40px;
+  height: 700px;
   background-image:none
 }
 .right.carousel-control.mod {
   margin-right: 0px;
   background-color:#333;
   width:40px;
+  height:700px;
   background-image:none
 }
 .fa-2x.fa-angle-left.mod {
@@ -58,6 +66,7 @@ iframe {
 .wrkDetail.col-sm-12 {
   margin-top: -160px;
 }
+
 
 @media (max-width: 776px){
   .wrkDetail.col-sm-12 {
@@ -93,6 +102,14 @@ iframe {
     top: -50px;
   }
 
+  .modal-dialog {
+    top: 50px;
+    margin-left:2em;
+  }
+    .well.mod{
+      margin-top: -5em;
+    }
+
   .carousel-inner {
     text-align: center;
   }
@@ -101,23 +118,49 @@ iframe {
     margin-left: -30px;
     background-color:#333;
     width:60px;
+    height:890px;
     background-image:none
   }
   .right.carousel-control {
     margin-right: -30px;
     background-color:#333;
     width:60px;
+    height:890px;
     background-image:none
   }
-
   .fa-2x.fa-angle-left {
     color:white;
-    padding-top:375px;
+    padding-top:422px;
     font-size:1.5em
   }
   .fa-2x.fa-angle-right {
     color:white;
-    padding-top:375px;
+    padding-top:422px;
     font-size:1.5em
+  }
+  .left.carousel-control.mod {
+    height:400px;
+  }
+  .right.carousel-control.mod {
+  height:400px;
+  }
+
+  .fa-2x.fa-angle-left.mod {
+    color:white;
+    padding-top:200px;
+    font-size:1.5em
+  }
+  .fa-2x.fa-angle-right.mod {
+    color:white;
+    padding-top:200px;
+    font-size:1.5em
+  }
+  .row.mod img {
+    height:400px;
+    width:425px;
+  }
+  iframe {
+    height:400px;
+    width:425px;
   }
 }
