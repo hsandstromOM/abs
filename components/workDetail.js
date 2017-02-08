@@ -175,12 +175,12 @@ function render () {
                               h("div.col-md-3.col-xs-12", {
                                 'style':'height:200px;width:275px'
                               },[
-                                h("iframe.workproj", {
-                                  'data-ng-show': 'workProject.fields.video1',
-                                  'data-ng-src':"https://www.youtube.com/embed/5G1XFtwfs5U",
-                                  'frameborder': "0",
-                                  'allowfullscreen': ""
-                                }),
+                                // h("iframe.workproj", {
+                                //   'data-ng-show': 'workProject.fields.video1',
+                                //   'data-ng-src':"https://www.youtube.com/embed/5G1XFtwfs5U",
+                                //   'frameborder': "0",
+                                //   'allowfullscreen': ""
+                                // }),
                                 h("a", {
                                   "data-toggle":"modal",
                                   "data-target":"#myModal"
@@ -383,16 +383,27 @@ function render () {
                               }, [
                                 h("div#myCarousel2.carousel.slide", [
                                       h("div.carousel-inner.mod", [
-
                                         h("div.item.active", [
                                           h("div.row", [
+                                            h("iframe", {
+                                              'data-ng-show': 'workProject.fields.video1',
+                                              'data-ng-src':"https://www.youtube.com/embed/5G1XFtwfs5U",
+                                              'frameborder': "0",
+                                              'allowfullscreen': ""
+                                            }),
+                                          ])
+                                        ]),
+
+                                      //  h("div.item.active", [
+                                          h("div.row", [
                                                 h("img", {
+                                                  'data-ng-hide': 'workProject.fields.title === "Premises Safety – Trip & Fall"',
                                                   "src":"{{workProject.fields.img1.fields.file.url}}",
                                                   //"style":"height: 750px",
                                                   "alt":""
                                                 })
-                                          ])
-                                        ]),
+                                          ]),
+                                    //    ]),
                                         h("div.item", [
                                           h("div.row", [
                                                 h("img", {
