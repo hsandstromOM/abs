@@ -2,7 +2,8 @@ var h = require('hyperscript')
 var headerNav = require('./shared/headerNav')
 var footer = require('./shared/footer')
 module.exports = {
-  url: '/workDetail/:slug',
+  url: '/workDetail',
+  //url: '/workDetail/:slug',
   template: render().outerHTML,
   controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window',  component],
   params: {
@@ -174,7 +175,7 @@ function render () {
                               h("div.col-md-3.col-xs-12", {
                                 'style':'height:200px;width:275px'
                               },[
-                                h("iframe", {
+                                h("iframe.workproj", {
                                   'data-ng-show': 'workProject.fields.video1',
                                   'data-ng-src':"https://www.youtube.com/embed/5G1XFtwfs5U",
                                   'frameborder': "0",

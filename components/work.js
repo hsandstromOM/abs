@@ -217,6 +217,7 @@ function render () {
               }),
               h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
                 "data-ui-sref":"workDetail({slug: workProject.fields.slug})",
+              // "data-ui-sref":"workDetail({obj: workProject})",
               }, "Read More")
             ])
           ])
