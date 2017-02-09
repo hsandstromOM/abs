@@ -458,7 +458,7 @@ function render () {
           //  "style":"margin-top:150px;left:-6%",
             "role": 'document'
           }, [
-            h("div.modal-content", {
+            h("div.modal-content.team", {
             //  "style":"border-radius:0;height:380px;width:140%"
             }, [
               h("div.modal-body", {

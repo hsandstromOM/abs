@@ -229,19 +229,22 @@ img.tm{
     width: 100%;
   }
    img.tm {
-    max-width: 330px;
-    padding-right: .5em;
-    padding-left: .5em;
+    max-width: 300px;
+    padding-right: .7em;
+    padding-left: .1em;
   }
   .fa-times-circle {
   	//position: absolute;
-    margin-left: 310px;
+    margin-left: 286px;
   }
   .col-sm-6 {
     padding-left: 20px;
-    padding-right: 0px;
+    padding-right: 50px;
     padding-top: 20px;
     width: 360px;
 }
+  .modal-content.team {
+    margin: -15px;
+  }
 
 }
