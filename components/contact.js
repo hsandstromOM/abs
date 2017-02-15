@@ -34,10 +34,10 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
       $scope.map.setCenter(new google.maps.LatLng(35.1650583, -80.88442550000002))
       $scope.map.setZoom(16)
       $scope.currentLocation = 'charlotte'
-    } else if (location === 'chapin') {
-      $scope.map.setCenter(new google.maps.LatLng(34.0884468,-81.2063686)) 
+    } else if (location === 'ballentine') {
+      $scope.map.setCenter(new google.maps.LatLng(34.125178, -81.23645420000003))
       $scope.map.setZoom(16)
-      $scope.currentLocation = 'chapin'
+      $scope.currentLocation = 'ballentine'
     }
   }
 
@@ -234,26 +234,26 @@ function render () {
             h('.honeyCombContact', [
 
 
-              h("img#chapinOfficeHoneyComb", {
+              h("img#ballentineOfficeHoneyComb", {
                 "style": "position:absolute;left:250px;top:-75px;z-index:2;width:250px",
                 "src":"img/doubleHoney.png",
-                'data-ng-click': "setLocation('chapin')",
-                'data-ng-class': "currentLocation === 'chapin' ? 'selectedGreen' : 'nonSelectedBlue'"
+                'data-ng-click': "setLocation('ballentine')",
+                'data-ng-class': "currentLocation === 'ballentine' ? 'selectedGreen' : 'nonSelectedBlue'"
               }),
               h("div.honeyText", {
                 "style": "left:250px;",
-                'data-ng-click': "setLocation('chapin')",
-                'data-ng-class': "currentLocation === 'chapin' ? 'selectedGreen' : 'nonSelectedBlue'"
+                'data-ng-click': "setLocation('ballentine')",
+                'data-ng-class': "currentLocation === 'ballentine' ? 'selectedGreen' : 'nonSelectedBlue'"
               }, [
                 h('img', {
                   'src':'img/contact_icon.png',
                   "style":'height:25px;',
-                  'data-ng-show': "currentLocation === 'chapin'"
+                  'data-ng-show': "currentLocation === 'ballentine'"
                 }),
                 h("h4.chapinOfficeTxt", {
-                  'data-ng-class': "currentLocation === 'chapin' ? 'selectedGreen' : 'nonSelectedBlue'"
-                }, "IRMO OFFICE"),
-                h("p", ["P.O. Box 2856", h('br'), "Irmo, SC", h('br'), "29036"]),
+                  'data-ng-class': "currentLocation === 'ballentine' ? 'selectedGreen' : 'nonSelectedBlue'"
+                }, "BALLENTINE OFFICE"),
+                h("p", ["Post Office Box 224", h('br'), "Ballentine, SC", h('br'), "29002"]),
 
               ])
             ]),

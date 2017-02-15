@@ -253,7 +253,7 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
 }
 
 function render () {
-  return h('div#homePage', [
+  return h('div#TeamPage', [
     h("div.page-container", [
       h('div', {
         'data-navheader': '',
