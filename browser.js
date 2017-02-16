@@ -13,6 +13,7 @@ require('angular-sanitize')
 require('angular-cookies')
 require('auth0-angular')
 require('angular-storage')
+require('angular-slugify')
 require('angular-jwt')
 require('angucomplete-alt')
 require('./components/contentfulWrapper')
@@ -43,7 +44,8 @@ ng.module('app', [
   'contentful',
   'ui.bootstrap',
   'hc.marked',
-  'ngMap'
+  'ngMap',
+  'slugifier'
 ])
   .constant('ee', ee)
   .constant('moment', moment)
@@ -57,7 +59,7 @@ ng.module('app', [
     })
 
 
-    $urlRouterProvider.otherwise('/*')
+    $urlRouterProvider.otherwise('/')
     $stateProvider
       .state('home', require('./components/home'))
       .state('contact', require('./components/contact'))
@@ -69,7 +71,6 @@ ng.module('app', [
 
     $locationProvider.html5Mode({
         enabled: true,
-        requireBase: false
     })
    }])
    .filter('serviceProvided', require('./filters/serviceProvided.js'))
