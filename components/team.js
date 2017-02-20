@@ -254,6 +254,11 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
 
 function render () {
   return h('div#TeamPage', [
+    h("title", {
+      "attributes": {
+        "ng-bind": "PageTitle.title()"
+      }
+    },"Team Page"),
     h("div.page-container", [
       h('div', {
         'data-navheader': '',

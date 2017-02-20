@@ -80,6 +80,13 @@ ng.module('app', [
    .directive('homehex', require('./components/homeHex.js'))
    .directive('footermenu', require('./components/shared/footer.js'))
    .factory('emailSvc', ['$http', require('./factories/email')])
+   .service('PageTitle', function(){
+     var title = 'Applied Building Sciences';
+     return {
+       title: function() {return title; },
+       setTitle: function(newTitle) { title = newTitle; }
+     };
+   })
 
 // manually bootstrap angular
 ng.element(document).ready(function() {

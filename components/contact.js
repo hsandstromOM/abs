@@ -122,7 +122,12 @@ angular.module('app').controller('ModalInstanceCtrl', function( $scope, $uibModa
   }
 })
 function render () {
-  return h('div#homePage', [
+  return h('div#contactPage', [
+    h("title", {
+      "attributes": {
+        "ng-bind": "PageTitle.title()"
+      }
+    },"Contact Page"),
     h("div.page-container", [
       h('div', {
         'data-navheader': '',

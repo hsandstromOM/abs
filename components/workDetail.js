@@ -2,8 +2,8 @@ var h = require('hyperscript')
 var headerNav = require('./shared/headerNav')
 var footer = require('./shared/footer')
 module.exports = {
-  url: '/workDetail',
-  //url: '/workDetail/:slug',
+  // url: '/workDetail',
+  url: '/workDetail/:slug',
   template: render().outerHTML,
   controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window',  component],
   params: {
@@ -96,7 +96,12 @@ angular.module('app').controller('ModalInstanceCtrl', function( $scope, $uibModa
   }
 })
 function render () {
-  return h('div#homePage', [
+  return h('div#workDetailPage', [
+    h("title", {
+      "attributes": {
+        "ng-bind": "PageTitle.title()"
+      }
+    },"Work Detail Page"),
     h("div.page-container", [
       h('div', {
         'data-navheader': '',

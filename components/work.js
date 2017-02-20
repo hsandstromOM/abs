@@ -52,7 +52,12 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, slug
 
 
 function render () {
-  return h('div#homePage', [
+  return h('div#workPage', [
+    h("title", {
+      "attributes": {
+        "ng-bind": "PageTitle.title()"
+      }
+    },"Work Page"),
     h("div.page-container", [
       h('div', {
         'data-navheader': '',

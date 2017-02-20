@@ -42,6 +42,11 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
 
 function render () {
   return h('div#homePage', [
+    h("title", {
+      "attributes": {
+        "ng-bind": "PageTitle.title()"
+      }
+    },"Home Page"),
     h("div.page-container", [
       h('div', {
         'data-navheader': '',
