@@ -125,7 +125,7 @@ function template () {
                 h("#team.tk-industry.customText", {
                   "style":"cursor:pointer;font-size: 18px;font-weight:normal;line-height:21px;padding-top: 15px;padding-bottom: 15px;",
                   "data-ui-sref":"team",
-                  'data-ng-class': "mainPage === 'team' ? 'selectedGreen' : 'nonSelectedBlue'"
+                  'data-ng-class': "mainPage === 'team' ? 'active' : 'selectedGreen' : 'nonSelectedBlue'"
                 }, "TEAM")
               ]),
               h("li", {
@@ -135,7 +135,7 @@ function template () {
                   "style": "cursor:pointer;font-size: 18px;font-weight:normal;line-height:21px;padding-top: 15px;padding-bottom: 15px;",
                   'data-ui-sref': 'work({service: defaultWorkService})',
                   'data-ng-click': 'setWorkService()',
-                  'data-ng-class': "mainPage === 'work' ? 'selectedGreen' : 'nonSelectedBlue'"
+                  'data-ng-class': "mainPage === 'work' ? 'active' : 'selectedGreen' : 'nonSelectedBlue'"
                 }, "WORK")
               ]),
               h("li", {
@@ -145,7 +145,7 @@ function template () {
                   "style": "cursor: pointer; font-size: 18px;font-weight:normal;line-height: 21px; padding-top: 15px; padding-bottom: 15px;",
                   'data-ng-click': 'setSelectedService()',
                   'data-ui-sref': 'services()',
-                  'data-ng-class': "mainPage === 'services' ? 'selectedGreen' : 'nonSelectedBlue'"
+                  'data-ng-class': "mainPage === 'services' ? 'active' : 'selectedGreen' : 'nonSelectedBlue'"
                 }, "SERVICES"),
               ]),
               h("li", {
@@ -154,7 +154,7 @@ function template () {
                 h("a.tk-industry", {
                   "style":"color:white;line-height:21px;font-weight: bold; margin: auto;width:180px;text-align:center;padding-top:5px;padding-bottom:5px;",
                   "data-ui-sref":"contact",
-                  'data-ng-class': "page === 'contact' ? 'greenContact' : 'blueContact'"
+                  'data-ng-class': "page === 'contact' ? 'active': 'greenContact' : 'blueContact'"
                 }, "CONTACT"),
               ])
             ])
