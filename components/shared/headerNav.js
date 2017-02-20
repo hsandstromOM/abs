@@ -154,7 +154,7 @@ function template () {
                 h("a.tk-industry", {
                   "style":"color:white;line-height:21px;font-weight: bold; margin: auto;width:180px;text-align:center;padding-top:5px;padding-bottom:5px;",
                   "data-ui-sref":"contact",
-                  'data-ng-class': "page === 'contact' ? 'active': 'greenContact' : 'blueContact'"
+                  'data-ng-class': "page === 'contact' ? 'greenContact' : 'blueContact'"
                 }, "CONTACT"),
               ])
             ])
