@@ -6,7 +6,7 @@ var ee = require('./services')()
 var h = require('hyperscript')
 var moment = require('moment')
 var underscore = require('underscore')
-var prerender = require('prerender-node')
+var prerender = require('prerender-node').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR')
 
 window.angular = ng
 require('angular-resource')

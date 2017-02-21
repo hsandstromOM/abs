@@ -40,6 +40,21 @@ function component ($scope, $state, store, contentful,  $uibModal, $window ) {
     $scope.allWorkProjects = res.data.items
   })
 
+  contentful.entries('content_type=workProjects').then(function(res) {
+    var seoData = res.data.items[0];
+    if (seoData.fields.pageTitle) {
+      document.title = seoData.fields.pageTitle;
+    }
+    if (seoData.fields.pageSpecificMetaDescriptionSeo) {
+      var meta = document.getElementsByTagName("meta");
+      for (var i = 0; i < meta.length; i++) {
+        if (meta[i].name.toLowerCase() === "description") {
+          meta[i].content = seoData.fields.pageSpecificMetaDescriptionSeo;
+        }
+      }
+    }
+  });
+
   $scope.open = function () {
 
     var modalInstance = $uibModal.open({
