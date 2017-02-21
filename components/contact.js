@@ -8,6 +8,7 @@ module.exports = {
 }
 
 function component ($scope, $state, store, contentful,  $uibModal, $window, NgMap, $http, emailSvc) {
+  var vm = this;
   NgMap.getMap().then(function(map) {
   $scope.map = map;
   $scope.map.setOptions({draggable: false, zoomControl: false, scrollwheel: false, disableDoubleClickZoom: true});
@@ -20,6 +21,20 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
     $scope.contentfulData = res.data.items[0]
   //  console.log("hey", $scope.contentfulData.fields.buttonText)
   })
+  contentful.entries('content_type=contactPage').then(function(res) {
+    var seoData = res.data.items[0];
+    if (seoData.fields.pageTitle) {
+      document.title = seoData.fields.pageTitle;
+    }
+    if (seoData.fields.pageSpecificMetaDescriptionSeo) {
+      var meta = document.getElementsByTagName("meta");
+      for (var i = 0; i < meta.length; i++) {
+        if (meta[i].name.toLowerCase() === "description") {
+          meta[i].content = seoData.fields.pageSpecificMetaDescriptionSeo;
+        }
+      }
+    }
+  });
   contentful.entries('content_type=locations').then(function(res) {
     $scope.allOffices = res.data.items
     console.log($scope.allOffices)

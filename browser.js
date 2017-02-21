@@ -142,6 +142,6 @@ ng.module('app', [
    })
 
 // manually bootstrap angular
-ng.element(document).ready(function() {
-  ng.bootstrap(document, ['app'])
-})
+// ng.element(document).ready(function() {
+//   ng.bootstrap(document, ['app'])
+// })
