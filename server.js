@@ -26,7 +26,7 @@ var nodemailer = require('nodemailer')
 var mandrillTransport = require('nodemailer-mandrill-transport')
 
 var prerender = require('prerender-node')
-app.use(prerender).set('prerenderServiceUrl', 'http://www.appliedbuildingservices.com/').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR')
+
 
 
 // load inprocess service
@@ -89,7 +89,7 @@ var server = http.createServer(function (req, res) {
   }
 })
 
-
+app.use(prerender).set('prerenderServiceUrl', 'http://www.appliedbuildingservices.com/').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR')
 
 server.listen(process.env.PORT || 3001);
 
