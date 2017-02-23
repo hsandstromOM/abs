@@ -25,6 +25,9 @@ var bodyParser = require('body-parser')
 var nodemailer = require('nodemailer')
 var mandrillTransport = require('nodemailer-mandrill-transport')
 
+var prerender = require('prerender-node');
+app.use(prerender).set('prerenderServiceUrl', 'http://www.appliedbuildingservices.com/').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR');
+
 
 // load inprocess service
 var ee = require('./services')()
