@@ -6,7 +6,7 @@ var ee = require('./services')()
 var h = require('hyperscript')
 var moment = require('moment')
 var underscore = require('underscore')
-// var prerender = require('prerender-node').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR')
+var prerender = require('prerender-node').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR')
 
 window.angular = ng
 require('angular-resource')
@@ -21,7 +21,7 @@ require('./components/contentfulWrapper')
 require('ngMap')
 require('angular-ui-bootstrap')
 require('angular-marked')
-// require('prerender-node').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR')
+require('prerender-node').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR')
 
 
 document.body.appendChild(
