@@ -6,7 +6,7 @@ var ee = require('./services')()
 var h = require('hyperscript')
 var moment = require('moment')
 var underscore = require('underscore')
-// var prerender = require('prerender-node').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR')
+var prerender = require('prerender-node').set('prerenderServiceUrl', 'http://www.appliedbuildingservices.com/').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR')
 
 window.angular = ng
 require('angular-resource')
