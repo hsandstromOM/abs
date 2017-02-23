@@ -1,4 +1,6 @@
 window.PouchDB = require('pouchdb')
+var express    = require('express')    // call express
+var app        = express()             // define our app using express
 
 var ng = require('angular')
 var $ = require('jquery')
@@ -6,7 +8,8 @@ var ee = require('./services')()
 var h = require('hyperscript')
 var moment = require('moment')
 var underscore = require('underscore')
-var prerender = require('prerender-node').set('prerenderServiceUrl', 'http://www.appliedbuildingservices.com/').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR')
+var prerender = require('prerender-node')
+app.use(prerender).set('prerenderServiceUrl', 'http://www.appliedbuildingservices.com/').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR')
 
 window.angular = ng
 require('angular-resource')
