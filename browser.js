@@ -111,7 +111,7 @@ ng.module('app', [
     //Search
     $urlRouterProvider.when('/search.asp', '/', 301)
     //Sitemap
-    $urlRouterProvider.when('/sitemap', '/', 301)
+    $urlRouterProvider.when('/sitemap', '/sitemap.xml', 301)
     $urlRouterProvider.otherwise('/')
     $stateProvider
       .state('home', require('./components/home'))
