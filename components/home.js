@@ -11,6 +11,20 @@ module.exports = {
 function component ($scope, $state, store, contentful,  $uibModal, $window) {
   $scope.page = 'home'
   $window.scrollTo(0,0);
+  contentful.entries('content_type=home').then(function(res) {
+    var seoData = res.data.items[0];
+    if (seoData.fields.pageTitleSeo) {
+      document.title = seoData.fields.pageTitleSeo;
+    }
+    if (seoData.fields.pageSpecificMetaDescriptionSeo) {
+      var meta = document.getElementsByTagName("meta");
+      for (var i = 0; i < meta.length; i++) {
+        if (meta[i].name.toLowerCase() === "description") {
+          meta[i].content = seoData.fields.pageSpecificMetaDescriptionSeo;
+        }
+      }
+    }
+  });
   var left = true
   $scope.certsLeft = []
   $scope.certsRight = []

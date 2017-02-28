@@ -11,6 +11,21 @@ module.exports = {
 }
 
 function component ($scope, $state, store, contentful,  $uibModal, $window) {
+  contentful.entries('content_type=serviceTypes').then(function(res) {
+    var seoData = res.data.items[0];
+    if (seoData.fields.pageTitleSeo) {
+      document.title = seoData.fields.pageTitleSeo;
+    }
+    if (seoData.fields.pageSpecificMetaDescriptionSeo) {
+      var meta = document.getElementsByTagName("meta");
+      for (var i = 0; i < meta.length; i++) {
+        if (meta[i].name.toLowerCase() === "description") {
+          meta[i].content = seoData.fields.pageSpecificMetaDescriptionSeo;
+        }
+      }
+    }
+  });
+
   if($state.params.service) {
     $scope.page = $state.params.service
     $scope.currentServiceProvided = $state.params.service

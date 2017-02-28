@@ -53,7 +53,7 @@ function render () {
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-        'data-ng-repeat': 'service in allServices[0]',
+        'data-ng-repeat': 'service in allServices[1]',
         'data-ng-if': 'service.fields.pageTitle === "Building Enclosure"',
       }, [
         h("img.overlayer", {
@@ -139,7 +139,7 @@ function render () {
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[1]',
+       'data-ng-repeat': 'service in allServices[0]',
        'data-ng-if': 'service.fields.pageTitle === "Engineering"',
       }, [
         h("img.overlayer", {

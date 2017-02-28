@@ -735,7 +735,13 @@ p, label, .btn, a, li {
   color: inherit; }
 
 .customText {
-  color: #344274; }
+  color: #344274;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 21px;
+  padding-top: 15px;
+  padding-bottom: 15px; }
 
 .customText:hover {
   color: #73B53d; }
@@ -920,7 +926,17 @@ p, label, .btn, a, li {
   /* Prevent unwanted side scroll on mobile */
   .subnav-navigation div div {
     letter-spacing: .0001em !important;
-    font-size: 1.33vw !important; } }
+    font-size: 1.33vw !important; }
+  .customText {
+    color: #344274;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 21px;
+    padding-top: 15px;
+    padding-bottom: 15px; }
+  .nav > li {
+    margin-left: 30px; } }
 
 @media (max-width: 767px) {
   .subnav-navigation div div {

@@ -43,7 +43,7 @@ function component ($scope, $state, store, contentful,  $uibModal, $window ) {
   contentful.entries('content_type=workProjects').then(function(res) {
     var seoData = res.data.items[0];
     if (seoData.fields.pageTitle) {
-      document.title = seoData.fields.pageTitle;
+      document.title = seoData.fields.pageTitleSeo;
     }
     if (seoData.fields.pageSpecificMetaDescriptionSeo) {
       var meta = document.getElementsByTagName("meta");

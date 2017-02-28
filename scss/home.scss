@@ -406,6 +406,7 @@ margin: 0 0 .5em 0;
 		transform:translate(0, -50%);
 		-webkit-transform:translateY(-50%);
 	}
+
 	.nav > li .dropdown-menu a,.nav > li .dropdown-menu a:hover{
 		color:#484848;
 	}
@@ -640,11 +641,19 @@ p, label, .btn, a, li {
 .customText
 {
    color:#344274;
+   cursor:pointer;
+   font-size: 18px;
+   font-weight:normal;
+   line-height:21px;
+   padding-top: 15px;
+   padding-bottom: 15px;
 }
 .customText:hover
 {
   color:#73B53d;
 }
+
+
 .container{
 	max-width:1170px;
 }
@@ -841,6 +850,7 @@ p, label, .btn, a, li {
         padding-left: 20px;
         padding-right: 20px;
     }
+
 }
 @media (max-width: 768px)
 {
@@ -851,6 +861,19 @@ p, label, .btn, a, li {
     .subnav-navigation div div {
       letter-spacing: .0001em !important;
       font-size: 1.33vw !important;
+    }
+    .customText
+    {
+       color:#344274;
+       cursor:pointer;
+       font-size: 14px;
+       font-weight:normal;
+       line-height:21px;
+       padding-top: 15px;
+       padding-bottom: 15px;
+    }
+    .nav > li {
+      margin-left: 30px;
     }
 }
 

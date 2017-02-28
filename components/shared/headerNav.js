@@ -120,36 +120,36 @@ function template () {
               "style":"border-top:none; backround-color:none;"
             }, [
               h("li", {
-                "style":"padding-right:2vh; text-align:center;"
+                // "style":"padding-right:2vh; text-align:center;"
               }, [
                 h("#team.tk-industry.customText", {
-                  "style":"cursor:pointer;font-size: 18px;font-weight:normal;line-height:21px;padding-top: 15px;padding-bottom: 15px;",
+                  // "style":"cursor:pointer;font-size: 18px;font-weight:normal;line-height:21px;padding-top: 15px;padding-bottom: 15px;",
                   "data-ui-sref":"team",
                   'data-ng-class': "mainPage === 'team' ? 'active' : 'selectedGreen' "
                 }, "TEAM")
               ]),
               h("li", {
-                "style":"padding-right:2vh; text-align:center;"
+                // "style":"padding-right:2vh; text-align:center;"
               }, [
                 h("#work.tk-industry.customText", {
-                  "style": "cursor:pointer;font-size: 18px;font-weight:normal;line-height:21px;padding-top: 15px;padding-bottom: 15px;",
+                  // "style": "cursor:pointer;font-size: 18px;font-weight:normal;line-height:21px;padding-top: 15px;padding-bottom: 15px;",
                   'data-ui-sref': 'work({service: defaultWorkService})',
                   'data-ng-click': 'setWorkService()',
                   'data-ng-class': "mainPage === 'work' ? 'active' : 'selectedGreen' "
                 }, "WORK")
               ]),
               h("li", {
-                "style":"padding-right:2vh; text-align:center;"
+                // "style":"padding-right:2vh; text-align:center;"
               }, [
                 h("div#services.tk-industry.customText", {
-                  "style": "cursor: pointer; font-size: 18px;font-weight:normal;line-height: 21px; padding-top: 15px; padding-bottom: 15px;",
+                  // "style": "cursor: pointer; font-size: 18px;font-weight:normal;line-height: 21px; padding-top: 15px; padding-bottom: 15px;",
                   'data-ng-click': 'setSelectedService()',
                   'data-ui-sref': 'services()',
                   'data-ng-class': "mainPage === 'services' ? 'active' : 'selectedGreen' "
                 }, "SERVICES"),
               ]),
               h("li", {
-                'style':'padding-right: 2vh;text-align:center;padding-top: 10px; padding-bottom: 10px;'
+                'style':'text-align:center;padding-top: 10px; padding-bottom: 10px;'
               }, [
                 h("a.tk-industry", {
                   "style":"color:white;line-height:21px;font-weight: bold; margin: auto;width:180px;text-align:center;padding-top:5px;padding-bottom:5px;",
@@ -205,18 +205,18 @@ function template () {
               'style':'background-color:#AFBAB5; margin-top:80px;padding-left: 0px;text-align:center;width:100%;'
             },[
               h('li', {
-                'style':'text-align: center; color:white;  padding:10px; font-size:16px;list-style:none; width:100%;'
+                'style':'text-align: center; color:white;  padding:10px; font-size:16px;list-style:none; margin:0;width:100%;'
               }, [
                 h('div', {
-                  'style':'cursor:pointer;border-bottom:1px solid white;padding-top:15px;padding-bottom:20px;width:300px; color:white;;text-transform:uppercase',
+                  'style':'cursor:pointer;border-bottom:1px solid white;padding-top:15px;padding-bottom:20px; color:white;;text-transform:uppercase',
                   'data-ui-sref':'team'
                 },'ARCHITECTURE')
               ]),
               h('li', {
-                'style':'text-align: center; color:white;  padding:10px; font-size:16px;list-style:none; width:100%;'
+                'style':'text-align: center; color:white;  padding:10px; font-size:16px;list-style:none; margin:0; width:100%;'
               }, [
                 h('div', {
-                  'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;width:300px;color:white;text-transform:uppercase',
+                  'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;color:white;text-transform:uppercase',
                 },[
                   h('div', {
                     'data-ui-sref':"team({division: 'Forensic Consulting'})"
@@ -224,26 +224,26 @@ function template () {
                 ])
               ]),
               h('li', {
-                'style':'text-align: center; color:white;  padding:10px; font-size:16px;list-style:none; width:100%;'
+                'style':'text-align: center; color:white;  padding:10px; font-size:16px;list-style:none; margin:0; width:100%;'
               }, [
                 h('div', {
-                  'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;width:300px; color:white;text-transform:uppercase',
+                  'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;color:white;text-transform:uppercase',
                   'data-ui-sref':"team({division: 'Building Enclosure'})"
                 },'BUILDING ENCLOSURE')
               ]),
               h('li', {
-                'style':'text-align: center; color:white; padding:10px; font-size:16px;list-style:none; width:100%;'
+                'style':'text-align: center; color:white; padding:10px; font-size:16px;list-style:none; margin:0; width:100%;'
               }, [
                 h('div', {
-                  'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;width:300px; color:white;text-transform:uppercase',
+                  'style':'cursor:pointer;border-bottom:1px solid white; padding-bottom:20px;color:white;text-transform:uppercase',
                   'data-ui-sref':"team({division: 'Life Safety & Human Factors'})"
                 },'LIFE SAFETY & HUMAN FACTORS')
               ]),
               h('li', {
-                'style':'text-align: center; color:white; padding:10px; font-size:16px;list-style:none; width:100%;'
+                'style':'text-align: center; color:white; padding:10px; font-size:16px;list-style:none; margin:0; width:100%;'
               }, [
                 h('div', {
-                  'style':'cursor:pointer;padding-bottom:20px;width:300px; color:white;text-transform:uppercase',
+                  'style':'cursor:pointer;padding-bottom:20px; color:white;text-transform:uppercase',
                   'data-ui-sref':"team({division: 'Engineering'})"
                 },'ENGINEERING')
               ]),
@@ -263,10 +263,10 @@ function template () {
               'style':'background-color:#AFBAB5;margin-top:160px;padding-left: 0px;text-align:center;width:100%;'
             }, [
               h('li', {
-                'style':'text-align: center; color:white;  padding:10px; font-size:16px;list-style:none; width:100%;'
+                'style':'text-align: center; color:white;  padding:10px; font-size:16px;list-style:none; margin:0;width:100%;'
               }, [
                 h('div', {
-                  'style':'border-bottom:1px solid white;padding:20px;width:300px; color:white;',
+                  'style':'border-bottom:1px solid white;padding:20px;color:white;',
                   'data-ng-repeat': 'serviceProvided in allWorkServicesProvided',
                   'data-ui-sref': 'work({service: serviceProvided})',
                   'data-ng-click': 'setWorkService(serviceProvided)'
@@ -287,10 +287,10 @@ function template () {
               'style':'background-color:#AFBAB5; margin-top:260px;padding-left: 0px;text-align:center;width:100%;'
             },[
               h('li', {
-                'style':'text-align: center; color:white;  padding:10px; font-size:16px;list-style:none; width:100%;'
+                'style':'text-align: center; color:white;  padding:10px; font-size:16px;list-style:none; margin:0; width:100%;'
               }, [
                 h('div', {
-                  'style':'border-bottom:1px solid white; text-align:center;padding:20px;width:300px; color:white;',
+                  'style':'border-bottom:1px solid white; text-align:center;padding:20px; color:white;',
                   'data-ui-sref': 'services({service: service})',
                   'data-ng-repeat': 'service in allServices',
                 }, '{{service.fields.pageTitle}}')

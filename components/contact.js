@@ -23,8 +23,8 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
   })
   contentful.entries('content_type=contactPage').then(function(res) {
     var seoData = res.data.items[0];
-    if (seoData.fields.pageTitle) {
-      document.title = seoData.fields.pageTitle;
+    if (seoData.fields.pageTitleSeo) {
+      document.title = seoData.fields.pageTitleSeo;
     }
     if (seoData.fields.pageSpecificMetaDescriptionSeo) {
       var meta = document.getElementsByTagName("meta");
@@ -138,11 +138,6 @@ angular.module('app').controller('ModalInstanceCtrl', function( $scope, $uibModa
 })
 function render () {
   return h('div#contactPage', [
-    h("title", {
-      "attributes": {
-        "ng-bind": "PageTitle.title()"
-      }
-    },"Contact Page"),
     h("div.page-container", [
       h('div', {
         'data-navheader': '',

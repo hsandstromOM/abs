@@ -121,6 +121,7 @@ ng.module('app', [
       //WORK//
       .state('work', require('./components/work'))
       .state('workDetail', require('./components/workDetail'))
+      .state('sitemap.xml', {url: '/sitemap.xml'})
 
     $locationProvider.html5Mode({
         enabled: true,
