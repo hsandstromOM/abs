@@ -325,7 +325,6 @@ function render () {
           ]),
           h("div.row.voffset", [
             h("div.honeyCombContainer#honeyCombContainer", {
-              "style":"position:relative;width:1200px;display:block;margin:0 auto"
             }, [
               h('.honeyCombRowOfFour', {
                 'data-ng-if': 'filteredMembers.length'
@@ -343,7 +342,6 @@ function render () {
                           "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
                         }),
                         h("p", {
-                        //  "style":"font-weight:bold;color:white;text-transform: uppercase;padding-top:17px"
                       },'{{member.fields.name}}'," ",'{{member.fields.middleName}}'," ",'{{member.fields.lastName}}')
                       ])
                     ]),
