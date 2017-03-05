@@ -7,6 +7,7 @@ var HttpCors = require('http-cors')
 var cors = new HttpCors()
 var HttpHashRouter = require('http-hash-router')
 var router = HttpHashRouter()
+var prerender = require('prerender-node');
 
 var bodyJSON = require('body/json')
 var sendJSON = require('send-data/json')
@@ -27,8 +28,6 @@ var mandrillTransport = require('nodemailer-mandrill-transport')
 
 // load inprocess service
 var ee = require('./services')()
-
-app.use(require('prerender-node').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR'));
 
 
 router.set('/api/info', {
