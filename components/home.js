@@ -162,7 +162,7 @@ function render () {
                   h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
                     'style': 'cursor: pointer;',
                     //"data-ng-src": 'contentfulData.fields.projectSpotlightTitle',
-                    "data-ui-sref":"workDetail({projname: 'Palms Oceanfront Hotel, Isle of Palms, SC'})"
+                    "data-ui-sref":"workDetail({title: 'Palms Oceanfront Hotel, Isle of Palms, SC'})"
                   }, "{{contentfulData.fields.buttonText}}")
                 ])
 
