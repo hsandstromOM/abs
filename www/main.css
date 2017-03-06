@@ -1186,10 +1186,11 @@ img.tm {
     width: 100% !important; }
   .honeyCombRowOfFour {
     text-align: center;
-    margin-left: 0px;
+    margin-left: 100px;
     width: 80%;
     float: none; }
   .honeyCombRowOfThree {
+    margin-top: -1px;
     margin-left: 0px;
     text-align: center;
     width: 100%; }
