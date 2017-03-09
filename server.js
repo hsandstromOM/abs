@@ -103,7 +103,7 @@ function handleTemplatePage (req, res) {
 }
 
 function renderApp (req, res, template) {
-  var layout = fs.readFileSync(__dirname + '/templates/layout.html', 'utf-8');
+  var layout = fs.readFileSync(__dirname + '/layout.html', 'utf-8');
   //var nav = fs.readFileSync(__dirname + '/templates/nav.html', 'utf-8')
   var footer = fs.readFileSync(__dirname + '/templates/footer.html', 'utf-8');
   sendHtml(req, res, ejs.render(layout, {
@@ -114,7 +114,7 @@ function renderApp (req, res, template) {
 }
 
 function render (req, res, template) {
-  var layout = fs.readFileSync(__dirname + '/templates/layout.html', 'utf-8');
+  var layout = fs.readFileSync(__dirname + '/layout.html', 'utf-8');
   var nav = fs.readFileSync(__dirname + '/templates/nav.html', 'utf-8');
   var footer = fs.readFileSync(__dirname + '/templates/footer.html', 'utf-8');
 
