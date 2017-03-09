@@ -2,7 +2,15 @@
 <html class="no-js" lang="" ng-app="app">
 <head>
     <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+    <system.webServer>
+        <httpProtocol>
+           <customHeaders>
+              <clear />
+              <add name="X-UA-Compatible" value="IE=EmulateIE7" />
+           </customHeaders>
+        </httpProtocol>
+     </system.webServer>
+  </configuration>
     <title>Applied Building Sciences</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <meta id = "siteDescription"
