@@ -144,9 +144,9 @@ ng.module('app', [
    })
 
 // manually bootstrap angular
-ng.element(document).ready(function() {
-  ng.bootstrap(document, ['app'])
-})
+// ng.element(document).ready(function() {
+//   ng.bootstrap(document, ['app'])
+// })
 
 },{"./components/contact":2,"./components/contentfulWrapper":4,"./components/home":5,"./components/homeHex.js":6,"./components/services":7,"./components/shared/footer.js":8,"./components/shared/headerNav.js":9,"./components/team":10,"./components/work":11,"./components/workDetail":12,"./factories/email":13,"./filters/serviceProvided.js":14,"./filters/telephone.js":15,"./services":103,"angucomplete-alt":16,"angular":34,"angular-cookies":18,"angular-jwt":20,"angular-marked":21,"angular-resource":24,"angular-sanitize":26,"angular-slugify":27,"angular-storage":29,"angular-ui-bootstrap":31,"angular-ui-router":32,"auth0-angular":37,"hyperscript":47,"jquery":54,"moment":59,"ngMap":61,"pouchdb":67,"underscore":79}],2:[function(require,module,exports){
 var h = require('hyperscript')
