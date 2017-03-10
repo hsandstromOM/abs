@@ -118,7 +118,7 @@ function render (req, res, template) {
   var nav = fs.readFileSync(__dirname + '/templates/nav.html', 'utf-8');
   var footer = fs.readFileSync(__dirname + '/templates/footer.html', 'utf-8');
 
-  //res.writeHead(200, {'Content-Type': 'text/html'});
+  // res.writeHead(200, {'Content-Type': 'text/html'});
   sendHtml(req, res, ejs.render(layout, {
     nav: nav,
     body: template,

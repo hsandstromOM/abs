@@ -413,25 +413,25 @@ function render () {
                     "name": "style",
                     "value": "text-align: center;"
                   }
-                }, `Thank you for contacting us!`),
+                }, "Thank you for contacting us!"),
                 h("h5", {
                   "style": {
                     "name": "style",
                     "value": "text-align: center;"
                   }
-                }, `We will get back to you shortly.`),
+                }, "We will get back to you shortly."),
                 h("h5", {
                   "style": {
                     "name": "style",
                     "value": "text-align: center;"
                   }
                 }, [
-                    `Return to our `,
+                    "Return to our ",
                     h("a", {
                       "attributes": {
                         "href": "http://www.appliedbuildingsciences.com/"
                       }
-                    }, `homepage`)
+                    }, "homepage")
                 ])
             ])
             // h('div', [
@@ -449,25 +449,25 @@ function render () {
                 "name": "style",
                 "value": "text-align: center;"
               }
-            }, `Thank you for contacting us!`),
+            }, "Thank you for contacting us!"),
             h("h5", {
               "style": {
                 "name": "style",
                 "value": "text-align: center;"
               }
-            }, `We will get back to you shortly.`),
+            }, "We will get back to you shortly."),
             h("h5", {
               "style": {
                 "name": "style",
                 "value": "text-align: center;"
               }
             }, [
-                `Return to our `,
+                "Return to our ",
                 h("a", {
                   "attributes": {
                     "href": "http://www.appliedbuildingsciences.com/"
                   }
-                }, `homepage`)
+                }, "homepage")
             ])
           ])
         ])
