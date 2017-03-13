@@ -1,7 +1,5 @@
 var express    = require('express')    // call express
 var app        = express()             // define our app using express
-var redirect = require('express-redirect')
-redirect(app)
 var http = require('http')
 var HttpCors = require('http-cors')
 var cors = new HttpCors()
