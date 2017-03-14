@@ -1,4 +1,3 @@
-window.PouchDB = require('pouchdb')
 
 var ng = require('angular')
 var $ = require('jquery')
@@ -142,7 +141,7 @@ ng.module('app', [
      };
    })
 
-// manually bootstrap angular
-// ng.element(document).ready(function() {
-//   ng.bootstrap(document, ['app'])
-// })
+//manually bootstrap angular
+ng.element(document).ready(function() {
+  ng.bootstrap(document, ['app'])
+})
