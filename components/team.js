@@ -312,7 +312,7 @@ function render () {
       }, [
         h("div.container.bloc-lg", [
           h("div.row", {
-            'style':'padding-bottom:50px;'
+            // 'style':'padding-bottom:50px;'
           }, [
             h("div.col-sm-10.col-sm-offset-1", [
               h("h3.tk-aaux-next.mg-md.text-left.tc-prussian-blue", {
@@ -326,9 +326,9 @@ function render () {
           h("div.row.voffset", [
             h("div.honeyCombContainer#honeyCombContainer", {
             }, [
-              h('.honeyCombRowOfFour', {
-                'data-ng-if': 'filteredMembers.length'
-              }, [
+              // h('.honeyComb', {
+              //   'data-ng-if': 'filteredMembers.length'
+              // }, [
                 h("a.honeyComb", {
                   "data-toggle":"modal",
                   "data-target":"#myModal",
@@ -346,11 +346,11 @@ function render () {
                       ])
                     ]),
                   ]),
-                ])
-              ]),
-              h('.honeyCombRowOfThree', {
-                'data-ng-if': 'filteredMembers.length > 4'
-              }, [
+                ]),
+              // ]),
+              // h('.honeyComb', {
+              //   'data-ng-if': 'filteredMembers.length > 4'
+              // }, [
                 h("a.honeyComb", {
                  "data-toggle":"modal",
                  "data-target":"#myModal",
@@ -367,11 +367,11 @@ function render () {
                       ])
                     ]),
                   ]),
-                ])
-              ]),
-              h('.honeyCombRowOfFour', {
-                'data-ng-if': 'filteredMembers.length > 7'
-              }, [
+                ]),
+              // ]),
+              // h('.honeyComb', {
+              //   'data-ng-if': 'filteredMembers.length > 7'
+              // }, [
                 h("a.honeyComb", {
                   "data-toggle":"modal",
                   "data-target":"#myModal",
@@ -388,11 +388,11 @@ function render () {
                       ])
                     ]),
                   ]),
-                ])
-              ]),
-              h('.honeyCombRowOfThree', {
-                'data-ng-if': 'filteredMembers.length > 11'
-              }, [
+                ]),
+              // ]),
+              // h('.honeyComb', {
+              //   'data-ng-if': 'filteredMembers.length > 11'
+              // }, [
                 h("a.honeyComb", {
                   "data-toggle":"modal",
                   "data-target":"#myModal",
@@ -409,11 +409,11 @@ function render () {
                       ])
                     ]),
                   ]),
-                ])
-              ]),
-              h('.honeyCombRowOfFour', {
-                'data-ng-if': 'filteredMembers.length > 14'
-              }, [
+                ]),
+              // ]),
+              // h('.honeyComb', {
+              //   'data-ng-if': 'filteredMembers.length > 14'
+              // }, [
                 h("a.honeyComb", {
                   "data-toggle":"modal",
                   "data-target":"#myModal",
@@ -430,11 +430,11 @@ function render () {
                       ])
                     ]),
                   ]),
-                ])
-              ]),
-              h('.honeyCombRowOfThree', {
-                'data-ng-if': 'filteredMembers.length > 18'
-              }, [
+                ]),
+              // ]),
+              // h('.honeyComb', {
+              //   'data-ng-if': 'filteredMembers.length > 18'
+              // }, [
                 h("a.honeyComb", {
                   "data-toggle":"modal",
                   "data-target":"#myModal",
@@ -451,11 +451,11 @@ function render () {
                       ])
                     ]),
                   ]),
-                ])
-              ]),
-              h('.honeyCombRowOfFour', {
-                'data-ng-if': 'filteredMembers.length > 22'
-              }, [
+                ]),
+              // ]),
+              // h('.honeyComb', {
+              //   'data-ng-if': 'filteredMembers.length > 22'
+              // }, [
                 h("a.honeyComb", {
                   "data-toggle":"modal",
                   "data-target":"#myModal",
@@ -473,7 +473,7 @@ function render () {
                     ]),
                   ]),
                 ])
-              ]),
+              // ]),
             ])
           ])
         ]),
