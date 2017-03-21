@@ -152,11 +152,11 @@ function render () {
               h("div.col-md-4.col-cd-offset-1.col-xs-12", [
                 h("div#over", [
                   h("span.Centerer"),
-                  h("img.Centered", {
-                    "style":"margin-top:-185px",
+                  h("img.hxImg.work.Centered", {
+                    "style":"margin-top:-165px",
                     "src":"img/doubleHoney.png"
                   }),
-                  h("div.gallery-text", {
+                  h("div.gallery-text.work", {
                     'style':'margin-top:-30px;'
                   },[
                     h('img',{'src':'img/contact_icon.png'}),

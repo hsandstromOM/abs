@@ -96,7 +96,7 @@
   .hexagon .hxImg {
     margin-top: -135px !important; }
   .hexagon .gallery-text {
-    top: -60px; } }
+    top: -70px; } }
 
 #over {
   width: 100%;
@@ -1761,6 +1761,8 @@ iframe {
   .hexagon .gallery-text {
     top: -90px; }
   .gallery-text.serv {
+    top: -50px; }
+  .gallery-text.work {
     top: -50px; }
   .modal-dialog {
     top: 50px;

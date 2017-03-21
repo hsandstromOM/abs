@@ -203,11 +203,11 @@ function render () {
                 h("div#over", [
                   h("span.Centerer"),
                   h("img.hxImg.Centered", {
-                    "style":"margin-top:-85px;",
+                    "style":"margin-top:-70px;",
                     "src":"img/doubleHoney.png"
                   }),
                   h("div.gallery-text.serv", {
-                    'style':'margin-top:70px;'
+                    'style':'margin-top:95px;'
 
                   },[
                     h('img.cIcon',{'src':'img/contact_icon.png'}),
