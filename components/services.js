@@ -202,12 +202,12 @@ function render () {
               h("div.col-md-4.col-cd-offset-1.col-xs-12.serv", [
                 h("div#over", [
                   h("span.Centerer"),
-                  h("img.hexImg.Centered", {
-                    "style":"margin-top:-129px !important;",
+                  h("img.hxImg.Centered", {
+                    "style":"margin-top:-85px;",
                     "src":"img/doubleHoney.png"
                   }),
                   h("div.gallery-text.serv", {
-                    'style':'margin-top:20px;'
+                    'style':'margin-top:70px;'
 
                   },[
                     h('img.cIcon',{'src':'img/contact_icon.png'}),

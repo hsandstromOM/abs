@@ -75,13 +75,13 @@ body {
 
 @media screen and (max-width: 770px) {
 .honeyCombContainer {
-  max-width: 300px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   /*background-color: rgba(0,0,0,.05);*/
 }
 .honeyComb {
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 .honeyComb:nth-child(7n+8) {
   clear: none;
@@ -89,6 +89,23 @@ body {
 .honeyComb:nth-child(7n+5) {
   margin-left: 0;
 }
+}
+@media screen and (max-width: 414px){
+  .honeyCombContainer {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    /*background-color: rgba(0,0,0,.05);*/
+  }
+  .honeyComb {
+    margin-bottom: 20px;
+  }
+  .honeyComb:nth-child(7n+8) {
+    clear: none;
+  }
+  .honeyComb:nth-child(7n+5) {
+    margin-left: 0;
+  }
 }
 
 

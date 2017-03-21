@@ -209,13 +209,13 @@ function render () {
                 ]),
               ]),
             ]),
-            h("div.col-sm-8", {
+            h("div.work.col-sm-8", {
             //  'style': 'border-bottom:1px solid #d9dedc;padding-bottom:80px;'
             }, [
               h('br'),
-              h("h2.mg-md.tc-prussian-blue",
-               '{{workProject.fields.title}}'
-              ),
+              h("h2.mg-md.tc-prussian-blue", {
+                'data-marked':'workProject.fields.title',
+              }),
               h("p", {
                 'data-marked': 'workProject.fields.workProjectSummary',
                   'style':'padding-bottom: 3px;'
