@@ -265,7 +265,7 @@ function render () {
                   "style":'height:25px;',
                   'data-ng-show': "currentLocation === 'ballentine'"
                 }),
-                h("h4.chapinOfficeTxt", {
+                h("h4.ballentineOfficeTxt", {
                   'data-ng-class': "currentLocation === 'ballentine' ? 'selectedGreen' : 'nonSelectedBlue'"
                 }, "BALLENTINE OFFICE"),
                 h("p", ["Post Office Box 224", h('br'), "Ballentine, SC", h('br'), "29002"]),
