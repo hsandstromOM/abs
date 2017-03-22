@@ -209,7 +209,7 @@ function template () {
               }, [
                 h('div', {
                   'style':'cursor:pointer;border-bottom:1px solid white;padding-top:15px;padding-bottom:20px; color:white;;text-transform:uppercase',
-                  'data-ui-sref':'team'
+                  'data-ui-sref':"team({division: 'Architecture'})"
                 },'ARCHITECTURE')
               ]),
               h('li', {
