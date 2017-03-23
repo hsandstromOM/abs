@@ -154,6 +154,9 @@ function render () {
                 h("br"),
                 h("br"),
                 h("h2.mg-md.text-center.tk-industry.tc-prussian-blue", "PROJECT SPOTLIGHT"),
+                h("h3.mg-md.text-center.tk-industry.tc-prussian-blue", {
+                    "data-marked": 'contentfulData.fields.projectSpotlightTitle',
+                }),
                 h("p", {
                   'style': " margin-bottom:65px;",
                   'data-marked': 'contentfulData.fields.projectSpotlightContent'
@@ -161,8 +164,7 @@ function render () {
                 h(".text-center", [
                   h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq", {
                     'style': 'cursor: pointer;',
-                    //"data-ng-src": 'contentfulData.fields.projectSpotlightTitle',
-                    "data-ui-sref":"workDetail({title: 'Palms Oceanfront Hotel, Isle of Palms, SC'})"
+                    "data-ui-sref":'workDetail({obj: contentfulData.fields.projectSpotlightLink})',
                   }, "{{contentfulData.fields.buttonText}}")
                 ])
 
