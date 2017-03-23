@@ -1576,6 +1576,7 @@ body {
   background-color: #fff;
   text-align: center;
   backface-visibility: hidden;
+  -ms-mask-image: url("team#hexContainer");
   -webkit-clip-path: url("team#hexContainer");
   -ms-clip-path: url("team#hexContainer");
   clip-path: url("team#hexContainer");
@@ -1600,6 +1601,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   backface-visibility: hidden;
+  -ms-mask-image: url("team#hexThumb");
   -webkit-clip-path: url("team#hexThumb");
   -ms-clip-path: url("team#hexThumb");
   clip-path: url("team#hexThumb");
