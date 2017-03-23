@@ -141,7 +141,8 @@ body {
   -ms-clip-path: url("team#hexContainer");
   clip-path: url("team#hexContainer");
   -webkit-transform:translateZ(0);
-  transition: all 300ms ease-in-out;
+  -ms-transform:translateZ(0);
+  transform:translateZ(0);
 
 }
 .hexThumb {
@@ -165,7 +166,8 @@ body {
   -ms-clip-path: url("team#hexThumb");
   clip-path: url("team#hexThumb");
   -webkit-transform:translateZ(0);
-  transition: all 300ms ease-in-out;
+  -ms-transform:translateZ(0);
+  transform:translateZ(0);
 
 }
 
