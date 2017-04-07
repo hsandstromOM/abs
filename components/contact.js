@@ -153,13 +153,11 @@ function render () {
           'src':'img/honeycomb.png',
           'style':"max-height:475px;z-index:1;margin-right:-50px !important;"
         }),
-        //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
           h("div.row", [
             h("div.col-sm-12", {'style':'margin-top:-195px;text-transform: uppercase;'},[
               h('h1.mg-md.text-center.tc-white', '{{contentfulData.fields.bannerText}}')
             ])
           ])
-        //])
       ]),
       h("div.closeNav", [
       h("div.overlay",{
@@ -223,7 +221,6 @@ function render () {
             "style": "width:750px;display:block;margin:0 auto;height:200px;position:relative;"
           }, [
             h('.honeyCombContact',[
-
               h("img#charlestonOfficeHoneyComb ", {
                 "style":"position:absolute;left:0px;top:-75px;z-index:2;width:250px",
                 "src":"img/doubleHoney.png",
@@ -247,8 +244,6 @@ function render () {
               ])
             ]),
             h('.honeyCombContact', [
-
-
               h("img#ballentineOfficeHoneyComb", {
                 "style": "position:absolute;left:250px;top:-75px;z-index:2;width:250px",
                 "src":"img/doubleHoney.png",

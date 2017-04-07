@@ -10,7 +10,7 @@ module.exports = function () {
 function controller ($scope, contentful, store) {
   $scope.allHexServicesProvided = []
   $scope.allServices = [
-    [],[],[],[],[],[]
+    [],[],[],[],[],[],[],[],[]
   ]
   $scope.setSelectedService = function (service) {
     store.set('selectedService', service)
@@ -53,7 +53,7 @@ function render () {
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-        'data-ng-repeat': 'service in allServices[1]',
+        'data-ng-repeat': 'service in allServices[0]',
         'data-ng-if': 'service.fields.pageTitle === "Building Enclosure"',
       }, [
         h("img.overlayer", {
@@ -74,7 +74,7 @@ function render () {
       h("a.honeyCombHome", {
         'data-ng-click': 'setSelectedService(service)',
         'data-ui-sref': 'services({service: service})',
-       'data-ng-repeat': 'service in allServices[0]',
+       'data-ng-repeat': 'service in allServices[1]',
        'data-ng-if': 'service.fields.pageTitle === "Forensic Consulting"',
       }, [
         h("img.overlayer", {

@@ -14,7 +14,13 @@
   top:-20px;
   z-index:2;
   width:250px;
-  text-align:center
+  text-align:center;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+.honeyText:hover {
+  color: #73B53d;
+  opacity: .7;
 }
 .contactCombImg{
   position:absolute;
@@ -68,6 +74,8 @@
   }
   .honeyCombContact{
     height:280px;
+    cursor: pointer;
+    transition: all .2s ease;
   }
 
   #charlotteOfficeHoneyComb{
@@ -77,6 +85,11 @@
     margin: auto;
     display: block;
     width:250px;
+    cursor: pointer;
+    transition: all .2s ease;
+  }
+  #charlotteOfficeHoneyComb:hover{
+    opacity: 0.7;
   }
   .honeyText{
     position:inherit !important;
@@ -86,6 +99,20 @@
     margin-bottom: 50px;
     display: block;
     width: 250px;
+    cursor: pointer;
+    transition: all .2s ease;
+  }
+  .honeyText :hover {
+    position:inherit !important;
+    z-index: 10;
+    margin: auto;
+    margin-top: -210px;
+    margin-bottom: 50px;
+    display: block;
+    width: 250px;
+    cursor: pointer;
+    transition: all .2s ease;
+    opacity: .7;
   }
   #ballentineOfficeHoneyComb{
     position:inherit !important;
@@ -94,7 +121,12 @@
     margin: auto;
     display: block;
     width:250px;
+    cursor: pointer;
+    transition: all .2s ease;
 
+  }
+  #ballentineOfficeHoneyComb:hover{
+    opacity: 0.7;
   }
 .breakMargin{
   margin-bottom: -30px;
@@ -106,6 +138,11 @@
     margin: auto;
     display: block;
     width:250px;
+    cursor: pointer;
+    transition: all .2s ease;
+  }
+  #charlestonOfficeHoneyComb:hover{
+    opacity: 0.7;
   }
 
 }
