@@ -108,7 +108,7 @@ function template () {
          h("div.container.bloc-md", [
            h("div.row", [
              h("div.col-sm-12", [
-               h("h6.mg-md", {
+               h("h6.mg-md.bttn", {
                'data-ui-sref': 'contact',
                'style':'cursor:pointer'
               },
@@ -117,22 +117,22 @@ function template () {
                  "style":"padding-top:20px"
                },[
                  h("div.col-sm-3", [
-                   h("h6.mg-md", {'data-ui-sref':'home', 'style':'cursor:pointer'},"HOME")
+                   h("h6.mg-md.bttn", {'data-ui-sref':'home', 'style':'cursor:pointer'},"HOME")
                  ]),
                  h("div.col-sm-3", [
-                   h("h6.mg-md", {'data-ui-sref':'team', 'style':'cursor:pointer'},"TEAM")
+                   h("h6.mg-md.bttn", {'data-ui-sref':'team', 'style':'cursor:pointer'},"TEAM")
                 ]),
                 h("div.col-sm-3", [
-                   h("h6.mg-md", {'data-ui-sref':'work', 'style':'cursor:pointer'},"WORK"),
-                   h("h5.mg-md.tk-aaux-next", {
+                   h("h6.mg-md.bttn", {'data-ui-sref':'work', 'style':'cursor:pointer'},"WORK"),
+                   h("h5.mg-md.tk-aaux-next.bttn", {
                      'data-ui-sref':'work({service: serviceProvided})',
                      'data-ng-repeat': 'serviceProvided in allWorkServicesProvided',
                      'style':'cursor:pointer'},
                      '{{serviceProvided.fields.pageTitle}}')
                  ]),
                  h("div.col-sm-3", [
-                   h("h6.mg-md", {'data-ui-sref':'services', 'style':'cursor:pointer'},"SERVICES"),
-                    h("h5.mg-md.tk-aaux-next", {
+                   h("h6.mg-md.bttn", {'data-ui-sref':'services', 'style':'cursor:pointer'},"SERVICES"),
+                    h("h5.mg-md.tk-aaux-next.bttn", {
                       'data-ui-sref':'services({service: service})',
                       'data-ng-repeat': 'service in allServices',
                       'style':'cursor:pointer'},

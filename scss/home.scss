@@ -76,6 +76,7 @@ a.ltc-royal-blue-traditional:hover{
   bottom: 0; }
   .subnav-navigation div div {
     color: white !important;
+    cursor: pointer;
     font-weight: 500;
     line-height: .05em;
     letter-spacing: .1em;
@@ -86,7 +87,18 @@ a.ltc-royal-blue-traditional:hover{
     height: 65px; }
 
 .subnav-navigation div:hover div {
-  background-color: #73b53d; }
+  background-color: #73b53d;
+  transition: .2s ease all;
+}
+
+.btn {
+    transition: .2s ease all;
+  }
+
+.bttn:hover{
+  color: #003057;
+  transition: .2s ease all;
+}
 
 /*-----------------------------------------------------------------------------------
 	    ABS
@@ -654,7 +666,8 @@ p, label, .btn, a, li {
 }
 .customText:hover
 {
-  color:#73B53d;
+  transition: .2s ease all;
+color: #003057;
 }
 
 

@@ -397,7 +397,7 @@ function render () {
             ]),
             h('.col-md-12', [
               h(".wire-btn-green-ryb.btn-sq.btn-lg", {
-                "style":"float:right;background-color:#F6F6F6",
+                "style":"float:right;background-color:#F6F6F6; cursor: pointer",
                 'data-ng-click':'submitForm(contact.$invalid, contact)',
                 "type":"submit"
               }, '{{contentfulData.fields.buttonText}}')

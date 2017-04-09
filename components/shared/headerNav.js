@@ -119,7 +119,7 @@ function template () {
             h("ul.site-navigation.nav.navbar-nav", {
               "style":"border-top:none; backround-color:none;"
             }, [
-              h("li", {
+              h("li.bttn", {
                 // "style":"padding-right:2vh; text-align:center;"
               }, [
                 h("#team.tk-industry.customText", {
@@ -151,8 +151,8 @@ function template () {
               h("li", {
                 'style':'text-align:center;padding-top: 10px; padding-bottom: 10px;'
               }, [
-                h("a.tk-industry", {
-                  "style":"color:white;line-height:21px;font-weight: bold; margin: auto;width:180px;text-align:center;padding-top:5px;padding-bottom:5px;",
+                h("a.tk-industry.btn.btn-lg.btn-sq", {
+                  "style":"cursor:pointer;color:white;line-height:21px;font-weight: bold; margin: auto;width:180px;text-align:center;padding-top:5px;padding-bottom:5px;",
                   "data-ui-sref":"contact",
                   'data-ng-class': "page === 'contact' ? 'greenContact' : 'blueContact'"
                 }, "CONTACT"),
