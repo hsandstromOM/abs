@@ -219,7 +219,10 @@ function render () {
               // }),
               h("div.shadow", [
                 h("div.hexContainerWork", [
-                  h(".hexThumbWork",[
+                  h(".hexThumbWork",{
+                      "data-ui-sref":"workDetail({slug: workProject.fields.slug})",
+                      "style":"cursor:pointer"
+                  },[
                     h("img", {
                       "data-ng-src": "{{workProject.fields.thumbnailImage.fields.file.url}}"
                     }),
