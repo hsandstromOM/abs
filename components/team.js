@@ -339,7 +339,8 @@ function render () {
                     h("div.hexContainer", [
                       h(".hexThumb",[
                         h("img", {
-                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
+                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}",
+                          "alt" : '{{member.fields.name}} {{member.fields.lastName}} Bio Pic',
                         }),
                         h("p", {
                       },'{{member.fields.name}}'," ",'{{member.fields.middleName}}'," ",'{{member.fields.lastName}}')
