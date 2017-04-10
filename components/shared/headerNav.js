@@ -12,7 +12,7 @@ module.exports = function () {
   }
 }
 
-function controller ($scope, $state, $stateParams, contentful, store) {
+function controller ($scope, $state, $stateParams, contentful, store, slug) {
   $scope.allWorkServicesProvided = []
   $scope.allServices = []
   $scope.teamDropClosed = true
@@ -144,7 +144,7 @@ function template () {
                 h("div#services.tk-industry.customText", {
                   // "style": "cursor: pointer; font-size: 18px;font-weight:normal;line-height: 21px; padding-top: 15px; padding-bottom: 15px;",
                   'data-ng-click': 'setSelectedService()',
-                  'data-ui-sref': 'services()',
+                  'data-ui-sref': 'services({slug: serviceTypes.fields.pageTitle})',
                   'data-ng-class': "mainPage === 'services' ? 'active' : 'selectedGreen' "
                 }, "SERVICES"),
               ]),

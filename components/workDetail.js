@@ -3,7 +3,7 @@ var headerNav = require('./shared/headerNav')
 var footer = require('./shared/footer')
 module.exports = {
   // url: '/workDetail',
-  url: '/workDetail/:slug',
+  url: '/work-detail/:slug',
   template: render().outerHTML,
   controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window',  component],
   params: {
@@ -21,6 +21,7 @@ function component ($scope, $state, store, contentful,  $uibModal, $window ) {
   $scope.slide = {
     'down' : true
   }
+  var vm = this;
 
   $window.scrollTo(0,0);
 
@@ -33,8 +34,6 @@ function component ($scope, $state, store, contentful,  $uibModal, $window ) {
        })
   } else if (store.get('workProject')) {
     $scope.workProject = store.get('workProject')
-  } else {
-    $state.go('buildingEnclosure')
   }
   contentful.entries('content_type=workProjects').then(function(res) {
     $scope.allWorkProjects = res.data.items
@@ -53,6 +52,10 @@ function component ($scope, $state, store, contentful,  $uibModal, $window ) {
         }
       }
     }
+  });
+  contentful.entries('content_type=workProjects').then(function(res) {
+    vm.projectGallery = res.data.items[0];
+    console.log("vm.projectGallery", vm.projectGallery);
   });
 
   $scope.open = function () {
@@ -394,6 +397,14 @@ function render () {
                                       h("div.carousel-inner.mod", [
                                         h("div.item.active", [
                                           h("div.row.mod", [
+                                            h("i.fa.fa-times-circle", {
+                                            //  "style":"padding:10px;margin-left: 410px",
+                                              "type": 'button',
+                                              'aria-label': 'close',
+                                              "aria-hidden":"true",
+                                              'data-dismiss': 'modal'
+                                            }
+                                          ),
                                             h("iframe", {
                                               'data-ng-show': 'workProject.fields.video1',
                                               'data-ng-src':"https://www.youtube.com/embed/5G1XFtwfs5U",
@@ -408,17 +419,16 @@ function render () {
 
                                           ])
                                         ]),
-                                      //  h("div.item", [
-                                    //      h("div.row", [
-                                                // h("img", {
-                                                //   'data-ng-hide': 'workProject.fields.title === "Premises Safety – Trip & Fall"',
-                                                //   "src":"{{workProject.fields.img1.fields.file.url}}",
-                                                //   "alt":""
-                                                // }),
-                                      //    ])
-                                      //  ]),
                                         h("div.item", [
                                           h("div.row.mod", [
+                                            h("i.fa.fa-times-circle", {
+                                            //  "style":"padding:10px;margin-left: 410px",
+                                              "type": 'button',
+                                              'aria-label': 'close',
+                                              "aria-hidden":"true",
+                                              'data-dismiss': 'modal'
+                                            }
+                                          ),
                                                 h("img", {
                                                   "src":"{{workProject.fields.img2.fields.file.url}}",
                                                   "alt":""

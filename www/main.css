@@ -1451,8 +1451,7 @@ img.tm {
 
 @media (max-width: 700px) {
   .contactFormSubmitButton {
-    margin-left: 22%;
-    cursor: pointer; } }
+    margin-left: 22%; } }
 
 #bloc-12 h2 {
   font-size: 16px;

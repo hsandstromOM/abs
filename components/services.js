@@ -2,39 +2,42 @@ var h = require('hyperscript')
 var headerNav = require('./shared/headerNav')
 var footer = require('./shared/footer')
 module.exports = {
- url: '/services',
+ url: '/services/:slug',
  template: render().outerHTML,
  controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window', component],
  params: {
-   service: null
+   obj: null,
+   service: null,
+   slug: null
  }
 }
 
 function component ($scope, $state, store, contentful,  $uibModal, $window) {
-  contentful.entries('content_type=serviceTypes').then(function(res) {
-    var seoData = res.data.items[0];
-    if (seoData.fields.pageTitleSeo) {
-      document.title = seoData.fields.pageTitleSeo;
-    }
-    if (seoData.fields.pageSpecificMetaDescriptionSeo) {
-      var meta = document.getElementsByTagName("meta");
-      for (var i = 0; i < meta.length; i++) {
-        if (meta[i].name.toLowerCase() === "description") {
-          meta[i].content = seoData.fields.pageSpecificMetaDescriptionSeo;
-        }
-      }
-    }
-  });
+
+  // if ($state.params.obj) {
+  //   $scope.service = $state.params.obj
+  //   store.set('serviceType', $state.params.obj)
+  // } else if ($state.params.slug) {
+  //   contentful.entries('content_type=serviceTypes&fields.pageTitle=' + $state.params.slug).then(function(res) {
+  //        $scope.service = res.data.items[0]
+  //      })
+  // } else if (store.get('serviceType')) {
+  //   $scope.service = store.get('serviceType')
+  // }
 
   if($state.params.service) {
     $scope.page = $state.params.service
     $scope.currentServiceProvided = $state.params.service
     $scope.selectedService = $state.params.service.fields.pageTitle
+    $scope.serviceDesc = $state.params.service.fields.pageSpecificMetaDescriptionSeo
+
 
     store.set('services', $scope.selectedService)
   } else if(store.get('selectedServices')){
     $scope.currentServiceProvided = store.get('selectedServices')
     $scope.selectedService = $scope.currentServiceProvided.fields.pageTitle
+    $scope.serviceDesc = $scope.currentServiceProvided.fields.pageSpecificMetaDescriptionSeo
+
 
   }
    $scope.allServicesProvided = []
@@ -46,12 +49,32 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
     $scope.currentService = $state.params.service
     $scope.page = $scope.currentService.fields.pageTitle
     $scope.email = $scope.currentService.fields.contactPerson
+
+
   } else if (store.get('selectedService')){
     $scope.currentService = store.get('selectedService')
     $scope.page = $scope.currentService.fields.pageTitle
     $scope.email = $scope.currentService.fields.contactPerson
+    $scope.selectedService = $scope.currentService.fields.pageTitle
+    $scope.serviceDesc = $scope.currentService.fields.pageSpecificMetaDescriptionSeo
+
   }
+
   $window.scrollTo(0,0);
+
+  contentful.entries('content_type=serviceTypes').then(function(res) {
+    var seoData = res.data.items[0];
+      document.title = $scope.selectedService;
+
+    if (seoData.fields.pageSpecificMetaDescriptionSeo) {
+      var meta = document.getElementsByTagName("meta");
+      for (var i = 0; i < meta.length; i++) {
+        if (meta[i].name.toLowerCase() === "description") {
+          meta[i].content = $scope.serviceDesc ;
+        }
+      }
+    }
+  });
 }
 
 function render () {

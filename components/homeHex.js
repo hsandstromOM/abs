@@ -8,6 +8,8 @@ module.exports = function () {
 }
 
 function controller ($scope, contentful, store) {
+
+
   $scope.allHexServicesProvided = []
   $scope.allServices = [
     [],[],[],[],[],[],[],[],[]

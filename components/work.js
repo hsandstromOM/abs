@@ -2,7 +2,7 @@ var h = require('hyperscript')
 var headerNav = require('./shared/headerNav')
 var footer = require('./shared/footer')
 module.exports = {
-  url: '/work',
+  url: '/work/:slug',
   template: render().outerHTML,
   controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window', component],
   params: {
@@ -15,16 +15,34 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, slug
     $scope.page = $state.params.service
     $scope.currentServiceProvided = $state.params.service
     $scope.selectedService = $state.params.service.fields.pageTitle
+    $scope.serviceDesc = $state.params.service.fields.pageSpecificMetaDescriptionSeo
+
     store.set('workService', $scope.selectedService)
   } else if(store.get('selectedWorkService')){
     $scope.currentServiceProvided = store.get('selectedWorkService')
     $scope.selectedService = $scope.currentServiceProvided.fields.pageTitle
+    $scope.serviceDesc = $scope.currentServiceProvided.fields.pageSpecificMetaDescriptionSeo
+
   }
 
   $scope.mainPage = 'work'
   $scope.slide = {
     'workNav' : true
   }
+
+  contentful.entries('content_type=serviceTypes').then(function(res) {
+    var seoData = res.data.items[0];
+      document.title = $scope.selectedService;
+
+    if (seoData.fields.pageSpecificMetaDescriptionSeo) {
+      var meta = document.getElementsByTagName("meta");
+      for (var i = 0; i < meta.length; i++) {
+        if (meta[i].name.toLowerCase() === "description") {
+          meta[i].content = $scope.serviceDesc ;
+        }
+      }
+    }
+  });
 
   $scope.selectServiceProvided = function (serviceProvided) {
     $scope.currentServiceProvided = serviceProvided
