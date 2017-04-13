@@ -6,23 +6,28 @@ module.exports = {
  template: render().outerHTML,
  controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window', component],
  params: {
-   obj: null,
    service: null,
    slug: null
  }
 }
 
-function component ($scope, $state, store, contentful,  $uibModal, $window) {
+function component ($scope, $state, store, contentful,  $uibModal, $window, slug) {
+
+  // var vm = this;
+  //
+  // vm.slugify = function(string) {
+  //   return Slug.slugify(string);
+  // };
 
   // if ($state.params.obj) {
-  //   $scope.service = $state.params.obj
-  //   store.set('serviceType', $state.params.obj)
+  //   $scope.selectedService = $state.params.obj
+  //   store.set('selectedService', $state.params.obj)
   // } else if ($state.params.slug) {
   //   contentful.entries('content_type=serviceTypes&fields.pageTitle=' + $state.params.slug).then(function(res) {
-  //        $scope.service = res.data.items[0]
+  //        $scope.selectedService = res.data.items[0]
   //      })
-  // } else if (store.get('serviceType')) {
-  //   $scope.service = store.get('serviceType')
+  // } else if (store.get('selectedService')) {
+  //   $scope.selectedService = store.get('selectedService')
   // }
 
   if($state.params.service) {

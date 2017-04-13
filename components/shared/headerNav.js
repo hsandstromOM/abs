@@ -13,6 +13,11 @@ module.exports = function () {
 }
 
 function controller ($scope, $state, $stateParams, contentful, store, slug) {
+  var vm = this;
+
+  vm.slugify = function(string) {
+    return Slug.slugify(string);
+  };
   $scope.allWorkServicesProvided = []
   $scope.allServices = []
   $scope.teamDropClosed = true
@@ -144,7 +149,7 @@ function template () {
                 h("div#services.tk-industry.customText", {
                   // "style": "cursor: pointer; font-size: 18px;font-weight:normal;line-height: 21px; padding-top: 15px; padding-bottom: 15px;",
                   'data-ng-click': 'setSelectedService()',
-                  'data-ui-sref': 'services({slug: serviceTypes.fields.pageTitle})',
+                  'data-ui-sref': 'services()',
                   'data-ng-class': "mainPage === 'services' ? 'active' : 'selectedGreen' "
                 }, "SERVICES"),
               ]),
@@ -321,7 +326,8 @@ function template () {
       {
         "style":"border-left:none;border-right:1px solid white;display:inline-block !important; width:20%",
         'data-ng-repeat': 'serviceProvided in allWorkServicesProvided',
-        'data-ng-click': 'setWorkService(serviceProvided)'
+        'data-ng-click': 'setWorkService(serviceProvided)',
+        'data-ui-sref': 'work({slug: serviceProvided.fields.slug})'
       }, [
         h("div", {
           'data-ui-sref': 'work({service: serviceProvided})',
@@ -341,7 +347,8 @@ function template () {
       {
         "style":"border-left:none;border-right:1px solid white;display:inline-block !important; width:20%",
         'data-ng-repeat': 'service in allServices',
-        'data-ng-click': 'setSelectedService(service)'
+        'data-ng-click': 'setSelectedService(service)',
+        'data-ui-sref': 'services({slug: selectedService.fields.slug})'
       }, [
         h("div", {
           'style': 'text-transform:uppercase',

@@ -7,6 +7,7 @@ var moment = require('moment')
 var underscore = require('underscore')
 var prerender = require('prerender-node').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR')
 
+
 window.angular = ng
 require('angular-resource')
 require('angular-sanitize')
@@ -21,6 +22,7 @@ require('ngMap')
 require('angular-ui-bootstrap')
 require('angular-marked')
 require('prerender-node').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR')
+require('angular-slugify/angular-slugify.js')
 
 
 document.body.appendChild(

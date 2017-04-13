@@ -2,7 +2,6 @@ var h = require('hyperscript')
 var headerNav = require('./shared/headerNav')
 var footer = require('./shared/footer')
 module.exports = {
-  // url: '/workDetail',
   url: '/work-detail/:slug',
   template: render().outerHTML,
   controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window',  component],
@@ -100,6 +99,7 @@ function component ($scope, $state, store, contentful,  $uibModal, $window ) {
     $scope.currentService = service
     $scope.page = $scope.currentService.fields.pageTitle
     $scope.page = $scope.currentService.fields.contactPerson
+    $scope.pageSlug = $scope.currentService.fields.pageTitle
   }
   $scope.allWorkProjects = []
   contentful.entries('content_type=workProjects&include=3').then(function(res) {
@@ -115,11 +115,6 @@ angular.module('app').controller('ModalInstanceCtrl', function( $scope, $uibModa
 })
 function render () {
   return h('div#workDetailPage', [
-    h("title", {
-      "attributes": {
-        "ng-bind": "PageTitle.title()"
-      }
-    },"Work Detail Page"),
     h("div.page-container", [
       h('div', {
         'data-navheader': '',
@@ -398,7 +393,7 @@ function render () {
                                         h("div.item.active", [
                                           h("div.row.mod", [
                                             h("i.fa.fa-times-circle", {
-                                            //  "style":"padding:10px;margin-left: 410px",
+                                             "style":"padding:10px;margin-left: 600px",
                                               "type": 'button',
                                               'aria-label': 'close',
                                               "aria-hidden":"true",

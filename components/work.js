@@ -6,7 +6,8 @@ module.exports = {
   template: render().outerHTML,
   controller: ['$scope', '$state', 'store', 'contentful', '$uibModal', '$window', component],
   params: {
-    service: null
+    service: null,
+    slug: null
   }
 }
 
