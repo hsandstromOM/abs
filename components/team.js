@@ -337,10 +337,11 @@ function render () {
                 }, [
                   h("div.shadow", [
                     h("div.hexContainer", [
-                      h(".hexThumb",[
+                      h(".hexThumb", [
                         h("img", {
                           "data-ng-src": "{{member.fields.fullImage.fields.file.url}}",
                           "alt" : '{{member.fields.name}} {{member.fields.lastName}} Bio Pic',
+                          "style": "  transition:all ease .2s;"
                         }),
                         h("p", {
                       },'{{member.fields.name}}'," ",'{{member.fields.middleName}}'," ",'{{member.fields.lastName}}')

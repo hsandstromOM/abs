@@ -112,12 +112,12 @@ sg.honeyCombTeam:nth-child(5n+4) {
 	text-transform: uppercase;
 	text-align: center;
 }
-.honeyCombTeam svg image {
+.honeyCombTeam image {
   transition:all ease .2s;
   opacity:.2;
   filter: url(#bw);
 }
-a.honeyCombTeam:hover svg image {
+a.honeyCombTeam:hover image {
   opacity:1;
   filter: url(#color);
 }
@@ -256,6 +256,9 @@ a.honeyCombTeam:hover svg image {
   -ms-transform:translateZ(0);
   transform:translateZ(0);
 
+}
+.hexContainer :hover {
+    transition:all ease .2s;
 }
 .hexThumb {
   display: block;
