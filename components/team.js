@@ -335,13 +335,12 @@ function render () {
                   'data-ng-click': 'setCurrentTeamMember(member)',
                   'data-ng-repeat': 'member in filteredMembers[0]'
                 }, [
-                  h("div.shadow", [
-                    h("div.hexContainer", [
+                  h(".shadow", [
+                    h(".hexContainer", [
                       h(".hexThumb", [
                         h("img", {
                           "data-ng-src": "{{member.fields.fullImage.fields.file.url}}",
                           "alt" : '{{member.fields.name}} {{member.fields.lastName}} Bio Pic',
-                          "style": "  transition:all ease .2s;"
                         }),
                         h("p", {
                       },'{{member.fields.name}}'," ",'{{member.fields.middleName}}'," ",'{{member.fields.lastName}}')

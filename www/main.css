@@ -1685,12 +1685,11 @@ a.honeyCombTeam:hover image {
   background-color: #fff;
   text-align: center;
   backface-visibility: hidden;
-  -ms-mask-image: url("team#hexContainer");
   -webkit-clip-path: url("team#hexContainer");
   -ms-clip-path: url("team#hexContainer");
+  -moz-clip-path: url("team#hexContainer");
   clip-path: url("team#hexContainer");
   -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
   transform: translateZ(0); }
 
 .hexContainer :hover {
@@ -1713,12 +1712,11 @@ a.honeyCombTeam:hover image {
   text-transform: uppercase;
   text-align: center;
   backface-visibility: hidden;
-  -ms-mask-image: url("team#hexThumb");
   -webkit-clip-path: url("team#hexThumb");
   -ms-clip-path: url("team#hexThumb");
+  -moz-clip-path: url("team#hexThumb");
   clip-path: url("team#hexThumb");
   -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
   transform: translateZ(0); }
 
 .old {
