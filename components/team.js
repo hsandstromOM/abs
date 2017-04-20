@@ -336,8 +336,8 @@ function render () {
                   'data-ng-repeat': 'member in filteredMembers[0]'
                 }, [
                   h(".shadow", [
-                    h(".hexContainer", [
-                      h(".hexThumb", [
+                    h(".hexContainer#hexContainer", [
+                      h(".hexThumb#hexThumb", [
                         h("img", {
                           "data-ng-src": "{{member.fields.fullImage.fields.file.url}}",
                           "alt" : '{{member.fields.name}} {{member.fields.lastName}} Bio Pic',

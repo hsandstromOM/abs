@@ -284,6 +284,7 @@ a.honeyCombTeam:hover image {
   clip-path: url("team#hexThumb");
   -webkit-transform:translateZ(0);
   transform:translateZ(0);
+  transition:all ease .2s;
 
 }
 

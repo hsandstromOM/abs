@@ -1717,7 +1717,8 @@ a.honeyCombTeam:hover image {
   -moz-clip-path: url("team#hexThumb");
   clip-path: url("team#hexThumb");
   -webkit-transform: translateZ(0);
-  transform: translateZ(0); }
+  transform: translateZ(0);
+  transition: all ease .2s; }
 
 .old {
   /*-webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 80% 100%);
