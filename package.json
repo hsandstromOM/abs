@@ -9,7 +9,9 @@
     "build": "watchify browser.js -o www/browser.js & node server.js & npm run watch-css",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/main.scss www/main.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "build:dev": "browserify browser.js | uglifyjs -cm | tee www/browser.min.js | gzip > www/broswer.js.gz",
+    "prod": "browserify browser.js | uglifyjs -cm > www/browser.min.js"
   },
   "repository": {
     "type": "git",
@@ -47,14 +49,22 @@
     "mandrill-api": "^1.0.45",
     "moment": "^2.10.6",
     "ngmap": "^1.17.1",
+    "node-sass": "^3.13.1",
     "nodemailer": "^2.4.2",
     "nodemailer-mandrill-transport": "^1.1.0",
     "palmettoflow-event": "^1.1.2",
     "palmettoflow-nodejs": "^1.0.1",
     "pouchdb": "^5.0.0",
     "prerender-node": "^2.7.0",
+    "progress-bar-webpack-plugin": "^1.9.3",
+    "resolve-url": "^0.2.1",
+    "resolve-url-loader": "^2.0.2",
+    "sass-loader": "^6.0.5",
     "send-data": "^7.0.0",
+    "style-loader": "^0.18.1",
     "underscore": "^1.8.3",
+    "webpack": "^1.13.2",
+    "webpack-error-notification": "^0.1.7",
     "xhr": "^2.1.0",
     "zero-config": "^7.0.1"
   },
