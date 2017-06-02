@@ -68,7 +68,6 @@ function controller ($scope, $state, $stateParams, contentful, store) {
               $scope.allWorkServicesProvided.sort(comparePriority)
               $scope.defaultWorkService = $scope.allWorkServicesProvided[0]
               store.set('defaultWorkService', $scope.defaultWorkService)
-              console.log($scope.defaultWorkService)
             }
           }
         })

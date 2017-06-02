@@ -23,7 +23,6 @@ function controller ($scope, contentful, store) {
     var switchAt = 3
     var arrayVal = 0
     angular.forEach(allServiceTypes, function(service){
-      console.log(service, index)
         if(switchAt === 3) {
           if(index < switchAt){
             $scope.allServices[arrayVal].push(service)

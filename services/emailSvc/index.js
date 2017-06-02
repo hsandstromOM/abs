@@ -62,7 +62,6 @@ module.exports = function () {
 	var ip_pool = "Main Pool"
 	var send_at = new Date()
 	mandrill_client.messages.send({"message": message, "async": async, "ip_pool": ip_pool, "send_at": send_at}, function(result) {
-	    console.log(result)
 	    return(result)
 
 	    // [{
@@ -74,7 +73,7 @@ module.exports = function () {
 
 	}, function(e) {
 	    // Mandrill returns the error as an object with name and message keys
-	    console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);
+	    // console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);
 	    // A mandrill error occurred: Unknown_Subaccount - No subaccount exists with the id 'customer-123'
 	})
   	})

@@ -19,7 +19,6 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
   $scope.page = 'contact'
   contentful.entries('content_type=contactPage').then(function(res) {
     $scope.contentfulData = res.data.items[0]
-  //  console.log("hey", $scope.contentfulData.fields.buttonText)
   })
   contentful.entries('content_type=contactPage').then(function(res) {
     var seoData = res.data.items[0];
@@ -37,7 +36,6 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
   });
   contentful.entries('content_type=locations').then(function(res) {
     $scope.allOffices = res.data.items
-    console.log($scope.allOffices)
   })
   $scope.currentLocation = 'currentLocation'
   $scope.setLocation = function (location) {
@@ -60,22 +58,17 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
 
 
   $scope.setMarker = function(office) {
-    console.log(office.latLng);
 
     var markerLat = office.latLng.lat()
     var markerLon = office.latLng.lng()
-    console.log(markerLat, markerLon);
   }
 
   $scope.showOffice = function(event, officeId) {
     $scope.office = $scope.allOffices[officeId];
-   console.log($scope.office.fields);
    $scope.map.showInfoWindow('foo', this);
   };
 
   $scope.sendContact = function(){
-    console.log('yo');
-    console.log($scope.contact);
   }
   $scope.contactForm = {
      'contactInfo': '',
@@ -108,12 +101,10 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
 
               emailSvc.send(obj).then(function success() {
                 $http.post(url, obj).then(function success() {
-                  console.log('success')
-                  //$scope.confirm()
                   })
                 })
               } else {
-                console.log('spam boi')
+                console.log('spam')
               }
         } else {
             console.log('invalid form')

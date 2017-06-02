@@ -64,7 +64,6 @@ router.set('/api/info', {
 router.set('/api', {
   POST: function(req, res) {
     bodyJSON(req, res, function(err, body) {
-      //console.log(body)
       var timeoutFired = false
       var to = setTimeout(function () {
         timeoutFired = true

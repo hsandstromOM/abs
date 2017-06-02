@@ -43,10 +43,8 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
   $scope.allServicesProvided = []
   $scope.allServiceTypes = []
   $scope.goToService = function (service) {
-    console.log(service)
   }
   $scope.goToWorkProjects = function (workProjects) {
-    console.log(workProjects)
   }
   $scope.allWorkProjects = []
   contentful.entries('content_type=workProjects').then(function(res) {

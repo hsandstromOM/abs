@@ -54,7 +54,6 @@ function component ($scope, $state, store, contentful,  $uibModal, $window ) {
   });
   contentful.entries('content_type=workProjects').then(function(res) {
     vm.projectGallery = res.data.items[0];
-    console.log("vm.projectGallery", vm.projectGallery);
   });
 
   $scope.open = function () {

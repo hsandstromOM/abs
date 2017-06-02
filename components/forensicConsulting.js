@@ -17,7 +17,6 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
   }
   contentful.entries('content_type=serviceTypes&include=3').then(function(res) {
     var items = res.data.items
-    console.log(res)
     angular.forEach(items, function(item){
       if(item.fields.pageTitle === 'FORENSIC CONSULTING') {
         $scope.contentfulData = item
@@ -34,7 +33,6 @@ function component ($scope, $state, store, contentful,  $uibModal, $window) {
   // }
   contentful.entries('content_type=workProjects&include=3').then(function(res) {
     $scope.allWorkProjects = res.data.items
-    console.log($scope.allWorkProjects[0])
   })
 }
 
