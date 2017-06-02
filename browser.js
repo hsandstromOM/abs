@@ -7,7 +7,6 @@ var moment = require('moment')
 var underscore = require('underscore')
 var prerender = require('prerender-node').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR')
 
-
 window.angular = ng
 require('angular-resource')
 require('angular-sanitize')

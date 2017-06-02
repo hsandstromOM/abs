@@ -26,8 +26,11 @@ var mandrillTransport = require('nodemailer-mandrill-transport')
 
 // load inprocess service
 var ee = require('./services')()
+var compression = require('compression')
 
-app.use(require('prerender-node').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR'));
+app.use(compression())
+
+app.use(require('prerender-node').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR'))
 
 router.set('/api/info', {
   POST: function (req, res) {
