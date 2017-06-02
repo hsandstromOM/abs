@@ -31,7 +31,7 @@ document.body.appendChild(
 document.head.appendChild(
   h('link', {
     rel: 'stylesheet',
-    href: 'main.css'
+    href: 'main.min.css'
   })
 )
 
