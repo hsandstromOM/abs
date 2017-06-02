@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/main.scss www/main.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
-    "build:dev": "browserify browser.js | uglifyjs -cm | tee www/browser.min.js | gzip > www/broswer.js.gz",
+    "build:dev": "browserify browser.js | uglifyjs -cm | tee www/browser.min.js",
     "prod": "browserify browser.js | uglifyjs -cm > www/browser.min.js"
   },
   "repository": {

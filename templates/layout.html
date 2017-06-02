@@ -79,18 +79,20 @@
 
 
       }
-      window.onload = function () {
-        var a_list = document.querySelectorAll('nav a') // returns NodeList
-        var a_array = Array.prototype.slice.call(a_list)
-        a_array.forEach(function (el) {
-          el.addEventListener('click', rollOut)
-        })
-      }
+      // window.onload = function () {
+      //   var a_list = document.querySelectorAll('nav a') // returns NodeList
+      //   var a_array = Array.prototype.slice.call(a_list)
+      //   a_array.forEach(function (el) {
+      //     el.addEventListener('click', rollOut)
+      //   })
+      // }
     </script>
-
+    <link
+      href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+      rel="stylesheet"  type='text/css'>
     <noscript id="deferred-styles">
       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" async>
-      <link rel="stylesheet" href='/ionicons.min.css'>
+      <link rel="stylesheet" href='/ionicons.min.css' type="text/css">
       <link rel="stylesheet" href="//cdn.rawgit.com/ghiden/angucomplete-alt/ecfffebbf747df3dcd06429c9063f04da06dd5b8/angucomplete-alt.css" async>
       <link rel="stylesheet" type="text/css" href="main.css" async>
  </noscript>

@@ -299,7 +299,6 @@ function render () {
           'src':'img/honeycomb.png',
           'style':"max-height:540px;z-index:1;margin-right:-50px !important;"
         }),
-        //h("div.container.bloc-xxl", {'style':'z-index:2; '},[
           h("div.row", [
             h("div.col-sm-12.vertical-align", {'style':'margin-top:-210px;text-transform: uppercase;'},[
               h("h1.mg-md.text-center.vertical-align.tc-white", '{{teamPage.fields.bannerHeadline}}')
@@ -312,7 +311,6 @@ function render () {
       }, [
         h("div.container.bloc-lg", [
           h("div.row", {
-            // 'style':'padding-bottom:50px;'
           }, [
             h("div.col-sm-10.col-sm-offset-1", [
               h("h3.tk-aaux-next.mg-md.text-left.tc-prussian-blue", {
@@ -326,9 +324,6 @@ function render () {
           h("div.row.voffset", [
             h("div.honeyCombContainer#honeyCombContainer", {
             }, [
-              // h('.honeyComb', {
-              //   'data-ng-if': 'filteredMembers.length'
-              // }, [
                 h("a.honeyComb", {
                   "data-toggle":"modal",
                   "data-target":"#myModal",
@@ -348,10 +343,6 @@ function render () {
                     ]),
                   ]),
                 ]),
-              // ]),
-              // h('.honeyComb', {
-              //   'data-ng-if': 'filteredMembers.length > 4'
-              // }, [
                 h("a.honeyComb", {
                  "data-toggle":"modal",
                  "data-target":"#myModal",
@@ -369,10 +360,6 @@ function render () {
                     ]),
                   ]),
                 ]),
-              // ]),
-              // h('.honeyComb', {
-              //   'data-ng-if': 'filteredMembers.length > 7'
-              // }, [
                 h("a.honeyComb", {
                   "data-toggle":"modal",
                   "data-target":"#myModal",
@@ -390,10 +377,6 @@ function render () {
                     ]),
                   ]),
                 ]),
-              // ]),
-              // h('.honeyComb', {
-              //   'data-ng-if': 'filteredMembers.length > 11'
-              // }, [
                 h("a.honeyComb", {
                   "data-toggle":"modal",
                   "data-target":"#myModal",
@@ -411,10 +394,6 @@ function render () {
                     ]),
                   ]),
                 ]),
-              // ]),
-              // h('.honeyComb', {
-              //   'data-ng-if': 'filteredMembers.length > 14'
-              // }, [
                 h("a.honeyComb", {
                   "data-toggle":"modal",
                   "data-target":"#myModal",
@@ -432,10 +411,6 @@ function render () {
                     ]),
                   ]),
                 ]),
-              // ]),
-              // h('.honeyComb', {
-              //   'data-ng-if': 'filteredMembers.length > 18'
-              // }, [
                 h("a.honeyComb", {
                   "data-toggle":"modal",
                   "data-target":"#myModal",
@@ -453,10 +428,6 @@ function render () {
                     ]),
                   ]),
                 ]),
-              // ]),
-              // h('.honeyComb', {
-              //   'data-ng-if': 'filteredMembers.length > 22'
-              // }, [
                 h("a.honeyComb", {
                   "data-toggle":"modal",
                   "data-target":"#myModal",
@@ -474,7 +445,6 @@ function render () {
                     ]),
                   ]),
                 ])
-              // ]),
             ])
           ])
         ]),
@@ -484,36 +454,29 @@ function render () {
           "aria-labelledby":"myModalLabel"
         }, [
           h("div.modal-dialog", {
-          //  "style":"margin-top:150px;left:-6%",
             "role": 'document'
           }, [
             h("div.modal-content.team", {
-            //  "style":"border-radius:0;height:380px;width:140%"
             }, [
               h("div.modal-body", {
-              //  "style":"padding:0"
               }, [
-                h("i.fa.fa-times-circle", {
-                //  "style":"padding:10px;margin-left: 410px",
-                  "type": 'button',
+                h("i.fa.fa-2x.fa-times-circle-o", {
                   'aria-label': 'close',
                   "aria-hidden":"true",
-                  'data-dismiss': 'modal'
+                  'data-dismiss': 'modal',
+                  "style": "float:right; padding:10px"
                 }
               ),
                 h("div.col-sm-6", {
-              //   "style":"padding-left: 0px;  padding-right: 0px;width: 360px"
                }, [
 
                  h("img.tm.img-responsive", {
-                //   "style": "max-height: 380px;text-align:center",
                    "data-ng-src":"{{currentTeamMember.fields.fullImage.fields.file.url}}",
                    "alt":""
                  })
                ]),
 
                 h("div.col-sm-6", {
-                //  "style":"padding-left:30px;padding-right:20px; height: 380px;width: 450px"
                 }, [
 
                   h("h4.tk-aaux-next", {
@@ -536,12 +499,6 @@ function render () {
                         'data-ng-href': 'mailto:{{currentTeamMember.fields.emailAddress}}'
                       }, "EMAIL {{currentTeamMember.fields.name}}"),
                       h("nbsp", " "),
-                      // h("a.tk-industry", {
-                      //   "style":"font-size:16px;color:#73B53d;display:inline;text-decoration:underline;letter-spacing: .1em",
-                      //   'data-ng-href': '{{currentTeamMember.fields.cV.fields.file.url}}',
-                      //   'target': '_self',
-                      //   'download': '{{currentTeamMember.fields.cV.fields.file.url}}',
-                      // }, "DOWNLOAD C.V.")
                     ])
 
                   ])

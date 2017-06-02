@@ -191,14 +191,13 @@ function render () {
                           h("div.item.active", [
                             h("div.row", [
                               h("div.col-md-3.col-xs-12", {
-                              //  'style':'height:200px;width:275px'
                               },[
                                 h("a", {
                                   "data-toggle":"modal",
                                   "data-target":"#myModal"
                                 }, [
                                   h("img", {
-                            //        'data-ng-if': 'workProject.fields.img1.fields.file.url',
+                                   'data-ng-show': 'workProject.fields.img1.fields.file.url',
                                     "src":"{{workProject.fields.img1.fields.file.url}}",
                                     'style':'height:200px; width:253px',
                                     "alt":"Image"
@@ -211,7 +210,7 @@ function render () {
                                   "data-target":"#myModal"
                                 }, [
                                   h("img", {
-                              //      'data-ng-if': 'workProject.fields.img2.fields.file.url',
+                                   'data-ng-show': 'workProject.fields.img2.fields.file.url',
                                     "src":"{{workProject.fields.img2.fields.file.url}}",
                                     'style':'height:200px; width:253px',
                                     "alt":"Image"
@@ -389,17 +388,31 @@ function render () {
                                 "style":"background-color:none;border:none;border-radius:0;-webkit-box-shadow:none;box-shadow:none"
                               }, [
                                 h("div#myCarousel2.carousel.slide", [
+                                  h("i.fa.fa-2x.fa-times-circle-o", {
+                                    "type": 'button',
+                                    'aria-label': 'close',
+                                    "aria-hidden":"true",
+                                    'data-dismiss': 'modal',
+                                    "style": "float:right"
+                                  }
+                                ),
                                       h("div.carousel-inner.mod", [
+                                        h("a.left.carousel-control.mod", {
+                                          "data-ng-href":"#myCarousel2",
+                                          "data-slide":"prev"
+                                        }, [
+                                          h("i.fa.fa-2x.fa-angle-left.mod", {
+                                          })
+                                        ]),
+                                        h("a.right.carousel-control.mod", {
+                                          "data-ng-href":"#myCarousel2",
+                                          "data-slide":"next"
+                                        }, [
+                                          h("i.fa.fa-2x.fa-angle-right.mod", {
+                                          })
+                                        ]),
                                         h("div.item.active", [
                                           h("div.row.mod", [
-                                            h("i.fa.fa-times-circle", {
-                                             "style":"padding:10px;margin-left: 600px",
-                                              "type": 'button',
-                                              'aria-label': 'close',
-                                              "aria-hidden":"true",
-                                              'data-dismiss': 'modal'
-                                            }
-                                          ),
                                             h("iframe", {
                                               'data-ng-show': 'workProject.fields.video1',
                                               'data-ng-src':"https://www.youtube.com/embed/5G1XFtwfs5U",
@@ -416,14 +429,14 @@ function render () {
                                         ]),
                                         h("div.item", [
                                           h("div.row.mod", [
-                                            h("i.fa.fa-times-circle", {
-                                            //  "style":"padding:10px;margin-left: 410px",
-                                              "type": 'button',
-                                              'aria-label': 'close',
-                                              "aria-hidden":"true",
-                                              'data-dismiss': 'modal'
-                                            }
-                                          ),
+                                          //   h("i.fa.fa-times-circle", {
+                                          //   //  "style":"padding:10px;margin-left: 410px",
+                                          //     "type": 'button',
+                                          //     'aria-label': 'close',
+                                          //     "aria-hidden":"true",
+                                          //     'data-dismiss': 'modal'
+                                          //   }
+                                          // ),
                                                 h("img", {
                                                   "src":"{{workProject.fields.img2.fields.file.url}}",
                                                   "alt":""
@@ -513,20 +526,20 @@ function render () {
 
 
                                           ]),
-                                          h("a.left.carousel-control.mod", {
-                                            "data-ng-href":"#myCarousel2",
-                                            "data-slide":"prev"
-                                          }, [
-                                            h("i.fa.fa-2x.fa-angle-left.mod", {
-                                            })
-                                          ]),
-                                          h("a.right.carousel-control.mod", {
-                                            "data-ng-href":"#myCarousel2",
-                                            "data-slide":"next"
-                                          }, [
-                                            h("i.fa.fa-2x.fa-angle-right.mod", {
-                                            })
-                                          ]),
+                                          // h("a.left.carousel-control.mod", {
+                                          //   "data-ng-href":"#myCarousel2",
+                                          //   "data-slide":"prev"
+                                          // }, [
+                                          //   h("i.fa.fa-2x.fa-angle-left.mod", {
+                                          //   })
+                                          // ]),
+                                          // h("a.right.carousel-control.mod", {
+                                          //   "data-ng-href":"#myCarousel2",
+                                          //   "data-slide":"next"
+                                          // }, [
+                                          //   h("i.fa.fa-2x.fa-angle-right.mod", {
+                                          //   })
+                                          // ]),
 
                                         ])
                                       ]),
