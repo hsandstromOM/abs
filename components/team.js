@@ -282,236 +282,150 @@ function component($scope, $state, store, contentful, $uibModal, $window, $q) {
   }
 }
 
-function render () {
-  return h('div#TeamPage', [
-    h("div.page-container", [
+function render() {
+  return h('div#TeamPage', [h("div.page-container", [
       h('div', {
         'data-navheader': '',
         'data-mainPage': 'mainPage',
-        'data-slide': 'slide',
+        'data-slide': 'slide'
       }),
-      h("div#bloc-1.bloc.bgc-white.bg-Header-Placeholder.d-bloc", {'style':'max-height:100vh;'},[
-        h('img.honeycomb-left',{
-          'src':'img/honeycomb_pattern.png',
-          'style':"max-height:350px;z-index:1;margin-left:-50px !important;"
+      h("div#bloc-1.bloc.bgc-white.bg-Header-Placeholder.d-bloc", {
+        'style': 'max-height:100vh;'
+      }, [
+        h('img.honeycomb-left', {
+          'src': 'img/honeycomb_pattern.png',
+          'style': "max-height:350px;z-index:1;margin-left:-50px !important;"
         }),
-        h('img.honeycomb-right',{
-          'src':'img/honeycomb.png',
-          'style':"max-height:540px;z-index:1;margin-right:-50px !important;"
+        h('img.honeycomb-right', {
+          'src': 'img/honeycomb.png',
+          'style': "max-height:540px;z-index:1;margin-right:-50px !important;"
         }),
-          h("div.row", [
-            h("div.col-sm-12.vertical-align", {'style':'margin-top:-210px;text-transform: uppercase;'},[
-              h("h1.mg-md.text-center.vertical-align.tc-white", '{{teamPage.fields.bannerHeadline}}')
-            ])
-          ])
+        h("div.row", [h("div.col-sm-12.vertical-align", {
+            'style': 'margin-top:-210px;text-transform: uppercase;'
+          }, [h("h1.mg-md.text-center.vertical-align.tc-white", '{{teamPage.fields.bannerHeadline}}')])])
         //])
       ]),
       h("div#bloc-12.bloc.bg-Halftone-Pattern.tc-prussian-blue", {
-        "style":"background-color:#F6F6F6;-webkit-box-shadow:inset 0 10px 5px 2px rgba(0,0,0,.05);box-shadow:inset 0 -3px 8px 4px rgba(0,0,0,.05);height:80%"
+        "style": "background-color:#F6F6F6;-webkit-box-shadow:inset 0 10px 5px 2px rgba(0,0,0,.05);box-shadow:inset 0 -3px 8px 4px rgba(0,0,0,.05);height:80%"
       }, [
         h("div.container.bloc-lg", [
-          h("div.row", {
-          }, [
-            h("div.col-sm-10.col-sm-offset-1", [
+          h("div.row", {}, [h("div.col-sm-10.col-sm-offset-1", [
               h("h3.tk-aaux-next.mg-md.text-left.tc-prussian-blue", {
-                "style":"font-size:24px;line-height:28px"
-              }, [
-                h("strong", '{{teamPage.fields.contentTitle}}')
-              ]),
+                "style": "font-size:24px;line-height:28px"
+              }, [h("strong", '{{teamPage.fields.contentTitle}}')]),
               h("p.tk-aaux-next.mg-md.text-left.tc-prussian-blue", '{{teamPage.fields.pageContent}}')
-            ])
-          ]),
-          h("div.row.voffset", [
-            h("div.honeyCombContainer#honeyCombContainer", {
-            }, [
-                h("a.honeyComb", {
-                  "data-toggle":"modal",
-                  "data-target":"#myModal",
-                  'data-ng-click': 'setCurrentTeamMember(member)',
-                  'data-ng-repeat': 'member in filteredMembers[0]'
-                }, [
-                  h(".shadow", [
-                    h(".hexContainer#hexContainer", [
-                      h(".hexThumb#hexThumb", [
-                        h("img", {
-                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}",
-                          "alt" : '{{member.fields.name}} {{member.fields.lastName}} Bio Pic',
-                        }),
-                        h("p", {
-                      },'{{member.fields.name}}'," ",'{{member.fields.middleName}}'," ",'{{member.fields.lastName}}')
-                      ])
-                    ]),
-                  ]),
-                ]),
-                h("a.honeyComb", {
-                 "data-toggle":"modal",
-                 "data-target":"#myModal",
-                 'data-ng-click': 'setCurrentTeamMember(member)',
-                 'data-ng-repeat': 'member in filteredMembers[1]'
-                }, [
-                  h("div.shadow", [
-                    h("div.hexContainer", [
-                      h(".hexThumb",[
-                        h("img", {
-                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
-                        }),
-                        h("p", '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
-                      ])
-                    ]),
-                  ]),
-                ]),
-                h("a.honeyComb", {
-                  "data-toggle":"modal",
-                  "data-target":"#myModal",
-                  'data-ng-click': 'setCurrentTeamMember(member)',
-                  'data-ng-repeat': 'member in filteredMembers[2]'
-                }, [
-                  h("div.shadow", [
-                    h("div.hexContainer", [
-                      h(".hexThumb",[
-                        h("img", {
-                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
-                        }),
-                        h("p", '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
-                      ])
-                    ]),
-                  ]),
-                ]),
-                h("a.honeyComb", {
-                  "data-toggle":"modal",
-                  "data-target":"#myModal",
-                  'data-ng-click': 'setCurrentTeamMember(member)',
-                 'data-ng-repeat': 'member in filteredMembers[3]'
-                }, [
-                  h("div.shadow", [
-                    h("div.hexContainer", [
-                      h(".hexThumb",[
-                        h("img", {
-                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
-                        }),
-                        h("p", '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
-                      ])
-                    ]),
-                  ]),
-                ]),
-                h("a.honeyComb", {
-                  "data-toggle":"modal",
-                  "data-target":"#myModal",
-                  'data-ng-click': 'setCurrentTeamMember(member)',
-                  'data-ng-repeat': 'member in filteredMembers[4]'
-                }, [
-                  h("div.shadow", [
-                    h("div.hexContainer", [
-                      h(".hexThumb",[
-                        h("img", {
-                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
-                        }),
-                        h("p", '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
-                      ])
-                    ]),
-                  ]),
-                ]),
-                h("a.honeyComb", {
-                  "data-toggle":"modal",
-                  "data-target":"#myModal",
-                  'data-ng-click': 'setCurrentTeamMember(member)',
-                  'data-ng-repeat': 'member in filteredMembers[5]'
-                }, [
-                  h("div.shadow", [
-                    h("div.hexContainer", [
-                      h(".hexThumb",[
-                        h("img", {
-                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
-                        }),
-                        h("p", '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
-                      ])
-                    ]),
-                  ]),
-                ]),
-                h("a.honeyComb", {
-                  "data-toggle":"modal",
-                  "data-target":"#myModal",
-                  'data-ng-click': 'setCurrentTeamMember(member)',
-                  'data-ng-repeat': 'member in filteredMembers[6]'
-                }, [
-                  h("div.shadow", [
-                    h("div.hexContainer", [
-                      h(".hexThumb",[
-                        h("img", {
-                          "data-ng-src": "{{member.fields.fullImage.fields.file.url}}"
-                        }),
-                        h("p", '{{member.fields.name}}'," ",'{{member.fields.lastName}}')
-                      ])
-                    ]),
-                  ]),
-                ])
-            ])
-          ])
+            ])]),
+          h("div.row.voffset", [h("div.honeyCombContainer#honeyCombContainer", {}, [
+              h("a.honeyComb", {
+                "data-toggle": "modal",
+                "data-target": "#myModal",
+                'data-ng-click': 'setCurrentTeamMember(member)',
+                'data-ng-repeat': 'member in filteredMembers[0]'
+              }, [h(".shadow", [h(".hexContainer#hexContainer", [h(".hexThumb#hexThumb", [
+                      h("img", {
+                        "data-ng-src": "{{member.fields.fullImage.fields.file.url}}",
+                        "alt": '{{member.fields.name}} {{member.fields.lastName}} Bio Pic'
+                      }),
+                      h("p", {}, '{{member.fields.name}}', " ", '{{member.fields.middleName}}', " ", '{{member.fields.lastName}}')
+                    ])])])]),
+              h("a.honeyComb", {
+                "data-toggle": "modal",
+                "data-target": "#myModal",
+                'data-ng-click': 'setCurrentTeamMember(member)',
+                'data-ng-repeat': 'member in filteredMembers[1]'
+              }, [h("div.shadow", [h("div.hexContainer", [h(".hexThumb", [
+                      h("img", {"data-ng-src": "{{member.fields.fullImage.fields.file.url}}"}),
+                      h("p", '{{member.fields.name}}', " ", '{{member.fields.lastName}}')
+                    ])])])]),
+              h("a.honeyComb", {
+                "data-toggle": "modal",
+                "data-target": "#myModal",
+                'data-ng-click': 'setCurrentTeamMember(member)',
+                'data-ng-repeat': 'member in filteredMembers[2]'
+              }, [h("div.shadow", [h("div.hexContainer", [h(".hexThumb", [
+                      h("img", {"data-ng-src": "{{member.fields.fullImage.fields.file.url}}"}),
+                      h("p", '{{member.fields.name}}', " ", '{{member.fields.lastName}}')
+                    ])])])]),
+              h("a.honeyComb", {
+                "data-toggle": "modal",
+                "data-target": "#myModal",
+                'data-ng-click': 'setCurrentTeamMember(member)',
+                'data-ng-repeat': 'member in filteredMembers[3]'
+              }, [h("div.shadow", [h("div.hexContainer", [h(".hexThumb", [
+                      h("img", {"data-ng-src": "{{member.fields.fullImage.fields.file.url}}"}),
+                      h("p", '{{member.fields.name}}', " ", '{{member.fields.lastName}}')
+                    ])])])]),
+              h("a.honeyComb", {
+                "data-toggle": "modal",
+                "data-target": "#myModal",
+                'data-ng-click': 'setCurrentTeamMember(member)',
+                'data-ng-repeat': 'member in filteredMembers[4]'
+              }, [h("div.shadow", [h("div.hexContainer", [h(".hexThumb", [
+                      h("img", {"data-ng-src": "{{member.fields.fullImage.fields.file.url}}"}),
+                      h("p", '{{member.fields.name}}', " ", '{{member.fields.lastName}}')
+                    ])])])]),
+              h("a.honeyComb", {
+                "data-toggle": "modal",
+                "data-target": "#myModal",
+                'data-ng-click': 'setCurrentTeamMember(member)',
+                'data-ng-repeat': 'member in filteredMembers[5]'
+              }, [h("div.shadow", [h("div.hexContainer", [h(".hexThumb", [
+                      h("img", {"data-ng-src": "{{member.fields.fullImage.fields.file.url}}"}),
+                      h("p", '{{member.fields.name}}', " ", '{{member.fields.lastName}}')
+                    ])])])]),
+              h("a.honeyComb", {
+                "data-toggle": "modal",
+                "data-target": "#myModal",
+                'data-ng-click': 'setCurrentTeamMember(member)',
+                'data-ng-repeat': 'member in filteredMembers[6]'
+              }, [h("div.shadow", [h("div.hexContainer", [h(".hexThumb", [
+                      h("img", {"data-ng-src": "{{member.fields.fullImage.fields.file.url}}"}),
+                      h("p", '{{member.fields.name}}', " ", '{{member.fields.lastName}}')
+                    ])])])])
+            ])])
         ]),
         h("div#myModal.modal.fade", {
-          "tabindex":"-1;",
-          "role":"dialog;",
-          "aria-labelledby":"myModalLabel"
-        }, [
-          h("div.modal-dialog", {
+          "tabindex": "-1;",
+          "role": "dialog;",
+          "aria-labelledby": "myModalLabel"
+        }, [h("div.modal-dialog", {
             "role": 'document'
-          }, [
-            h("div.modal-content.team", {
-            }, [
-              h("div.modal-body", {
-              }, [
+          }, [h("div.modal-content.team", {}, [h("div.modal-body", {}, [
                 h("i.fa.fa-2x.fa-times-circle-o", {
                   'aria-label': 'close',
-                  "aria-hidden":"true",
+                  "aria-hidden": "true",
                   'data-dismiss': 'modal',
                   "style": "float:right; padding:10px"
-                }
-              ),
-                h("div.col-sm-6", {
-               }, [
+                }),
+                h("div.col-sm-6", {}, [h("img.tm.img-responsive", {
+                    "data-ng-src": "{{currentTeamMember.fields.fullImage.fields.file.url}}",
+                    "alt": ""
+                  })]),
 
-                 h("img.tm.img-responsive", {
-                   "data-ng-src":"{{currentTeamMember.fields.fullImage.fields.file.url}}",
-                   "alt":""
-                 })
-               ]),
-
-                h("div.col-sm-6", {
-                }, [
+                h("div.col-sm-6", {}, [
 
                   h("h4.tk-aaux-next", {
-                    "style":"padding-top:20px;text-transform: uppercase;padding-bottom: 5px"
-                  }, [
-                    h("strong", "{{currentTeamMember.fields.name}}"," ", "{{currentTeamMember.fields.lastName}}", ",")
-                  ]),
+                    "style": "padding-top:20px;text-transform: uppercase;padding-bottom: 5px"
+                  }, [h("strong", "{{currentTeamMember.fields.name}}", " ", "{{currentTeamMember.fields.lastName}}", ",")]),
                   h("h4", {
                     "style": "padding-bottom: 5px"
                   }, "{{currentTeamMember.fields.certificationsAndLicenses}}"),
                   h("p", {
                     "style": "letter-spacing: -0.7px;line-height: 1.3em;padding-bottom: 15px"
-                  }, "{{currentTeamMember.fields.bio}}" ),
+                  }, "{{currentTeamMember.fields.bio}}"),
                   h("div", {
-                    "style":"display:block"
-                  }, [
-                    h("p", [
+                    "style": "display:block"
+                  }, [h("p", [
                       h("a.tk-industry", {
-                        "style":"font-size:16px;color:#73B53d;display:inline;text-decoration:underline;text-transform: uppercase;margin-right: 10px;letter-spacing: .1em",
+                        "style": "font-size:16px;color:#73B53d;display:inline;text-decoration:underline;text-transform: uppercase;margin-right: 10px;letter-spacing: .1em",
                         'data-ng-href': 'mailto:{{currentTeamMember.fields.emailAddress}}'
                       }, "EMAIL {{currentTeamMember.fields.name}}"),
-                      h("nbsp", " "),
-                    ])
-
-                  ])
+                      h("nbsp", " ")
+                    ])])
                 ])
-              ])
-            ])
-          ])
-        ])
+              ])])])])
       ]),
-    //  footer
-    h('div', {
-      'data-footermenu': ''
-    }),
-      ])
-    ])
+      //  footer
+      h('div', {'data-footermenu': ''})
+    ])])
 }
