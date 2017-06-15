@@ -5,7 +5,6 @@ var ee = require('./services')()
 var h = require('hyperscript')
 var moment = require('moment')
 var underscore = require('underscore')
-var prerender = require('prerender-node').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR')
 
 window.angular = ng
 require('angular-resource')
@@ -20,7 +19,6 @@ require('./components/contentfulWrapper')
 require('ngMap')
 require('angular-ui-bootstrap')
 require('angular-marked')
-require('prerender-node').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR')
 require('angular-slugify/angular-slugify.js')
 
 
@@ -28,12 +26,12 @@ document.body.appendChild(
   h('div', { 'data-ui-view': '' })
 )
 
-document.head.appendChild(
-  h('link', {
-    rel: 'stylesheet',
-    href: 'main.min.css'
-  })
-)
+// document.head.appendChild(
+//   h('link', {
+//     rel: 'stylesheet',
+//     href: 'main.min.css'
+//   })
+// )
 
 ng.module('app', [
   require('angular-ui-router'),

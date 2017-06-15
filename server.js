@@ -1,6 +1,7 @@
 var express    = require('express')    // call express
 var app        = express()             // define our app using express
 var http = require('http')
+var compression = require('compression')
 var HttpCors = require('http-cors')
 var cors = new HttpCors()
 var HttpHashRouter = require('http-hash-router')
@@ -23,32 +24,24 @@ var bodyParser = require('body-parser')
 var nodemailer = require('nodemailer')
 var mandrillTransport = require('nodemailer-mandrill-transport')
 
+var options = {
+  dotfiles: 'ignore',
+  etag: false,
+  extensions: ['htm', 'html', 'png', 'jpg', 'jpeg', 'svg', 'gif'],
+  maxAge: '1d',
+  setHeaders: function (res, path, stat) {
+    res.set('x-timestamp', Date.now())
+  }
+}
+app.use(express.static('./www', options));
 
 // load inprocess service
 var ee = require('./services')()
-var compression = require('compression')
-var mcache = require('memory-cache')
-var cache = (duration) => {
-  return (req, res, next) => {
-    let key = '__express__' + req.originalUrl || req.url
-    let cachedBody = mcache.get(key)
-    if (cachedBody) {
-      res.send(cachedBody)
-      return
-    } else {
-      res.sendResponse = res.send
-      res.send = (body) => {
-        mcache.put(key, body, duration * 1000);
-        res.sendResponse(body)
-      }
-      next()
-    }
-  }
-}
 
-app.use(compression())
+app.use(compression('./www'));
 
-app.use(require('prerender-node').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR'))
+
+// app.use(require('prerender-node').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR'))
 
 router.set('/api/info', {
   POST: function (req, res) {
@@ -88,10 +81,11 @@ router.set('/', handleTemplatePage)
 
 // static assets
 // explicitly set routes
-router.set('/fonts/*', ecstatic({ root: __dirname + '/www',  handleError: false}))
-router.set('/img/*', ecstatic({ root: __dirname + '/www',  handleError: false}))
-router.set('/browser.min.js', ecstatic({ root: __dirname + '/www',  handleError: false}))
-router.set('/main.min.css', ecstatic({ root: __dirname + '/www',  handleError: false}))
+router.set('/fonts/*', ecstatic({ root: __dirname + '/www', handleError: false}))
+router.set('/blocs.min.css', ecstatic({ root: __dirname + '/www',  handleError: false}))
+router.set('/img/*', ecstatic({ root: __dirname + '/www', handleError: false}))
+router.set('/browser.min.js', ecstatic({ root: __dirname + '/www', handleError: false}))
+router.set('/main.min.css', ecstatic({ root: __dirname + '/www', handleError: false}))
 
 
 var server = http.createServer(function (req, res) {
@@ -144,3 +138,4 @@ function render (req, res, template) {
     footer: footer
   }))
 }
+app.use(prerender).set('prerenderServiceUrl', 'http://www.appliedbuildingsciences.com/').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR');
