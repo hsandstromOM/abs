@@ -40,10 +40,6 @@ module.exports = {
             }
         ],
     },
-    resolve: {
-        extensions: ['.js'],
-        root: [ path.join(__dirname, 'components') ]
-    },
     plugins: [
         new ProgressBarPlugin(),
         new WebpackErrorNotificationPlugin()

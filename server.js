@@ -1,12 +1,13 @@
 var express    = require('express')    // call express
 var app        = express()             // define our app using express
-var http = require('http')
 var compression = require('compression')
+app.use(compression(`${__dirname}/www`))
+var http = require('http')
 var HttpCors = require('http-cors')
 var cors = new HttpCors()
 var HttpHashRouter = require('http-hash-router')
 var router = HttpHashRouter()
-var prerender = require('prerender-node');
+var prerender = require('prerender-node')
 
 var bodyJSON = require('body/json')
 var sendJSON = require('send-data/json')
@@ -27,19 +28,16 @@ var mandrillTransport = require('nodemailer-mandrill-transport')
 var options = {
   dotfiles: 'ignore',
   etag: false,
-  extensions: ['htm', 'html', 'png', 'jpg', 'jpeg', 'svg', 'gif'],
-  maxAge: '1d',
+  extensions: ['htm', 'html', 'png', 'jpg', 'jpeg', 'svg', 'gif', 'js', 'css', 'url'],
+  maxAge: '1w',
   setHeaders: function (res, path, stat) {
     res.set('x-timestamp', Date.now())
   }
 }
-app.use(express.static('./www', options));
+app.use(express.static(`${__dirname}/www`, options));
 
 // load inprocess service
 var ee = require('./services')()
-
-app.use(compression('./www'));
-
 
 // app.use(require('prerender-node').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR'))
 
