@@ -1,10 +1,10 @@
-
 var ng = require('angular')
 var $ = require('jquery')
 var ee = require('./services')()
 var h = require('hyperscript')
 var moment = require('moment')
 var underscore = require('underscore')
+
 
 window.angular = ng
 require('angular-resource')
@@ -25,13 +25,6 @@ require('angular-slugify/angular-slugify.js')
 document.body.appendChild(
   h('div', { 'data-ui-view': '' })
 )
-
-// document.head.appendChild(
-//   h('link', {
-//     rel: 'stylesheet',
-//     href: 'main.min.css'
-//   })
-// )
 
 ng.module('app', [
   require('angular-ui-router'),

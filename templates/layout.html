@@ -26,6 +26,34 @@
       });
     } catch (e) {}
   </script>
+            <script>
+                window.prerenderReady = false;
+              </script>
+
+              <script type="text/javascript">
+  function setUserAgent(window, userAgent) {
+    if (window.navigator.userAgent != userAgent) {
+      var userAgentProp = {
+        get: function() {
+          return userAgent;
+        }
+      };
+      try {
+        Object.defineProperty(window.navigator, 'userAgent', userAgentProp);
+      } catch (e) {
+        window.navigator = Object.create(navigator, {
+          userAgent: userAgentProp
+        });
+      }
+    }
+  }
+  if (navigator.userAgent.indexOf('Prerender') !== -1) {
+    setUserAgent(window, navigator.userAgent + 'chrome');
+  }
+</script>
+</head>
+
+<body class="full-intro">
   <svg class="clip-svg" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 241 279" style="enable-background:new 0 0 241 279;" xml:space="preserve">
             <defs>
             <clipPath id="hexContainer" clipPathUnits="userSpaceOnUse">
@@ -59,34 +87,6 @@
               </clipPath>
               </defs>
             </svg>
-  <script>
-    window.prerenderReady = false;
-  </script>
-
-  <script type="text/javascript">
-    function setUserAgent(window, userAgent) {
-      if (window.navigator.userAgent != userAgent) {
-        var userAgentProp = {
-          get: function() {
-            return userAgent;
-          }
-        };
-        try {
-          Object.defineProperty(window.navigator, 'userAgent', userAgentProp);
-        } catch (e) {
-          window.navigator = Object.create(navigator, {
-            userAgent: userAgentProp
-          });
-        }
-      }
-    }
-    if (navigator.userAgent.indexOf('Prerender') !== -1) {
-      setUserAgent(window, navigator.userAgent + 'chrome');
-    }
-  </script>
-</head>
-
-<body>
   <%- nav %>
     <%- body %>
       <%- footer %>
