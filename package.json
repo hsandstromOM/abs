@@ -13,6 +13,9 @@
     "build:dev": "browserify browser.js | uglifyjs -cm | tee www/browser.min.js",
     "prod": "browserify browser.js | uglifyjs -cm > www/browser.min.js"
   },
+  "engines": {
+    "node": "6.11.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hsandstromOM/abs.git"
