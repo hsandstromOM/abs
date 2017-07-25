@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<html lang="en">
-<html class="no-js">
+<!doctype html>
+<html class="no-js" lang="">
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!--[if lte IE 9]>
             <p class="browserupgrade"><img src="img/ABS_logo.png"/>You are using an <strong>outdated</strong> browser. Please <a href="https://www.microsoft.com/en-us/download/internet-explorer.aspx">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -102,15 +101,15 @@
           });
           else window.addEventListener('load', loadDeferredStyles);
         </script>
-        <%- nav %>
-          <%- body %>
-            <%- footer %>
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="/blocs.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXGcQrZuDz0YvTvgQ_Ods0hUiVO-UbAyo&amp"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/webshim/1.16.0/minified/polyfiller.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/webshim/1.16.0/minified/polyfiller.js"></script> -->
         <script src="/browser.min.js"></script>
+        <%- nav %>
+          <%- body %>
+            <%- footer %>
 </body>
 
 </html>
