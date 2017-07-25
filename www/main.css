@@ -20,7 +20,7 @@
   z-index: 5;
   background: #98a09c;
   background: -moz-linear-gradient(top, #98a09c 0%, #bdc7c3 24%, #c5ceca 41%, #c5ceca 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, #98a09c), color-stop(24%, #bdc7c3), color-stop(41%, #c5ceca), color-stop(100%, #c5ceca));
+  background: -webkit-gradient(top, left bottom, color-stop(0%, #98a09c), color-stop(24%, #bdc7c3), color-stop(41%, #c5ceca), color-stop(100%, #c5ceca));
   background: -webkit-linear-gradient(top, #98a09c 0%, #bdc7c3 24%, #c5ceca 41%, #c5ceca 100%);
   background: -o-linear-gradient(top, #98a09c 0%, #bdc7c3 24%, #c5ceca 41%, #c5ceca 100%);
   background: -ms-linear-gradient(top, #98a09c 0%, #bdc7c3 24%, #c5ceca 41%, #c5ceca 100%);
