@@ -81,8 +81,8 @@ router.set('/', handleTemplatePage)
 router.set('/fonts/*', ecstatic({ root: __dirname + '/www', handleError: false}))
 router.set('/blocs.min.css', ecstatic({ root: __dirname + '/www',  handleError: false}))
 router.set('/img/*', ecstatic({ root: __dirname + '/www', handleError: false}))
-router.set('/browser.min.js', ecstatic({ root: __dirname + '/www', handleError: false}))
-router.set('/main.min.css', ecstatic({ root: __dirname + '/www', handleError: false}))
+router.set('/browser.js', ecstatic({ root: __dirname + '/www', handleError: false}))
+router.set('/main.css', ecstatic({ root: __dirname + '/www', handleError: false}))
 
 
 var server = http.createServer(function (req, res) {
