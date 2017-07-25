@@ -1,7 +1,7 @@
 var express    = require('express')    // call express
 var app        = express()             // define our app using express
 var compression = require('compression')
-app.use(compression(`${__dirname}/www`))
+app.use(compression('${__dirname}/www'))
 var http = require('http')
 var HttpCors = require('http-cors')
 var cors = new HttpCors()
@@ -81,8 +81,8 @@ router.set('/', handleTemplatePage)
 router.set('/fonts/*', ecstatic({ root: __dirname + '/www', handleError: false}))
 router.set('/blocs.min.css', ecstatic({ root: __dirname + '/www',  handleError: false}))
 router.set('/img/*', ecstatic({ root: __dirname + '/www', handleError: false}))
-router.set('/browser.js', ecstatic({ root: __dirname + '/www', handleError: false}))
-router.set('/main.css', ecstatic({ root: __dirname + '/www', handleError: false}))
+router.set('/browser.min.js', ecstatic({ root: __dirname + '/www', handleError: false}))
+router.set('/main.min.css', ecstatic({ root: __dirname + '/www', handleError: false}))
 
 
 var server = http.createServer(function (req, res) {
@@ -96,7 +96,8 @@ var server = http.createServer(function (req, res) {
   }
 })
 
-app.use(prerender).set('prerenderServiceUrl', 'http://www.appliedbuildingsciences.com/').set('prerenderToken', 'bCDSypXLkVdEzThyUTfR');
+app.use(require('prerender-node').set('prerenderServiceUrl', 'http://www.appliedbuildingsciences.com/'));
+
 
 
 server.listen(process.env.PORT || 3001);
