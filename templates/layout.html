@@ -81,32 +81,11 @@
               </clipPath>
               </defs>
             </svg>
-  <%- nav %>
-    <%- body %>
-      <%- footer %>
-        <!-- <script>
-          function rollOut(e) {
-            var self = this
-            e.preventDefault()
-            var page = document.querySelector('.site-content')
-
-            setTimeout(function() {
-              window.location.href = self.href
-            }, 500)
-          }
-          window.onload = function() {
-            var a_list = document.querySelectorAll('nav a') // returns NodeList
-            var a_array = Array.prototype.slice.call(a_list)
-            a_array.forEach(function(el) {
-              el.addEventListener('click', rollOut)
-            })
-          }
-        </script> -->
         <noscript id="deferred-styles">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet" async>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" async>
-        <link rel="stylesheet" href='/ionicons.min.css' async>
-        <link rel="stylesheet" href="//cdn.rawgit.com/ghiden/angucomplete-alt/ecfffebbf747df3dcd06429c9063f04da06dd5b8/angucomplete-alt.css" async>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" async>
+        <!-- <link rel="stylesheet" href='/ionicons.min.css' async> -->
+        <link rel="stylesheet" href="https://cdn.rawgit.com/ghiden/angucomplete-alt/ecfffebbf747df3dcd06429c9063f04da06dd5b8/angucomplete-alt.css" async>
         <link rel="stylesheet" href="/main.min.css" async>
         </noscript>
         <script>
@@ -123,9 +102,12 @@
           });
           else window.addEventListener('load', loadDeferredStyles);
         </script>
-        <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+        <%- nav %>
+          <%- body %>
+            <%- footer %>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="/blocs.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXGcQrZuDz0YvTvgQ_Ods0hUiVO-UbAyo&amp"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/webshim/1.16.0/minified/polyfiller.js"></script>
         <script src="/browser.min.js"></script>

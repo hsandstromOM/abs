@@ -8,7 +8,6 @@ var cors = new HttpCors()
 var HttpHashRouter = require('http-hash-router')
 var router = HttpHashRouter()
 var prerender = require('prerender-node')
-app.use(require('prerender-node').set('prerenderServiceUrl', 'http://www.appliedbuildingsciences.com/').set('prerenderToken', '00EWg1eZQSu50jzoj11f'))
 var bodyJSON = require('body/json')
 var sendJSON = require('send-data/json')
 var sendError = require('send-data/error')
@@ -135,4 +134,6 @@ function render (req, res, template) {
     body: template,
     footer: footer
   }))
+
+  app.use(prerender).set('prerenderServiceUrl', 'http://www.appliedbuildingsciences.com/').set('prerenderToken', '00EWg1eZQSu50jzoj11f');
 }
