@@ -31,6 +31,7 @@
     "angular": "1.6.3",
     "angular-contentful": "^2.0.0",
     "angular-cookies": "1.6.3",
+    "angular-jwt": "^0.1.9",
     "angular-marked": "^1.2.0",
     "angular-resource": "1.6.3",
     "angular-sanitize": "1.6.3",
