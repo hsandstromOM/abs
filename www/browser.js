@@ -47,8 +47,8 @@ ng.module('app', [
     function ($urlRouterProvider, $stateProvider, contentfulProvider, $locationProvider) {
 
     contentfulProvider.setOptions({
-      space: 'nut9vf69gg5q',
-      accessToken: 'b9e46ef90906d1b2b21a7cec0edcc4a038b42a1ab39ef831e1f86883b0225ed7'
+      space: 'lxejsmju70ex',
+      accessToken: '2ef82748feb6fd9e7d78f7103794d27612337c3499abc02d7f21c1fb4ee5c627'
     })
 
     // 301 Redirects
@@ -586,92 +586,7 @@ module.exports = function () {
 function component(e,t,o,n,i,r){e.page="home",r.scrollTo(0,0),n.entries("content_type=home").then(function(e){var t=e.data.items[0];if(t.fields.pageTitleSeo&&(document.title=t.fields.pageTitleSeo),t.fields.pageSpecificMetaDescriptionSeo)for(var o=document.getElementsByTagName("meta"),n=0;n<o.length;n++)"description"===o[n].name.toLowerCase()&&(o[n].content=t.fields.pageSpecificMetaDescriptionSeo)});var a=!0;e.certsLeft=[],e.certsRight=[],n.entries("content_type=home").then(function(t){e.contentfulData=t.data.items[0],angular.forEach(e.contentfulData.fields.certsAndLicenses,function(t){!0===a?(e.certsLeft.push(t),a=!1):(e.certsRight.push(t),a=!0)})}),e.allServicesProvided=[],e.allServiceTypes=[],e.goToService=function(e){},e.goToWorkProjects=function(e){},e.allWorkProjects=[],n.entries("content_type=workProjects").then(function(t){e.allWorkProjects=t.data.items})}function render(){return h("div#homePage",[h("title",{attributes:{"ng-bind":"PageTitle.title()"}},"Home Page"),h("div.page-container",[h("div",{"data-navheader":"","data-mainPage":"mainPage","data-slide":"slide"}),h("div#bloc-1.bloc.bgc-white.bg-header-image4.d-bloc",{style:"max-height:175vh;"},[h("img.honeycomb-left",{src:"img/honeycomb_pattern.png",style:"max-height:400px;z-index:1;margin-left:-50px !important;"}),h("img.honeycomb-right",{src:"img/honeycomb.png",style:"max-height:600px;z-index:1;margin-right:-50px !important;"}),h("div.row",[h("div.col-sm-12",{style:"margin-top:-325px;"},[h("h1.text-center.hero-bloc-text.tc-white",["STRUCTURAL INTEGRITY,",h("br"),"FROM THE GROUND UP"]),h("div.text-center",[h("i.fa.fa-2x.fa-angle-down.icon-green-ryb",{style:"float:none"})]),h("h3.mg-md.text-center.tc-green-ryb.tk-industry",{style:"margin-top:0px"},["WHO WE ARE."])])])]),h("div#bloc-2.bloc.bg-Halftone-Pattern.tc-prussian-blue.bgc-white",{style:"background-color:#F6F6F6;height:80%; -webkit-box-shadow:inset 0 10px 5px 2px rgba(0,0,0,.05);box-shadow:inset 0 -3px 8px 4px rgba(0,0,0,.05);height:80%;"},[h("div.container.bloc-lg",[h("div.row",[h("div.col-sm-8.col-sm-offset-2",[h("p.text-left",{"data-marked":"contentfulData.fields.whoWeAreContent"}),h("p.text-left",{style:"font-weight: 600 !important","data-marked":"contentfulData.fields.whoWeAreContentCloser"})]),h("div.col-sm-12",{style:"margin-left:0px! important;"},[h("br"),h("div.text-center",[h("i.fa.fa-2x.fa-angle-down.icon-green-ryb",{style:"float:none"})]),h("h3.mg-md.text-center.tc-green-ryb.tk-industry",{style:"margin-top:0px; margin-bottom 100px"},["WHAT WE DO."]),h("br"),h("br")])])])]),h(".container",{style:"background-color:#ffffff;min-width:100% !important"},[h("div.col-md-12",{style:"z-index:2"},[h("div",{style:"display:block; margin:auto; text-align:center;","data-homehex":""}),h("br")])]),h("div#bloc-5.bloc.bg-Halftone-Pattern.tc-prussian-blue.bgc-white",{style:"background-color:#F6F6F6; -webkit-box-shadow:inset 0 10px 5px 2px rgba(0,0,0,.05);box-shadow:inset 0 3px 8px 4px rgba(0,0,0,.05);z-index:1;"},[h("div.container.bloc-lg",[h("div.row",[h("div.col-sm-12",{},[h("br"),h("br"),h("h2.mg-md.text-center.tk-industry.tc-prussian-blue","PROJECT SPOTLIGHT"),h("h3.mg-md.text-center.tk-industry.tc-prussian-blue",{"data-marked":"contentfulData.fields.projectSpotlightTitle"}),h("p",{style:" margin-bottom:65px;","data-marked":"contentfulData.fields.projectSpotlightContent"}),h(".text-center",[h("a.btn.btn-lg.btn-wire.wire-btn-green-ryb.btn-sq",{style:"cursor: pointer;","data-ui-sref":"workDetail({obj: contentfulData.fields.projectSpotlightLink})"},"{{contentfulData.fields.buttonText}}")])])])])]),h("div#bloc-6.bloc.tc-white.bgc-royal-blue-traditional",[h("div.container.bloc-md",[h("div.row",[h("div.col-md-4.col-sm-12.col-xs-12",[h("h2.tc-white",{style:"margin-top:0"},"CERTIFICATIONS AND LICENSES")]),h("div.col-md-4.col-sm-12.col-xs-12",[h("p",{"data-ng-repeat":"cert in certsLeft"},"{{cert}}")]),h("div.col-md-4.col-sm-12.col-xs-12",[h("p",{"data-ng-repeat":"cert in certsRight"},"{{cert}}")])])])]),h("div",{"data-footermenu":""})])])}var h=require("hyperscript"),headerNav=require("./shared/headerNav"),footer=require("./shared/footer");module.exports={url:"/",template:render().outerHTML,controller:["$scope","$state","store","contentful","$uibModal","$window",component]};
 
 },{"./shared/footer":8,"./shared/headerNav":9,"hyperscript":48}],6:[function(require,module,exports){
-function controller() {}
-function render() {
-  return h("#honeyHex", [
-    h(".homeHoneyThree", [
-      h("a.honeyCombHome", {
-        href: "/services/building-enclosure"
-      }, [
-        h("img.overlayer", {
-          src: "img/ABS-HomeHex-building-enclosure-green.png",
-          style: "position:absolute;"
-        }),
-        h("img.honeyThumb", {src: "img/ABS-HomeHex-building-enclosure-hover.png"}),
-        h("div.hexText", {
-          style: "height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;"
-        }, [h("p", {
-            style: "font-weight:bold;color:white;text-transform: uppercase"
-          }, "{{contentfulData.fields.services[0].fields.pageTitle}}")])
-      ]),
-      h("a.honeyCombHome", {
-        href: "/services/forensic-consulting"
-      }, [
-        h("img.overlayer", {
-          src: "img/ABS-HomeHex-forensic-consulting-green.png",
-          style: "position:absolute;"
-        }),
-        h("img.honeyThumb", {src: "img/ABS-HomeHex-forensic-consulting-hover.png"}),
-        h("div.hexText", {
-          style: "height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;"
-        }, [h("p", {
-            style: "font-weight:bold;color:white;text-transform: uppercase"
-          }, "{{contentfulData.fields.services[1].fields.pageTitle}}")])
-      ]),
-      h("a.honeyCombHome", {
-        href: "/services/life-safety-and-human-factors"
-      }, [
-        h("img.overlayer", {
-          src: "img/ABS-HomeHex-life-safety-human-factors-green.png",
-          style: "position:absolute;"
-        }),
-        h("img.honeyThumb", {src: "img/ABS-HomeHex-life-safety-human-factors-hover.png"}),
-        h("div.hexText", {
-          style: "height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;"
-        }, [h("p", {
-            style: "font-weight:bold;color:white;text-transform: uppercase"
-          }, "{{contentfulData.fields.services[2].fields.pageTitle}}")])
-      ])
-    ]),
-    h(".homeHoneyTwo", [
-      h("a.honeyCombHome", {
-        href: "/services/architecture"
-      }, [
-        h("img.overlayer", {
-          src: "img/ABS-HomeHex-architecture-green.png",
-          style: "position:absolute;"
-        }),
-        h("img.honeyThumb", {src: "img/ABS-HomeHex-architecture-hover.png"}),
-        h("div.hexText", {
-          style: "height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;"
-        }, [h("p", {
-            style: "font-weight:bold;color:white;text-transform: uppercase;padding-top:17px"
-          }, "{{contentfulData.fields.services[3].fields.pageTitle}}")])
-      ]),
-      h("a.honeyCombHome", {
-        href: "/services/engineering"
-      }, [
-        h("img.overlayer", {
-          src: "img/ABS-HomeHex-engineering-green.png",
-          style: "position:absolute;"
-        }),
-        h("img.honeyThumb", {src: "img/ABS-HomeHex-engineering-hover.png"}),
-        h("div.hexText", {
-          style: "height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;"
-        }, [h("p", {
-            style: "font-weight:bold;color:white;text-transform: uppercase;padding-top:17px"
-          }, "{{contentfulData.fields.services[4].fields.pageTitle}}")])
-      ])
-    ])
-  ])
-}
-var h = require("hyperscript");
-module.exports = function() {
-  return {
-    template: render().outerHTML,
-    controller: ["$scope", "contentful", "store", controller]
-  }
-};
+function controller(e,i,t){e.allHexServicesProvided=[],e.allServices=[[],[],[],[],[],[],[],[],[]],e.setSelectedService=function(e){t.set("selectedService",e)},i.entries("content_type=serviceTypes&include=3").then(function(i){var t=i.data.items,r=1,s=3,n=0;angular.forEach(t,function(i){3===s?r<s?(e.allServices[n].push(i),r++):(e.allServices[n].push(i),s=3,r=1,n++):2===s&&(r<s?(e.allServices[n].push(i),r++):(e.allServices[n].push(i),s=4,r=1,n++))})})}function render(){return h("#honeyHex",[h(".homeHoneyThree",[h("a.honeyCombHome",{"data-ng-click":"setSelectedService(service)","data-ui-sref":"services({service: service})","data-ng-repeat":"service in allServices[0]","data-ng-if":'service.fields.pageTitle === "Building Enclosure"'},[h("img.overlayer",{src:"img/ABS-HomeHex-building-enclosure-green.png",style:"position:absolute;"}),h("img.honeyThumb",{src:"img/ABS-HomeHex-building-enclosure-hover.png"}),h("div.hexText",{style:"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;"},[h("p",{style:"font-weight:bold;color:white;text-transform: uppercase"},"{{service.fields.pageTitle}}")])]),h("a.honeyCombHome",{"data-ng-click":"setSelectedService(service)","data-ui-sref":"services({service: service})","data-ng-repeat":"service in allServices[1]","data-ng-if":'service.fields.pageTitle === "Forensic Consulting"'},[h("img.overlayer",{src:"img/ABS-HomeHex-forensic-consulting-green.png",style:"position:absolute;"}),h("img.honeyThumb",{src:"img/ABS-HomeHex-forensic-consulting-hover.png"}),h("div.hexText",{style:"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;"},[h("p",{style:"font-weight:bold;color:white;text-transform: uppercase"},"{{service.fields.pageTitle}}")])]),h("a.honeyCombHome",{"data-ng-click":"setSelectedService(service)","data-ui-sref":"services({service: service})","data-ng-repeat":"service in allServices[1]","data-ng-if":'service.fields.pageTitle === "Life Safety & Human Factors"'},[h("img.overlayer",{src:"img/ABS-HomeHex-life-safety-human-factors-green.png",style:"position:absolute;"}),h("img.honeyThumb",{src:"img/ABS-HomeHex-life-safety-human-factors-hover.png"}),h("div.hexText",{style:"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;"},[h("p",{style:"font-weight:bold;color:white;text-transform: uppercase"},"{{service.fields.pageTitle}}")])])]),h(".homeHoneyTwo",[h("a.honeyCombHome",{"data-ng-click":"setSelectedService(service)","data-ui-sref":"services({service: service})","data-ng-repeat":"service in allServices[0]","data-ng-if":'service.fields.pageTitle === "Architecture"'},[h("img.overlayer",{src:"img/ABS-HomeHex-architecture-green.png",style:"position:absolute;"}),h("img.honeyThumb",{src:"img/ABS-HomeHex-architecture-hover.png"}),h("div.hexText",{style:"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;"},[h("p",{style:"font-weight:bold;color:white;text-transform: uppercase;padding-top:17px"},"{{service.fields.pageTitle}}")])]),h("a.honeyCombHome",{"data-ng-click":"setSelectedService(service)","data-ui-sref":"services({service: service})","data-ng-repeat":"service in allServices[0]","data-ng-if":'service.fields.pageTitle === "Engineering"'},[h("img.overlayer",{src:"img/ABS-HomeHex-engineering-green.png",style:"position:absolute;"}),h("img.honeyThumb",{src:"img/ABS-HomeHex-engineering-hover.png"}),h("div.hexText",{style:"height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;"},[h("p",{style:"font-weight:bold;color:white;text-transform: uppercase;padding-top:17px"},"{{service.fields.pageTitle}}")])])])])}var h=require("hyperscript");module.exports=function(){return{template:render().outerHTML,controller:["$scope","contentful","store",controller]}};
 
 },{"hyperscript":48}],7:[function(require,module,exports){
 function component(e,t,i,r,c,n,a){t.params.service?(e.page=t.params.service,e.currentServiceProvided=t.params.service,e.selectedService=t.params.service.fields.pageTitle,e.serviceDesc=t.params.service.fields.pageSpecificMetaDescriptionSeo,i.set("services",e.selectedService)):i.get("selectedServices")&&(e.currentServiceProvided=i.get("selectedServices"),e.selectedService=e.currentServiceProvided.fields.pageTitle,e.serviceDesc=e.currentServiceProvided.fields.pageSpecificMetaDescriptionSeo),e.allServicesProvided=[],e.slide={serviceNav:!0},e.mainPage="services",t.params.service?(e.currentService=t.params.service,e.page=e.currentService.fields.pageTitle,e.email=e.currentService.fields.contactPerson):i.get("selectedService")&&(e.currentService=i.get("selectedService"),e.page=e.currentService.fields.pageTitle,e.email=e.currentService.fields.contactPerson,e.selectedService=e.currentService.fields.pageTitle,e.serviceDesc=e.currentService.fields.pageSpecificMetaDescriptionSeo),n.scrollTo(0,0),r.entries("content_type=serviceTypes").then(function(t){var i=t.data.items[0];if(document.title=e.selectedService,i.fields.pageSpecificMetaDescriptionSeo)for(var r=document.getElementsByTagName("meta"),c=0;c<r.length;c++)"description"===r[c].name.toLowerCase()&&(r[c].content=e.serviceDesc)})}function render(){return h("div#servicesPage",[h("title",{attributes:{"ng-bind":"PageTitle.title()"}},"Serivces Page"),h("div.page-container",[h("div",{"data-navheader":"","data-mainPage":"mainPage","data-slide":"slide"}),h("div",{"data-ng-if":'currentService.fields.pageTitle === "Architecture"'},[h("div#bloc-1.bloc.bgc-white.bg-Architecture-Header2.d-bloc",{style:"max-height:100vh;"},[h("img.honeycomb-left",{src:"img/honeycomb_pattern.png",style:"max-height:350px;z-index:1;margin-left:-50px !important;"}),h("img.honeycomb-right",{src:"img/honeycomb.png",style:"max-height:540px;z-index:1;margin-right:-50px !important;"}),h("div.row",[h("div.col-sm-12",{style:"margin-top:-240px;"},[h("h4.mg-md.text-center.tc-white","SERVICES:"),h("h1.mg-md.text-center.tc-white","{{currentService.fields.pageTitle}}",{style:"text-transform:uppercase"})])])])]),h("div",{"data-ng-if":'currentService.fields.pageTitle === "Forensic Consulting"'},[h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-ForensicConsulting.d-bloc",{style:"max-height:100vh;"},[h("img.honeycomb-left",{src:"img/honeycomb_pattern.png",style:"max-height:350px;z-index:1;margin-left:-50px !important;"}),h("img.honeycomb-right",{src:"img/honeycomb.png",style:"max-height:540px;z-index:1;margin-right:-50px !important;"}),h("div.row",[h("div.col-sm-12",{style:"margin-top:-240px;"},[h("h4.mg-md.text-center.tc-white","SERVICES:"),h("h1.mg-md.text-center.tc-white","{{currentService.fields.pageTitle}}",{style:"text-transform:uppercase"})])])])]),h("div",{"data-ng-if":'currentService.fields.pageTitle === "Engineering"'},[h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-Engineering.d-bloc",{style:"max-height:100vh;"},[h("img.honeycomb-left",{src:"img/honeycomb_pattern.png",style:"max-height:350px;z-index:1;margin-left:-50px !important;"}),h("img.honeycomb-right",{src:"img/honeycomb.png",style:"max-height:540px;z-index:1;margin-right:-50px !important;"}),h("div.row",[h("div.col-sm-12",{style:"margin-top:-240px;"},[h("h4.mg-md.text-center.tc-white","SERVICES:"),h("h1.mg-md.text-center.tc-white","{{currentService.fields.pageTitle}}",{style:"text-transform:uppercase"})])])])]),h("div",{"data-ng-if":'currentService.fields.pageTitle === "Life Safety & Human Factors"'},[h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-LifeSafety.d-bloc",{style:"max-height:100vh;"},[h("img.honeycomb-left",{src:"img/honeycomb_pattern.png",style:"max-height:350px;z-index:1;margin-left:-50px !important;"}),h("img.honeycomb-right",{src:"img/honeycomb.png",style:"max-height:540px;z-index:1;margin-right:-50px !important;"}),h("div.row",[h("div.col-sm-12",{style:"margin-top:-240px;"},[h("h4.mg-md.text-center.tc-white","SERVICES:"),h("h1.mg-md.text-center.tc-white","{{currentService.fields.pageTitle}}",{style:"text-transform:uppercase"})])])])]),h("div",{"data-ng-if":'currentService.fields.pageTitle === "Building Enclosure"'},[h("div#bloc-1.bloc.bgc-white.bg-ABS-Headers-BuildingEnclosure.d-bloc",{style:"max-height:100vh;"},[h("img.honeycomb-left",{src:"img/honeycomb_pattern.png",style:"max-height:350px;z-index:1;margin-left:-50px !important;"}),h("img.honeycomb-right",{src:"img/honeycomb.png",style:"max-height:540px;z-index:1;margin-right:-50px !important;"}),h("div.row",[h("div.col-sm-12",{style:"margin-top:-240px;"},[h("h4.mg-md.text-center.tc-white","SERVICES:"),h("h1.mg-md.text-center.tc-white","{{currentService.fields.pageTitle}}",{style:"text-transform:uppercase"})])])])]),h("div.closeNav",[h("div#bloc-2.bloc.bg-Halftone-Pattern.tc-prussian-blue.bgc-white",{style:"background-color:#F6F6F6;-webkit-box-shadow:inset 0 10px 5px 2px rgba(0,0,0,.05);box-shadow:inset 0 -3px 8px 4px rgba(0,0,0,.05)"},[h("div.container.bloc-lg",[h("div.hexagon.row",[h("div.col-md-4.col-cd-offset-1.col-xs-12.serv",[h("div#over",[h("span.Centerer"),h("img.hxImg.Centered",{style:"margin-top:-70px;",src:"img/doubleHoney.png"}),h("div.gallery-text.serv",{style:"margin-top:95px;"},[h("img.cIcon",{src:"img/contact_icon.png"}),h("h4.hextitle",["INTERESTED IN",h("br"),"WORKING TOGETHER?"]),h("h5.hexname.tk-aaux-next","{{currentService.fields.contactPerson.fields.name}} {{currentService.fields.contactPerson.fields.lastName}},"),h("p","{{currentService.fields.contactPerson.fields.certificationsAndLicenses}}"),h("a.tk-aaux-next",{"data-ng-href":"mailto:{{currentService.fields.contactPerson.fields.emailAddress}}",style:"text-transform:uppercase"},"EMAIL {{currentService.fields.contactPerson.fields.name}}")])])]),h(".col-md-7.col-xs-12",[h("p.text-left",{"data-marked":"currentService.fields.description"}),h("br"),h("br")])])])])])]),h("div",{"data-footermenu":""})])}var h=require("hyperscript"),headerNav=require("./shared/headerNav"),footer=require("./shared/footer");module.exports={url:"/services/:slug",template:render().outerHTML,controller:["$scope","$state","store","contentful","$uibModal","$window",component],params:{service:null,slug:null}};

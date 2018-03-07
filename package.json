@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "watchify browser.js -o www/browser.js & node server.js",
-    "build": "watchify browser.js -o www/browser.js & node server.js",
+    "build": "watchify browser.js -o www/browser.js & node server.js & npm run watch-css",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/main.scss www/main.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
