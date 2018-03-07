@@ -14,8 +14,7 @@
     "prod": "browserify browser.js | uglifyjs -cm > www/browser.min.js"
   },
   "engines": {
-    "node": "6.11.1",
-    "npm": "5.6.0"
+    "node": "6.11.1"
   },
   "repository": {
     "type": "git",
