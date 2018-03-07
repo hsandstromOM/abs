@@ -46,8 +46,8 @@ ng.module('app', [
     function ($urlRouterProvider, $stateProvider, contentfulProvider, $locationProvider) {
 
     contentfulProvider.setOptions({
-      space: 'lxejsmju70ex',
-      accessToken: '2ef82748feb6fd9e7d78f7103794d27612337c3499abc02d7f21c1fb4ee5c627'
+      space: 'nut9vf69gg5q',
+      accessToken: 'b9e46ef90906d1b2b21a7cec0edcc4a038b42a1ab39ef831e1f86883b0225ed7'
     })
 
     // 301 Redirects
