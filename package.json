@@ -68,6 +68,7 @@
     "resolve-url-loader": "^2.0.2",
     "sass-loader": "^6.0.5",
     "send-data": "^7.0.0",
+    "sqlite3": "^3.1.4",
     "style-loader": "^0.18.1",
     "underscore": "^1.8.3",
     "webpack": "^1.13.2",
