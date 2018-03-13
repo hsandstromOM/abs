@@ -1,0 +1,22 @@
+window.angular = require('angular');
+window.PouchDB = require('pouchdb');
+window._ = require('underscore');
+window.moment = require('moment');
+window.$ = require('jquery');
+
+require('angular-resource');
+require('angular-sanitize');
+require('angular-cookies');
+require('angular-ui-router');
+require('angular-storage');
+require('angular-jwt');
+require('angucomplete-alt');
+require('./components/contentfulWrapper');
+require('ngMap');
+require('angular-ui-bootstrap');
+require('angular-utils-pagination');
+require('angular-stripe-checkout');
+require('angular-marked');
+// require('./components/mailChimp');
+require('angular-slugify');
+// require('angular-socialshare');

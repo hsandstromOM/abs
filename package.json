@@ -5,16 +5,13 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "watchify browser.js -o www/browser.js & node server.js",
+    "dev": "webpack --watch & nodemon server.js",
     "build": "watchify browser.js -o www/browser.js & node server.js & npm run watch-css",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/main.scss www/main.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "build:dev": "browserify browser.js | uglifyjs -cm | tee www/browser.min.js",
     "prod": "browserify browser.js | uglifyjs -cm > www/browser.min.js"
-  },
-  "engines": {
-    "node": "8.9.4"
   },
   "repository": {
     "type": "git",
@@ -41,6 +38,8 @@
     "angular-ui-router": "0.4.2",
     "angular-utils-pagination": "^0.11.1",
     "auth0-angular": "^4.0.4",
+    "babel-core": "^6.18.0",
+    "babel-loader": "^6.2.6",
     "body": "^5.1.0",
     "body-parser": "^1.15.1",
     "compression": "^1.6.2",
@@ -54,6 +53,7 @@
     "mandrill-api": "^1.0.45",
     "memory-cache": "^0.1.6",
     "moment": "^2.10.6",
+    "ng-annotate-loader": "^0.2.0",
     "ngmap": "^1.17.1",
     "node-pre-gyp": "^0.8.0",
     "node-sass": "^3.13.1",

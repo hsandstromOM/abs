@@ -12,11 +12,14 @@ const nodeModulePath = path.join(__dirname, 'node_modules');
 
 // Webpack config
 module.exports = {
-    entry: "./browser.js"
+    entry: {
+        app: './browser.js',
+        vendor: './vendor.js',
+    },
     output: {
         path: outputPath,
         publicPath: 'www/',
-        filename: '[name].browser.js'
+        filename: '[name].bundle.js'
     },
     devtool: 'source-map',
     module: {
@@ -30,10 +33,10 @@ module.exports = {
                 loaders: ['style', 'css', 'sass', 'resolve-url?fail', 'sass?sourceMap'],
             },
             {
-                test: /\.js$/,
-                loaders: ['babel-loader', 'ng-annotate?add=true&map=false'],
-                exclude: nodeModulePath
-            },
+              test: /\.js$/,
+              loaders: ['babel-loader', 'ng-annotate?add=true&map=false'],
+              exclude: nodeModulePath
+          },
             {
                 test: /\.jpe?g|\.gif$|\.png|\.svg|\.woff|\.eot|\.ttf/,
                 loader: 'url-loader'

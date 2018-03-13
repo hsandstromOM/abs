@@ -111,6 +111,12 @@ function component ($scope, $state, store, contentful,  $uibModal, $window, NgMa
         }
     }
   }
+
+
+
+
+
+
 // ####### Email code is here, tie form data to this
 // ####### Leave contact info blank, its a honeypot check to keep bots out
 
@@ -121,253 +127,273 @@ angular.module('app').controller('ModalInstanceCtrl', function( $scope, $uibModa
     $uibModalInstance.dismiss('cancel')
   }
 })
-function render() {
-  return h('div#contactPage', [h("div.page-container", [
+function render () {
+  return h('div#contactPage', [
+    h("div.page-container", [
       h('div', {
         'data-navheader': '',
         'data-mainPage': 'mainPage',
-        'data-slide': 'slide'
+        'data-slide': 'slide',
       }),
-      h("div#bloc-1.bloc.bgc-white.bg-Header-Placeholder.d-bloc", {
-        'style': 'max-height:100vh;'
-      }, [
-        h('img.honeycomb-left', {
-          'src': 'img/honeycomb_pattern.png',
-          'style': "max-height:310px;z-index:1;margin-left:-50px !important;"
+      h("div#bloc-1.bloc.bgc-white.bg-Header-Placeholder.d-bloc", {'style':'max-height:100vh;'},[
+        h('img.honeycomb-left',{
+          'src':'img/honeycomb_pattern.png',
+          'style':"max-height:310px;z-index:1;margin-left:-50px !important;"
         }),
-        h('img.honeycomb-right', {
-          'src': 'img/honeycomb.png',
-          'style': "max-height:475px;z-index:1;margin-right:-50px !important;"
+        h('img.honeycomb-right',{
+          'src':'img/honeycomb.png',
+          'style':"max-height:475px;z-index:1;margin-right:-50px !important;"
         }),
-        h("div.row", [h("div.col-sm-12", {
-            'style': 'margin-top:-195px;text-transform: uppercase;'
-          }, [h('h1.mg-md.text-center.tc-white', '{{contentfulData.fields.bannerText}}')])])
+          h("div.row", [
+            h("div.col-sm-12", {'style':'margin-top:-195px;text-transform: uppercase;'},[
+              h('h1.mg-md.text-center.tc-white', '{{contentfulData.fields.bannerText}}')
+            ])
+          ])
       ]),
       h("div.closeNav", [
-        h("div.overlay", {'style': 'pointer-events: none'}),
-        h('ng-map.breakMargin', {
-          'style': 'display:block;width:100%;height:600px;',
-          'data-zoom-to-include-markers': 'true',
-          'center': 'current-location'
-        }, [
+      h("div.overlay",{
+        'style': 'pointer-events: none'
+      }),
+      h('ng-map.breakMargin', {
+        'style': 'display:block;width:100%;height:600px;',
+        'data-zoom-to-include-markers': 'true',
+        'center':'current-location'
+      }, [
           h('marker', {
             'data-ng-repeat': '(id, office) in allOffices',
-            "id": '{{id}}',
+            "id":  '{{id}}',
             'data-position': '{{office.fields.location.lat}}, {{office.fields.location.lon}}',
             'data-icon': 'img/mapMarker.png',
-            'data-on-click': 'showOffice(event, id)'
+            'data-on-click': 'showOffice(event, id)',
           }),
 
-          h('info-window#foo', {
-            'position': 'current-location'
-          }, [h('div', {
-            }, [h('.mobileParkHeaderInfo', {
-                'style': 'padding: 10px;display: inline-block'
-              }, [
-                h('.mobileOfficeName', {
-                  'style': 'font-weight: bold'
-                }, 'ABS Building Sciences'),
-                h('.mobileOfficeAddress', {
-                  'style': 'width: 150px; line-height: 15px; font-size: 12px'
-                }, '{{office.fields.address}}'),
-                h('.mobileParkHours', {
-                }, [h('boldHours', {
-                    'style': 'display:inline-block;'
-                  }, '{{office.fields.phoneNumber | telephone:filter}}')]),
-                h('a.directions', {
+        h('info-window#foo', {
+          'position':'current-location'
+      },[
+        h('div', {
+        //  "style": "width: 100%; line-height: 1.5em"
+        },[
+          h('.mobileParkHeaderInfo', {
+            'style': 'padding: 10px;display: inline-block'
+          }, [
+            h('.mobileOfficeName', {
+              'style': 'font-weight: bold'
+            }, 'ABS Building Sciences'),
+            h('.mobileOfficeAddress', {
+              'style': 'width: 150px; line-height: 15px; font-size: 12px'
+            }, '{{office.fields.address}}'),
+            h('.mobileParkHours', {
+              //'data-ng-show': 'parkMarker.fields.hours'
+            }, [
+              h('boldHours', {
+                'style': 'display:inline-block;'
+              }, '{{office.fields.phoneNumber | telephone:filter}}'),
+            ]),
+            h('a.directions', {
 
-                  'travel-mode': "DRIVING",
-                  'origin': "current-location",
-                  'destination': "{{office.fields.address}}",
-                  'data-ng-href': 'https://www.google.com/maps/dir/Current+Location/"{{office.fields.address}}"',
-                  'target': '_blank'
-                }, "Get Directions")
+              'travel-mode':"DRIVING",
+              'origin':"current-location",
+              'destination':"{{office.fields.address}}",
+              'data-ng-href':'https://www.google.com/maps/dir/Current+Location/"{{office.fields.address}}"',
+              'target': '_blank'
+            },"Get Directions")
 
-              ])])])
+          ]),
         ]),
+      ]),
+      ]),
 
-        h("div.bg-Halftone-Pattern.col-md-12", {
-          "style": "display:block;width:100%;padding-bottom:50px;background-color:#F6F6F6"
-        }, [
-          h("div.col-md-12", [h("div.honeyCombRow", {
-              "style": "width:750px;display:block;margin:0 auto;height:200px;position:relative;"
+
+      h("div.bg-Halftone-Pattern.col-md-12", {
+        "style":"display:block;width:100%;padding-bottom:50px;background-color:#F6F6F6"
+      }, [
+        h("div.col-md-12", [
+          h("div.honeyCombRow", {
+            "style": "width:750px;display:block;margin:0 auto;height:200px;position:relative;"
+          }, [
+            h('.honeyCombContact',[
+              h("img#charlestonOfficeHoneyComb ", {
+                "style":"position:absolute;left:0px;top:-75px;z-index:2;width:250px",
+                "src":"img/doubleHoney.png",
+                'data-ng-click': "setLocation('charleston')",
+                'data-ng-class': "currentLocation === 'charleston' ? 'selectedGreen' : 'nonSelectedBlue'"
+              }),
+              h("div.honeyText", {
+                'data-ng-click': "setLocation('charleston')",
+                'data-ng-class': "currentLocation === 'charleston' ? 'selectedGreen' : 'nonSelectedBlue'"
+              }, [
+                h('img', {
+                  'src':'img/contact_icon.png',
+                  "style":' height:25px;',
+                  'data-ng-show': "currentLocation === 'charleston'"
+                }),
+                h("h4.charlestonOfficeTxt", {
+                  'data-ng-class': "currentLocation === 'charleston' ? 'selectedGreen' : 'nonSelectedBlue'"
+                }, "CHARLESTON OFFICE"),
+                h("p", ["1890 Milford Street", h('br'), "Charleston, SC", h('br'), "843.724.1456"])
+
+              ])
+            ]),
+            h('.honeyCombContact', [
+              h("img#ballentineOfficeHoneyComb", {
+                "style": "position:absolute;left:250px;top:-75px;z-index:2;width:250px",
+                "src":"img/doubleHoney.png",
+                'data-ng-click': "setLocation('ballentine')",
+                'data-ng-class': "currentLocation === 'ballentine' ? 'selectedGreen' : 'nonSelectedBlue'"
+              }),
+              h("div.honeyText", {
+                "style": "left:250px;",
+                'data-ng-click': "setLocation('ballentine')",
+                'data-ng-class': "currentLocation === 'ballentine' ? 'selectedGreen' : 'nonSelectedBlue'"
+              }, [
+                h('img', {
+                  'src':'img/contact_icon.png',
+                  "style":'height:25px;',
+                  'data-ng-show': "currentLocation === 'ballentine'"
+                }),
+                h("h4.ballentineOfficeTxt", {
+                  'data-ng-class': "currentLocation === 'ballentine' ? 'selectedGreen' : 'nonSelectedBlue'"
+                }, "BALLENTINE OFFICE"),
+                h("p", ["Post Office Box 224", h('br'), "Ballentine, SC", h('br'), "29002"]),
+
+              ])
+            ]),
+            h('.honeyCombContact', [
+              h("img#charlotteOfficeHoneyComb", {
+                "style":"position:absolute;left:500px;top:-75px;z-index:2;width:250px",
+                "src":"img/doubleHoney.png",
+                'data-ng-click': "setLocation('charlotte')",
+                'data-ng-class': "currentLocation === 'charlotte' ? 'selectedGreen' : 'nonSelectedBlue'"
+              }),
+              h("div.honeyText", {
+                "style":"left:500px;",
+                'data-ng-click': "setLocation('charlotte')",
+                'data-ng-class': "currentLocation === 'charlotte' ? 'selectedGreen' : 'nonSelectedBlue'"
+              }, [
+                h('img', {
+                  'src':'img/contact_icon.png',
+                  "style":'height:25px;',
+                  'data-ng-show': "currentLocation === 'charlotte'"
+                }),
+                h("h4.charlotteOfficeTxt", "CHARLOTTE OFFICE"),
+                h("p", {
+                  "style": "margin-left: 10px; margin-right: 10px;"
+                }, ["5601 77 Center Drive", h('br'), "Charlotte, NC", h('br'), "980.219.7084"]),
+
+              ])
+            ])
+          ])
+        ]),
+        h("div.col-md-8.col-md-offset-2", [
+          h('br'),
+          h('div', {
+            "style":'margin-left:1.5%;'
+          },[
+            h("h3.tk-aaux-next.ltc-royal-blue-traditional", "{{contentfulData.fields.formHeadline}}"),
+            h("p.ltc-royal-blue-traditional", "{{contentfulData.fields.formSubtitle}}"),
+            h('br')
+          ]),
+
+          h("form#contact", {
+            'novalidate': 'true',
+            'name': 'contact',
+            'data-ng-hide': 'contactThankYou'
+          }, [
+            h("div.form-group.col-md-6.tk-aaux-next", {
+              'data-ng-class':"{ 'has-error' : contact.name.$invalid && !contact.name.$pristine }",
+              'style':'font-size:16px;font-weight:400;'
             }, [
-              h('.honeyCombContact', [
-                h("img#charlestonOfficeHoneyComb ", {
-                  "style": "position:absolute;left:0px;top:-75px;z-index:2;width:250px",
-                  "src": "img/doubleHoney.png",
-                  'data-ng-click': "setLocation('charleston')",
-                  'data-ng-class': "currentLocation === 'charleston' ? 'selectedGreen' : 'nonSelectedBlue'"
-                }),
-                h("div.honeyText", {
-                  'data-ng-click': "setLocation('charleston')",
-                  'data-ng-class': "currentLocation === 'charleston' ? 'selectedGreen' : 'nonSelectedBlue'"
-                }, [
-                  h('img', {
-                    'src': 'img/contact_icon.png',
-                    "style": ' height:25px;',
-                    'data-ng-show': "currentLocation === 'charleston'"
-                  }),
-                  h("h4.charlestonOfficeTxt", {
-                    'data-ng-class': "currentLocation === 'charleston' ? 'selectedGreen' : 'nonSelectedBlue'"
-                  }, "CHARLESTON OFFICE"),
-                  h("p", ["1890 Milford Street", h('br'), "Charleston, SC", h('br'), "843.724.1456"])
-
-                ])
-              ]),
-              h('.honeyCombContact', [
-                h("img#ballentineOfficeHoneyComb", {
-                  "style": "position:absolute;left:250px;top:-75px;z-index:2;width:250px",
-                  "src": "img/doubleHoney.png",
-                  'data-ng-click': "setLocation('ballentine')",
-                  'data-ng-class': "currentLocation === 'ballentine' ? 'selectedGreen' : 'nonSelectedBlue'"
-                }),
-                h("div.honeyText", {
-                  "style": "left:250px;",
-                  'data-ng-click': "setLocation('ballentine')",
-                  'data-ng-class': "currentLocation === 'ballentine' ? 'selectedGreen' : 'nonSelectedBlue'"
-                }, [
-                  h('img', {
-                    'src': 'img/contact_icon.png',
-                    "style": 'height:25px;',
-                    'data-ng-show': "currentLocation === 'ballentine'"
-                  }),
-                  h("h4.ballentineOfficeTxt", {
-                    'data-ng-class': "currentLocation === 'ballentine' ? 'selectedGreen' : 'nonSelectedBlue'"
-                  }, "BALLENTINE OFFICE"),
-                  h("p", ["Post Office Box 224", h('br'), "Ballentine, SC", h('br'), "29002"])
-                ])
-              ]),
-              h('.honeyCombContact', [
-                h("img#charlotteOfficeHoneyComb", {
-                  "style": "position:absolute;left:500px;top:-75px;z-index:2;width:250px",
-                  "src": "img/doubleHoney.png",
-                  'data-ng-click': "setLocation('charlotte')",
-                  'data-ng-class': "currentLocation === 'charlotte' ? 'selectedGreen' : 'nonSelectedBlue'"
-                }),
-                h("div.honeyText", {
-                  "style": "left:500px;",
-                  'data-ng-click': "setLocation('charlotte')",
-                  'data-ng-class': "currentLocation === 'charlotte' ? 'selectedGreen' : 'nonSelectedBlue'"
-                }, [
-                  h('img', {
-                    'src': 'img/contact_icon.png',
-                    "style": 'height:25px;',
-                    'data-ng-show': "currentLocation === 'charlotte'"
-                  }),
-                  h("h4.charlotteOfficeTxt", "CHARLOTTE OFFICE"),
-                  h("p", {
-                    "style": "margin-left: 10px; margin-right: 10px;"
-                  }, ["5601 77 Center Drive", h('br'), "Charlotte, NC", h('br'), "980.219.7084"])
+              h("label.ltc-royal-blue-traditional", {
+                'style':'font-size:16px;font-weight:400;',
+                "for":"name"
+              }, "NAME"),
+              h("input#name.form-control", {
+                "type":"text",
+                'data-ng-model': 'contactForm.name',
+                'name': 'name',
+                'required': 'true'
+              }),
+              h("p.help-block", {
+                'data-ng-show': 'contact.name.$invalid && !contact.name.$pristine'
+              }, "Your name is required.")
+            ]),
+            h("div.form-group.col-md-6", {
+              'data-ng-class':"{ 'has-error' : contact.email.$invalid && !contact.email.$pristine }"
+            }, [
+              h("label.ltc-royal-blue-traditional", {
+                'style':'font-size:16px;font-weight:400;',
+                "for":"email"
+              }, "EMAIL"),
+              h("input#email.form-control", {
+                "type":"email",
+                'data-ng-model': 'contactForm.email',
+                'required': 'true',
+                'name': 'email'
+              }),
+              h("p.help-block", {
+                'data-ng-show': 'contact.email.$invalid && !contact.name.$pristine',
+              }, "A valid email is required.")
+            ]),
+            h("div.form-group.col-md-6", [
+              h("label.ltc-royal-blue-traditional", {
+                'style':'font-size:16px;font-weight:400;',
+                'for': 'subject'
+              }, "SUBJECT"),
+              h("div", [
+                h("select#subject.form-control", {
+                  'data-ng-model': "contactForm.subject",
+                },[
+                  h("option", "Architecture"),
+                  h("option", "Forensic Consulting"),
+                  h("option", "Building Enclosure"),
+                  h("option", ["Life Safety and Human Factors" ]),
+                  h("option",  "Engineering Services"),
+                  h("option",  "Other")
                 ])
               ])
-            ])]),
-          h("div.col-md-8.col-md-offset-2", [
-            h('br'),
-            h('div', {
-              "style": 'margin-left:1.5%;'
-            }, [
-              h("h3.tk-aaux-next.ltc-royal-blue-traditional", "{{contentfulData.fields.formHeadline}}"),
-              h("p.ltc-royal-blue-traditional", "{{contentfulData.fields.formSubtitle}}"),
-              h('br')
             ]),
-
-            h("form#contact", {
-              'novalidate': 'true',
-              'name': 'contact',
-              'data-ng-hide': 'contactThankYou'
+            h("div.form-group.col-md-6", {
+              'data-ng-class':"{ 'has-error' : contact.phone.$invalid && !contact.phone.$pristine }"
             }, [
-              h("div.form-group.col-md-6.tk-aaux-next", {
-                'data-ng-class': "{ 'has-error' : contact.name.$invalid && !contact.name.$pristine }",
-                'style': 'font-size:16px;font-weight:400;'
-              }, [
-                h("label.ltc-royal-blue-traditional", {
-                  'style': 'font-size:16px;font-weight:400;',
-                  "for": "name"
-                }, "NAME"),
-                h("input#name.form-control", {
-                  "type": "text",
-                  'data-ng-model': 'contactForm.name',
-                  'name': 'name',
-                  'required': 'true'
-                }),
-                h("p.help-block", {
-                  'data-ng-show': 'contact.name.$invalid && !contact.name.$pristine'
-                }, "Your name is required.")
-              ]),
-              h("div.form-group.col-md-6", {
-                'data-ng-class': "{ 'has-error' : contact.email.$invalid && !contact.email.$pristine }"
-              }, [
-                h("label.ltc-royal-blue-traditional", {
-                  'style': 'font-size:16px;font-weight:400;',
-                  "for": "email"
-                }, "EMAIL"),
-                h("input#email.form-control", {
-                  "type": "email",
-                  'data-ng-model': 'contactForm.email',
-                  'required': 'true',
-                  'name': 'email'
-                }),
-                h("p.help-block", {
-                  'data-ng-show': 'contact.email.$invalid && !contact.name.$pristine'
-                }, "A valid email is required.")
-              ]),
-              h("div.form-group.col-md-6", [
-                h("label.ltc-royal-blue-traditional", {
-                  'style': 'font-size:16px;font-weight:400;',
-                  'for': 'subject'
-                }, "SUBJECT"),
-                h("div", [h("select#subject.form-control", {
-                    'data-ng-model': "contactForm.subject"
-                  }, [
-                    h("option", "Architecture"),
-                    h("option", "Forensic Consulting"),
-                    h("option", "Building Enclosure"),
-                    h("option", ["Life Safety and Human Factors"]),
-                    h("option", "Engineering Services"),
-                    h("option", "Other")
-                  ])])
-              ]),
-              h("div.form-group.col-md-6", {
-                'data-ng-class': "{ 'has-error' : contact.phone.$invalid && !contact.phone.$pristine }"
-              }, [
-                h("label.ltc-royal-blue-traditional", {
-                  'style': 'font-size:16px;font-weight:400;',
-                  'for': 'phone'
-                }, "PHONE"),
-                h("input#phone.form-control", {
-                  "type": "tel",
-                  'data-ng-model': 'contactForm.phone',
-                  'name': 'phone',
-                  'required': 'true'
-                }),
-                h("p.help-block", {
-                  'data-ng-show': 'contact.phone.$invalid && !contact.phone.$pristine'
-                }, "A valid phone number is required.")
-              ]),
-              h("div.form-group.col-md-12", {
-                'data-ng-class': "{ 'has-error' : contact.message.$invalid && !contact.message.$pristine }"
-              }, [
-                h("label.ltc-royal-blue-traditional", {
-                  'style': 'font-size:16px;font-weight:400;',
-                  'for': 'message'
-                }, "MESSAGE"),
-                h("textarea#message.form-control", {
-                  "rows": "15",
-                  'data-ng-model': 'contactForm.message',
-                  'name': 'message',
-                  'required': 'true'
-                }),
-                h("p.help-block", {
-                  'data-ng-show': 'contact.message.$invalid && !contact.message.$pristine'
-                }, "A message is required.")
-              ]),
-              h('.col-md-12', [h(".wire-btn-green-ryb.btn-sq.btn-lg", {
-                  "style": "float:right;background-color:#F6F6F6; cursor: pointer",
-                  'data-ng-click': 'submitForm(contact.$invalid, contact)',
-                  "type": "submit"
-                }, '{{contentfulData.fields.buttonText}}')]),
-              h("div.thankYouDiv.hidden", [
+              h("label.ltc-royal-blue-traditional", {
+                'style':'font-size:16px;font-weight:400;',
+                'for': 'phone'
+              }, "PHONE"),
+              h("input#phone.form-control", {
+                "type":"tel",
+                'data-ng-model': 'contactForm.phone',
+                'name': 'phone',
+                'required': 'true'
+              }),
+              h("p.help-block", {
+                'data-ng-show': 'contact.phone.$invalid && !contact.phone.$pristine'
+              }, "A valid phone number is required.")
+            ]),
+            h("div.form-group.col-md-12", {
+              'data-ng-class':"{ 'has-error' : contact.message.$invalid && !contact.message.$pristine }"
+            }, [
+              h("label.ltc-royal-blue-traditional", {
+                'style':'font-size:16px;font-weight:400;',
+                'for': 'message'
+              }, "MESSAGE"),
+              h("textarea#message.form-control", {
+                "rows":"15",
+                'data-ng-model': 'contactForm.message',
+                'name': 'message',
+                'required': 'true'
+              }),
+              h("p.help-block", {
+                'data-ng-show': 'contact.message.$invalid && !contact.message.$pristine'
+              }, "A message is required.")
+            ]),
+            h('.col-md-12', [
+              h(".wire-btn-green-ryb.btn-sq.btn-lg", {
+                "style":"float:right;background-color:#F6F6F6; cursor: pointer",
+                'data-ng-click':'submitForm(contact.$invalid, contact)',
+                "type":"submit"
+              }, '{{contentfulData.fields.buttonText}}')
+            ]),
+            h("div.thankYouDiv.hidden", [
                 h("h3", {
                   "style": {
                     "name": "style",
@@ -386,48 +412,58 @@ function render() {
                     "value": "text-align: center;"
                   }
                 }, [
-                  "Return to our ",
-                  h("a", {
-                    "attributes": {
-                      "href": "http://www.appliedbuildingsciences.com/"
-                    }
-                  }, "homepage")
+                    "Return to our ",
+                    h("a", {
+                      "attributes": {
+                        "href": "http://www.appliedbuildingsciences.com/"
+                      }
+                    }, "homepage")
                 ])
-              ])
-            ]),
-            h('#thankYouMessage', {
-              'data-ng-show': 'contactThankYou'
-            }, [h('.col-md-12', [
-                h("h3", {
-                  "style": {
-                    "name": "style",
-                    "value": "text-align: center;"
+            ])
+            // h('div', [
+            //   h('div', {
+            //
+            //   }, 'SEND'),
+            // ])
+          ]),
+          h('#thankYouMessage', {
+            'data-ng-show': 'contactThankYou'
+          }, [
+            h('.col-md-12', [
+            h("h3", {
+              "style": {
+                "name": "style",
+                "value": "text-align: center;"
+              }
+            }, "Thank you for contacting us!"),
+            h("h5", {
+              "style": {
+                "name": "style",
+                "value": "text-align: center;"
+              }
+            }, "We will get back to you shortly."),
+            h("h5", {
+              "style": {
+                "name": "style",
+                "value": "text-align: center;"
+              }
+            }, [
+                "Return to our ",
+                h("a", {
+                  "attributes": {
+                    "href": "http://www.appliedbuildingsciences.com/"
                   }
-                }, "Thank you for contacting us!"),
-                h("h5", {
-                  "style": {
-                    "name": "style",
-                    "value": "text-align: center;"
-                  }
-                }, "We will get back to you shortly."),
-                h("h5", {
-                  "style": {
-                    "name": "style",
-                    "value": "text-align: center;"
-                  }
-                }, [
-                  "Return to our ",
-                  h("a", {
-                    "attributes": {
-                      "href": "http://www.appliedbuildingsciences.com/"
-                    }
-                  }, "homepage")
-                ])
-              ])])
+                }, "homepage")
+            ])
+          ])
+        ])
           ])
         ])
       ]),
       //  footer
-      h('div', {'data-footermenu': ''})
-    ])])
+      h('div', {
+        'data-footermenu': ''
+      }),
+    ])
+  ])
 }
