@@ -52,7 +52,7 @@
     "jquery": "^2.2.3",
     "mandrill-api": "^1.0.45",
     "memory-cache": "^0.1.6",
-    "moment": "^2.10.6",
+    "moment": "^2.29.2",
     "ng-annotate-loader": "^0.2.0",
     "ngmap": "^1.17.1",
     "node-pre-gyp": "^0.8.0",
